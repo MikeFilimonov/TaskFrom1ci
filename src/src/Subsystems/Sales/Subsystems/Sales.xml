@@ -60,6 +60,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.OrdersClosing</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.Quotations</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.GoodsInvoicedNotShipped</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.RequestForQuotation</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

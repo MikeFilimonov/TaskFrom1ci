@@ -2281,6 +2281,7 @@
 			<Document>TransferAndPromotion</Document>
 			<Document>WeeklyTimesheet</Document>
 			<Document>WorkOrder</Document>
+			<Document>RequestForQuotation</Document>
 			<DocumentNumerator>TaxInvoiceIssued</DocumentNumerator>
 			<DocumentJournal>BankDocuments</DocumentJournal>
 			<DocumentJournal>CashDocuments</DocumentJournal>
