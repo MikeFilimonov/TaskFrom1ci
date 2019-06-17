@@ -11632,7 +11632,7 @@
 		<Metadata name="Document.RegistersCorrection.Help" id="631bb4ca-15b6-4e8f-a0c0-016c149da2d6.1" configVersion="a0b33d5a57dcbc42806f2aeab00b4d9700000000"/>
 		<Metadata name="Document.RegistersCorrection.ManagerModule" id="631bb4ca-15b6-4e8f-a0c0-016c149da2d6.2" configVersion="03ecaac5a205864ca8214137303084b300000000"/>
 		<Metadata name="Document.RegistersCorrection.ObjectModule" id="631bb4ca-15b6-4e8f-a0c0-016c149da2d6.0" configVersion="02dd0cc292ae8f4387d842d4e6258cd800000000"/>
-		<Metadata name="Document.RequestForQuotation" id="f08d1bea-0d19-44fb-8439-d5099239e922" configVersion="479a3ffaad81cf4ea061be96925c4f7c00000000"/>
+		<Metadata name="Document.RequestForQuotation" id="f08d1bea-0d19-44fb-8439-d5099239e922" configVersion="dd90c1129d341f4c80dd823fbff9e38900000000"/>
 		<Metadata name="Document.RetailRevaluation" id="4c578a2c-4071-4d57-950c-8bae63f9b00f" configVersion="f92d37b72c0f4642a1648c4bf53eeb0000000000">
 			<Metadata name="Document.RetailRevaluation.TabularSection.Inventory.Attribute.MeasurementUnit" id="060797a9-5ead-4aeb-9e5a-5c2233014c77"/>
 			<Metadata name="Document.RetailRevaluation.TabularSection.Inventory.Attribute.Products" id="15e4b37b-c837-4d76-8951-6c1604fdf8c6"/>
