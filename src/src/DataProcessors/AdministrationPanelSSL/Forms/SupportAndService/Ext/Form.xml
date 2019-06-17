@@ -1,0 +1,972 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<Customizable>false</Customizable>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">NotificationProcessing</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+		<Event name="OnClose">OnClose</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="GroupTitle" id="1574">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="GroupHeaderExtendedTooltip" id="1632"/>
+			<ChildItems>
+				<LabelDecoration name="SectionDescription" id="1575">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Use this section to keep track of the application state, back up and restore data, update versions, and optimize performance.</v8:content>
+						</v8:item>
+					</Title>
+					<VerticalAlign>Top</VerticalAlign>
+					<TitleHeight>2</TitleHeight>
+					<ContextMenu name="SectionDescriptionContextMenu" id="1576"/>
+					<ExtendedTooltip name="SectionDescriptionExtendedTooltip" id="1633"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="GroupFrequencyService" id="1431">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Frequent service group</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Frequent service group</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="GroupFrequencyServiceExtendedTooltip" id="1637"/>
+			<ChildItems>
+				<Button name="DataProcessorEventLogMonitorOpen" id="1445">
+					<Type>Hyperlink</Type>
+					<CommandName>DataProcessor.EventLogMonitor.StandardCommand.Open</CommandName>
+					<ExtendedTooltip name="DatProcessorEventLogMonitorOpenExtendedTooltip" id="1638"/>
+				</Button>
+				<Button name="DataProcessorActiveUserOpen" id="1446">
+					<Type>Hyperlink</Type>
+					<CommandName>DataProcessor.ActiveUsers.StandardCommand.Open</CommandName>
+					<ExtendedTooltip name="DataProcessorActiveUsersOpenExtendedTooltip" id="1639"/>
+				</Button>
+				<Button name="DataProcessorBlockingConnectionsWithInfobaseOpen" id="1447">
+					<Type>Hyperlink</Type>
+					<CommandName>DataProcessor.UserWorkBlocking.StandardCommand.Open</CommandName>
+					<ExtendedTooltip name="DataProcessorLockInfobaseConnectionsOpenExtendedTooltip" id="1640"/>
+				</Button>
+				<Button name="DataProcessorMarkedObjectsDeletionOpen" id="1448">
+					<Type>Hyperlink</Type>
+					<CommandName>DataProcessor.DeleteMarkedObjects.StandardCommand.Open</CommandName>
+					<ExtendedTooltip name="DataProcessorMarkedObjectDeletionOpenExtendedTooltip" id="1641"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="GroupScheduledOperations" id="1527">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Compliance operations</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>0:d186981c-69b1-43e1-8ae8-b1a7a6483090</TitleTextColor>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Compliance operations</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="GroupScheduledOperationsExtendedTooltip" id="1642"/>
+			<ChildItems>
+				<UsualGroup name="Group5" id="1586">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Group5ExtendedTooltip" id="1643"/>
+					<ChildItems>
+						<UsualGroup name="Group2" id="1866">
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group2ExtendedTooltip" id="1867"/>
+							<ChildItems>
+								<Button name="DataProcessorScheduledAndBackgroundJobs" id="1502">
+									<Type>Hyperlink</Type>
+									<CommandName>DataProcessor.ScheduledAndBackgroundJobs.Command.ScheduledAndBackgroundJobs</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="DataProcessorScheduledAndBackgroundJobsExtendedTooltip" id="1645">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Plan and launch scheduled jobs.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Group7" id="1868">
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group7ExtendedTooltip" id="1869"/>
+							<ChildItems>
+								<Button name="InformationRegisterClosingDatesDataClosingDates" id="1552">
+									<Type>Hyperlink</Type>
+									<CommandName>InformationRegister.ClosingDates.Command.DataClosingDates</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="InformationRegisterClosingDatesDataClosingDatesExtendedTooltip" id="1648">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Prohibit editing documents from the previous accounting periods.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Group6" id="1587">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Group6ExtendedTooltip" id="1650"/>
+					<ChildItems>
+						<UsualGroup name="Group8" id="1870">
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group8ExtendedTooltip" id="1871"/>
+							<ChildItems>
+								<Button name="DataProcessorManagingTotalsAndAggregatesOpen" id="1501">
+									<Type>Hyperlink</Type>
+									<CommandName>DataProcessor.TotalAndAggregateManagement.StandardCommand.Open</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="DataProcessorTotalAndAggregateManagementOpenExtendedTooltip" id="1652">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Calculated totals period setup.
+Reconstruction, aggregates filling and optimization.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Group9" id="1872">
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group9ExtendedTooltip" id="1873"/>
+							<ChildItems>
+								<Button name="FullTextSearchAndTextsExtractionManagement" id="1503">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.FullTextSearchAndTextsExtractionManagement</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Manage full-text search</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="FullTextSearchAndTextsExtractionManagementExtendedTooltip" id="1655">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Update and clean up full-text search index. Manage text extraction from files.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="GroupMarkedObjectDeletionOnSchedule" id="1766">
+					<Width>86</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="GroupMarkedObjectDeletionOnScheduleExtendedTooltip" id="1767"/>
+					<ChildItems>
+						<UsualGroup name="Group10" id="1874">
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group10ExtendedTooltip" id="1875"/>
+							<ChildItems>
+								<CheckBoxField name="DeleteMarkedUse" id="1770">
+									<DataPath>DeleteMarkedUse</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Automatically delete marked objects on schedule</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="DeleteMarkedUseContextMenu" id="1771"/>
+									<ExtendedTooltip name="DeleteMarkedUseExtendedTooltip" id="1772"/>
+									<Events>
+										<Event name="OnChange">DeleteMarkedUseOnChange</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Group11" id="1876">
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group11ExtendedTooltip" id="1877"/>
+							<ChildItems>
+								<Button name="DeleteMarkedConfigureSchedule" id="1773">
+									<Type>Hyperlink</Type>
+									<Enabled>false</Enabled>
+									<CommandName>Form.Command.DeleteMarkedConfigureSchedule</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="DeleteMarkedConfigureScheduleExtendedTooltip" id="1774"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="GroupBackupAndRecovery" id="1467">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Backup and recovery</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>0:d186981c-69b1-43e1-8ae8-b1a7a6483090</TitleTextColor>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Backup and recovery</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="CloneBackupAndRestorationGroupExtendedTooltip" id="1657"/>
+			<ChildItems>
+				<UsualGroup name="Group1" id="1620">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Group1ExtendedTooltip" id="1658"/>
+					<ChildItems>
+						<UsualGroup name="Group3" id="1471">
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group3ExtendedTooltip" id="1659"/>
+							<ChildItems>
+								<LabelDecoration name="ApplicationBackup" id="1570">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Backup</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<Hyperlink>true</Hyperlink>
+									<ContextMenu name="ApplicationBackupCopyContextMenu" id="1571"/>
+									<ExtendedTooltip name="ApplicationBackupCopyExtendedTooltip" id="1661">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Backup procedure start.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="Click">ApplicationBackupClick</Event>
+									</Events>
+								</LabelDecoration>
+								<LabelDecoration name="RecoveryFromBackup" id="1568">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Restore from backup</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<Hyperlink>true</Hyperlink>
+									<ContextMenu name="RestorationFromBackupCopiesCommandContextMenu" id="1569"/>
+									<ExtendedTooltip name="RestoreFromBackupCopyExtendedTooltip" id="1664">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Start data recovery from backup files.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="Click">RestoringFromBackupClick</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="GroupBackupSetting" id="1479">
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupSettingBackupExtendedTooltip" id="1666"/>
+							<ChildItems>
+								<LabelDecoration name="BackupSetup" id="1572">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Backup setup</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<Hyperlink>true</Hyperlink>
+									<ContextMenu name="BackupSettingContextMenu" id="1573"/>
+									<ExtendedTooltip name="SettingBackupExtendedTooltip" id="1667">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Configure backup parameters.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="Click">BackupSettingClick</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="GroupRestorationBackupCopiesSaaS" id="1615">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Backup restoration group</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Backup restoration group</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>StrongSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="GroupRestorationBackupCopiesSaaSExtendedTooltip" id="1669"/>
+					<ChildItems>
+						<PictureDecoration name="BackupRestorationSaaS" id="1618">
+							<ToolTipRepresentation>ShowRight</ToolTipRepresentation>
+							<Picture>
+								<xr:Ref>CommonPicture.UnavailableFieldsInformtion</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="BackupRestorationSaaSContextMenu" id="1619"/>
+							<ExtendedTooltip name="BackupRestorationSaaSExtendedTooltip" id="1670">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>To restore the application from a backup, go to the Service manager, and then run commands Setup -&gt; Application backups</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</PictureDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="GroupClassifiers" id="1556">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Classifiers</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>0:d186981c-69b1-43e1-8ae8-b1a7a6483090</TitleTextColor>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Classifiers</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="GroupClassifiersExtendedTooltip" id="1679"/>
+			<ChildItems>
+				<UsualGroup name="Group13" id="1908">
+					<Representation>None</Representation>
+					<ExtendedTooltip name="Group13ExtendedTooltip" id="1909"/>
+					<ChildItems>
+						<UsualGroup name="Group14" id="1910">
+							<Width>43</Width>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group14ExtendedTooltip" id="1911"/>
+							<ChildItems>
+								<Button name="DataProcessorBankClassifierImportProcess" id="1904">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.DataProcessorBankClassifierImportProcess</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="DataProcessorBankClassifierImportProcessExtendedTooltip" id="1905">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Import classifier of banks with the specified settings from additional data proccessor</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Group15" id="1912">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group15ExtendedTooltip" id="1913"/>
+							<ChildItems>
+								<Button name="ConfigureImportBankClassifier" id="1906">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ConfigureImportBankClassifier</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ConfigureImportBankClassifierExtendedTooltip" id="1907">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Configure data processor which will be used for importing information on available banks</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Group16" id="1914">
+					<Representation>None</Representation>
+					<ExtendedTooltip name="Group16ExtendedTooltip" id="1915"/>
+					<ChildItems>
+						<UsualGroup name="Group4" id="1557">
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Representation>None</Representation>
+							<ChildItemsWidth>Equal</ChildItemsWidth>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group4ExtendedTooltip" id="1680"/>
+							<ChildItems>
+								<Button name="DataProcessorExchangeRatesImportProcess" id="1624">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.DataProcessorExchangeRatesImportProcess</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="DataProcessorExchangeRatesImportProcessExtendedTooltip" id="1688">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Import the exchange rates of the selected currencies for the specified period.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Group12" id="1902">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group12ExtendedTooltip" id="1903"/>
+							<ChildItems>
+								<Button name="ConfigureExchangeRatesImport" id="1900">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ConfigureExchangeRatesImport</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ConfigureExchangeRatesImportExtendedTooltip" id="1901">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Configure data processor which will be used for currency rates import.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="GroupRefreshEnabledAndDetailsChanges" id="1537">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Application version update</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>0:d186981c-69b1-43e1-8ae8-b1a7a6483090</TitleTextColor>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="GroupRefreshEnabledAndDetailsChangesExtendedTooltip" id="1697"/>
+			<ChildItems>
+				<UsualGroup name="Columns1" id="1614">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Columns1ExtendedTooltip" id="1698"/>
+					<ChildItems>
+						<UsualGroup name="Group18" id="1890">
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group18ExtendedTooltip" id="1891"/>
+							<ChildItems>
+								<Button name="DataProcessorConfigurationUpdate" id="1452">
+									<Type>Hyperlink</Type>
+									<CommandName>DataProcessor.InstallUpdates.StandardCommand.Open</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Search and install updates</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="DatProcessorConfigurationUpdateExtendedTooltip" id="1700">
+										<Height>3</Height>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Receive information about the last updates and automatic installation of updates at once, in specified time, when closing the application.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Group19" id="1892">
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group19ExtendedTooltip" id="1893"/>
+							<ChildItems>
+								<Button name="ApplicationUpdateSetup" id="1748">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ApplicationUpdateSetup</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Configure application update via the Internet</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ApplicationUpdateConfiguringExtendedTooltip" id="1749">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Configure application update via the Internet</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Columns2" id="1627">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Columns2ExtendedTooltip" id="1705"/>
+					<ChildItems>
+						<UsualGroup name="Group20" id="1894">
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group20ExtendedTooltip" id="1895"/>
+							<ChildItems>
+								<Button name="OpenReleaseNotes" id="1463">
+									<Type>Hyperlink</Type>
+									<CommandName>CommonForm.ReleaseNotes.StandardCommand.Open</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="OpenReleaseNotesExtendedTooltip" id="1703">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Change history by application versions.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Group21" id="1896">
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group21ExtendedTooltip" id="1897"/>
+							<ChildItems>
+								<Button name="ResultsUpdateAndAdditionalProcessingData" id="1629">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ResultsUpdateAndAdditionalProcessingData</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ResultsUpdateAndAdditionalInformationProcessorDataExtendedTooltip" id="1707">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Information on progress of the application version update, deferred execution of additional data processing procedures.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Columns3" id="1753">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Columns3ExtendedTooltip" id="1754"/>
+					<ChildItems>
+						<UsualGroup name="Group22" id="1898">
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group22ExtendedTooltip" id="1899"/>
+							<ChildItems>
+								<CheckBoxField name="DetailedEventLogOnInfobaseUpdate" id="1610">
+									<DataPath>ConstantsSet.DetailedEventLogOnInfobaseUpdate</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Detail update process in event log</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="DetailedEventLogOnInfobaseUpdateContextMenu" id="1611"/>
+									<ExtendedTooltip name="DetailedEventLogOnInfobaseUpdateExtendedTooltip" id="1710">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Write detailed information on the update progress to event log.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">DetailInfobaseUpdateInEventLogMonitorOnChange</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ConstantsSet" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Constant set</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>ConstantsSet.UseFullTextSearch</Field>
+				<Field>ConstantsSet.UseSeparationByDataAreas</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="RunMode" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Operation mode (fixed structure)</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+			<Edit>
+				<xr:Common>false</xr:Common>
+			</Edit>
+		</Attribute>
+		<Attribute name="DeleteMarkedID" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Deletion of marked objects identifier</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="DeleteMarkedUse" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Deletion of marked objects usage</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="DeleteMarkedSchedule" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Deletion of marked objects schedule</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="FullTextSearchAndTextsExtractionManagement" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Manage full-text search</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Manage full-text search and text extraction</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ProcessingManagingFullTextSearch</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="DataProcessorExchangeRatesImportProcess" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Exchange rates import</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Exchange rates import from Internet</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>DataProcessorExchangeRatesImportProcess</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.StandardSubsystemsLocalMode</Item>
+			</FunctionalOptions>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ResultsUpdateAndAdditionalProcessingData" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Update results and additional data processing</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Update results and additional data processing</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>PostponedProcessingData</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="AdditionalReportsOnAdministration" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Additional administration reports</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Additional administration reports</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>AdditionalReportsOnAdministration</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="AdditionalAdministrativeDataProcessors" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Additional data processors for administration</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Additional data processors for administration</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>AdditionalAdministrativeDataProcessors</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ApplicationUpdateSetup" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Application update setup</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Application update setup</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ApplicationUpdateSetup</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="DeleteMarkedConfigureSchedule" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Configure schedule</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Set schedule for automatic cleanup of the selected objects in the scheduled job.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>DeleteMarkedConfigureSchedule</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="SearchAndDeleteDuplicates" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Search and delete duplicates</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Search and delete duplicates</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>SearchAndDeleteDuplicates</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ConfigureExchangeRatesImport" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Configure exchange rates import</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ConfigureImportCurrencyRate</Action>
+		</Command>
+		<Command name="DataProcessorBankClassifierImportProcess" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Import bank classifier</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Data processor bank classifier import process</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>DataProcessorBankClassifierImportProcess</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.StandardSubsystemsLocalMode</Item>
+			</FunctionalOptions>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ConfigureImportBankClassifier" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Configure classifier import</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Configure import bank classifier</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ConfigureImportBankClassifier</Action>
+		</Command>
+	</Commands>
+</Form>

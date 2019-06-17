@@ -1,0 +1,835 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<Title>
+		<v8:item>
+			<v8:lang>en</v8:lang>
+			<v8:content>Purchases / Warehouse</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">OnOpen</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+		<Event name="OnClose">OnClose</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="GroupTitle" id="92">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="GroupHeaderExtendedTooltip" id="259"/>
+			<ChildItems>
+				<LabelDecoration name="SectionDescription" id="93">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Customize inventory accounting, multi-warehouse management, purchase order statuses, reservation, and safekeeping.</v8:content>
+						</v8:item>
+					</Title>
+					<VerticalAlign>Top</VerticalAlign>
+					<TitleHeight>2</TitleHeight>
+					<ContextMenu name="SectionDescriptionContextMenu" id="94"/>
+					<ExtendedTooltip name="SectionDescriptionExtendedTooltip" id="260"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="WEBApplication" id="345">
+			<TitleTextColor>style:FormTextColor</TitleTextColor>
+			<TitleFont ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="WEBApplicationExtendedTooltip" id="346"/>
+			<ChildItems>
+				<Button name="UpdateSystemParameters" id="347">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.UpdateSystemParameters</CommandName>
+					<TextColor>style:FormTextColor</TextColor>
+					<Font ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<ExtendedTooltip name="RefreshSystemParametersExtendedTooltip" id="348">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>To apply the changes, restart the application or click Update system parameters.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</Button>
+				<LabelDecoration name="DecorationProportion3" id="349">
+					<ContextMenu name="DecorationProportion3ContextMenu" id="350"/>
+					<ExtendedTooltip name="DecorationProportion3ExtendedTooltip" id="351"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="SettingInventory" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Inventory (products)</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>0:d186981c-69b1-43e1-8ae8-b1a7a6483090</TitleTextColor>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="SettingInventoryExtendedTooltip" id="270"/>
+			<ChildItems>
+				<UsualGroup name="Group1" id="99">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Group1ExtendedTooltip" id="271"/>
+					<ChildItems>
+						<UsualGroup name="AccountingSettingsInDifferentUOMments" id="113">
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="AccountingSettingsInDifferentUOMmentsExtendedTooltip" id="272">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Select this option to use different units of measure in product accounting.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<ChildItems>
+								<CheckBoxField name="UseSeveralUnitsForProduct" id="114">
+									<DataPath>ConstantsSet.UseSeveralUnitsForProduct</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Use different units of measure in accounting</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="UseSeveralUnitsForProductContextMenu" id="115"/>
+									<ExtendedTooltip name="UseSeveralUnitsForProductExtendedTooltip" id="273">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Select this option to use different units of measure in inventory accouting, for example, pieces, blocks, boxes, or kilograms. Note. You cannot turn this option off if the application has accounting data.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">FunctionalOptionAccountingInVariousUOMOnChange</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="SettingsUseCharacteristics" id="118">
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="SettingsUseCharacteristicsExtendedTooltip" id="277">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Select this option to maintain accounting of inventory, works, and services by their characteristics.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<ChildItems>
+								<CheckBoxField name="UseCharacteristics" id="119">
+									<DataPath>ConstantsSet.UseCharacteristics</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Inventory accounting by characteristics</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="UseCharacteristicsContextMenu" id="120"/>
+									<ExtendedTooltip name="UseCharacteristicsExtendedTooltip" id="278">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Select this option to maintain accounting of inventory, works, and services by their characteristics. The characteristics represent additional dimensions that help to arrange products in a convenient way. Common characteristics include, for example, color, size, and capacity. Note. You cannot turn this option off if the application has accounting data.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">FunctionalOptionUseCharacteristicsOnChange</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Group2" id="100">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Group2ExtendedTooltip" id="276"/>
+					<ChildItems>
+						<LabelDecoration name="Decoration1" id="352">
+							<Width>1</Width>
+							<ContextMenu name="Decoration1ContextMenu" id="353"/>
+							<ExtendedTooltip name="Decoration1ExtendedTooltip" id="354"/>
+						</LabelDecoration>
+						<UsualGroup name="SettingsUseBatches" id="123">
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="SettingsUseBatchesExtendedTooltip" id="281">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Select this option to maintain product accounting by batches.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<ChildItems>
+								<CheckBoxField name="UseBatches" id="124">
+									<DataPath>ConstantsSet.UseBatches</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Inventory accounting by batches</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="UseBatchesContextMenu" id="125"/>
+									<ExtendedTooltip name="UseBatchesExtendedTooltip" id="282">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Select this option to maintain inventory accounting by product batches. With batch accounting, different inventory batches can be accounted separately. Batch accounting is mandatory for the inventory accepted from a counterparty for commission, processing, or safekeeping. It is optional for your company's inventory. Note. Unlike inventory increase documents, product batches are not considered in the FIFO method when determining the cost of inventory decrease. Note. You cannot turn this option off if the application has accounting data.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">FunctionalOptionUseBatchesOnChange</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="SettingWarehouses" id="147">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Warehouse accounting</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>0:d186981c-69b1-43e1-8ae8-b1a7a6483090</TitleTextColor>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Warehouse accounting</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="SettingWarehousesExtendedTooltip" id="285"/>
+			<ChildItems>
+				<UsualGroup name="Group3" id="154">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Group3ExtendedTooltip" id="286"/>
+					<ChildItems>
+						<UsualGroup name="Group7" id="370">
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group7ExtendedTooltip" id="371"/>
+							<ChildItems>
+								<CheckBoxField name="UseSeveralWarehouses" id="148">
+									<DataPath>ConstantsSet.UseSeveralWarehouses</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Multi-warehouse accounting</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="UseSeveralWarehousesContextMenu" id="149"/>
+									<ExtendedTooltip name="UseSeveralWarehousesExtendedTooltip" id="287">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Select this option if you need to maintain records for two or more warehouses. With this option, you can specify warehouses in documents.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">FunctionalOptionAccountingByMultipleWarehousesOnChange</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<Button name="CatalogBusinessUnitsWarehouses" id="153">
+							<Type>Hyperlink</Type>
+							<SkipOnInput>false</SkipOnInput>
+							<CommandName>Form.Command.CatalogBusinessUnitsWarehouses</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="CatalogBusinessUnitsWarehousesExtendedTooltip" id="295"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Group4" id="155">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Group4ExtendedTooltip" id="293"/>
+					<ChildItems>
+						<UsualGroup name="SettingsAccountingByCells" id="134">
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="AccountingByCellsSettingsExtendedTooltip" id="297">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Select this option to maintain inventory accounting by inventory location (for example, aisle, rack, and shelf).</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<ChildItems>
+								<CheckBoxField name="UseStorageBins" id="135">
+									<DataPath>ConstantsSet.UseStorageBins</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Inventory accounting by storage bins</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<TitleHeight>1</TitleHeight>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="UseStorageBinsContextMenu" id="136"/>
+									<ExtendedTooltip name="UseStorageBinsExtendedTooltip" id="298">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Select this option to maintain inventory accounting by storage location. The list of storage bins is specified separately for each warehouse. Note. You cannot turn this option off if the application has accounting data.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">FunctionalOptionAccountingByCellsOnChange</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Group6" id="358">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Group6ExtendedTooltip" id="359"/>
+					<ChildItems>
+						<UsualGroup name="SettingsSerialNumbers" id="360">
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="SettingsSerialNumbersExtendedTooltip" id="361">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Select this option to use product serial numbers.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<ChildItems>
+								<CheckBoxField name="FunctionalOptionUseSerialNumbers" id="362">
+									<DataPath>ConstantsSet.UseSerialNumbers</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Use product serial numbers</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<TitleHeight>1</TitleHeight>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="FunctionalOptionUseSerialNumbersContextMenu" id="363"/>
+									<ExtendedTooltip name="FunctionalOptionUseSerialNumbersExtendedTooltip" id="364">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>&lt;b&gt;Select this option if you need to use product serial numbers as a reference, to keep track of the after-sale warranty period, and to account stock balance by serial numbers. Each product has a unique serial number.&lt;/&gt;
+
+
+Reference mode: optional serial numbers. It is a common practice to register serial numbers when selling goods to record the act of sale and the beginning of the warranty period.
+
+Stock accounting mode: mandatory serial numbers. Goods transfers require serial numbers. You can monitor stock balance by the product serial numbers.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">FunctionalOptionFunctionalOptionUseSerialNumbersOnChange</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="SettingsUseSerialNumbersAsInventoryRecordDetails" id="365">
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="SettingsUseSerialNumbersAsInventoryRecordDetailsExtendedTooltip" id="366">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Select this option to monitor stock balance by product serial numbers.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<ChildItems>
+								<CheckBoxField name="FunctionalOptionUseSerialNumbersAsInventoryRecordDetails" id="367">
+									<DataPath>ConstantsSet.UseSerialNumbersAsInventoryRecordDetails</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<TitleHeight>1</TitleHeight>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="FunctionalOptionUseSerialNumbersAsInventoryRecordDetailsContextMenu" id="368"/>
+									<ExtendedTooltip name="FunctionalOptionUseSerialNumbersAsInventoryRecordDetailsExtendedTooltip" id="369">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>When this option is selected, all documents require product serial numbers. You can view the list of available serial numbers when selecting goods or in the reports. Note. You cannot turn this option off if the application has accounting data. Before starting using serial numbers to manage stock balance, perform stocktaking by serial numbers.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">FunctionalOptionUseSerialNumbersAsInventoryRecordDetailsOnChange</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="SettingsReservation" id="234">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Reservation</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>0:d186981c-69b1-43e1-8ae8-b1a7a6483090</TitleTextColor>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Reservation</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="SettingsReservationExtendedTooltip" id="301"/>
+			<ChildItems>
+				<UsualGroup name="ReservationSettingsFO" id="240">
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<Width>43</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="SettingsReservationFOExtendedTooltip" id="303">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Use reservation of warehouse inventory, scheduled receipts, and production orders.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<ChildItems>
+						<CheckBoxField name="UseInventoryReservation" id="241">
+							<DataPath>ConstantsSet.UseInventoryReservation</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Use inventory reservation</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<TitleHeight>1</TitleHeight>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="UseInventoryReservationContextMenu" id="242"/>
+							<ExtendedTooltip name="UseInventoryReservationExtendedTooltip" id="304">
+								<Title formatted="true">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Select this option to reserve inventory, maintain accounting of materials and other direct costs of production against sales orders, and create purchase orders from sales orders and production orders (for both assembly or disassembly). Note. You cannot turn this option off if the application has accounting data.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">FunctionalOptionInventoryReservationOnChange</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<LabelDecoration name="DecorationProportion" id="249">
+					<ContextMenu name="DecorationProportionContextMenu" id="250"/>
+					<ExtendedTooltip name="DecorationProportionExtendedTooltip" id="308"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="SalesOrdersSettings" id="174">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Purchase orders</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>0:d186981c-69b1-43e1-8ae8-b1a7a6483090</TitleTextColor>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="SalesOrdersSettingsExtendedTooltip" id="309"/>
+			<ChildItems>
+				<UsualGroup name="Group5" id="175">
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Group5ExtendedTooltip" id="310"/>
+					<ChildItems>
+						<UsualGroup name="Group8" id="372">
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group8ExtendedTooltip" id="373"/>
+							<ChildItems>
+								<CheckBoxField name="UsePurchaseOrderStatuses" id="176">
+									<DataPath>ConstantsSet.UsePurchaseOrderStatuses</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Multiple purchase order statuses</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="UsePurchaseOrderStatusesContextMenu" id="177"/>
+									<ExtendedTooltip name="UsePurchaseOrderStatusesExtendedTooltip" id="311">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Select this option to define three or more purchase order statuses. When it is turned off, you can define order statuses in the fields below.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">UsePurchaseOrderStatesOnChange</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Group9" id="374">
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group9ExtendedTooltip" id="375"/>
+							<ChildItems>
+								<Button name="CatalogSalesOrderStates" id="192">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.CatalogPurchaseOrderStates</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="CatalogCustomerOrderStatusExtendedTooltip" id="321"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="SettingPurchaseOrderStatesDefault" id="180">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="SettingPurchaseOrderStatesDefaultExtendedTooltip" id="313"/>
+					<ChildItems>
+						<UsualGroup name="OrdersStates" id="181">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="OrdersStatesExtendedTooltip" id="314"/>
+							<ChildItems>
+								<InputField name="InProcessStatus" id="184">
+									<DataPath>ConstantsSet.PurchaseOrdersInProgressStatus</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>"In progress" status</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="InProcessStatusContextMenu" id="185"/>
+									<ExtendedTooltip name="StateAtWorkExtendedTooltip" id="316"/>
+									<Events>
+										<Event name="OnChange">InProcessStatusOnChange</Event>
+									</Events>
+								</InputField>
+								<InputField name="CompletedStatus" id="189">
+									<DataPath>ConstantsSet.PurchaseOrdersCompletionStatus</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>"Completed" status</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="CompletedStatusContextMenu" id="190"/>
+									<ExtendedTooltip name="StateCompletedExtendedTooltip" id="319"/>
+									<Events>
+										<Event name="OnChange">CompletedStatusOnChange</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="Decoration2" id="355">
+							<ContextMenu name="Decoration2ContextMenu" id="356"/>
+							<ExtendedTooltip name="Decoration2ExtendedTooltip" id="357"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="SettingsMiscellaneous" id="215">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Other</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>0:d186981c-69b1-43e1-8ae8-b1a7a6483090</TitleTextColor>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Other</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="SettingsOtherExtendedTooltip" id="334"/>
+			<ChildItems>
+				<UsualGroup name="SettingsTransferToProcessing" id="216">
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<Width>43</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="SettingsTransferToProcessingExtendedTooltip" id="336">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Select this option to hand over materials for processing.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<ChildItems>
+						<CheckBoxField name="UseSubcontractorManufacturers" id="217">
+							<DataPath>ConstantsSet.UseSubcontractorManufacturers</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Hand over materials for processing</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<TitleHeight>1</TitleHeight>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="UseSubcontractorManufacturersContextMenu" id="218"/>
+							<ExtendedTooltip name="UseSubcontractorManufacturersExtendedTooltip" id="337">
+								<Title formatted="true">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Select this option to hand over your company's materials to counterparties for processing or turning into finished products. Note. You cannot turh this option off if the application has accounting data.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">FunctionalOptionTransferRawMaterialsForProcessingOnChange</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="SettingsCounterpartiesPricesAccounting" id="376">
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Width>43</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="SettingsCounterpartiesPricesAccountingExtendedTooltip" id="377"/>
+					<ChildItems>
+						<CheckBoxField name="UseCounterpartiesPricesTracking" id="378">
+							<DataPath>ConstantsSet.UseCounterpartiesPricesTracking</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Counterparty price accounting</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<TitleHeight>1</TitleHeight>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="UseCounterpartiesPricesTrackingContextMenu" id="379"/>
+							<ExtendedTooltip name="UseCounterpartiesPricesTrackingExtendedTooltip" id="380">
+								<Title formatted="true">
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Select this option to record vendor prices (incoming prices) when posting goods receipts.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">FunctionalOptionCounterpartiesPricesAccountingOnChange</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ConstantsSet" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Constant set</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>ConstantsSet.AcceptInventoryInTheCustody</Field>
+				<Field>ConstantsSet.AccountingBySubsidiaryCompany</Field>
+				<Field>ConstantsSet.AddItemNumberToProductDescriptionOnPrinting</Field>
+				<Field>ConstantsSet.ArchiveSalesSlipsDuringTheShiftClosure</Field>
+				<Field>ConstantsSet.CheckStockBalanceOnPosting</Field>
+				<Field>ConstantsSet.ForeignExchangeAccounting</Field>
+				<Field>ConstantsSet.FunctionalCurrency</Field>
+				<Field>ConstantsSet.ParentCompany</Field>
+				<Field>ConstantsSet.PresentationCurrency</Field>
+				<Field>ConstantsSet.PurchaseOrdersCompletionStatus</Field>
+				<Field>ConstantsSet.PurchaseOrdersInProgressStatus</Field>
+				<Field>ConstantsSet.UseBatches</Field>
+				<Field>ConstantsSet.UseBudgeting</Field>
+				<Field>ConstantsSet.UseInventoryReservation</Field>
+				<Field>ConstantsSet.UseProjects</Field>
+				<Field>ConstantsSet.UsePurchaseOrderStatuses</Field>
+				<Field>ConstantsSet.UseRetail</Field>
+				<Field>ConstantsSet.UseSeveralWarehouses</Field>
+				<Field>ConstantsSet.UseStorageBins</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="RunMode" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Run mode</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="CatalogBusinessUnitsWarehouses" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Warehouses</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Click this link to view the list of warehouses.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CatalogBusinessUnitsWarehouses</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="CatalogPurchaseOrderStates" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Purchase order statuses</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Click this link to view or edit the list of Purchase order statuses. The link is available when the "Multiple purchase order statuses" option is selected.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CatalogPurchaseOrderStates</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="UpdateSystemParameters" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Update system parameters</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Update system parameters</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>UpdateSystemParameters</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

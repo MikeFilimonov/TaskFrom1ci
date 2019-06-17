@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<Enum uuid="f282798c-45a1-4d6a-a65f-b3e032ee96e0">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.VATDueOnCustomsClearance" category="Ref">
+				<xr:TypeId>c0a5acdb-540b-4c2f-8192-95858d04000e</xr:TypeId>
+				<xr:ValueId>65984b1e-23dc-4992-97f2-54cbb382f435</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.VATDueOnCustomsClearance" category="Manager">
+				<xr:TypeId>023cc458-c7e3-452b-b99b-56c387649110</xr:TypeId>
+				<xr:ValueId>a606e258-9004-4ddb-af5b-98670d53b288</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.VATDueOnCustomsClearance" category="List">
+				<xr:TypeId>55a88023-8d67-4db3-aa33-1668dcece46b</xr:TypeId>
+				<xr:ValueId>80a22288-ba49-4ca1-bd19-2bcba6728b65</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>VATDueOnCustomsClearance</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>VAT due on customs clearance</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="3988e940-c01f-41d2-84e5-a71fcba176f3">
+				<Properties>
+					<Name>OnTheSupply</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>On the supply</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c80a6894-02e4-4ced-9cc1-0f0c942e18d8">
+				<Properties>
+					<Name>InTheVATReturn</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>In the VAT return</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

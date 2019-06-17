@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.19081"></meta></head><body>
+
+<h1>Payment terms</h1>
+<p>Payment terms define the conditions under which the supplier completes a sale. Typically, they specify the period when the customer can pay off the amount due and whether the supplier expects the payment at once or according to a schedule. Also, payment terms may require cash in advance, cash on delivery, payment method, and so on.</p>
+
+<p>In 1C:Drive, you can define payment terms for each of your counterparties' contracts to clearly communicate with the counterparties when you expect their payment for your sales invoices or when your suppliers expect your payment for their supplier invoices. Also, you can fine-tune the payment terms in invoices that are based on the contracts.</p>
+
+<p>Also, 1C:Drive uses the payment terms of sales and purchase documents to display planned money receipts and expenditures in the payment calendar.</p>
+
+<h2>Contract-level payment terms</h2>
+<p>In 1C:Drive, each of the payment terms that you can specify for a contract includes the following fields:</p>
+
+<ul><li><b>Payment method</b>. Can have the "Cash-in-hand" or "Electronic" value.</li>
+<li><b>Term</b>. Can have the "Payment in advance" or "Net" value.</li>
+<li><b>Due period, days</b>. The number of days starting from the invoice date when the supplier expects the amount due.</li>
+<li><b>% of payment</b>. The percentage of the amount the supplier expects by the due date.</li>
+</ul><p>Once you define the payment terms for a contract with a customer, 1C:Drive applies them to each sales invoice you issue for the customer. Similarly, the payment terms affect the customer's sales orders, account sales from consignee, and subcontractor reports.</p>
+
+<p>In the same manner, the payment terms you defined for a contract with a supplier are applied by 1C:Drive to each supplier invoice and purchase order you register for the supplier.</p>
+
+<p>Also, in a contract with a supplier or a customer, you can specify discounts for early payment. Such a discount has the following fields:</p>
+
+<ul><li><strong>Period, days</strong>. The number of days starting from the invoice date when the supplier expects the amount due to apply the discount.</li>
+<li><strong>Discount, %</strong>. The discount in percent.</li>
+</ul><p>To define payment terms for a counterparty's contract, do the following:</p>
+
+<ol><li>Open the counterparty details.</li>
+<li>Click <strong>Contracts</strong>.</li>
+<li>Open the contract.</li>
+<li>Click the <strong>Billing</strong> tab.</li>
+<li>Click the link at the bottom of the tab.</li>
+<li>In the <strong>Payment method</strong> field, select how you expect to get the amount due from the customer or how your supplier expects to get it from your company, in cash or not.</li>
+<li>In the <strong>Payment terms</strong> table, add an item and specify its <strong>Term</strong>, <strong>Due period, days</strong>, and <strong>% of payment</strong>.
+<p>You can add as many items as you need. Also, you can edit and delete items.</p>
+</li>
+<li>In the <strong>Early payment discounts</strong> table, add an item and specify its <strong>Period, days</strong> and <strong>Discount, %</strong>.
+<p>You can add as many items as you need. Also, you can edit and delete items.</p>
+</li>
+<li>Click <strong>OK</strong>.</li>
+<li>Click <strong>Save</strong>.</li>
+</ol><h2>Editing payment terms in sales and purchase documents</h2>
+
+<p>If you applied contract-level payment terms to a sales document (sales order, sales invoice, account sales from consignee, or subcontractor report) or to a purchase document (purchase order or supplier invoice), you may want to edit the payment terms for the document. For instance, the payment terms you specified in the contract request the customer to make their payment in 15 days after the sales invoice date, but in the given sale you want to force the customer to pay in 10 days.</p>
+
+<p>Another example is when a contract with your supplier requires your company to pay 100% Net to the supplier in 10 days, then you managed to change it to 15 days in a purchase order, and finally you agree to extend it to 20 days and you register this in a supplier invoice.
+</p>
+
+
+<p>In a sales or purchase document, you can edit payment terms in the following fields:</p>
+
+
+
+<ul><li><strong>Payment method</strong>. Can have one of the following values:
+	<ul><li><strong>Cash-in-hand</strong></li>
+	<li><strong>Electronic</strong></li>
+	<li><strong>Undefined</strong></li>
+	</ul></li>
+<li><strong>Cash account</strong>. Your company's cash account for receiving the money from the customer or for sending the money to the supplier.
+This field is available only if you set <strong>Payment method</strong> to "Cash-in-hand".
+</li>
+<li><strong>Bank account</strong>. Your company's bank account for receiving the money from the customer or for sending the money to the supplier.
+This field is available only if you set <strong>Payment method</strong> to "Electronic".
+</li>
+<li><strong>Due date</strong>. Due date for each instalment.</li>
+<li><strong>Payment %</strong>. The percentage of the amount the supplier expects by the due date.</li>
+<li><strong>Payment amount</strong>. The amount the supplier expects by the due date.</li>
+</ul><p>To edit a sales or purchase document's payment terms:</p>
+
+<ol><li>Open the document.</li>
+<li>Click the <strong>Payment terms</strong> tab.</li>
+<li>Select the <strong>Set payment terms</strong> checkbox.</li>
+<li>Do any of the following:
+	<ul><li>To make the customer or your company pay once according to the document, click <strong>Single</strong> and then, in the <strong>Due date</strong> field, specify the due date.
+	1C:Drive sets the <strong>Payment % field</strong> to 100.</li>
+	<li>To make the customer or your company pay according to the schedule of the document, click <strong>Schedule</strong> and then, in the payment schedule table, add an item and specify its <strong>Due date</strong> and either <strong>Payment %</strong>, or <strong>Payment amount</strong>.</li>
+	</ul><p>You can add as many items as you need. Also, you can edit and delete items.</p>
+</li>
+<li>In the <strong>Payment method</strong> field, select the payment method.</li>
+<li>Specify the other payment terms (<strong>Cash account</strong>, <strong>Bank account</strong>).</li>
+<li>Click <strong>Save</strong>.</li>
+</ol><h2>Clearing payment terms from sales and purchase documents</h2>
+
+<p>To clear the payment terms for a sales or purchase document:</p>
+
+<ul><li>Open the sales document, click the <b>Payment terms</b> tab, clear the <b>Set payment terms</b> check box, and click <b>OK</b>.</li>
+</ul><h2>Monitoring accounts receivable</h2>
+<p>When you have sales documents with payment terms specified (sales orders, sales invoices, account sales from consignee, or subcontractor reports), you may need to check whether your customers make payments according to these documents.</p>
+
+<p>For this purpose, you can use the following reports:</p>
+
+<ul><li><b>Accounts receivable</b>. Shows whether a customer has an overdue debt to your company according to sales documents.</li>
+<li><b>Accounts receivable aging</b>. Shows a customer's debt amount grouped by time periods.</li>
+</ul><h2>Monitoring accounts payable</h2>
+
+<p>When you have purchase documents with payment terms specified (purchase orders or supplier invoices), you may need to check whether your company makes payments according to these documents.</p>
+
+<p>For this purpose, you can use the following reports:</p>
+
+<ul><li><strong>Accounts payable</strong>. Shows whether your company has overdue debt to its suppliers according to purchase documents.</li>
+<li><strong>Accounts payable aging</strong>. Shows your company's debt amount grouped by time periods.</li>
+</ul></body></html>

@@ -1,0 +1,809 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="FormCommandBar" id="-1"/>
+	<Events>
+		<Event name="ChoiceProcessing">ChoiceProcessing</Event>
+		<Event name="AfterWriteAtServer">AfterWriteAtServer</Event>
+		<Event name="OnReadAtServer">OnReadAtServer</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+		<Event name="OnWriteAtServer">OnWriteAtServer</Event>
+		<Event name="FillCheckProcessingAtServer">FillCheckProcessingAtServer</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Pages" id="282">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Pages</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Pages</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="PagesExtendedTooltip" id="299"/>
+			<ChildItems>
+				<Page name="OptionsFillPage" id="283">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Fill settings page</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Fill settings page</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="OptionsFillPageExtendedTooltip" id="300"/>
+					<ChildItems>
+						<UsualGroup name="Group" id="75">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupExtendedTooltip" id="301"/>
+							<ChildItems>
+								<InputField name="Description" id="1">
+									<DataPath>Object.Description</DataPath>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Wrap>false</Wrap>
+									<ContextMenu name="DescriptionContextMenu" id="2"/>
+									<ExtendedTooltip name="DescriptionExtendedTooltip" id="302"/>
+								</InputField>
+								<InputField name="BusinessCalendar" id="167">
+									<DataPath>Object.BusinessCalendar</DataPath>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="BusinessCalendarContextMenu" id="168"/>
+									<ExtendedTooltip name="BusinessCalendarExtendedTooltip" id="310"/>
+									<Events>
+										<Event name="OnChange">BusinessCalendarOnChange</Event>
+									</Events>
+								</InputField>
+								<UsualGroup name="PeriodFolder" id="221">
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="PeriodFolderExtendedTooltip" id="305"/>
+									<ChildItems>
+										<InputField name="StartDate" id="171">
+											<DataPath>Object.StartDate</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Fill in schedule from</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="StartDateContextMenu" id="172"/>
+											<ExtendedTooltip name="StartDateExtendedTooltip" id="306"/>
+											<Events>
+												<Event name="OnChange">BeginDateOnChange</Event>
+											</Events>
+										</InputField>
+										<InputField name="EndDate" id="219">
+											<DataPath>Object.EndDate</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>to</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="EndDateContextMenu" id="220"/>
+											<ExtendedTooltip name="EndDateExtendedTooltip" id="307"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="SettingsFolder" id="218">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ChildItemsWidth>Equal</ChildItemsWidth>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="SettingsFolderExtendedTooltip" id="313"/>
+							<ChildItems>
+								<UsualGroup name="FillMethodFolder" id="176">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="FillMethodFolderExtendedTooltip" id="314"/>
+									<ChildItems>
+										<RadioButtonField name="FillMethodForWeeks" id="169">
+											<DataPath>Object.FillMethod</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ColumnsCount>1</ColumnsCount>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Week pattern</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xr:DesignTimeRef">Enum.WorkScheduleFillingMethods.EnumValue.ByWeeks</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="FillMethodForWeeksContextMenu" id="170"/>
+											<ExtendedTooltip name="FillMethodForWeeksExtendedTooltip" id="315"/>
+											<Events>
+												<Event name="OnChange">FillMethodOnChange</Event>
+											</Events>
+										</RadioButtonField>
+										<UsualGroup name="FolderLengthCycleDays" id="188">
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="FolderLengthCycleDaysExtendedTooltip" id="318"/>
+											<ChildItems>
+												<RadioButtonField name="FillMethodByCyclesOfAnyLength" id="248">
+													<DataPath>Object.FillMethod</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<RadioButtonType>Auto</RadioButtonType>
+													<ColumnsCount>1</ColumnsCount>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Shift pattern</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xr:DesignTimeRef">Enum.WorkScheduleFillingMethods.EnumValue.ByCyclesOfAnyLength</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="FillMethodByCyclesOfAnyLengthContextMenu" id="249"/>
+													<ExtendedTooltip name="FillMethodByCyclesOfAnyLengthExtendedTooltip" id="317"/>
+													<Events>
+														<Event name="OnChange">FillMethodOnChange</Event>
+													</Events>
+												</RadioButtonField>
+												<UsualGroup name="ShiftPatternGroup" id="375">
+													<Group>AlwaysHorizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ShiftPatternGroupExtendedTooltip" id="376"/>
+													<ChildItems>
+														<PictureDecoration name="Decoration1" id="377">
+															<Width>1</Width>
+															<Height>2</Height>
+															<FileDragMode>AsFile</FileDragMode>
+															<ContextMenu name="Decoration1ContextMenu" id="378"/>
+															<ExtendedTooltip name="Decoration1ExtendedTooltip" id="379"/>
+														</PictureDecoration>
+														<UsualGroup name="ShiftPatternGroupChild" id="380">
+															<Group>Vertical</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ShiftPatternGroupChildExtendedTooltip" id="381"/>
+															<ChildItems>
+																<InputField name="CycleLength" id="189">
+																	<DataPath>CycleLength</DataPath>
+																	<TitleLocation>Left</TitleLocation>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>days</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<Width>6</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<SpinButton>true</SpinButton>
+																	<AutoMarkIncomplete>true</AutoMarkIncomplete>
+																	<MinValue xsi:type="xs:decimal">1</MinValue>
+																	<ContextMenu name="CycleLengthContextMenu" id="190"/>
+																	<ExtendedTooltip name="CycleLengthExtendedTooltip" id="319"/>
+																	<Events>
+																		<Event name="OnChange">CycleLengthOnChange</Event>
+																	</Events>
+																</InputField>
+																<InputField name="BeginnigDate" id="229">
+																	<DataPath>Object.BeginnigDate</DataPath>
+																	<AutoMarkIncomplete>true</AutoMarkIncomplete>
+																	<ContextMenu name="DateReferenceContextMenu" id="230"/>
+																	<ExtendedTooltip name="DateReferenceExtendedTooltip" id="321"/>
+																	<Events>
+																		<Event name="OnChange">DateReferenceOnChange</Event>
+																	</Events>
+																</InputField>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ConsiderHolidaysGroup" id="177">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ConsiderHolidaysGroupExtendedTooltip" id="323"/>
+									<ChildItems>
+										<UsualGroup name="FillTemplateFolder" id="195">
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="FillTemplateFolderExtendedTooltip" id="327"/>
+											<ChildItems>
+												<Table name="FillTemplate" id="196">
+													<Representation>List</Representation>
+													<TitleLocation>Top</TitleLocation>
+													<CommandBarLocation>None</CommandBarLocation>
+													<ChangeRowSet>false</ChangeRowSet>
+													<ChangeRowOrder>false</ChangeRowOrder>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>56</MaxWidth>
+													<Height>7</Height>
+													<Header>false</Header>
+													<HorizontalScrollBar>DontUse</HorizontalScrollBar>
+													<HorizontalLines>false</HorizontalLines>
+													<VerticalLines>false</VerticalLines>
+													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<VerticalStretch>false</VerticalStretch>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<FileDragMode>AsFile</FileDragMode>
+													<DataPath>Object.FillTemplate</DataPath>
+													<SearchStringLocation>None</SearchStringLocation>
+													<ViewStatusLocation>None</ViewStatusLocation>
+													<SearchControlLocation>None</SearchControlLocation>
+													<RowFilter xsi:nil="true"/>
+													<ContextMenu name="FillTemplateContextMenu" id="197">
+														<Autofill>false</Autofill>
+													</ContextMenu>
+													<AutoCommandBar name="FillTemplateCommandBar" id="198"/>
+													<ExtendedTooltip name="FillTemplateExtendedTooltip" id="328"/>
+													<SearchStringAddition name="FillTemplateSearchString" id="364">
+														<AdditionSource>
+															<Item>FillTemplate</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="FillTemplateSearchStringContextMenu" id="365"/>
+														<ExtendedTooltip name="FillTemplateSearchStringExtendedTooltip" id="366"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="FillTemplateViewStatus" id="367">
+														<AdditionSource>
+															<Item>FillTemplate</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="FillTemplateViewStatusContextMenu" id="368"/>
+														<ExtendedTooltip name="FillTemplateViewStatusExtendedTooltip" id="369"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="FillTemplateSearchControl" id="370">
+														<AdditionSource>
+															<Item>FillTemplate</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="FillTemplateSearchControlContextMenu" id="371"/>
+														<ExtendedTooltip name="FillTemplateSearchControlExtendedTooltip" id="372"/>
+													</SearchControlAddition>
+													<Events>
+														<Event name="Selection">FillTemplateChoice</Event>
+													</Events>
+													<ChildItems>
+														<ColumnGroup name="FillTemplateFolderColumns" id="199">
+															<Title>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Filling template column group</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Filling template column group</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>Horizontal</Group>
+															<ExtendedTooltip name="FillTemplateFolderColumnsExtendedTooltip" id="329"/>
+															<ChildItems>
+																<LabelField name="FillTemplateLineNumber" id="208">
+																	<DataPath>Object.FillTemplate.LineNumber</DataPath>
+																	<EditMode>EnterOnInput</EditMode>
+																	<ContextMenu name="FillTemplateLineNumberContextMenu" id="209"/>
+																	<ExtendedTooltip name="FillTemplateLineNumberExtendedTooltip" id="330"/>
+																</LabelField>
+																<LabelField name="FillTemplatePresentationDay" id="212">
+																	<DataPath>Object.FillTemplate.DayPresentation</DataPath>
+																	<EditMode>EnterOnInput</EditMode>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<ContextMenu name="FillTemplatePresentationDayContextMenu" id="213"/>
+																	<ExtendedTooltip name="FillTemplatePresentationDayExtendedTooltip" id="331"/>
+																</LabelField>
+																<CheckBoxField name="FillTemplateDayEnabledInLine" id="233">
+																	<DataPath>Object.FillTemplate.DayIncludedInSchedule</DataPath>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Shows whether the day is added to the schedule</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<EditMode>EnterOnInput</EditMode>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="FillTemplateDayEnabledInLineContextMenu" id="234"/>
+																	<ExtendedTooltip name="FillTemplateDayEnabledInLineExtendedTooltip" id="332"/>
+																	<Events>
+																		<Event name="OnChange">FillTemplateDayEnabledInLineOnChange</Event>
+																	</Events>
+																</CheckBoxField>
+																<LabelField name="FillTemplatePresentationSchedule" id="214">
+																	<DataPath>Object.FillTemplate.SchedulePresentation</DataPath>
+																	<EditMode>EnterOnInput</EditMode>
+																	<CellHyperlink>true</CellHyperlink>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<ContextMenu name="FillTemplatePresentationScheduleContextMenu" id="215"/>
+																	<ExtendedTooltip name="FillTemplatePresentationScheduleExtendedTooltip" id="333"/>
+																</LabelField>
+															</ChildItems>
+														</ColumnGroup>
+													</ChildItems>
+												</Table>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Holidays" id="373">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Holidays</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Holidays</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>55</Width>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="HolidaysExtendedTooltip" id="374"/>
+							<ChildItems>
+								<CheckBoxField name="ConsiderHolidays" id="173">
+									<DataPath>Object.ConsiderHolidays</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ConsiderHolidaysContextMenu" id="174"/>
+									<ExtendedTooltip name="ConsiderHolidaysExtendedTooltip" id="324"/>
+									<Events>
+										<Event name="OnChange">ConsiderHolidaysOnChange</Event>
+									</Events>
+								</CheckBoxField>
+								<LabelField name="SchedulePreHolidayDay" id="287">
+									<DataPath>SchedulePreHolidayDay</DataPath>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Hiperlink>true</Hiperlink>
+									<ContextMenu name="SchedulePreHolidayDayContextMenu" id="288"/>
+									<ExtendedTooltip name="SchedulePreHolidayDayExtendedTooltip" id="326"/>
+									<Events>
+										<Event name="Click">SchedulePreHolidayDayClick</Event>
+									</Events>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="DetailsFolder" id="227">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Details group</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Details group</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="DetailsFolderExtendedTooltip" id="344"/>
+							<ChildItems>
+								<InputField name="Definition" id="162">
+									<DataPath>Object.Definition</DataPath>
+									<TitleLocation>Left</TitleLocation>
+									<Height>1</Height>
+									<ChoiceButton>true</ChoiceButton>
+									<ContextMenu name="DefinitionContextMenu" id="163"/>
+									<ExtendedTooltip name="DefinitionExtendedTooltip" id="345"/>
+									<Events>
+										<Event name="StartChoice">CommentStartChoice</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ResultFillCommandTransitionFolder" id="290">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ResultFillCommandTransitionFolderExtendedTooltip" id="346"/>
+							<ChildItems>
+								<UsualGroup name="YearsOfManualEditingGroup" id="294">
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="YearsOfManualEditingGroupExtendedTooltip" id="347"/>
+									<ChildItems>
+										<LabelField name="ManualEditTextInformation" id="297">
+											<DataPath>ManualEditTextInformation</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<Width>44</Width>
+											<Height>2</Height>
+											<TextColor>0:283ce432-3553-4de9-94a2-ca9a590437f5</TextColor>
+											<ContextMenu name="ManualEditTextInformationContextMenu" id="298"/>
+											<ExtendedTooltip name="ManualEditTextInformationExtendedTooltip" id="349"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<Button name="ResultFill" id="289">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ResultFill</CommandName>
+									<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<ExtendedTooltip name="ResultFillExtendedTooltip" id="350"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ResultFillPage" id="284">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Population result page</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Population result page</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ResultFillPageExtendedTooltip" id="351"/>
+					<ChildItems>
+						<UsualGroup name="ResultFillFolder" id="252">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ChildItemsWidth>LeftWidest</ChildItemsWidth>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ResultFillFolderExtendedTooltip" id="352"/>
+							<ChildItems>
+								<UsualGroup name="WorkScheduleFolder" id="267">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ScheduleGroupExtendedTooltip" id="353"/>
+									<ChildItems>
+										<UsualGroup name="ResultOfFillOptionsFolder" id="271">
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ResultOfFillOptionsFolderExtendedTooltip" id="354"/>
+											<ChildItems>
+												<InputField name="CurrentYearNumber" id="268">
+													<DataPath>CurrentYearNumber</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Year</v8:content>
+														</v8:item>
+													</Title>
+													<SpinButton>true</SpinButton>
+													<EditFormat>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>NG=</v8:content>
+														</v8:item>
+													</EditFormat>
+													<ContextMenu name="NumberOfCurrentYearContextMenu" id="269"/>
+													<ExtendedTooltip name="NumberOfCurrentYearExtendedTooltip" id="355"/>
+													<Events>
+														<Event name="OnChange">CurrentYearNumberOnChange</Event>
+													</Events>
+												</InputField>
+												<Button name="FillByTemplate" id="270">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.FillByTemplate</CommandName>
+													<ExtendedTooltip name="FillByPatternExtendedTooltip" id="357"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<CalendarField name="WorkSchedule" id="253">
+											<DataPath>WorkSchedule</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Schedule population result</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<ShowCurrentDate>false</ShowCurrentDate>
+											<ContextMenu name="WorkScheduleContextMenu" id="254"/>
+											<ExtendedTooltip name="WorkScheduleExtendedTooltip" id="358"/>
+											<Events>
+												<Event name="OnPeriodOutput">WorkScheduleOnPeriodOutput</Event>
+												<Event name="Selection">WorkScheduleChoice</Event>
+											</Events>
+										</CalendarField>
+										<LabelDecoration name="ChartManagementInformationalText" id="275">
+											<VerticalStretch>false</VerticalStretch>
+											<TextColor>0:ad87bd29-0ad1-4da4-ac62-38e714e0cb9f</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>To edit working days and holidays in the calendar, double-click them.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ControlScheduleInformationTextContextMenu" id="276"/>
+											<ExtendedTooltip name="ControlScheduleInformationTextExtendedTooltip" id="359"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ResultFillInformationTextGroup" id="279">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ResultFillInformationTextGroupExtendedTooltip" id="360"/>
+							<ChildItems>
+								<LabelField name="ResultFillInformationText" id="277">
+									<DataPath>ResultFillInformationText</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>55</Width>
+									<Height>2</Height>
+									<VerticalStretch>false</VerticalStretch>
+									<TextColor>0:ad87bd29-0ad1-4da4-ac62-38e714e0cb9f</TextColor>
+									<ContextMenu name="ResultFillInformationTextContextMenu" id="278"/>
+									<ExtendedTooltip name="ResultFillInformationTextExtendedTooltip" id="362"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<Button name="OptionsFill" id="293">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.OptionsFill</CommandName>
+							<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ExtendedTooltip name="OptionsFillExtendedTooltip" id="363"/>
+						</Button>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Calendars</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<Columns>
+				<AdditionalColumns table="Object.FillTemplate">
+					<Column name="DayPresentation" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Day presentation</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="SchedulePresentation" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Timetable presentation</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="Action" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Action</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="CycleLength" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Rotation period</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="OccupancyInformationText" id="2">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="DateOccupancyRate" id="3">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="RequiresFill" id="4">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="WorkSchedule" id="5">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ScheduleDays" id="7">
+			<Type/>
+		</Attribute>
+		<Attribute name="CurrentYearNumber" id="8">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="PreviousYearNumber" id="9">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ResultFillByPattern" id="12">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ManualEdit" id="13">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ResultFillInformationText" id="14">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ModifiedTemplate" id="16">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ModifiedResults" id="17">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ModifiedDays" id="6">
+			<Type/>
+		</Attribute>
+		<Attribute name="SchedulePreHolidayDay" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Pre-holiday working hours</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ManualEditTextInformation" id="18">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="FillByTemplate" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Restore default</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.FillForm</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>FillByTemplate</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ResultFill" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Check result &gt;&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ResultFill</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="OptionsFill" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>&lt;&lt; Back to settings</v8:content>
+				</v8:item>
+			</Title>
+			<Action>OptionsFill</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

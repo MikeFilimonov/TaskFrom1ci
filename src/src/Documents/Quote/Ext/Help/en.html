@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.19267"></meta></head><body>
+<h1>Quotations</h1>
+<p>A <em>quotation</em> is a document that your company submits to a potential customer. It lists the proposed prices for your goods or services. It is normally based on certain conditions provided by the customer.</p>
+<p>You can use a quotation as the first document in a sales flow. For instance, you can create and send a quotation to your customer, then create a sales order based on the quotation, then create a sales invoice based on the sales order, then create a payment document based on the sales invoice or the sales order, and so on. Alternatively, you can create a payment document directly based on the quotation.</p>
+<h2>Viewing quotations</h2>
+<p>To view the list of quotations:</p>
+<ul><li>Click <strong>Sales &gt; Sales &gt; Quotations</strong>. </li></ul><p>You can create, edit, or delete quotations.</p>
+<h2>Quotation fields</h2>
+<p>A quotation has the following fields:</p>
+<ul><li><strong>Customer</strong> (required). The customer name. 
+</li><li><strong>Contract</strong> (required). The contract governing the sale. This field is only available if the customer's billing details include contracts. 
+</li><li><strong>Number</strong>. A unique quotation number. 
+</li><li><strong>dated</strong>. The date and time when the quotation was created. 
+</li><li><strong>Company</strong> (required). The company that issues the quotation. 
+</li><li><strong>Prices and currency</strong>. Indicates the currency, price type, and VAT tax category of the quotation. 
+</li><li><strong>Valid until</strong>. The end of the validity period. It shows how much time your customer has to accept or decline the quotation. 
+</li><li><strong>Terms and conditions</strong>. The quotation terms and conditions. </li></ul><h2>Monitoring quotation statuses</h2>
+<p>For each quotation, 1C:Drive automatically defines its status.</p>
+<p>When viewing the quotation list, the <strong>Status</strong> column helps you focus on the quotations having the status of your interest.</p>
+<p>Available quotation statuses:</p>
+<ul><li><strong>Draft</strong>. The quotation is saved but not posted yet. 
+</li><li><strong>Sent</strong>. The quotation is posted but there is neither sales order, nor sales invoice for it yet. 
+</li><li><strong>Completed</strong>. The quotation is either invoiced, or there is a sales order for it. </li></ul><h2>Creating quotations</h2>
+<p>To create a quotation:</p>
+<ol><li>Click <strong>Sales &gt; Sales &gt; Quotations</strong>. 
+</li><li>Click <strong>Create</strong>. 
+</li><li>Fill the quotation fields. 
+<p>For more information, see <a href="#quotation_fields">Quotation fields</a>.</p>
+</li><li>Specify the goods and services to include in the quotation. 
+<p>For more information, see <a href="#specifying_goods_and_services_to_sell">Specifying goods and services to sell</a>.</p>
+</li><li>Optional. Specify discounts for the goods and services. 
+<p>For more information, see <a href="DataProcessor.DiscountTypes/Help">Discounts</a>.</p>
+</li><li>Optional. Specify payment terms for the quotation. 
+<p>For more information, see <a href="Catalog.CounterpartyContracts.Form.StagesOfPaymentForm/Help">Payment terms</a>.</p>
+</li><li>Optional. Specify quotation variants. 
+<p>For more information, see <a href="#specifying_quotation_variants">Specifying quotation variants</a>.</p>
+</li><li>Click <strong>Post</strong>. 
+</li><li>Print the quotation and send it to the customer. </li></ol><a name="specifying_goods_and_services_to_sell"></a>
+<h2>Specifying goods and services to sell</h2>
+<p>To specify the goods and services your company sells to a customer according to a quotation, use the <strong>Products</strong> tab of the quotation page.</p>
+<p>The table on the tab lists all goods and services the customer is to pay for, their prices, quantities, the VAT amount, and the total amount. In the table, you can add, edit, and delete items.</p>
+<p>Adding an item and filling its fields is a straightforward way to populate the products table. Also, you can copy existing items, paste them to the table, and update their fields.</p>
+<p>Another way to populate the products table is as follows:</p>
+<ul><li>Selecting products </li></ul><a name="selecting_products"></a>
+<h3>Selecting products</h3>
+<p>When selling a product you might want to select it by different criteria.</p>
+<p>For this purpose, use the product selection tool. To open it:</p>
+<ul><li>On the <strong>Products</strong> tab of the quotation, click <strong>Select</strong>. </li></ul><p>For more information, see <a href="DataProcessor.ProductsSelection/Help">Selecting products for sales documents</a>.</p><a name="specifying_quotation_variants"></a>
+<h2>Specifying quotation variants</h2>
+<p>Sometimes, when communicating with a customer on a particular deal, you might need to prepare more than one variant of the same quotation to let the customer choose an appropriate one among them.</p>
+<p>For instance, in one quotation variant, you specify one equipment model and installment works, while in another variant, you specify another model and the same installment works.</p>
+<p>For this purpose, in 1C:Drive, for a quotation, you can create any number of its alternative variants, edit or delete them. Each variant has its own set of goods and services specified.</p>
+<h3>Viewing quotation variants</h3>
+<p>1C:Drive displays all variants of a quotation on the <strong>Products</strong> tab of the quotation.</p>
+<p>By default, a quotation contains a single quotation variant.</p>
+<p>Among the quotation variants, one variant is selected. For the selected variant, 1C:Drive displays its content (goods and services) on the <strong>Products</strong> tab and lets you edit it. For more information, see <a href="#specifying_goods_and_services_to_sell">Specifying goods and services to sell</a>.</p>
+<p>To display another variant of the quotation:</p>
+<ul><li>On the <strong>Products</strong> tab of the quotation, select this variant. </li></ul><p>In a quotation, you can mark one of its variants as the preferred variant. For instance, the one your customer has chosen. You cannot delete this variant unless you mark another variant as the preferred one.</p>
+<p>When you create other documents based on a quotation, 1C:Drive uses the content of the quotation's preferred variant.</p>
+<p>To mark a quotation variant as the preferred one:</p>
+<ul><li>On the <strong>Products</strong> tab of the quotation, select the variant and then click <strong>Actions &gt; Set as preferred</strong>. </li></ul><h3>Creating quotation variants</h3>
+<p>To create a quotation variant:</p>
+<ul><li>On the <strong>Products</strong> tab of the quotation, click <strong>Actions &gt; Add</strong>. </li></ul><p>To create a copy of a quotation variant in the same quotation:</p>
+<ul><li>On the <strong>Products</strong> tab of the quotation, select the variant and then click <strong>Actions &gt; Copy</strong>. </li></ul><h3>Deleting quotation variants</h3>
+<p>To delete a quotation variant:</p>
+<ul><li>On the <strong>Products</strong> tab of the quotation, select this variant and then click <strong>Actions &gt; Delete</strong>. </li></ul></body></html>

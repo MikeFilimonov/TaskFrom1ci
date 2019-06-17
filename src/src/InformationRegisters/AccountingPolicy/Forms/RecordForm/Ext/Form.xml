@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="FormCommandBar" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">AfterWrite</Event>
+		<Event name="BeforeWrite">BeforeWrite</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+		<Event name="BeforeWriteAtServer">BeforeWriteAtServer</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="GroupPeriod" id="33">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="GroupPeriodExtendedTooltip" id="34"/>
+			<ChildItems>
+				<InputField name="Period" id="1">
+					<DataPath>Record.Period</DataPath>
+					<ContextMenu name="PeriodContextMenu" id="2"/>
+					<ExtendedTooltip name="PeriodExtendedTooltip" id="3"/>
+				</InputField>
+				<InputField name="Company" id="4">
+					<DataPath>Record.Company</DataPath>
+					<ContextMenu name="CompanyContextMenu" id="5"/>
+					<ExtendedTooltip name="CompanyExtendedTooltip" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Pages" id="43">
+			<ExtendedTooltip name="PagesExtendedTooltip" id="44"/>
+			<ChildItems>
+				<Page name="PageFinance" id="45">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Finance</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="PageFinanceExtendedTooltip" id="46"/>
+					<ChildItems>
+						<UsualGroup name="GroupVAT" id="25">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>VAT</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="GroupVATExtendedTooltip" id="26"/>
+							<ChildItems>
+								<CheckBoxField name="RegisteredForVAT" id="7">
+									<DataPath>Record.RegisteredForVAT</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="RegisteredForVATContextMenu" id="8"/>
+									<ExtendedTooltip name="RegisteredForVATExtendedTooltip" id="9"/>
+									<Events>
+										<Event name="OnChange">RegisteredForVATOnChange</Event>
+									</Events>
+								</CheckBoxField>
+								<UsualGroup name="GroupVATOptions" id="31">
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="GroupVATOptionsExtendedTooltip" id="32"/>
+									<ChildItems>
+										<UsualGroup name="GroupVATOptionsLeft" id="49">
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="GroupVATOptionsLeftExtendedTooltip" id="50"/>
+											<ChildItems>
+												<PictureDecoration name="Decoration1" id="51">
+													<Width>1</Width>
+													<Height>2</Height>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="Decoration1ContextMenu" id="52"/>
+													<ExtendedTooltip name="Decoration1ExtendedTooltip" id="53"/>
+												</PictureDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="GroupVATOptionsRight" id="54">
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="GroupVATOptionsRightExtendedTooltip" id="55"/>
+											<ChildItems>
+												<RadioButtonField name="PostVATEntriesBySourceDocuments" id="56">
+													<DataPath>PostVATEntriesBySourceDocuments</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Register VAT entries with</v8:content>
+														</v8:item>
+													</Title>
+													<RadioButtonType>Auto</RadioButtonType>
+													<ColumnsCount>1</ColumnsCount>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Source documents (sales invoices, supplier invoices, and so on)</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">1</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Tax invoices</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">0</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="PostVATEntriesBySourceDocumentsContextMenu" id="57"/>
+													<ExtendedTooltip name="PostVATEntriesBySourceDocumentsExtendedTooltip" id="58"/>
+													<Events>
+														<Event name="OnChange">PostVATEntriesBySourceDocumentsOnChange</Event>
+													</Events>
+												</RadioButtonField>
+												<UsualGroup name="CreateAutomaticTaxInvoice" id="59">
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="CreateAutomaticTaxInvoiceExtendedTooltip" id="60"/>
+													<ChildItems>
+														<PictureDecoration name="Decoration2" id="61">
+															<Width>1</Width>
+															<Height>1</Height>
+															<FileDragMode>AsFile</FileDragMode>
+															<ContextMenu name="Decoration2ContextMenu" id="62"/>
+															<ExtendedTooltip name="Decoration2ExtendedTooltip" id="63"/>
+														</PictureDecoration>
+														<CheckBoxField name="IssueAutomaticallyAgainstSales" id="64">
+															<DataPath>Record.IssueAutomaticallyAgainstSales</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="IssueAutomaticallyAgainstSalesContextMenu" id="65"/>
+															<ExtendedTooltip name="IssueAutomaticallyAgainstSalesExtendedTooltip" id="66"/>
+														</CheckBoxField>
+													</ChildItems>
+												</UsualGroup>
+												<RadioButtonField name="PostAdvancePaymentsBySourceDocuments" id="67">
+													<DataPath>PostAdvancePaymentsBySourceDocuments</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Register VAT entries on advance payments with</v8:content>
+														</v8:item>
+													</Title>
+													<RadioButtonType>Auto</RadioButtonType>
+													<ColumnsCount>1</ColumnsCount>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Source documents (bank payments, bank receipts, and so on)</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">1</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Advance payment invoices</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">0</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="PostAdvancePaymentsBySourceDocumentsContextMenu" id="68"/>
+													<ExtendedTooltip name="PostAdvancePaymentsBySourceDocumentsExtendedTooltip" id="69"/>
+													<Events>
+														<Event name="OnChange">PostAdvancePaymentsBySourceDocumentsOnChange</Event>
+													</Events>
+												</RadioButtonField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="DefaultVATRate" id="13">
+									<DataPath>Record.DefaultVATRate</DataPath>
+									<ContextMenu name="DefaultVATRateContextMenu" id="14"/>
+									<ExtendedTooltip name="DefaultVATRateExtendedTooltip" id="15"/>
+								</InputField>
+								<InputField name="VATThreshold" id="16">
+									<DataPath>Record.VATThreshold</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>The threshold for registering for VAT or joining a VAT accounting scheme (for informational purposes only).</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ContextMenu name="VATThresholdContextMenu" id="17"/>
+									<ExtendedTooltip name="VATThresholdExtendedTooltip" id="18"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="GroupPL" id="27">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Profit and loss statement</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="GroupPLExtendedTooltip" id="28"/>
+							<ChildItems>
+								<CheckBoxField name="CashMethodOfAccounting" id="19">
+									<DataPath>Record.CashMethodOfAccounting</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="CashMethodOfAccountingContextMenu" id="20"/>
+									<ExtendedTooltip name="CashMethodOfAccountingExtendedTooltip" id="21"/>
+								</CheckBoxField>
+								<InputField name="InventoryValuationMethod" id="22">
+									<DataPath>InventoryValuationMethod</DataPath>
+									<ContextMenu name="InventoryValuationMethodContextMenu" id="23"/>
+									<ExtendedTooltip name="InventoryValuationMethodExtendedTooltip" id="24"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="PageAdavancedInventoryManagment" id="47">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Аdvanced inventory management</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="PageAdavancedInventoryManagmentExtendedTooltip" id="48"/>
+					<ChildItems>
+						<RadioButtonField name="UseGoodsReturnFromCustomer" id="37">
+							<DataPath>UseGoodsReturnFromCustomer</DataPath>
+							<TitleTextColor>0:ad87bd29-0ad1-4da4-ac62-38e714e0cb9f</TitleTextColor>
+							<RadioButtonType>RadioButtons</RadioButtonType>
+							<ColumnsCount>1</ColumnsCount>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Credit note document posts all entries, including inventory</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.YesNo.EnumValue.No</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Credit note document posts accounts receivable, Goods return posts inventory entries</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.YesNo.EnumValue.Yes</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="UseGoodsReturnFromCustomerContextMenu" id="38"/>
+							<ExtendedTooltip name="UseGoodsReturnFromCustomerExtendedTooltip" id="39"/>
+						</RadioButtonField>
+						<RadioButtonField name="UseGoodsReturnToSupplier" id="40">
+							<DataPath>UseGoodsReturnToSupplier</DataPath>
+							<TitleTextColor>0:ad87bd29-0ad1-4da4-ac62-38e714e0cb9f</TitleTextColor>
+							<RadioButtonType>RadioButtons</RadioButtonType>
+							<ColumnsCount>1</ColumnsCount>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Debit note document posts all entries, including inventory</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.YesNo.EnumValue.No</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Debit note document posts accounts payable, Goods return posts inventory entries</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.YesNo.EnumValue.Yes</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="UseGoodsReturnToSupplierContextMenu" id="41"/>
+							<ExtendedTooltip name="UseGoodsReturnToSupplierExtendedTooltip" id="42"/>
+						</RadioButtonField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Record" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.AccountingPolicy</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="UseTaxInvoices" id="2">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="RegisteredForVAT" id="3">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="UseGoodsReturnFromCustomer" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Sales return flow</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.YesNo</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="UseGoodsReturnToSupplier" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Purchase return flow</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.YesNo</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Period" id="7">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Company" id="8">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Companies</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="PostVATEntriesBySourceDocuments" id="9">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="PostAdvancePaymentsBySourceDocuments" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Post advance payments by source documents</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="InventoryValuationMethod" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Inventory valuation method</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.InventoryValuationMethods</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

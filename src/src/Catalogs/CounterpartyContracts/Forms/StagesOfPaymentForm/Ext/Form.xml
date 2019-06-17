@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<Title>
+		<v8:item>
+			<v8:lang>en</v8:lang>
+			<v8:content>Payment terms &amp; conditions</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>ChangeHistory</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Delete</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>Reread</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>SetDeletionMark</ExcludedCommand>
+		<ExcludedCommand>ShowInList</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<ShowTitle>false</ShowTitle>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnReadAtServer">OnReadAtServer</Event>
+		<Event name="BeforeClose">BeforeClose</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="PaymentMethod" id="7">
+			<DataPath>Object.PaymentMethod</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<Width>15</Width>
+			<VerticalStretch>false</VerticalStretch>
+			<ContextMenu name="PaymentMethodContextMenu" id="8"/>
+			<ExtendedTooltip name="PaymentMethodExtendedTooltip" id="9"/>
+		</InputField>
+		<UsualGroup name="StagesOfPaymentGroup" id="97">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Payment terms</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="StagesOfPaymentGroupExtendedTooltip" id="98"/>
+			<ChildItems>
+				<Table name="StagesOfPayment" id="10">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Object.StagesOfPayment</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="StagesOfPaymentContextMenu" id="11"/>
+					<AutoCommandBar name="StagesOfPaymentCommandBar" id="12">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="StagesOfPaymentAdd" id="35">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<OnlyInAllActions>true</OnlyInAllActions>
+								<CommandName>Form.Item.StagesOfPayment.StandardCommand.Add</CommandName>
+								<ExtendedTooltip name="StagesOfPaymentAddExtendedTooltip" id="36"/>
+							</Button>
+							<Button name="StagesOfPaymentCopy" id="37">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<OnlyInAllActions>true</OnlyInAllActions>
+								<CommandName>Form.Item.StagesOfPayment.StandardCommand.Copy</CommandName>
+								<ExtendedTooltip name="StagesOfPaymentCopyExtendedTooltip" id="38"/>
+							</Button>
+							<Button name="StagesOfPaymentChange" id="39">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<OnlyInAllActions>true</OnlyInAllActions>
+								<CommandName>Form.Item.StagesOfPayment.StandardCommand.Change</CommandName>
+								<ExtendedTooltip name="StagesOfPaymentChangeExtendedTooltip" id="40"/>
+							</Button>
+							<Button name="StagesOfPaymentDelete" id="41">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<OnlyInAllActions>true</OnlyInAllActions>
+								<CommandName>Form.Item.StagesOfPayment.StandardCommand.Delete</CommandName>
+								<ExtendedTooltip name="StagesOfPaymentDeleteExtendedTooltip" id="42"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="StagesOfPaymentExtendedTooltip" id="13"/>
+					<SearchStringAddition name="StagesOfPaymentSearchString" id="14">
+						<AdditionSource>
+							<Item>StagesOfPayment</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="StagesOfPaymentSearchStringContextMenu" id="15"/>
+						<ExtendedTooltip name="StagesOfPaymentSearchStringExtendedTooltip" id="16"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="StagesOfPaymentViewStatus" id="17">
+						<AdditionSource>
+							<Item>StagesOfPayment</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="StagesOfPaymentViewStatusContextMenu" id="18"/>
+						<ExtendedTooltip name="StagesOfPaymentViewStatusExtendedTooltip" id="19"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="StagesOfPaymentSearchControl" id="20">
+						<AdditionSource>
+							<Item>StagesOfPayment</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="StagesOfPaymentSearchControlContextMenu" id="21"/>
+						<ExtendedTooltip name="StagesOfPaymentSearchControlExtendedTooltip" id="22"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnEditEnd">StagesOfPaymentOnEditEnd</Event>
+						<Event name="AfterDeleteRow">StagesOfPaymentAfterDeleteRow</Event>
+					</Events>
+					<ChildItems>
+						<LabelField name="StagesOfPaymentLineNumber" id="63">
+							<DataPath>Object.StagesOfPayment.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="StagesOfPaymentLineNumberContextMenu" id="64"/>
+							<ExtendedTooltip name="StagesOfPaymentLineNumberExtendedTooltip" id="65"/>
+						</LabelField>
+						<InputField name="StagesOfPaymentTerm" id="66">
+							<DataPath>Object.StagesOfPayment.Term</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="StagesOfPaymentTermContextMenu" id="67"/>
+							<ExtendedTooltip name="StagesOfPaymentTermExtendedTooltip" id="68"/>
+						</InputField>
+						<InputField name="StagesOfPaymentDuePeriod" id="69">
+							<DataPath>Object.StagesOfPayment.DuePeriod</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="StagesOfPaymentDuePeriodContextMenu" id="70"/>
+							<ExtendedTooltip name="StagesOfPaymentDuePeriodExtendedTooltip" id="71"/>
+						</InputField>
+						<InputField name="StagesOfPaymentPercentageOfPayment" id="72">
+							<DataPath>Object.StagesOfPayment.PaymentPercentage</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="StagesOfPaymentPercentageOfPaymentContextMenu" id="73"/>
+							<ExtendedTooltip name="StagesOfPaymentPercentageOfPaymentExtendedTooltip" id="74"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="EarlyPaymentDiscountsGroup" id="99">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Early payment discounts</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="EarlyPaymentDiscountsGroupExtendedTooltip" id="100"/>
+			<ChildItems>
+				<InputField name="ProvideEPD" id="109">
+					<DataPath>Object.ProvideEPD</DataPath>
+					<ContextMenu name="ProvideEPDContextMenu" id="110"/>
+					<ExtendedTooltip name="ProvideEPDExtendedTooltip" id="111"/>
+				</InputField>
+				<Table name="EarlyPaymentDiscounts" id="75">
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Object.EarlyPaymentDiscounts</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="EarlyPaymentDiscountsContextMenu" id="76"/>
+					<AutoCommandBar name="EarlyPaymentDiscountsCommandBar" id="77">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="EarlyPaymentDiscountsAdd" id="101">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<OnlyInAllActions>true</OnlyInAllActions>
+								<CommandName>Form.Item.EarlyPaymentDiscounts.StandardCommand.Add</CommandName>
+								<ExtendedTooltip name="EarlyPaymentDiscountsAddExtendedTooltip" id="102"/>
+							</Button>
+							<Button name="EarlyPaymentDiscountsCopy" id="103">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<OnlyInAllActions>true</OnlyInAllActions>
+								<CommandName>Form.Item.EarlyPaymentDiscounts.StandardCommand.Copy</CommandName>
+								<ExtendedTooltip name="EarlyPaymentDiscountsCopyExtendedTooltip" id="104"/>
+							</Button>
+							<Button name="EarlyPaymentDiscountsChange" id="105">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<OnlyInAllActions>true</OnlyInAllActions>
+								<CommandName>Form.Item.EarlyPaymentDiscounts.StandardCommand.Change</CommandName>
+								<ExtendedTooltip name="EarlyPaymentDiscountsChangeExtendedTooltip" id="106"/>
+							</Button>
+							<Button name="EarlyPaymentDiscountsDelete" id="107">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<OnlyInAllActions>true</OnlyInAllActions>
+								<CommandName>Form.Item.EarlyPaymentDiscounts.StandardCommand.Delete</CommandName>
+								<ExtendedTooltip name="EarlyPaymentDiscountsDeleteExtendedTooltip" id="108"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="EarlyPaymentDiscountsExtendedTooltip" id="78"/>
+					<SearchStringAddition name="EarlyPaymentDiscountsSearchString" id="79">
+						<AdditionSource>
+							<Item>EarlyPaymentDiscounts</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="EarlyPaymentDiscountsSearchStringContextMenu" id="80"/>
+						<ExtendedTooltip name="EarlyPaymentDiscountsSearchStringExtendedTooltip" id="81"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="EarlyPaymentDiscountsViewStatus" id="82">
+						<AdditionSource>
+							<Item>EarlyPaymentDiscounts</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="EarlyPaymentDiscountsViewStatusContextMenu" id="83"/>
+						<ExtendedTooltip name="EarlyPaymentDiscountsViewStatusExtendedTooltip" id="84"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="EarlyPaymentDiscountsSearchControl" id="85">
+						<AdditionSource>
+							<Item>EarlyPaymentDiscounts</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="EarlyPaymentDiscountsSearchControlContextMenu" id="86"/>
+						<ExtendedTooltip name="EarlyPaymentDiscountsSearchControlExtendedTooltip" id="87"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="EarlyPaymentDiscountsPeriod" id="91">
+							<DataPath>Object.EarlyPaymentDiscounts.Period</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="EarlyPaymentDiscountsPeriodContextMenu" id="92"/>
+							<ExtendedTooltip name="EarlyPaymentDiscountsPeriodExtendedTooltip" id="93"/>
+						</InputField>
+						<InputField name="EarlyPaymentDiscountsDiscount" id="94">
+							<DataPath>Object.EarlyPaymentDiscounts.Discount</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="EarlyPaymentDiscountsDiscountContextMenu" id="95"/>
+							<ExtendedTooltip name="EarlyPaymentDiscountsDiscountExtendedTooltip" id="96"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<CommandBar name="GroupFooter" id="59">
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="GroupFooterExtendedTooltip" id="60"/>
+			<ChildItems>
+				<Button name="OK" id="55">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<DefaultItem>true</DefaultItem>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<CommandName>Form.Command.OK</CommandName>
+					<ExtendedTooltip name="OKExtendedTooltip" id="56"/>
+				</Button>
+				<Button name="Cancel" id="61">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.Cancel</CommandName>
+					<ExtendedTooltip name="CancelExtendedTooltip" id="62"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.CounterpartyContracts</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<Columns>
+				<AdditionalColumns table="Object.InfobaseParameters"/>
+				<AdditionalColumns table="Object.StagesOfPayment">
+					<Column name="IncorrectPersentageOfPayment" id="1">
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+					<Column name="IncorrectDuePeriod" id="2">
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="LineNumberOfTheTotalPayment" id="2">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="CloseFormWithoutConfirmation" id="4">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="OK" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>OK</v8:content>
+				</v8:item>
+			</Title>
+			<Action>OK</Action>
+		</Command>
+		<Command name="Cancel" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Cancel</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Cancel</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="UUID">
+			<Type/>
+		</Parameter>
+		<Parameter name="AddressInTempStorage">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>CommonCommand.AttachedToObjectFiles</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.19130"></meta></head><body>
+<h1>Bank statement processing settings</h1>
+<p>The format of an exported bank statement depends on the bank client system.</p>
+<p>To be able to <a href="DataProcessor.BankStatementProcessing/Help">import data from a bank statement file</a>, you have to add and configure a data processor that supports this data format. Typically, for each file format you have a separate data processor in 1C:Drive.</p>
+<p>To view and edit the list of data processor settings, click <strong>Cash management &gt; Bank statement processing settings</strong>.</p>
+<p>Each list item represents data processor settings and has the following fields:</p>
+<ul><li><strong>Description</strong>. The name of the data processor settings. 
+</li><li><strong>Data processor</strong>. A reference to a data processor available in 1C:Drive. For more information, see ??? 
+</li><li><strong>Encoding</strong>. The encoding of source bank statement files. 
+</li><li><strong>File extensions</strong>. The supported extensions of source bank statement files. Use the following template: 
+<p><em>Format_name1|*.extension1|Format_name2|*.extension2</em></p>
+<p>Example:</p>
+<p>XML file (*.xml)|*.xml|Text files (*.txt)|*.txt</p>
+<p>Do not use spaces in file masks (like "*.xml"). Also, do not include spaces before and after vertical pipe symbols ("|").</p>
+</li><li><strong>Automatic payment allocation</strong>. Specifies whether 1C:Drive automatically allocates the imported incoming payments. 
+</li><li><strong>Import directory</strong>. The default folder where the data processor looks for source files. 
+</li><li><strong>Additional settings</strong>. Extra settings that affect the behavior of the data processor. For instance, these can be mappings to the items of the <strong>Cash flow items</strong> list, which allows 1C:Drive to distinguish between payments from customers, payments to vendors, and other payments. </li></ul><p>You can create, edit, and delete data processor settings.</p></body></html>

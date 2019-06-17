@@ -1,0 +1,292 @@
+﻿#Region GeneralPurposeProceduresAndFunctions
+
+&AtServer
+// Procedure fills the exchange rates table
+//
+Procedure FillTableFixedAssets()
+	
+	Query = New Query;
+	Query.Text = 
+	"SELECT
+	|	DepreciationParametersSliceLast.FixedAsset AS FixedAsset,
+	|	DepreciationParametersSliceLast.StructuralUnit AS Department,
+	|	DepreciationParametersSliceLast.AmountOfProductsServicesForDepreciationCalculation AS AmountOfProductsServicesForDepreciationCalculation,
+	|	DepreciationParametersSliceLast.CostForDepreciationCalculation AS CostForDepreciationCalculation,
+	|	DepreciationParametersSliceLast.UsagePeriodForDepreciationCalculation AS UsagePeriodForDepreciationCalculation,
+	|	DepreciationParametersSliceLast.GLExpenseAccount AS GLExpenseAccount,
+	|	DepreciationParametersSliceLast.BusinessLine AS BusinessLine
+	|FROM
+	|	InformationRegister.FixedAssetParameters.SliceLast(&DocumentDate, Company = &Company) AS DepreciationParametersSliceLast";
+	
+	Query.SetParameter("DocumentDate", Object.Date);
+	Query.SetParameter("Company", ParentCompany);
+	
+	QueryResultTable = Query.Execute().Unload();
+	TableFixedAssets.Load(QueryResultTable);
+	
+EndProcedure
+
+&AtServerNoContext
+// It receives data set from server for the ContractOnChange procedure.
+//
+Function GetDataDateOnChange(DocumentRef, DateNew, DateBeforeChange)
+	
+	DATEDIFF = DriveServer.CheckDocumentNumber(DocumentRef, DateNew, DateBeforeChange);
+	
+	StructureData = New Structure();
+	
+	StructureData.Insert(
+		"DATEDIFF",
+		DATEDIFF
+	);
+	
+	Return StructureData;
+	
+EndFunction
+
+&AtServerNoContext
+// It receives data set from server for the ContractOnChange procedure.
+//
+Function GetCompanyDataOnChange(Company)
+	
+	StructureData = New Structure();
+	
+	StructureData.Insert(
+		"Counterparty",
+		DriveServer.GetCompany(Company)
+	);
+	
+	Return StructureData;
+	
+EndFunction
+
+&AtServerNoContext
+// Receives the set of data from the server for the ProductsOnChange procedure.
+//
+Function GetDataFixedAsset(FixedAsset)
+	
+	StructureData = New Structure();
+	
+	StructureData.Insert("MethodOfDepreciationProportionallyProductsAmount", FixedAsset.DepreciationMethod = Enums.FixedAssetDepreciationMethods.ProportionallyToProductsVolume);
+	
+	Return StructureData;
+	
+EndFunction
+
+#EndRegion
+
+#Region ProcedureFormEventHandlers
+
+&AtServer
+// Procedure - OnCreateAtServer event handler.
+// The procedure implements
+// - form attribute initialization,
+// - setting of the form functional options parameters.
+//
+Procedure OnCreateAtServer(Cancel, StandardProcessing)
+	
+	DriveServer.FillDocumentHeader(
+		Object,
+		,
+		Parameters.CopyingValue,
+		Parameters.Basis,
+		PostingIsAllowed,
+		Parameters.FillingValues
+	);
+	
+	DocumentDate = Object.Date;
+	If Not ValueIsFilled(DocumentDate) Then
+		DocumentDate = CurrentDate();
+	EndIf;
+	
+	ParentCompany = DriveServer.GetCompany(Object.Company);
+	
+	FillTableFixedAssets();
+	
+	User = Users.CurrentUser();
+	
+	SettingValue = DriveReUse.GetValueByDefaultUser(User, "MainDepartment");
+	MainDepartment = ?(ValueIsFilled(SettingValue), SettingValue, Catalogs.BusinessUnits.MainDepartment);
+	
+	// StandardSubsystems.AdditionalReportsAndDataProcessors
+	AdditionalReportsAndDataProcessors.OnCreateAtServer(ThisForm);
+	// End StandardSubsystems.AdditionalReportsAndDataProcessors
+	
+	// StandardSubsystems.Printing
+	PrintManagement.OnCreateAtServer(ThisForm, Items.ImportantCommandsGroup);
+	// End StandardSubsystems.Printing
+	
+EndProcedure
+
+// Procedure - OnReadAtServer event handler.
+//
+&AtServer
+Procedure OnReadAtServer(CurrentObject)
+	
+	ClosingDates.ObjectOnReadAtServer(ThisForm, CurrentObject);
+	
+EndProcedure
+
+&AtClient
+// Procedure - event handler AfterWriting.
+//
+Procedure AfterWrite(WriteParameters)
+	
+	Notify("FixedAssetsStatesUpdate");
+	
+EndProcedure
+
+#EndRegion
+
+#Region ProcedureEventHandlersOfFormAttributes
+
+&AtClient
+// Procedure - event handler OnChange of the Date input field.
+// The procedure determines the situation when after changing the date
+// of a document this document is found in another period
+// of documents enumeration, and in this case the procedure assigns new unique number to the document.
+// Overrides the corresponding form parameter.
+//
+Procedure DateOnChange(Item)
+	
+	// Date change event DataProcessor.
+	DateBeforeChange = DocumentDate;
+	DocumentDate = Object.Date;
+	If Object.Date <> DateBeforeChange Then
+		StructureData = GetDataDateOnChange(Object.Ref, Object.Date, DateBeforeChange);
+		If StructureData.DATEDIFF <> 0 Then
+			Object.Number = "";
+		EndIf;
+	EndIf; 
+	
+EndProcedure
+
+&AtClient
+// Procedure - event handler OnChange of the Company input field.
+// In procedure the document number
+// is cleared, and also the form functional options are configured.
+// Overrides the corresponding form parameter.
+//
+Procedure CompanyOnChange(Item)
+	
+	// Company change event data processor.
+	Object.Number = "";
+	StructureData = GetCompanyDataOnChange(Object.Company);
+	Counterparty = StructureData.Counterparty;
+	
+EndProcedure
+
+#Region EventHandlersOfThePropertyTabularSectionAttributes
+
+&AtClient
+// Procedure - event handler OnStartEdit of the FixedAssets list row.
+//
+Procedure FixedAssetsOnStartEdit(Item, NewRow, Copy)
+	
+	If NewRow Then
+		TabularSectionRow = Items.FixedAssets.CurrentData;
+		TabularSectionRow.StructuralUnit = MainDepartment;
+	EndIf;	
+	
+EndProcedure
+
+&AtClient
+// Procedure - event handler OnChange of the WorksProductsVolumeForDepreciationCalculation input field 
+// in the row of the FixedAssets
+// tabular section.
+//
+Procedure FixedAssetsVolumeProductsWorksForDepreciationCalculationOnChange(Item)
+	
+	TabularSectionRow = Items.FixedAssets.CurrentData;
+	StructureData = GetDataFixedAsset(TabularSectionRow.FixedAsset);
+	
+	If Not StructureData.MethodOfDepreciationProportionallyProductsAmount Then
+		ShowMessageBox(Undefined,NStr("en = '""Product (work) volume for calculating depreciation"" cannot be filled in for the specified depreciation method.'"));
+		TabularSectionRow.AmountOfProductsServicesForDepreciationCalculation = 0;
+	EndIf;
+	
+EndProcedure
+
+&AtClient
+// Procedure - event handler OnChange of the UsagePeriodForDepreciationCalculation input field 
+// in the row of the FixedAssets
+// tabular section.
+//
+Procedure FixedAssetsUsagePeriodForDepreciationCalculationOnChange(Item)
+	
+	TabularSectionRow = Items.FixedAssets.CurrentData;
+	StructureData = GetDataFixedAsset(TabularSectionRow.FixedAsset);
+	
+	If StructureData.MethodOfDepreciationProportionallyProductsAmount Then
+		ShowMessageBox(Undefined,NStr("en = 'Cannot fill in ""Useful life for calculating depreciation"" for the specified method of depreciation.'"));
+		TabularSectionRow.UsagePeriodForDepreciationCalculation = 0;
+	EndIf;
+	
+EndProcedure
+
+&AtClient
+// Procedure - event handler OnChange of the
+// FixedAsset input field in the row
+// of the FixedAssets tabular section.
+//
+Procedure FixedAssetsFixedAssetOnChange(Item)
+	
+	FixedAssetsArray = TableFixedAssets.FindRows(New Structure("FixedAsset", Items.FixedAssets.CurrentData.FixedAsset));
+	
+	If FixedAssetsArray.Count() <> 0 Then
+		Items.FixedAssets.CurrentData.UsagePeriodForDepreciationCalculation = FixedAssetsArray[0].UsagePeriodForDepreciationCalculation;
+		Items.FixedAssets.CurrentData.AmountOfProductsServicesForDepreciationCalculation = FixedAssetsArray[0].AmountOfProductsServicesForDepreciationCalculation;
+		Items.FixedAssets.CurrentData.CostForDepreciationCalculation = FixedAssetsArray[0].CostForDepreciationCalculation;
+		Items.FixedAssets.CurrentData.CostForDepreciationCalculationBeforeChanging = FixedAssetsArray[0].CostForDepreciationCalculation;
+		Items.FixedAssets.CurrentData.GLExpenseAccount = FixedAssetsArray[0].GLExpenseAccount;
+		Items.FixedAssets.CurrentData.BusinessLine = FixedAssetsArray[0].BusinessLine;
+		Items.FixedAssets.CurrentData.StructuralUnit = FixedAssetsArray[0].Department;
+	Else
+		Items.FixedAssets.CurrentData.UsagePeriodForDepreciationCalculation = 0;
+		Items.FixedAssets.CurrentData.AmountOfProductsServicesForDepreciationCalculation = 0;
+		Items.FixedAssets.CurrentData.CostForDepreciationCalculation = 0;
+		Items.FixedAssets.CurrentData.CostForDepreciationCalculationBeforeChanging = 0;
+	EndIf;
+	
+	TabularSectionRow = Items.FixedAssets.CurrentData;
+	StructureData = GetDataFixedAsset(TabularSectionRow.FixedAsset);
+	
+	If StructureData.MethodOfDepreciationProportionallyProductsAmount Then
+		TabularSectionRow.UsagePeriodForDepreciationCalculation = 0;
+	Else
+		TabularSectionRow.AmountOfProductsServicesForDepreciationCalculation = 0;
+	EndIf;
+	
+EndProcedure
+
+#EndRegion
+
+#Region LibrariesHandlers
+
+// StandardSubsystems.AdditionalReportsAndDataProcessors
+&AtClient
+Procedure Attachable_ExecuteAssignedCommand(Command)
+	If Not AdditionalReportsAndDataProcessorsClient.ExecuteAllocatedCommandAtClient(ThisForm, Command.Name) Then
+		ExecutionResult = Undefined;
+		AdditionalReportsAndProcessingsExecuteAllocatedCommandAtServer(Command.Name, ExecutionResult);
+		AdditionalReportsAndDataProcessorsClient.ShowCommandExecutionResult(ThisForm, ExecutionResult);
+	EndIf;
+EndProcedure
+
+&AtServer
+Procedure AdditionalReportsAndProcessingsExecuteAllocatedCommandAtServer(ItemName, ExecutionResult)
+	AdditionalReportsAndDataProcessors.ExecuteAllocatedCommandAtServer(ThisForm, ItemName, ExecutionResult);
+EndProcedure
+// End StandardSubsystems.AdditionalReportsAndDataProcessors
+
+// StandardSubsystems.Printing
+&AtClient
+Procedure Attachable_ExecutePrintCommand(Command)
+	PrintManagementClient.ExecuteConnectedPrintCommand(Command, ThisObject, Object);
+EndProcedure
+
+// End StandardSubsystems.Printing
+
+#EndRegion
+
+#EndRegion

@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<h1>Goods return documents</h1>
+<p>There are various reasons why your customers may wish to return merchandise they bought from your company. These might include the poor quality of the merchandise, a mistaken purchase of the wrong product, defective items, or extra items the customer ordered. The same reasons may force you to return merchandise your company bought from your supplier.</p>
+<p>To register the title to the goods transfer for the goods your customer returns to your company, you register a <i>goods return</i> document in 1C:Drive. On the contrary, if your company returns goods to your supplier, you issue a <i>goods return to supplier</i> document to the supplier in 1C:Drive.</p>
+<p>In 1C:Drive, you use separate goods return documents in addition to credit note documents if the <b><a href="InformationRegister.AccountingPolicy/Help#sales_return_flow_option">Sales return flow</a></b> option is set to "Credit note document posts accounts receivable, Goods return posts inventory entries."</p>
+<p>Similarly, you use separate goods return to supplier documents in addition to debit note documents if the <b><a href="InformationRegister.AccountingPolicy/Help#purchase_return_flow_option">Purchase return flow</a></b> option is set to "Debit note document posts accounts payable, Goods return posts inventory entries."</p>
+<h2>Viewing goods return documents</h2>
+<p>To view the list of goods return documents:</p>
+<ul><li>Click <b>Sales &gt; Return &gt; Goods return</b>. </li></ul><h2>Viewing goods return to supplier documents</h2>
+<p>To view the list of goods return to supplier documents:</p>
+<ul><li>Click <b>Purchases &gt; Return &gt; Goods return</b>. </li></ul><a name="goods_return_fields"></a>
+<h2>Goods return fields</h2>
+<p>A goods return has the following fields:</p>
+<ul><li><b>Counterparty</b> (required). The customer you register the goods return from. 
+</li><li><b>Contract</b> (required). The customer's contract that governs the issue of the goods return. 
+</li><li><b>Sales invoice</b> (required). The sales invoice you want to apply the goods return to. 
+</li><li><b>Credit note</b>. The credit note you want to apply the goods return to. 
+</li><li><b>Number</b>. A unique goods return number. 
+</li><li><b>Dated</b>. The date and time when your register the goods return. 
+</li><li><b>Incoming number</b>. A goods return number the customer assigned. Typically, it is the number of the delivery note. 
+</li><li><b>Dated</b>. The date and time when the customer issued the goods return. 
+</li><li><b>Company</b> (required). Your company that registers the goods return from the customer. 
+</li><li><b>Warehouse</b> (required). Your company's warehouse to which you return the goods. </li></ul><a name="goods_return_to_supplier_fields"></a>
+<h2>Goods return to supplier fields</h2>
+<p>A goods return to supplier has the following fields:</p>
+<ul><li><b>Counterparty</b> (required). The supplier you issue the goods return to. 
+</li><li><b>Contract</b> (required). The supplier's contract that governs the issue of the goods return. 
+</li><li><b>Supplier invoice</b> (required). The supplier invoice you want to apply the goods return to. 
+</li><li><b>Debit note</b>. The debit note you want to apply the goods return to. 
+</li><li><b>Number</b>. A unique goods return number. It helps you identify the goods return. 
+</li><li><b>Dated</b>. The date and time when your issue the goods return. 
+</li><li><b>Company</b> (required). Your company that issues the goods return to the supplier. 
+</li><li><b>Warehouse</b> (required). Your company's warehouse from which you return the goods. 
+</li><li><b>GL account</b> (required). The GL account to which you register the goods return. Typically, it is the purchase return GL account. </li></ul><h2>Creating goods return documents</h2>
+<p>To create a goods return document:</p>
+<ol><li>Do any of the following: 
+<ul><li>Click <b>Sales &gt; Return &gt; Goods return</b> and then click <b>Create</b>. 
+</li><li>Open a sales invoice or a credit note and click <b>Generate &gt; Goods return</b>. </li></ul></li><li>Fill the goods return fields. 
+<p>For more information, see <a href="#goods_return_fields">Goods return fields</a>.</p>
+</li><li>Click the <b>Products</b> tab. 
+</li><li>Do any of the following: 
+<ul><li>To populate the table on the <b>Products</b> tab according to the sales invoice you specified in the <b>Sales invoice</b> field, click <b>Fill by sales invoice</b>. 
+</li><li>To populate the table on the <b>Products tab</b> according to the credit note you specified in the <b>Credit note</b> field, click <b>Fill by credit note</b>. </li></ul></li><li>For each returned product, in the <b>Return quantity</b> column, specify the returned quantity. 
+</li><li>Click <b>Post</b>. </li></ol><h2>Creating goods return to supplier documents</h2>
+<p>To create a goods return to supplier document:</p>
+<ol><li>Do any of the following: 
+<ul><li>Click <b>Purchases &gt; Return &gt; Goods return</b> and then click <b>Create</b>. 
+</li><li>Open a supplier invoice or a debit note and click <b>Generate &gt; Goods return</b>. </li></ul></li><li>Fill the goods return to supplier fields. 
+<p>For more information, see <a href="#goods_return_to_supplier_fields">Goods return to supplier fields</a>.</p>
+</li><li>Click the <b>Products</b> tab. 
+</li><li>Do any of the following: 
+<ul><li>To populate the table on the <b>Products</b> tab according to the supplier invoice you specified in the <b>Supplier invoice</b> field, click <b>Fill by supplier invoice</b>. 
+</li><li>To populate the table on the <b>Products</b> tab according to the debit note you specified in the <b>Debit note</b> field, click <b>Fill by debit note</b>. </li></ul></li><li>For each returned product, in the <b>Return quantity</b> column, specify the returned quantity. 
+</li><li>Click <b>Post</b>. </li></ol></body></html>

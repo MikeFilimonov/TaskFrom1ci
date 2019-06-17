@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<AutoCommandBar name="FormCommandBar" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<CheckBoxField name="ShowRelevantSettings" id="85">
+			<DataPath>ShowRelevantSettings</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ShowRelevantSettingsContextMenu" id="86"/>
+			<ExtendedTooltip name="ShowRelevantSettingsExtendedTooltip" id="87"/>
+			<Events>
+				<Event name="OnChange">ShowRelevantSettingsOnChange</Event>
+			</Events>
+		</CheckBoxField>
+		<UsualGroup name="ListSettingsComposerUserSettings" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>User-defined settings group</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ListSettingsComposerUserSettingsExtendedTooltip" id="2"/>
+		</UsualGroup>
+		<Table name="List" id="3">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>List</DataPath>
+			<RowPictureDataPath>List.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>ListSettingsComposerUserSettings</UserSettingsGroup>
+			<ContextMenu name="ListContextMenu" id="4"/>
+			<AutoCommandBar name="ListCommandBar" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ListExtendedTooltip" id="6"/>
+			<SearchStringAddition name="ListSearchString" id="7">
+				<AdditionSource>
+					<Item>List</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ListSearchStringContextMenu" id="8"/>
+				<ExtendedTooltip name="ListSearchStringExtendedTooltip" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ListViewStatus" id="10">
+				<AdditionSource>
+					<Item>List</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ListViewStatusContextMenu" id="11"/>
+				<ExtendedTooltip name="ListViewStatusExtendedTooltip" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ListSearchControl" id="13">
+				<AdditionSource>
+					<Item>List</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ListSearchControlContextMenu" id="14"/>
+				<ExtendedTooltip name="ListSearchControlExtendedTooltip" id="15"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Company" id="16">
+					<DataPath>List.Company</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="CompanyContextMenu" id="17"/>
+					<ExtendedTooltip name="CompanyExtendedTooltip" id="18"/>
+				</LabelField>
+				<LabelField name="Product" id="19">
+					<DataPath>List.Product</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ProductContextMenu" id="20"/>
+					<ExtendedTooltip name="ProductExtendedTooltip" id="21"/>
+				</LabelField>
+				<LabelField name="ProductCategory" id="22">
+					<DataPath>List.ProductCategory</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ProductCategoryContextMenu" id="23"/>
+					<ExtendedTooltip name="ProductCategoryExtendedTooltip" id="24"/>
+				</LabelField>
+				<LabelField name="StructuralUnit" id="82">
+					<DataPath>List.StructuralUnit</DataPath>
+					<ContextMenu name="StructuralUnitContextMenu" id="83"/>
+					<ExtendedTooltip name="StructuralUnitExtendedTooltip" id="84"/>
+				</LabelField>
+				<ColumnGroup name="GroupInStock" id="70">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>In stock</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group in stock</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<ExtendedTooltip name="GroupInStockExtendedTooltip" id="71"/>
+					<ChildItems>
+						<LabelField name="Inventory" id="28">
+							<DataPath>List.Inventory</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<ContextMenu name="InventoryContextMenu" id="29"/>
+							<ExtendedTooltip name="InventoryExtendedTooltip" id="30"/>
+						</LabelField>
+						<LabelField name="InventoryTransferred" id="31">
+							<DataPath>List.InventoryTransferred</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Transferred</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="InventoryTransferredContextMenu" id="32"/>
+							<ExtendedTooltip name="InventoryTransferredExtendedTooltip" id="33"/>
+						</LabelField>
+						<LabelField name="InventoryReceived" id="34">
+							<DataPath>List.InventoryReceived</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Received</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="InventoryReceivedContextMenu" id="35"/>
+							<ExtendedTooltip name="InventoryReceivedExtendedTooltip" id="36"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="GroupVAT" id="72">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>VAT</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<ExtendedTooltip name="GroupVATExtendedTooltip" id="73"/>
+					<ChildItems>
+						<LabelField name="VATInput" id="49">
+							<DataPath>List.VATInput</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Input</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="VATInputContextMenu" id="50"/>
+							<ExtendedTooltip name="VATInputExtendedTooltip" id="51"/>
+						</LabelField>
+						<LabelField name="VATOutput" id="52">
+							<DataPath>List.VATOutput</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Output</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="VATOutputContextMenu" id="53"/>
+							<ExtendedTooltip name="VATOutputExtendedTooltip" id="54"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="GroupDelayedInvoicing" id="78">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Delayed invoicing</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<ExtendedTooltip name="GroupDelayedInvoicingExtendedTooltip" id="79"/>
+					<ChildItems>
+						<LabelField name="GoodsShippedNotInvoiced" id="37">
+							<DataPath>List.GoodsShippedNotInvoiced</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Width>23</Width>
+							<ContextMenu name="GoodsShippedNotInvoicedContextMenu" id="38"/>
+							<ExtendedTooltip name="GoodsShippedNotInvoicedExtendedTooltip" id="39"/>
+						</LabelField>
+						<LabelField name="GoodsReceivedNotInvoiced" id="40">
+							<DataPath>List.GoodsReceivedNotInvoiced</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Width>23</Width>
+							<ContextMenu name="GoodsReceivedNotInvoicedContextMenu" id="41"/>
+							<ExtendedTooltip name="GoodsReceivedNotInvoicedExtendedTooltip" id="42"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="GroupDelayedDelivery" id="80">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Delayed delivery</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<ExtendedTooltip name="GroupDelayedDeliveryExtendedTooltip" id="81"/>
+					<ChildItems>
+						<LabelField name="GoodsInvoicedNotDelivered" id="43">
+							<DataPath>List.GoodsInvoicedNotDelivered</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Width>23</Width>
+							<ContextMenu name="GoodsInvoicedNotDeliveredContextMenu" id="44"/>
+							<ExtendedTooltip name="GoodsInvoicedNotDeliveredExtendedTooltip" id="45"/>
+						</LabelField>
+						<LabelField name="UnearnedRevenue" id="46">
+							<DataPath>List.UnearnedRevenue</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<ContextMenu name="UnearnedRevenueContextMenu" id="47"/>
+							<ExtendedTooltip name="UnearnedRevenueExtendedTooltip" id="48"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="GroupReturn" id="74">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Return</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group return</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<ExtendedTooltip name="GroupReturnExtendedTooltip" id="75"/>
+					<ChildItems>
+						<LabelField name="SalesReturn" id="64">
+							<DataPath>List.SalesReturn</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Sales</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="SalesReturnContextMenu" id="65"/>
+							<ExtendedTooltip name="SalesReturnExtendedTooltip" id="66"/>
+						</LabelField>
+						<LabelField name="PurchaseReturn" id="67">
+							<DataPath>List.PurchaseReturn</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Purchase</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="PurchaseReturnContextMenu" id="68"/>
+							<ExtendedTooltip name="PurchaseReturnExtendedTooltip" id="69"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="GroupIncomeAndExpenses" id="76">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Income and expenses</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<ExtendedTooltip name="GroupIncomeAndExpensesExtendedTooltip" id="77"/>
+					<ChildItems>
+						<LabelField name="Revenue" id="55">
+							<DataPath>List.Revenue</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<ContextMenu name="RevenueContextMenu" id="56"/>
+							<ExtendedTooltip name="RevenueExtendedTooltip" id="57"/>
+						</LabelField>
+						<LabelField name="COGS" id="58">
+							<DataPath>List.COGS</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<ContextMenu name="COGSContextMenu" id="59"/>
+							<ExtendedTooltip name="COGSExtendedTooltip" id="60"/>
+						</LabelField>
+						<LabelField name="Consumption" id="61">
+							<DataPath>List.Consumption</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<ContextMenu name="ConsumptionContextMenu" id="62"/>
+							<ExtendedTooltip name="ConsumptionExtendedTooltip" id="63"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="List" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.ProductGLAccounts</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ShowRelevantSettings" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show relevant settings</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Product" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Product</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Products</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<WindowOpeningMode>LockWholeInterface</WindowOpeningMode>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="FormCommandBar" id="-1" DisplayImportance="Usual">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="FormNext" id="8">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Next</CommandName>
+				<ExtendedTooltip name="FormNextExtendedTooltip" id="9"/>
+			</Button>
+			<Button name="FormCancel" id="20">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Cancel</CommandName>
+				<ExtendedTooltip name="FormCancelExtendedTooltip" id="21"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">OnOpen</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Pages" id="1">
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="PagesExtendedTooltip" id="2"/>
+			<ChildItems>
+				<Page name="PageDescription" id="3">
+					<ExtendedTooltip name="PageDescriptionExtendedTooltip" id="4"/>
+					<ChildItems>
+						<LabelDecoration name="Description" id="5">
+							<TextColor>0:d296f133-e57e-4c4d-b344-16e8e42327d5</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>We need to make your database ready for FIFO inventory valuation method. You might be don't need it for now though, but there are some technical issues which should be solved to let you switch to FIFO at any moment you want. This process might take a long time, depending on your data volume. To make it easy, please, run this stuff at the moment of the lowerest users activity.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="DescriptionContextMenu" id="6"/>
+							<ExtendedTooltip name="DescriptionExtendedTooltip" id="7"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="PageFilling" id="10">
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="PageFillingExtendedTooltip" id="11"/>
+					<ChildItems>
+						<PictureDecoration name="PictureLongOperation" id="14">
+							<Picture>
+								<xr:Ref>CommonPicture.LongOperation48</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="PictureLongOperationContextMenu" id="15"/>
+							<ExtendedTooltip name="PictureLongOperationExtendedTooltip" id="16"/>
+						</PictureDecoration>
+						<LabelDecoration name="DecorationPosting" id="17">
+							<Height>3</Height>
+							<TextColor>0:d296f133-e57e-4c4d-b344-16e8e42327d5</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Preparation for FIFO is in progress...</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выполняется проведение документов...</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalAlign>Center</VerticalAlign>
+							<ContextMenu name="DecorationPostingContextMenu" id="18"/>
+							<ExtendedTooltip name="DecorationPostingExtendedTooltip" id="19"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="PageResult" id="12">
+					<ExtendedTooltip name="PageResultExtendedTooltip" id="13"/>
+					<ChildItems>
+						<LabelDecoration name="InformationText" id="25">
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Now your system is FIFO ready. We recommend you to&lt;link SetupTask&gt; set up the schedule for FIFO calculation periodicity&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="InformationTextContextMenu" id="26"/>
+							<ExtendedTooltip name="InformationTextExtendedTooltip" id="27"/>
+							<Events>
+								<Event name="URLProcessing">InformationTextURLProcessing</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.FillCostLayerRegisters</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="OpenSettings" id="2">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="BackgroundJobID" id="3">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="StorageAddress" id="4">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Next" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Next &gt;&gt;</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Далее &gt;&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Next</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Next</Action>
+		</Command>
+		<Command name="Cancel" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Cancel</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Cancel</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Cancel</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,32 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://1c.com/first_launch_1_0">
+	<objectType name="Countries">
+		<property name="country" upperBound="-1"/>
+		<property name="version" form="Attribute"/>
+	</objectType>
+	<objectType name="country">
+		<property name="folder" nillable="false"/>
+		<property name="name" nillable="false"/>
+		<property name="description" nillable="false"/>
+	</objectType>
+	<objectType name="items" ordered="false">
+		<property xmlns:d3p1="http://1c.com/first_launch_1_0" name="extension" type="d3p1:extension" lowerBound="0" upperBound="-1" nillable="true"/>
+		<property xmlns:d3p1="http://1c.com/first_launch_1_0" name="item" type="d3p1:item" upperBound="-1"/>
+		<property name="version" form="Attribute"/>
+	</objectType>
+	<objectType name="item" open="true">
+		<property name="item_type" form="Attribute">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="List" itemType="xs:string">
+				<enumeration xsi:type="xs:string">catalog</enumeration>
+				<enumeration xsi:type="xs:string">chart_of_accounts</enumeration>
+				<enumeration xsi:type="xs:string">constant</enumeration>
+				<enumeration xsi:type="xs:string">data_processor</enumeration>
+				<enumeration xsi:type="xs:string">information_register</enumeration>
+				<enumeration xsi:type="xs:string">sl_data_xml</enumeration>
+			</typeDef>
+		</property>
+		<property name="item_name" form="Attribute"/>
+	</objectType>
+	<objectType name="extension">
+		<property name="path" form="Attribute"/>
+	</objectType>
+</package>

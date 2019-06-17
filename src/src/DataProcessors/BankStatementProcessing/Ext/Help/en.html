@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.19155"></meta></head><body>
+<h1>Importing bank statements</h1>
+<p>If your company has a bank account for receiving payments from your customers and for making payments to your suppliers and other parties, you need to register these transactions in 1C:Drive in order to have the clear view of the account's cash in and cash out. Typically, you register bank receipts and bank payments one by one in 1C:Drive.</p>
+<p>If you use a bank client system to control transactions of the bank account, you can simplify the task of recording these transactions to 1C:Drive. You can export them from the bank client to a file and then import them to 1C:Drive. As a result, 1C:Drive generates bank receipts and bank payments.</p><a name="bank_statement_import_table_fields"></a>
+<h2>Bank statement import table fields</h2>
+<p>After 1C:Drive reads data from a bank statement file, it displays the data in the import table.</p>
+<p>The idea of the import table is to let you view:</p>
+<ul><li>The records read from the file 
+</li><li>The mapping between the record fields and 1C:Drive fields 
+</li><li>The import status of each record </li></ul><p>The mapping table fields are as follows:</p>
+<ul><li><img src="_files/bank_statement_processing_status.png"></img>. The import status. Available values: 
+<ul><li>Red circle. The record is not mapped. 
+</li><li>Empty green circle. The record is mapped and ready to import. 
+</li><li>Filled green circle. The record is imported. </li></ul></li><li>#. The line number. 
+</li><li><strong>Received</strong>. The date when the bank received the payment document. 
+</li><li><strong>Document</strong>. The document that 1C:Drive created based on the payment from the imported statement. It is read-only. 
+</li><li><strong>Amount</strong>. The amount paid. 
+</li><li><strong>Company</strong>. Your company. 
+</li><li><strong>Bank account</strong>. Your company's bank account. 
+</li><li><strong>Operation type</strong>. The payment operation type. For instance: 
+<ul><li>To supplier 
+</li><li>To customer 
+</li><li>Payroll 
+</li><li>From customer 
+</li><li>From supplier 
+</li><li>Other </li></ul></li><li><strong>Counterparty</strong>. The name of your company's counterparty that made or received the payment. 
+</li><li><strong>Contract</strong> (Optional). The contract between your company and the counterparty. 
+</li><li><strong>Counterparty bank account</strong>. The bank account of the counterparty. 
+</li><li><strong>Cash flow item</strong>. The cash flow item that describes the purpose of the transaction. 
+</li><li><strong>Expense GL account</strong> (Optional). The GL account to write off funds. </li></ul><h2>Importing bank statement files</h2>
+<p>To import bank statements to 1C:Drive:</p>
+<ol><li>In the bank list, for each bank that provides bank statements, in the <strong>Bank statement processing &gt; Settings</strong> field, select the bank statement processing settings. 
+<p>For more information, see <a href="Catalog.BankStatementProcessingSettings/Help">Bank statement processing settings</a>.</p>
+</li><li>Click <strong>Cash management &gt; Bank statement processing</strong>. 
+</li><li>In the <strong>Bank to exchange data with</strong> field, select the bank. 
+</li><li>Click <strong>Import statement from file</strong>. 
+</li><li>Select the source file and click <strong>Open</strong>. 
+<p>1C:Drive reads the file and displays preliminary import results in the import table.</p>
+<p>For more information, see <a href="#bank_statement_import_table_fields">Bank statement import table fields</a>.</p>
+<p>When you select a record in the table, 1C:Drive displays the payment purpose read from the bank statement.</p>
+<p>To hide the records that are marked imported, click <strong>Hide imported</strong>.</p>
+<p>To show all records, click <strong>Show all</strong>.</p>
+</li><li>For each record you want to import, do the following: 
+<ol type="a"><li>Check the record's import status. 
+</li><li>Skip records that are already imported and concentrate on the records that are mapped and ready to import or not mapped. 
+</li><li>If necessary, fill the empty fields in the import table. 
+</li><li>If the record is not mapped to 1C:Drive's data, in the <strong>Data mapping errors</strong> table, set the mapping between the values read from the file and the target attributes and click <strong>Apply changes and refresh</strong>. 
+<p>1C:Drive saves the resulting mapping. To learn how to change it, see <a href="InformationRegister.BankStatementMapping/Help">Editing bank statement mappings</a>.</p></li></ol></li><li>Select the records you want to import. 
+<p>To select all records, click <strong>Mark all</strong>.</p>
+<p>To clear selection from all records, click <strong>Clear all</strong>.</p>
+</li><li>Click <strong>Import</strong>. 
+<p>When creating payment documents based on transactions read from the file, 1C:Drive fills the documents based on the records of the import table and displays the number of documents it created. If there are errors, it continues creating other documents and displays the errors.</p>
+</li>
+<li>If there are mapping errors, for each record where 1C:Drive found a mapping error, click the record, specify the correct mapping, click <strong>Apply changes and refresh</strong>, and retry importing the data.</li>
+<li>Click <strong>Cash management &gt; Bank &gt; Bank documents</strong>, ensure that all bank documents specified in the bank statement were imported correctly, and post all the documents.</li>
+<ol></ol></ol></body></html>

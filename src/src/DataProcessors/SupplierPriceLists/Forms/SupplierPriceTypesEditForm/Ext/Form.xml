@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<Width>50</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="FormCommandBar" id="-1"/>
+	<Events>
+		<Event name="ChoiceProcessing">ChoiceProcessing</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<Table name="SupplierPriceTypes" id="1">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Object.SupplierPriceTypes</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="SupplierPriceTypesContextMenu" id="2"/>
+			<AutoCommandBar name="SupplierPriceTypesCommandBar" id="3">
+				<ChildItems>
+					<Button name="SupplierPriceTypesPickup" id="17">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Pick</CommandName>
+						<ExtendedTooltip name="SupplierPriceTypesPickupExtendedTooltip" id="19"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="SupplierPriceTypesExtendedTooltip" id="20"/>
+			<SearchStringAddition name="SupplierPriceTypesSearchString" id="27">
+				<AdditionSource>
+					<Item>SupplierPriceTypes</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="SupplierPriceTypesSearchStringContextMenu" id="28"/>
+				<ExtendedTooltip name="SupplierPriceTypesSearchStringExtendedTooltip" id="29"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="SupplierPriceTypesViewStatus" id="30">
+				<AdditionSource>
+					<Item>SupplierPriceTypes</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="SupplierPriceTypesViewStatusContextMenu" id="31"/>
+				<ExtendedTooltip name="SupplierPriceTypesViewStatusExtendedTooltip" id="32"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="SupplierPriceTypesSearchControl" id="33">
+				<AdditionSource>
+					<Item>SupplierPriceTypes</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="SupplierPriceTypesSearchControlContextMenu" id="34"/>
+				<ExtendedTooltip name="SupplierPriceTypesSearchControlExtendedTooltip" id="35"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="SupplierPriceTypesLineNumber" id="10">
+					<DataPath>Object.SupplierPriceTypes.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="SupplierPriceTypesLineNumberContextMenu" id="11"/>
+					<ExtendedTooltip name="SupplierPriceTypesLineNumberExtendedTooltip" id="21"/>
+				</LabelField>
+				<InputField name="PriceTypesCounterpartyRefs" id="12">
+					<DataPath>Object.SupplierPriceTypes.Ref</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceForm>Catalog.SupplierPriceTypes.Form.QuickChoiceForm</ChoiceForm>
+					<ContextMenu name="PriceTypesCounterpartyRefsContextMenu" id="13"/>
+					<ExtendedTooltip name="PriceTypesCounterpartyRefsExtendedTooltip" id="23"/>
+				</InputField>
+				<InputField name="SupplierPriceTypesCounterparty" id="15">
+					<DataPath>Object.SupplierPriceTypes.Ref.Owner</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="SupplierPriceTypesCounterpartyContextMenu" id="16"/>
+					<ExtendedTooltip name="SupplierPriceTypesCounterpartyExtendedTooltip" id="22"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<CommandBar name="CommandGroup" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group commands</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group commands</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="CommandGroupExtendedTooltip" id="24"/>
+			<ChildItems>
+				<Button name="OK" id="14">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.OK</CommandName>
+					<ExtendedTooltip name="OKExtendedTooltip" id="25"/>
+				</Button>
+				<Button name="Close" id="18">
+					<Type>CommandBarButton</Type>
+					<Representation>Text</Representation>
+					<CommandName>Form.StandardCommand.Close</CommandName>
+					<ExtendedTooltip name="CloseExtendedTooltip" id="26"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.SupplierPriceLists</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="OK" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>OK</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>OK</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>OK</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Pick" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Select</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Select</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Pick</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

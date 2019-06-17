@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<h1>Accounting policy</h1>
+<p>For each company for which you keep records in 1C:Drive, create at least one accounting policy.</p>
+<p>For the given company, an accounting policy defines the VAT accounting specifics, cash or Earning method of accounting, and other settings.</p>
+<p>If you work with several companies in 1C:Drive, accounting policies allow you to define different policies for different companies.</p>
+<p>Also, by specifying several accounting policies for the same company you can set that the company uses different policies during different time periods. For instance, the company is not VAT-registered at the moment, but starting from next year, it becomes VAT-registered (say, due to legislation changes or because the company's revenue exceeds the VAT registration threshold). As a result, documents that belong to these periods must post different entries on VAT: without VAT this year and including VAT next year.</p>
+<p>If you define several accounting policies for a company, only one of the policies has effect at the given moment. For instance, if a company has two policies, first taking effect on 01 January, 2017 and second taking effect on 01 July, 2018, then from 01 January, 2017 til 30 June, 2018 the company uses the first policy, and from 01 July, 2018 it uses the second policy.</p>
+<p>Each accounting policy has the following fields:</p>
+<ul><li><b>Finance</b> 
+<ul><li><strong>Period</strong>. The date when the policy takes effect. 
+</li><li><strong>Company</strong>. The company that owns the policy. 
+<p>The <strong>Period</strong> and <strong>Company</strong> fields uniquely identify the policy. Thus, for the same company you cannot create more than one policy taking effect on the same date. For this company, you can create several policies taking effect on different dates.</p><a name="registered_for_vat"></a>
+</li><li><strong>Registered for VAT</strong>. Adds VAT-related fields to your accounting documents. Select it if your company is VAT-registered. 
+<p>To learn how to work with VAT in 1C:Drive, see <a href="Document.TaxInvoiceIssued/Help">Managing VAT</a>.</p><a name="use_tax_invoices"></a>
+</li><li><strong>Register VAT entries with</strong>. This field is available only if <strong>Registered for VAT</strong> is turned on. Defines whether the company uses tax invoices to separate the events of title to the goods transfer and the events of VAT charges. Available values: 
+<ul><li><b>Source documents (sales invoices, supplier invoices, and so on)</b>. Use invoices and other sources documents (like credit and debit notes) as tax invoices. 
+</li><li><b>Tax invoices</b>. Select this value in the following scenarios: 
+<ul><li>You need to issue a single tax invoice for multiple shipments. 
+<p>Ensure that the legislation in your country allows summary tax invoices.</p>
+</li><li>For each shipment, your supplier provides both a sales invoice and a tax invoice, and you need to ensure that each sales invoice has a matching tax invoice. 
+<p>You might want to keep records of sales invoices and tax invoices separately if they do not always come together from your supplier.</p></li></ul><a name="issue_automatically_based_on_sales_documents"></a>
+<p>The extra option you can select or clear for this value is as follows:</p>
+<ul><li><b>Issue automatically based on sales documents</b>. Select it to make 1C:Drive automatically create and post a tax invoice issued after you create and post a sales invoice. </li></ul></li></ul><a name="register_VAT_entries_on_advance_payments_with"></a>
+</li><li><b>Register VAT entries on advance payments with</b>. This field is available only if <strong>Registered for VAT</strong> is turned on. Defines the documents the company uses to track VAT on advance payments. Available values: 
+<ul><li><b>Source documents (bank payments, bank receipts, and so on)</b>. Use bank payments, cash vouchers, and bank and cash receipts in the meaning of advance payment invoices. 
+</li><li><b>Advance payment invoices</b>. Issue or register advance payment invoices for advance payments you receive or make. </li></ul></li><li><strong>Default VAT rate</strong>. The default VAT rate for the company's products you create afterwards. 
+</li><li><strong>VAT threshold</strong>. When the company's revenue exceeds this threshold (if it is defined in your country's VAT legislation), it must register for VAT or join a VAT accounting scheme. This field is for information purposes only; it does not affect anything in 1C:Drive. 
+</li><li><strong>Cash method of accounting</strong>. Defines whether the company uses the cash method of accounting. Otherwise, it uses the Earning method of accounting. 
+</li><li><strong>Accounting inventory method</strong>. The method of writing off goods from the inventory. 
+<ul><li><strong>By Average</strong>. The average of the costs of goods (weighted average). 
+</li><li><strong>FIFO</strong>. The first goods sold are the first goods bought (first in, first out). </li></ul></li></ul></li><li><b>Advanced inventory management</b> 
+<ul><a name="sales_return_flow_option"></a>
+<li><b>Sales return flow</b> 
+<p>Defines the types of documents you use when your customers return goods they purchased from your company. Can have one of the following values:</p>
+<ul><li><b>Credit note document posts all entries, including inventory</b>. Use credit note documents to register both accounts receivable and title to the goods transfer. 
+<p>For more information, see <a href="Document.CreditNote/Help">Credit notes</a>.</p>
+</li><li><b>Credit note document posts accounts receivable, Goods return posts inventory entries</b>. Use credit note documents to register accounts receivable and goods return documents to register title to the goods transfer. 
+<p>For more information, see <a href="Document.CreditNote/Help">Credit notes</a> and <a href="Document.GoodsReturn/Help">Goods return documents</a>.</p></li></ul><a name="purchase_return_flow_option"></a>
+</li><li><b>Purchase return flow</b> 
+<p>Defines the types of documents you use when your company returns goods you purchased from your suppliers. Can have one of the following values:</p>
+<ul><li><b>Debit note document posts all entries, including inventory</b>. Use debit note documents to register both accounts payable and title to the goods transfer. 
+<p>For more information, see <a href="Document.DebitNote/Help">Debit notes</a>.</p>
+</li><li><b>Debit note document posts accounts payable, Goods return posts inventory entries</b>. Use debit note documents to register accounts payable and goods return to supplier documents to register title to the goods transfer. 
+<p>For more information, see <a href="Document.DebitNote/Help">Debit notes</a> and <a href="Document.GoodsReturn/Help">Goods return to supplier documents</a>.</p></li></ul></li></ul></li></ul><p>To create an accounting policy:</p>
+<ol><li>Go to <strong>Company &gt; Enterprise &gt; Accounting policy</strong>. 
+</li><li>Click <strong>Create</strong>. 
+</li><li>In the <strong>Period</strong> field, specify the date when the policy takes effect. 
+</li><li>In the <strong>Company</strong> field, select the company. 
+</li><li>Fill the other policy fields. 
+</li><li>Click <strong>Save</strong>. </li></ol></body></html>

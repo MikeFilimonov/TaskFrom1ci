@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<ChildItems>
+			<ButtonGroup name="ImportantCommandsGroup" id="576">
+				<ExtendedTooltip name="ImportantCommandsGroupExtendedTooltip" id="577"/>
+			</ButtonGroup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite">AfterWrite</Event>
+		<Event name="NotificationProcessing">NotificationProcessing</Event>
+		<Event name="OnReadAtServer">OnReadAtServer</Event>
+		<Event name="OnOpen">OnOpen</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="GroupHeader" id="196">
+			<Group>AlwaysHorizontal</Group>
+			<HorizontalSpacing>Double</HorizontalSpacing>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="GroupHeaderExtendedTooltip" id="310"/>
+			<ChildItems>
+				<UsualGroup name="GroupLeftColumn" id="580">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="GroupLeftColumnExtendedTooltip" id="581"/>
+					<ChildItems>
+						<InputField name="Company" id="252">
+							<DataPath>Object.Company</DataPath>
+							<TitleLocation>Left</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>28</MaxWidth>
+							<ContextMenu name="CompanyContextMenu" id="253"/>
+							<ExtendedTooltip name="CompanyExtendedTooltip" id="331"/>
+							<Events>
+								<Event name="OnChange">CompanyOnChange</Event>
+							</Events>
+						</InputField>
+						<InputField name="Counterparty" id="293">
+							<DataPath>Object.Counterparty</DataPath>
+							<TitleLocation>Left</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>28</MaxWidth>
+							<ChooseType>false</ChooseType>
+							<ContextMenu name="CounterpartyContextMenu" id="294"/>
+							<ExtendedTooltip name="CounterpartyExtendedTooltip" id="332"/>
+							<Events>
+								<Event name="OnChange">CounterpartyOnChange</Event>
+								<Event name="StartChoice">CounterpartyStartChoice</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="GroupRightColumn" id="578">
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="GroupRightColumnExtendedTooltip" id="579"/>
+					<ChildItems>
+						<UsualGroup name="GroupHeaderHorizontal" id="491">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupHeaderHorizontalExtendedTooltip" id="492"/>
+							<ChildItems>
+								<InputField name="Number" id="449">
+									<DataPath>Object.Number</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Tax invoice #</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>13</MaxWidth>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="NumberContextMenu" id="450"/>
+									<ExtendedTooltip name="NumberExtendedTooltip" id="451"/>
+								</InputField>
+								<InputField name="DateOfSupply" id="452">
+									<DataPath>Object.DateOfSupply</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>dated</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Left</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoChoiceIncomplete>false</AutoChoiceIncomplete>
+									<ContextMenu name="DateOfSupplyContextMenu" id="453"/>
+									<ExtendedTooltip name="DateOfSupplyExtendedTooltip" id="454"/>
+									<Events>
+										<Event name="OnChange">DateOfSupplyOnChange</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="GroupReceivedAndCurrency" id="582">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupReceivedAndCurrencyExtendedTooltip" id="583"/>
+							<ChildItems>
+								<InputField name="Date" id="224">
+									<DataPath>Object.Date</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Received</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>10</MaxWidth>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="DateContextMenu" id="225"/>
+									<ExtendedTooltip name="DateExtendedTooltip" id="327"/>
+								</InputField>
+								<InputField name="Currency" id="235">
+									<DataPath>Object.Currency</DataPath>
+									<OpenButton>false</OpenButton>
+									<ContextMenu name="CurrencyContextMenu" id="236"/>
+									<ExtendedTooltip name="CurrencyExtendedTooltip" id="335"/>
+									<Events>
+										<Event name="OnChange">CurrencyOnChange</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="OperationKind" id="584">
+							<DataPath>Object.OperationKind</DataPath>
+							<ContextMenu name="OperationKindContextMenu" id="585"/>
+							<ExtendedTooltip name="OperationKindExtendedTooltip" id="586"/>
+							<Events>
+								<Event name="OnChange">OperationKindOnChange</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Pages" id="587">
+			<ExtendedTooltip name="PagesExtendedTooltip" id="588"/>
+			<ChildItems>
+				<Page name="PageBasis" id="589">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Base documents</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="PageBasisExtendedTooltip" id="590"/>
+					<ChildItems>
+						<Table name="BasisDocuments" id="545">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Object.BasisDocuments</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="BasisDocumentsContextMenu" id="546"/>
+							<AutoCommandBar name="BasisDocumentsCommandBar" id="547"/>
+							<ExtendedTooltip name="BasisDocumentsExtendedTooltip" id="548"/>
+							<SearchStringAddition name="BasisDocumentsSearchString" id="549">
+								<AdditionSource>
+									<Item>BasisDocuments</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="BasisDocumentsSearchStringContextMenu" id="550"/>
+								<ExtendedTooltip name="BasisDocumentsSearchStringExtendedTooltip" id="551"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="BasisDocumentsViewStatus" id="552">
+								<AdditionSource>
+									<Item>BasisDocuments</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="BasisDocumentsViewStatusContextMenu" id="553"/>
+								<ExtendedTooltip name="BasisDocumentsViewStatusExtendedTooltip" id="554"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="BasisDocumentsSearchControl" id="555">
+								<AdditionSource>
+									<Item>BasisDocuments</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="BasisDocumentsSearchControlContextMenu" id="556"/>
+								<ExtendedTooltip name="BasisDocumentsSearchControlExtendedTooltip" id="557"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">BasisDocumentsOnChange</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="BasisDocumentsLineNumber" id="558">
+									<DataPath>Object.BasisDocuments.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="BasisDocumentsLineNumberContextMenu" id="559"/>
+									<ExtendedTooltip name="BasisDocumentsLineNumberExtendedTooltip" id="560"/>
+								</LabelField>
+								<InputField name="BasisDocumentsBasisDocument" id="561">
+									<DataPath>Object.BasisDocuments.BasisDocument</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="BasisDocumentsBasisDocumentContextMenu" id="562"/>
+									<ExtendedTooltip name="BasisDocumentsBasisDocumentExtendedTooltip" id="563"/>
+									<Events>
+										<Event name="StartChoice">BasisDocumentsBasisDocumentStartChoice</Event>
+										<Event name="ChoiceProcessing">BasisDocumentsBasisDocumentChoiceProcessing</Event>
+									</Events>
+								</InputField>
+								<InputField name="BasisDocumentsVATAmount" id="564">
+									<DataPath>Object.BasisDocuments.VATAmount</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>VAT</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="BasisDocumentsVATAmountContextMenu" id="565"/>
+									<ExtendedTooltip name="BasisDocumentsVATAmountExtendedTooltip" id="566"/>
+								</InputField>
+								<InputField name="BasisDocumentsAmount" id="567">
+									<DataPath>Object.BasisDocuments.Amount</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="BasisDocumentsAmountContextMenu" id="568"/>
+									<ExtendedTooltip name="BasisDocumentsAmountExtendedTooltip" id="569"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="PageAdditional" id="591">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Additional Information</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="PageAdditionalExtendedTooltip" id="592"/>
+					<ChildItems>
+						<InputField name="Department" id="482">
+							<DataPath>Object.Department</DataPath>
+							<ContextMenu name="DepartmentContextMenu" id="483"/>
+							<ExtendedTooltip name="DepartmentExtendedTooltip" id="484"/>
+						</InputField>
+						<InputField name="Responsible" id="479">
+							<DataPath>Object.Responsible</DataPath>
+							<Width>20</Width>
+							<ContextMenu name="ResponsibleContextMenu" id="480"/>
+							<ExtendedTooltip name="ResponsibleExtendedTooltip" id="481"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="Footer" id="593">
+			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="FooterExtendedTooltip" id="594"/>
+			<ChildItems>
+				<UsualGroup name="Total" id="244">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>0:1df935d0-dbff-44ad-b3b5-057382fc07e1</BackColor>
+					<ExtendedTooltip name="TotalExtendedTooltip" id="300"/>
+					<ChildItems>
+						<LabelField name="TaxInvoiceReceivedSubtotal" id="595">
+							<DataPath>DocumentSubtotal</DataPath>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<ContextMenu name="TaxInvoiceReceivedSubtotalContextMenu" id="596"/>
+							<ExtendedTooltip name="TaxInvoiceReceivedSubtotalExtendedTooltip" id="597"/>
+						</LabelField>
+						<LabelField name="BasisDocumentsTotalVATAmount" id="573">
+							<DataPath>Object.BasisDocuments.TotalVATAmount</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Tax</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<ContextMenu name="BasisDocumentsTotalVATAmountContextMenu" id="574"/>
+							<ExtendedTooltip name="BasisDocumentsTotalVATAmountExtendedTooltip" id="575"/>
+						</LabelField>
+						<LabelField name="BasisDocumentsTotalAmount" id="570">
+							<DataPath>Object.BasisDocuments.TotalAmount</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Total</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<ContextMenu name="BasisDocumentsTotalAmountContextMenu" id="571"/>
+							<ExtendedTooltip name="BasisDocumentsTotalAmountExtendedTooltip" id="572"/>
+						</LabelField>
+						<LabelField name="PresentationCurrency" id="598">
+							<DataPath>Object.Currency</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>6</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="PresentationCurrencyContextMenu" id="599"/>
+							<ExtendedTooltip name="PresentationCurrencyExtendedTooltip" id="600"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Object</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentObject.TaxInvoiceReceived</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Object.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="DocumentSubtotal" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Subtotal</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

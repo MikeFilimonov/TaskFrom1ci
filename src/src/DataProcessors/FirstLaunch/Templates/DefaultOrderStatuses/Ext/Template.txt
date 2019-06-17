@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<V8Exch:_1CV8DtUD xmlns:V8Exch="http://www.1c.ru/V8/1CV8DtUD/" xmlns:core="http://v8.1c.ru/data" xmlns:v8="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<V8Exch:Data>
+		<v8:ConstantValueManager.StateCompletedSalesOrders>
+			<v8:Value xsi:type="v8:CatalogRef.SalesOrderStatuses">2039d478-f9ef-11e7-8782-b06ebfcc6763</v8:Value>
+		</v8:ConstantValueManager.StateCompletedSalesOrders>
+		<v8:ConstantValueManager.SalesOrdersInProgressStatus>
+			<v8:Value xsi:type="v8:CatalogRef.SalesOrderStatuses">2039d477-f9ef-11e7-8782-b06ebfcc6763</v8:Value>
+		</v8:ConstantValueManager.SalesOrdersInProgressStatus>
+		<v8:ConstantValueManager.ProductionOrdersCompletionStatus>
+			<v8:Value xsi:type="v8:CatalogRef.ProductionOrderStatuses">2039d47c-f9ef-11e7-8782-b06ebfcc6763</v8:Value>
+		</v8:ConstantValueManager.ProductionOrdersCompletionStatus>
+		<v8:ConstantValueManager.ProductionOrdersInProgressStatus>
+			<v8:Value xsi:type="v8:CatalogRef.ProductionOrderStatuses">2039d47b-f9ef-11e7-8782-b06ebfcc6763</v8:Value>
+		</v8:ConstantValueManager.ProductionOrdersInProgressStatus>
+		<v8:ConstantValueManager.PurchaseOrdersCompletionStatus>
+			<v8:Value xsi:type="v8:CatalogRef.PurchaseOrderStatuses">2039d47a-f9ef-11e7-8782-b06ebfcc6763</v8:Value>
+		</v8:ConstantValueManager.PurchaseOrdersCompletionStatus>
+		<v8:ConstantValueManager.PurchaseOrdersInProgressStatus>
+			<v8:Value xsi:type="v8:CatalogRef.PurchaseOrderStatuses">2039d479-f9ef-11e7-8782-b06ebfcc6763</v8:Value>
+		</v8:ConstantValueManager.PurchaseOrdersInProgressStatus>
+		<v8:ConstantValueManager.StateCompletedWorkOrders>
+			<v8:Value xsi:type="v8:CatalogRef.WorkOrderStatuses">3ecf6d40-3a8e-11e9-9200-08606ee77ef0</v8:Value>
+		</v8:ConstantValueManager.StateCompletedWorkOrders>
+		<v8:ConstantValueManager.WorkOrdersInProgressStatus>
+			<v8:Value xsi:type="v8:CatalogRef.WorkOrderStatuses">3ecf6d3f-3a8e-11e9-9200-08606ee77ef0</v8:Value>
+		</v8:ConstantValueManager.WorkOrdersInProgressStatus>
+		<v8:CatalogObject.SalesOrderStatuses>
+			<v8:Ref xsi:type="v8:CatalogRef.SalesOrderStatuses">8e6e8f87-f9ec-11e7-8782-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Code>000000001</v8:Code>
+			<v8:Description>Open</v8:Description>
+			<v8:PredefinedDataName>Open</v8:PredefinedDataName>
+			<v8:OrderStatus>Open</v8:OrderStatus>
+			<v8:Color>AQEIAAAAAAAAAO+7v3siVSJ9</v8:Color>
+		</v8:CatalogObject.SalesOrderStatuses>
+		<v8:CatalogObject.SalesOrderStatuses>
+			<v8:Ref xsi:type="v8:CatalogRef.SalesOrderStatuses">2039d477-f9ef-11e7-8782-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Code>000000002</v8:Code>
+			<v8:Description>In progress</v8:Description>
+			<v8:OrderStatus>InProcess</v8:OrderStatus>
+			<v8:Color>AQFCAAAAAAAAAO+7v3siIyIsOWNkNTEwYzctYWJmYy0xMWQ0LTk0MzQtMDA0MDk1
+ZTEyZmM3LDIsDQp7MywyLA0KezkxfQ0KfQ0KfQ==</v8:Color>
+		</v8:CatalogObject.SalesOrderStatuses>
+		<v8:CatalogObject.SalesOrderStatuses>
+			<v8:Ref xsi:type="v8:CatalogRef.SalesOrderStatuses">2039d478-f9ef-11e7-8782-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Code>000000003</v8:Code>
+			<v8:Description>Completed</v8:Description>
+			<v8:OrderStatus>Completed</v8:OrderStatus>
+			<v8:Color>AQFmAAAAAAAAAO+7v3siIyIsOWNkNTEwYzctYWJmYy0xMWQ0LTk0MzQtMDA0MDk1
+ZTEyZmM3LDIsDQp7MywzLA0KezAsNDMyYTJjNjYtMDEyZC00ZDlhLWEzOGMtMTlk
+NTc0OTEwYTY0fQ0KfQ0KfQ==</v8:Color>
+		</v8:CatalogObject.SalesOrderStatuses>
+		<v8:CatalogObject.ProductionOrderStatuses>
+			<v8:Ref xsi:type="v8:CatalogRef.ProductionOrderStatuses">8e6e8f85-f9ec-11e7-8782-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Code>000000001</v8:Code>
+			<v8:Description>Open</v8:Description>
+			<v8:PredefinedDataName>Open</v8:PredefinedDataName>
+			<v8:OrderStatus>Open</v8:OrderStatus>
+			<v8:Color>AQEIAAAAAAAAAO+7v3siVSJ9</v8:Color>
+		</v8:CatalogObject.ProductionOrderStatuses>
+		<v8:CatalogObject.ProductionOrderStatuses>
+			<v8:Ref xsi:type="v8:CatalogRef.ProductionOrderStatuses">2039d47b-f9ef-11e7-8782-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Code>000000002</v8:Code>
+			<v8:Description>In progress</v8:Description>
+			<v8:OrderStatus>InProcess</v8:OrderStatus>
+			<v8:Color>AQFCAAAAAAAAAO+7v3siIyIsOWNkNTEwYzctYWJmYy0xMWQ0LTk0MzQtMDA0MDk1
+ZTEyZmM3LDIsDQp7MywyLA0KezkxfQ0KfQ0KfQ==</v8:Color>
+		</v8:CatalogObject.ProductionOrderStatuses>
+		<v8:CatalogObject.ProductionOrderStatuses>
+			<v8:Ref xsi:type="v8:CatalogRef.ProductionOrderStatuses">2039d47c-f9ef-11e7-8782-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Code>000000003</v8:Code>
+			<v8:Description>Completed</v8:Description>
+			<v8:OrderStatus>Completed</v8:OrderStatus>
+			<v8:Color>AQFmAAAAAAAAAO+7v3siIyIsOWNkNTEwYzctYWJmYy0xMWQ0LTk0MzQtMDA0MDk1
+ZTEyZmM3LDIsDQp7MywzLA0KezAsNDMyYTJjNjYtMDEyZC00ZDlhLWEzOGMtMTlk
+NTc0OTEwYTY0fQ0KfQ0KfQ==</v8:Color>
+		</v8:CatalogObject.ProductionOrderStatuses>
+		<v8:CatalogObject.PurchaseOrderStatuses>
+			<v8:Ref xsi:type="v8:CatalogRef.PurchaseOrderStatuses">8e6e8f86-f9ec-11e7-8782-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Code>000000001</v8:Code>
+			<v8:Description>Open</v8:Description>
+			<v8:PredefinedDataName>Open</v8:PredefinedDataName>
+			<v8:OrderStatus>Open</v8:OrderStatus>
+			<v8:Color>AQEIAAAAAAAAAO+7v3siVSJ9</v8:Color>
+		</v8:CatalogObject.PurchaseOrderStatuses>
+		<v8:CatalogObject.PurchaseOrderStatuses>
+			<v8:Ref xsi:type="v8:CatalogRef.PurchaseOrderStatuses">2039d479-f9ef-11e7-8782-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Code>000000002</v8:Code>
+			<v8:Description>In progress</v8:Description>
+			<v8:OrderStatus>InProcess</v8:OrderStatus>
+			<v8:Color>AQFCAAAAAAAAAO+7v3siIyIsOWNkNTEwYzctYWJmYy0xMWQ0LTk0MzQtMDA0MDk1
+ZTEyZmM3LDIsDQp7MywyLA0KezkxfQ0KfQ0KfQ==</v8:Color>
+		</v8:CatalogObject.PurchaseOrderStatuses>
+		<v8:CatalogObject.PurchaseOrderStatuses>
+			<v8:Ref xsi:type="v8:CatalogRef.PurchaseOrderStatuses">2039d47a-f9ef-11e7-8782-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Code>000000003</v8:Code>
+			<v8:Description>Completed</v8:Description>
+			<v8:OrderStatus>Completed</v8:OrderStatus>
+			<v8:Color>AQFmAAAAAAAAAO+7v3siIyIsOWNkNTEwYzctYWJmYy0xMWQ0LTk0MzQtMDA0MDk1
+ZTEyZmM3LDIsDQp7MywzLA0KezAsNDMyYTJjNjYtMDEyZC00ZDlhLWEzOGMtMTlk
+NTc0OTEwYTY0fQ0KfQ0KfQ==</v8:Color>
+		</v8:CatalogObject.PurchaseOrderStatuses>
+		<v8:CatalogObject.WorkOrderStatuses>
+			<v8:Ref xsi:type="v8:CatalogRef.WorkOrderStatuses">3ecf6d3f-3a8e-11e9-9200-08606ee77ef0</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Code>000000002</v8:Code>
+			<v8:Description>In progress</v8:Description>
+			<v8:OrderStatus>InProcess</v8:OrderStatus>
+			<v8:Color>AQFCAAAAAAAAAO+7v3siIyIsOWNkNTEwYzctYWJmYy0xMWQ0LTk0MzQtMDA0MDk1
+ZTEyZmM3LDIsDQp7MywyLA0KezkxfQ0KfQ0KfQ==</v8:Color>
+		</v8:CatalogObject.WorkOrderStatuses>
+		<v8:CatalogObject.WorkOrderStatuses>
+			<v8:Ref xsi:type="v8:CatalogRef.WorkOrderStatuses">3ecf6d40-3a8e-11e9-9200-08606ee77ef0</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Code>000000003</v8:Code>
+			<v8:Description>Completed</v8:Description>
+			<v8:OrderStatus>Completed</v8:OrderStatus>
+			<v8:Color>AQFmAAAAAAAAAO+7v3siIyIsOWNkNTEwYzctYWJmYy0xMWQ0LTk0MzQtMDA0MDk1
+ZTEyZmM3LDIsDQp7MywzLA0KezAsNDMyYTJjNjYtMDEyZC00ZDlhLWEzOGMtMTlk
+NTc0OTEwYTY0fQ0KfQ0KfQ==</v8:Color>
+		</v8:CatalogObject.WorkOrderStatuses>
+		<v8:CatalogObject.WorkOrderStatuses>
+			<v8:Ref xsi:type="v8:CatalogRef.WorkOrderStatuses">b6670327-3a6c-11e9-9200-08606ee77ef0</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Code>000000001</v8:Code>
+			<v8:Description>Open</v8:Description>
+			<v8:PredefinedDataName>Open</v8:PredefinedDataName>
+			<v8:OrderStatus>Open</v8:OrderStatus>
+			<v8:Color>AQEIAAAAAAAAAO+7v3siVSJ9</v8:Color>
+		</v8:CatalogObject.WorkOrderStatuses>
+	</V8Exch:Data>
+	<PredefinedData>
+		<Catalog.SalesOrderStatuses>
+			<item Ref="8e6e8f87-f9ec-11e7-8782-b06ebfcc6763" PredefinedDataName="Open"/>
+		</Catalog.SalesOrderStatuses>
+		<Catalog.ProductionOrderStatuses>
+			<item Ref="8e6e8f85-f9ec-11e7-8782-b06ebfcc6763" PredefinedDataName="Open"/>
+		</Catalog.ProductionOrderStatuses>
+		<Catalog.PurchaseOrderStatuses>
+			<item Ref="8e6e8f86-f9ec-11e7-8782-b06ebfcc6763" PredefinedDataName="Open"/>
+		</Catalog.PurchaseOrderStatuses>
+		<Catalog.WorkOrderStatuses>
+			<item Ref="b6670327-3a6c-11e9-9200-08606ee77ef0" PredefinedDataName="Open"/>
+		</Catalog.WorkOrderStatuses>
+	</PredefinedData>
+</V8Exch:_1CV8DtUD>

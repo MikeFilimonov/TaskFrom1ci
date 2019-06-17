@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="V8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.19236"></meta></head><body>
+<h1>Managing discounts</h1>
+<p>In 1C:Drive, you can specify flexible discounts to make the best offer for your customers in your sales documents. Typically, you need this to encourage your customers to buy your goods and services.</p>
+<p>Negative discounts work as markups. This can be useful, for instance, to raise your sales when the customer is ready to pay more for fulfilling their order urgently.</p>
+<p>You can specify <em>manual discounts</em> and <em>automatic discounts</em>.</p>
+<ul><li>A manual discount is a custom discount specified in a sales document. It is applied to the entire document. For instance, a potential customer agrees to order your goods and services only if the amount to pay is reduced by at least 3%. Once you apply a manual discount, 1C:Drive decreases the amount of the sales document. 
+<p>In a manual discount, you specify the discount percentage.</p>
+</li><li>An automatic discount is a discount that 1C:Drive automatically applies to a sales document if the conditions defined in the automatic discount are met. It can be applied to the entire document or to its individual lines. For instance, you can specify a 5% automatic discount to apply to all sales orders exceeding 10,000 EUR. 
+<p>In an automatic discount, you specify when to apply the discount and how to reduce the amount.</p></li></ul><p>The main difference between manual and automatic discounts is who determines whether to apply the discount:</p>
+<ul><li>For a manual discount, it is the author of a sales document. 
+<p>When the number of available discounts and the number of rules the document author must follow grow, specifying a discount might get complicated and prone to human error. An excessive discount is the loss of your company's money.</p>
+</li><li>For an automatic discount, 1C:Drive simply follows the rules automatically. 
+<p>The main benefit of it is saving your time and effort on selecting a discount for a specific sales scenario. Automatic discounts simplify the creation of sales documents.</p></li></ul><a name="manual_discounts"></a>
+<h2>Managing manual discounts</h2>
+<p>To be able to work with manual discounts, turn on the <strong>Settings &gt; Accounting settings &gt; Sales &gt; Discounts &gt; Use discount</strong> option.</p>
+<h3>Viewing manual discounts</h3>
+<p>To view the list of manual discounts:</p>
+<ul><li>Click <strong>Sales &gt; Catalogs &gt; Discount types</strong> and then click the <strong>Manual discounts</strong> tab. </li></ul><p>You can apply as many manual discounts as you want to a sales document.</p>
+<h3>Creating manual discounts</h3>
+<p>To create a manual discount:</p>
+<ol><li>Click <strong>Sales &gt; Catalogs &gt; Discount types</strong>, click the <strong>Manual discounts</strong> tab, and then click <strong>Create</strong>. 
+</li><li>Specify the discount name and percentage. 
+</li><li>If necessary, specify notes that describe the rules for applying the discount. 
+</li><li>Click <strong>Save</strong>. </li></ol><p>After creating a manual discount, 1C:Drive adds it to the list of manual discounts. Later you can apply it to a sales document.</p>
+<h3>Applying manual discounts</h3>
+<p>To apply a manual discount to a sales document:</p>
+<ol><li>Open the sales document. 
+</li><li>Click <strong>Prices and currency</strong>. 
+</li><li>In the <strong>Discounts</strong> list, select a discount. 
+</li><li>Select the <strong>Refill prices</strong> check box. 
+</li><li>Click <strong>OK</strong>. </li></ol><p>1C:Drive applies the discount to each line of the sales document. The <strong>Prices and currency</strong> link includes the name of the manual discount. For each line, the <strong>Discount %</strong> column displays the applied discount percentage.</p>
+<p>For any line of the sales document, you can edit the value in the <strong>Discount %</strong> column and thus change the discount applied to the line.</p>
+<h2>Managing automatic discounts</h2>
+<p>To be able to work with automatic discounts, turn on the <strong>Settings &gt; Accounting settings &gt; Sales &gt; Discounts &gt; Automatic discounts</strong> option.</p>
+<h3>Viewing automatic discounts</h3>
+<p>To view the list of automatic discounts:</p>
+<ul><li>Click <strong>Sales &gt; Catalogs &gt; Discount types</strong> and then click the <strong>Automatic discounts</strong> tab. </li></ul><p>1C:Drive applies an automatic discount to a sales document if the document matches the criteria defined in the discount.</p>
+<p>You can organize automatic discounts in a hierarchy of folders.</p>
+<h3>Creating automatic discounts</h3>
+<p>To create an automatic discount:</p>
+<ol><li>Click <strong>Sales &gt; Catalogs &gt; Discount types</strong>. 
+</li><li>Click the <strong>Automatic discounts</strong> tab. 
+</li><li>Click the target discount folder. 
+<p>For more information, see <a href="#custom_overlapping_rules">Specifying custom overlapping rules</a>.</p>
+</li><li>Click <strong>Create</strong>. 
+</li><li>Fill the discount fields. 
+<p>For more information, see <a href="#automatic_discount_fields">Filling automatic discount fields</a>.</p>
+</li><li>If necessary, set the discount conditions. 
+<p>For more information, see <a href="#discount_conditions">Specifying discount conditions</a>.</p>
+</li><li>If necessary, exclude particular products from the discount. 
+<p>For more information, see <a href="#products_excluded_from_discounts">Excluding products from discounts</a>.</p>
+</li><li>If necessary, set customers that get the discount. 
+<p>For more information, see <a href="#customers_getting_discounts">Specifying customers that get discounts</a>.</p>
+</li><li>If necessary, set the discount schedule. 
+<p>For more information, see <a href="#discount_schedule">Specifying discount schedules</a>.</p>
+</li><li>Click <strong>Save</strong>. </li></ol><a name="automatic_discount_fields">
+<h3>Filling automatic discount fields</h3>
+<p>An automatic discount has the following fields:</p>
+<ul><li><strong>Description</strong>. The discount name. 
+</li><li><strong>Active</strong>. 1C:Drive applies active discounts only. This field lets you temporarily deactivate the discount without deleting it. Deactivating a discount does not affect the documents where the discount is applied. 
+</li><li><strong>Applicable to</strong>. The sales flow affected by the discount: wholesale, retail, or both. 
+</li><li><strong>Priority</strong>. The discount priority. It only has effect if discount's overlapping rule is <strong>Apply sequentially</strong> or <strong>Displace</strong>. 
+<p>For more information about discounts overlapping rules and priorities, see <a href="#discount_overlapping_rules">Managing discount overlapping rules</a>.</p>
+</li><li><strong>Charge model</strong>. The discount calculation method: fixed amount or percentage. 
+</li><li><strong>Apply per</strong>. Shows whether the discount is applied to the total of the sales document (<strong>Document</strong>) or to individual lines of the document (<strong>Line</strong>). This is important because a 20 EUR discount for a document with 3 lines turns into a 60 EUR discount if you select <strong>Line</strong>. 
+</li><li><strong>Value</strong>. The discount value. </li></ul></a><a name="discount_conditions"></a>
+<h3>Specifying discount conditions</h3>
+<p>You can specify the conditions for applying a discount. If you do not specify any conditions, 1C:Drive always applies the discount, provided that the overlapping rules allow this.</p>
+<p>Complete the following fields:</p>
+<ul><li><strong>Description</strong>. The condition name. 
+</li><li><strong>Apply for</strong>. The condition details: 
+<ul><li><strong>Volume purchased</strong>. Apply the discount upon reaching a specific sales volume. 
+<p>Specify whether the condition checks the amount or quantity in the entire sales document or in its line, a comparison rule, and a value.</p>
+<p>For instance, you can set a condition that the number of chairs sold is greater than or equal to 5, or a condition that the sales document's amount is greater than 500 EUR.</p>
+</li><li><strong>Bundle purchased</strong>. Apply the discount when a particular collection of items is sold at once. 
+<p>Specify the items and their quantity.</p>
+<p>For instance, you can set a condition that a cap, a scarf, and a pair of gloves are sold at once.</p></li></ul></li></ul><p>You can create a group for discount conditions and even create a hierarchy of such groups. Then, you can place a discount to a group. Thus, you can logically organize a large number of conditions similarly to the way you organize files in folders.</p>
+<p>1C:Drive applies a discount to a sales document only when all its conditions are met in the document.</p><a name="products_excluded_from_discounts"></a>
+<h3>Excluding products from discounts</h3>
+<p>You can decide not to apply a discount to particular products even if a sales document matches the discount conditions.</p>
+<p>To exclude products from a discount:</p>
+<ul><li>In the discount details, click the <strong>Filters and Exceptions</strong> tab, click the <strong>Product exceptions</strong> tab, select the exception type (by products, product categories, or price groups), and then select the products, product categories, or price groups. 
+<p>Optionally, for each of the selected products, product categories, or price groups, you can set a custom discount amount.</p></li></ul><a name="customers_getting_discounts"></a>
+<h3>Specifying customers that get discounts</h3>
+<p>For a wholesale discount, you can set a list of wholesale customers eligible for the discount.</p>
+<p>To set a list of customers eligible for a wholesale discount:</p>
+<ul><li>In the discount details, click the <strong>Filters and Exceptions</strong> tab, click the <strong>Provide to</strong> tab, and then, on the Counterparties tab, fill the list of customers. 
+<p>If you leave the list blank, 1C:Drive applies the discount for all wholesale customers.</p></li></ul><p>For a retail discount, you can set a list of points of sale (POS) eligible for the discount.</p>
+<p>To set a list of points of sale for a retail discount:</p>
+<ul><li>In the discount details, click the <strong>Filters and Exceptions</strong> tab, click the <strong>Provide to</strong> tab, and then, on the <strong>POS</strong> tab, fill the list of points of sales. 
+<p>If you leave the list blank, 1C:Drive applies the discount to all points of sale.</p></li></ul><a name="discount_schedule"></a>
+<h3>Specifying discount schedules</h3>
+<p>You can set a discount schedule. For instance, you might want to apply a discount on Monday from 10:00 AM till 11:00 AM and on Friday from 5:00 PM till 6:00 PM.</p>
+<p>To set a discount schedule:</p>
+<ul><li>In the discount details, click the <strong>Filters and Exceptions</strong> tab, click the <strong>Weekly schedule</strong> tab, and specify the schedule. </li></ul><a name="discount_overlapping_rules">
+<h3>Managing discount overlapping rules</h3>
+<p>When a sales document matches the criteria for several automatic discounts at once, 1C:Drive applies these competing discounts according to discount overlapping rules.</p></a><a name="top_level_overlapping_rule"></a>
+<h4>Specifying the top-level overlapping rule</h4>
+<p>By default, only the top-level overlapping rule is available. It affects the discounts that reside outside any folders (as if they belong to a top-level folder).</p>
+<p>To set the top-level overlapping rule:</p>
+<ul><li>On the <strong>Automatic discounts</strong> tab, in the <strong>Top-level overlapping rule</strong> field, select one of the following: 
+<ul><li><strong>Sum up</strong>. Sum up all discounts. 
+</li><li><strong>Apply max</strong>. Only apply the discount giving the maximum discount amount. 
+</li><li><strong>Apply min</strong>. Only apply the discount giving the minimum discount amount. 
+</li><li><strong>Apply sequentially</strong>. Apply the discounts in the order defined by their priorities, starting from the lowest priority. 
+</li><li><strong>Displace</strong>. Only apply the discount with the highest priority. </li></ul></li></ul><p>In simple scenarios with a small number of competing discounts, using the top-level overlapping rule is enough.</p><a name="custom_overlapping_rules"></a>
+<h4>Specifying custom overlapping rules</h4>
+<p>If you have a large number of competing discounts, you might want to add more overlapping rules.</p>
+<p>A custom overlapping rule is a rule specified for a discount folder.</p>
+<p>You can create a hierarchy of folders for your automatic discounts. For each folder, you specify the overlapping rule and priority.</p>
+<p>The overlapping rule affects all the discounts that belong to the folder.</p>
+<p>The folder's priority is compared with priorities of other folders and discounts having the same level in the hierarchy. So, it only has effect if the overlapping rule affecting the parent folder is <strong>Apply sequentially</strong> or <strong>Displace</strong>.</p>
+<p>Thus, you can flexibly control how 1C:Drive applies competing discounts.</p>
+<p>For instance, if you have three competing discounts and you want to apply them in the following way:</p>
+<ul><li>Sum up: 
+<ul><li><em>Discount 1</em> 
+</li><li>The maximum among: 
+<ul><li><em>Discount 2</em> 
+</li><li><em>Discount 3</em> </li></ul></li></ul></li></ul><p>you can set the <strong>Sum up</strong> top-level overlapping rule, then create a discount folder with the <strong>Apply max</strong> overlapping rule, and place <em>Discount 2</em> and <em>Discount 3</em> to this folder.</p>
+<p>Another example: if you have four competing discounts with 0 priority and you want to apply them in the following way:</p>
+<ol><li>The maximum among: 
+<ul><li><em>Discount 1</em> 
+</li><li><em>Discount 2</em> </li></ul></li><li>The minimum among: 
+<ul><li><em>Discount 3</em> 
+</li><li><em>Discount 4</em> </li></ul></li></ol><p>you can set the <strong>Apply sequentially</strong> top-level overlapping rule, create <em>Folder A</em> with the <strong>Apply max</strong> overlapping rule and priority 1, create <em>Folder B</em> with the <strong>Apply min</strong> overlapping rule and priority 2, place <em>Discount 1</em> and <em>Discount 2</em> to <em>Folder A</em>, and place <em>Discount 3</em> and <em>Discount 4</em> to <em>Folder B</em>.</p>
+<p>To create a discount folder:</p>
+<ol><li>On the <strong>Automatic discounts</strong> tab, click <strong>Create overlapping rule</strong>. 
+</li><li>Specify the folder name, parent folder, overlapping rule, priority, and optional notes. 
+</li><li>Click <strong>Save</strong>. </li></ol><p>To move a discount to a folder:</p>
+<ul><li>On the <strong>Automatic discounts</strong> tab, drag the discount to the folder. </li></ul><h3>Applying automatic discounts</h3>
+<p>When posting a sales document, 1C:Drive applies automatic discounts if their conditions are met.</p>
+<p>Before posting the document, to check the discount percentage, on the <strong>Products</strong> tab, click <strong>Apply discounts</strong> and check the values in the <strong>Automatic discount %</strong> column.</p>
+<h2>Viewing discounts applied to sales documents</h2>
+<p>1C:Drive can apply both a manual discount and automatic discounts to a sales document. It first applies the manual discount, and then automatic discounts. The order is important because the final amount might differ depending on the order. For instance, if you have a 100 EUR sales order, a 5% manual discount, and a 10 EUR automatic discount, the final amount is 100-5%-10=85 EUR, not 100-10-5%=85.5 EUR.</p>
+<p>The total percentage of automatic discounts applied to lines of a sales document is displayed on the <strong>Products</strong> tab, in the <strong>Automatic discount %</strong> column.</p>
+<p>To view the discounts applied to a line of a sales document:</p>
+<ul><li>In this line, double-click in the <strong>Automatic discount %</strong> column. 
+<p>This opens the <strong>Discounts applied to a line</strong> window with the manual discount amount, the automatic discount amount, the list of applied automatic discounts, and the total discount amount.</p></li></ul><p>To view the discounts applied to the entire sales document:</p>
+<ul><li>In the document, click <strong>Applied discounts</strong>. 
+<p>This opens the <strong>Discounts applied in the document</strong> window with all discounts and their amounts.</p>
+<p>It also displays automatic discounts that are not applied because their conditions are not met and automatic discounts that are not applied due to the overlapping rules.</p></li></ul></body></html>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<ChildItems>
+			<Button name="FormPrintSimplifiedTaxInvoice" id="15">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.PrintSimplifiedTaxInvoice</CommandName>
+				<ExtendedTooltip name="FormPrintSimplifiedTaxInvoiceExtendedTooltip" id="16"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="GroupDateNumber" id="13">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="GroupDateNumberExtendedTooltip" id="14"/>
+			<ChildItems>
+				<InputField name="ReceiptNumber" id="10">
+					<DataPath>Object.ReceiptNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ReceiptNumberContextMenu" id="11"/>
+					<ExtendedTooltip name="ReceiptNumberExtendedTooltip" id="12"/>
+				</InputField>
+				<InputField name="Date" id="1">
+					<DataPath>Object.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="DateContextMenu" id="2"/>
+					<ExtendedTooltip name="DateExtendedTooltip" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Company" id="4">
+			<DataPath>Object.Company</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="CompanyContextMenu" id="5"/>
+			<ExtendedTooltip name="CompanyExtendedTooltip" id="6"/>
+		</InputField>
+		<InputField name="CashCR" id="7">
+			<DataPath>Object.CashCR</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="CashCRContextMenu" id="8"/>
+			<ExtendedTooltip name="CashCRExtendedTooltip" id="9"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.PrintSimplifiedTaxInvoice</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="PrintSimplifiedTaxInvoice" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Simplified tax invoice</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Print</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>PrintSimplifiedTaxInvoice</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

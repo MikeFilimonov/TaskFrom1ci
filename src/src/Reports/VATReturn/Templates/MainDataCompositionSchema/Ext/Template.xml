@@ -1,0 +1,889 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>DataSource1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>DataSet1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Box</dataPath>
+			<field>Box</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Box</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>VATAmount</dataPath>
+			<field>VATAmount</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>VAT amount</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Company</dataPath>
+			<field>Company</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Company</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>AmountExcludesVAT</dataPath>
+			<field>AmountExcludesVAT</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Amount excl VAT</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ProductType</dataPath>
+			<field>ProductType</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Product / service</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>OperationType</dataPath>
+			<field>OperationType</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Operation type</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Period</dataPath>
+			<field>Period</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Period</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>2</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Recorder</dataPath>
+			<field>Recorder</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Document</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>VATRate</dataPath>
+			<field>VATRate</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>VAT rate</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ShipmentDocument</dataPath>
+			<field>ShipmentDocument</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Shipment document</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Counterparty</dataPath>
+			<field>Counterparty</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Counterparty</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>VATSection</dataPath>
+			<field>VATSection</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>VAT section</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Supplier</dataPath>
+			<field>Supplier</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Supplier</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>DataSource1</dataSource>
+		<query>SELECT
+	"OUTPUT" AS Register,
+	VATOutput.Period AS Period,
+	VATOutput.Recorder AS Recorder,
+	VATOutput.Company AS Company,
+	VATOutput.Customer AS Counterparty,
+	VATOutput.ShipmentDocument AS ShipmentDocument,
+	VATOutput.VATRate AS VATRate,
+	VATOutput.OperationType AS OperationType,
+	VATOutput.ProductType AS ProductType,
+	VATOutput.AmountExcludesVAT AS AmountExcludesVAT,
+	VATOutput.VATAmount AS VATAmount
+INTO TT_InputOutputRawDetails
+FROM
+	AccumulationRegister.VATOutput AS VATOutput
+{WHERE
+	(VATOutput.Period BETWEEN &amp;Date1 AND &amp;Date2)}
+
+UNION ALL
+
+SELECT
+	"INPUT",
+	VATInput.Period,
+	VATInput.Recorder,
+	VATInput.Company,
+	VATInput.Supplier,
+	VATInput.ShipmentDocument,
+	VATInput.VATRate,
+	VATInput.OperationType,
+	VATInput.ProductType,
+	VATInput.AmountExcludesVAT,
+	VATInput.VATAmount
+FROM
+	AccumulationRegister.VATInput AS VATInput
+{WHERE
+	(VATInput.Period BETWEEN &amp;Date1 AND &amp;Date2)}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	1 AS Box,
+	"VAT due on sales" AS VATSection
+INTO TT_SectionsAndBoxes
+
+UNION ALL
+
+SELECT
+	2,
+	"VAT due on member states acquisitions"
+
+UNION ALL
+
+SELECT
+	3,
+	"VAT due on advances"
+
+UNION ALL
+
+SELECT
+	4,
+	"TOTAL VAT due (sum of boxes 1, 2, 3)"
+
+UNION ALL
+
+SELECT
+	5,
+	"VAT reclaimed on purchases"
+
+UNION ALL
+
+SELECT
+	6,
+	"VAT reclaimed on advances"
+
+UNION ALL
+
+SELECT
+	7,
+	"Net VAT to be paid (box 4 - box 5 - box 6)"
+
+UNION ALL
+
+SELECT
+	8,
+	"VAT not confirmed"
+
+UNION ALL
+
+SELECT
+	101,
+	"Export"
+
+UNION ALL
+
+SELECT
+	102,
+	"Import"
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	VALUE(Enum.VATOperationTypes.AdvancePayment) AS OperationType,
+	"OUTPUT" AS Register,
+	3 AS Box
+INTO TT_OperationTypesAndBoxes
+
+UNION ALL
+
+SELECT
+	VALUE(Enum.VATOperationTypes.AdvancePayment),
+	"INPUT",
+	6
+
+UNION ALL
+
+SELECT
+	VALUE(Enum.VATOperationTypes.AdvanceCleared),
+	"OUTPUT",
+	3
+
+UNION ALL
+
+SELECT
+	VALUE(Enum.VATOperationTypes.AdvanceCleared),
+	"INPUT",
+	6
+
+UNION ALL
+
+SELECT
+	VALUE(Enum.VATOperationTypes.Sales),
+	"OUTPUT",
+	1
+
+UNION ALL
+
+SELECT
+	VALUE(Enum.VATOperationTypes.SalesReturn),
+	"OUTPUT",
+	1
+
+UNION ALL
+
+SELECT
+	VALUE(Enum.VATOperationTypes.DiscountAllowed),
+	"OUTPUT",
+	1
+
+UNION ALL
+
+SELECT
+	VALUE(Enum.VATOperationTypes.Export),
+	"OUTPUT",
+	101
+
+UNION ALL
+
+SELECT
+	VALUE(Enum.VATOperationTypes.Purchases),
+	"INPUT",
+	5
+
+UNION ALL
+
+SELECT
+	VALUE(Enum.VATOperationTypes.PurchasesReturn),
+	"INPUT",
+	5
+
+UNION ALL
+
+SELECT
+	VALUE(Enum.VATOperationTypes.DiscountReceived),
+	"INPUT",
+	5
+
+UNION ALL
+
+SELECT
+	VALUE(Enum.VATOperationTypes.Import),
+	"INPUT",
+	102
+
+UNION ALL
+
+SELECT
+	VALUE(Enum.VATOperationTypes.ReverseChargeApplied),
+	"OUTPUT",
+	2
+
+UNION ALL
+
+SELECT
+	VALUE(Enum.VATOperationTypes.ReverseChargeApplied),
+	"INPUT",
+	5
+
+UNION ALL
+
+SELECT
+	VALUE(Enum.VATOperationTypes.OtherAdjustments),
+	"OUTPUT",
+	1
+
+UNION ALL
+
+SELECT
+	VALUE(Enum.VATOperationTypes.OtherAdjustments),
+	"INPUT",
+	5
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	TT_InputOutputRawDetails.Register AS Register,
+	TT_InputOutputRawDetails.Period AS Period,
+	TT_InputOutputRawDetails.Recorder AS Recorder,
+	TT_InputOutputRawDetails.Company AS Company,
+	TT_InputOutputRawDetails.Counterparty AS Counterparty,
+	TT_InputOutputRawDetails.ShipmentDocument AS ShipmentDocument,
+	TT_InputOutputRawDetails.VATRate AS VATRate,
+	TT_InputOutputRawDetails.OperationType AS OperationType,
+	TT_InputOutputRawDetails.ProductType AS ProductType,
+	TT_InputOutputRawDetails.AmountExcludesVAT AS AmountExcludesVAT,
+	TT_InputOutputRawDetails.VATAmount AS VATAmount,
+	TT_OperationTypesAndBoxes.Box AS Box
+INTO TT_InputOutputDetails
+FROM
+	TT_InputOutputRawDetails AS TT_InputOutputRawDetails
+		LEFT JOIN TT_OperationTypesAndBoxes AS TT_OperationTypesAndBoxes
+		ON TT_InputOutputRawDetails.OperationType = TT_OperationTypesAndBoxes.OperationType
+			AND TT_InputOutputRawDetails.Register = TT_OperationTypesAndBoxes.Register
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	TT_InputOutputDetails.Company AS Company,
+	TT_InputOutputDetails.AmountExcludesVAT AS AmountExcludesVAT,
+	TT_InputOutputDetails.VATAmount AS VATAmount,
+	4 AS Box
+INTO TT_InputOutputBoxTotals
+FROM
+	TT_InputOutputDetails AS TT_InputOutputDetails
+WHERE
+	(TT_InputOutputDetails.Box = 1
+			OR TT_InputOutputDetails.Box = 2
+			OR TT_InputOutputDetails.Box = 3)
+
+UNION ALL
+
+SELECT
+	TT_InputOutputDetails.Company,
+	TT_InputOutputDetails.AmountExcludesVAT,
+	TT_InputOutputDetails.VATAmount,
+	7
+FROM
+	TT_InputOutputDetails AS TT_InputOutputDetails
+WHERE
+	(TT_InputOutputDetails.Box = 1
+			OR TT_InputOutputDetails.Box = 2
+			OR TT_InputOutputDetails.Box = 3)
+
+UNION ALL
+
+SELECT
+	TT_InputOutputDetails.Company,
+	-TT_InputOutputDetails.AmountExcludesVAT,
+	-TT_InputOutputDetails.VATAmount,
+	7
+FROM
+	TT_InputOutputDetails AS TT_InputOutputDetails
+WHERE
+	(TT_InputOutputDetails.Box = 5
+			OR TT_InputOutputDetails.Box = 6)
+
+UNION ALL
+
+SELECT
+	CatalogCompanies.Ref,
+	0,
+	0,
+	1
+FROM
+	Catalog.Companies AS CatalogCompanies
+
+UNION ALL
+
+SELECT
+	CatalogCompanies.Ref,
+	0,
+	0,
+	2
+FROM
+	Catalog.Companies AS CatalogCompanies
+
+UNION ALL
+
+SELECT
+	CatalogCompanies.Ref,
+	0,
+	0,
+	3
+FROM
+	Catalog.Companies AS CatalogCompanies
+
+UNION ALL
+
+SELECT
+	CatalogCompanies.Ref,
+	0,
+	0,
+	4
+FROM
+	Catalog.Companies AS CatalogCompanies
+
+UNION ALL
+
+SELECT
+	CatalogCompanies.Ref,
+	0,
+	0,
+	5
+FROM
+	Catalog.Companies AS CatalogCompanies
+
+UNION ALL
+
+SELECT
+	CatalogCompanies.Ref,
+	0,
+	0,
+	6
+FROM
+	Catalog.Companies AS CatalogCompanies
+
+UNION ALL
+
+SELECT
+	CatalogCompanies.Ref,
+	0,
+	0,
+	7
+FROM
+	Catalog.Companies AS CatalogCompanies
+
+UNION ALL
+
+SELECT
+	CatalogCompanies.Ref,
+	0,
+	0,
+	8
+FROM
+	Catalog.Companies AS CatalogCompanies
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	TT_InputOutputDetails.Period AS Period,
+	TT_InputOutputDetails.Recorder AS Recorder,
+	TT_InputOutputDetails.Company AS Company,
+	TT_InputOutputDetails.Counterparty AS Counterparty,
+	TT_InputOutputDetails.ShipmentDocument AS ShipmentDocument,
+	TT_InputOutputDetails.VATRate AS VATRate,
+	TT_InputOutputDetails.OperationType AS OperationType,
+	TT_InputOutputDetails.ProductType AS ProductType,
+	TT_InputOutputDetails.AmountExcludesVAT AS AmountExcludesVAT,
+	TT_InputOutputDetails.VATAmount AS VATAmount,
+	TT_InputOutputDetails.Box AS Box,
+	ISNULL(TT_SectionsAndBoxes.VATSection, "&lt;Undefined&gt;") AS VATSection
+FROM
+	TT_InputOutputDetails AS TT_InputOutputDetails
+		LEFT JOIN TT_SectionsAndBoxes AS TT_SectionsAndBoxes
+		ON TT_InputOutputDetails.Box = TT_SectionsAndBoxes.Box
+
+UNION ALL
+
+SELECT
+	NULL,
+	NULL,
+	TT_InputOutputBoxTotals.Company,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	SUM(TT_InputOutputBoxTotals.AmountExcludesVAT),
+	SUM(TT_InputOutputBoxTotals.VATAmount),
+	TT_InputOutputBoxTotals.Box,
+	ISNULL(TT_SectionsAndBoxes.VATSection, "&lt;Undefined&gt;")
+FROM
+	TT_InputOutputBoxTotals AS TT_InputOutputBoxTotals
+		LEFT JOIN TT_SectionsAndBoxes AS TT_SectionsAndBoxes
+		ON TT_InputOutputBoxTotals.Box = TT_SectionsAndBoxes.Box
+
+GROUP BY
+	ISNULL(TT_SectionsAndBoxes.VATSection, "&lt;Undefined&gt;"),
+	TT_InputOutputBoxTotals.Company,
+	TT_InputOutputBoxTotals.Box
+
+UNION ALL
+
+SELECT
+	NULL,
+	VATIncurredBalance.ShipmentDocument,
+	VATIncurredBalance.Company,
+	NULL,
+	VATIncurredBalance.ShipmentDocument,
+	VATIncurredBalance.VATRate,
+	VALUE(Enum.VATOperationTypes.EmptyRef),
+	VALUE(Enum.ProductsTypes.EmptyRef),
+	VATIncurredBalance.AmountExcludesVATBalance,
+	VATIncurredBalance.VATAmountBalance,
+	8,
+	"VAT not confirmed"
+FROM
+	AccumulationRegister.VATIncurred.Balance({(&amp;Date2)}, ) AS VATIncurredBalance</query>
+	</dataSet>
+	<totalField>
+		<dataPath>VATAmount</dataPath>
+		<expression>Sum(VATAmount)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>AmountExcludesVAT</dataPath>
+		<expression>Sum(AmountExcludesVAT)</expression>
+	</totalField>
+	<parameter>
+		<name>Period</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Period</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Date1</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Date1</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Period.StartDate</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Date2</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Date2</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Period.EndDate</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Default</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>VAT return</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>AmountExcludesVAT</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>VATAmount</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Company</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Catalog.Companies.MainCompany</dcsset:right>
+					<dcsset:userSettingID>59ee7130-808e-43e8-a9ae-5d592f4de28c</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Box</dcsset:left>
+					<dcsset:comparisonType>Less</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:decimal">100</dcsset:right>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Export and import excluded</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Period</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">LastQuarter</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>234ac01d-8029-40a8-b44c-63951c5dafc6</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Box</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Period</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Recorder</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Recorder</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>VATSection</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>MaximumWidth</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">40</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>OperationType</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>MaximumWidth</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Box</dcsset:left>
+							<dcsset:comparisonType>InList</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">4</dcsset:right>
+							<dcsset:right xsi:type="xs:decimal">7</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>BackColor</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">web:DarkSeaGreen</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>Font</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>OperationType</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Box</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">8</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Text</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Awaiting Tax invoice</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>AppearanceTemplate</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ReportThemeGreen</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>GroupFieldsPlacement</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionGroupFieldsPlacement">SeparatelyAndInTotalsOnly</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>VerticalOverallPlacement</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>VATSection</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Box</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>VATRate</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>OperationType</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ProductType</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>Recorder</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

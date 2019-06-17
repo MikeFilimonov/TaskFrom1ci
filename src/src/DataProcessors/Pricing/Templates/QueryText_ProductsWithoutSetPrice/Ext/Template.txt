@@ -1,0 +1,66 @@
+﻿SELECT
+	ProductsTable.Products AS Products,
+	ProductsTable.Characteristic AS Characteristic
+INTO ProductsTable
+FROM
+	&ProductsTable AS ProductsTable
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	PricesSliceLast.Products AS Products,
+	PricesSliceLast.Characteristic AS Characteristic
+INTO ProductsDescriptionWithPrice
+FROM
+	InformationRegister.Prices.SliceLast(
+			&ToDate,
+			PriceKind = &PriceKind
+				AND Actuality) AS PricesSliceLast
+WHERE
+	&CharacteristicCondition
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	Products.Ref AS Products,
+	VALUE(Catalog.ProductsCharacteristics.EmptyRef) AS Characteristic,
+	Products.MeasurementUnit AS MeasurementUnit
+INTO ProductsDescriptionOfAllPositions
+FROM
+	Catalog.Products AS Products
+WHERE
+	Products.ProductsType IN (VALUE(Enum.ProductsTypes.InventoryItem), VALUE(Enum.ProductsTypes.Service), VALUE(Enum.ProductsTypes.Work))
+
+UNION ALL
+
+SELECT
+	ProductsCharacteristics.Owner,
+	ProductsCharacteristics.Ref,
+	ProductsCharacteristics.Owner.MeasurementUnit
+FROM
+	Catalog.ProductsCharacteristics AS ProductsCharacteristics
+WHERE
+	ProductsCharacteristics.Owner.ProductsType IN (VALUE(Enum.ProductsTypes.InventoryItem), VALUE(Enum.ProductsTypes.Service), VALUE(Enum.ProductsTypes.Work))
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	ProductsDescriptionOfAllPositions.Products AS Products,
+	ProductsDescriptionOfAllPositions.Characteristic AS Characteristic,
+	ProductsDescriptionOfAllPositions.MeasurementUnit AS MeasurementUnit,
+	0 AS Price
+FROM
+	ProductsDescriptionOfAllPositions AS ProductsDescriptionOfAllPositions
+WHERE
+	Not (ProductsDescriptionOfAllPositions.Products, ProductsDescriptionOfAllPositions.Characteristic) In
+				(SELECT
+					ProductsDescriptionWithPrice.Products,
+					ProductsDescriptionWithPrice.Characteristic
+				FROM
+					ProductsDescriptionWithPrice AS ProductsDescriptionWithPrice)
+	AND Not (Products, Characteristic) In
+						(SELECT
+							ProductsTable.Products,
+							ProductsTable.Characteristic
+						FROM
+							ProductsTable AS ProductsTable)

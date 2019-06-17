@@ -1,0 +1,1324 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<ChildItems>
+			<ButtonGroup name="ImportantCommandsGroup" id="254">
+				<Title>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Group important commands</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Group important commands</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ImportantCommandsGroupExtendedTooltip" id="255"/>
+				<ChildItems>
+					<Button name="CommonCommandRemind" id="264">
+						<Type>CommandBarButton</Type>
+						<CommandName>CommonCommand.SetReminder</CommandName>
+						<DataPath>Object.Ref</DataPath>
+						<ExtendedTooltip name="CommonCommandRemindExtendedTooltip" id="265"/>
+					</Button>
+					<Button name="Fill" id="78">
+						<Type>CommandBarButton</Type>
+						<SkipOnInput>true</SkipOnInput>
+						<CommandName>Form.Command.Fill</CommandName>
+						<ExtendedTooltip name="FillExtendedTooltip" id="133"/>
+					</Button>
+					<Button name="Calculate" id="79">
+						<Type>CommandBarButton</Type>
+						<SkipOnInput>true</SkipOnInput>
+						<CommandName>Form.Command.Calculate</CommandName>
+						<ExtendedTooltip name="CalculateExtendedTooltip" id="134"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+			<ButtonGroup name="GroupGlobalCommands" id="256">
+				<Title>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Group global commands</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Group global commands</v8:content>
+					</v8:item>
+				</ToolTip>
+				<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
+				<ExtendedTooltip name="GroupGlobalCommandsExtendedTooltip" id="257"/>
+				<ChildItems>
+					<Button name="CommonCommandReportByMovements" id="260">
+						<Type>CommandBarButton</Type>
+						<CommandName>CommonCommand.FlowReport</CommandName>
+						<DataPath>Object.Ref</DataPath>
+						<ExtendedTooltip name="CommonCommandReportByMovementsExtendedTooltip" id="261"/>
+					</Button>
+					<Button name="CommonCommandObjectFilling" id="258">
+						<Type>CommandBarButton</Type>
+						<CommandName>CommonCommand.ObjectFill</CommandName>
+						<DataPath>Object.Ref</DataPath>
+						<ExtendedTooltip name="CommonCommandObjectFillingExtendedTooltip" id="259"/>
+					</Button>
+					<Button name="CommonCommandObjectReports" id="262">
+						<Type>CommandBarButton</Type>
+						<CommandName>CommonCommand.ObjectReports</CommandName>
+						<DataPath>Object.Ref</DataPath>
+						<ExtendedTooltip name="CommonCommandObjectReportsExtendedTooltip" id="263"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="ChoiceProcessing">ChoiceProcessing</Event>
+		<Event name="OnReadAtServer">OnReadAtServer</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Header" id="1">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="HeaderExtendedTooltip" id="135"/>
+			<ChildItems>
+				<UsualGroup name="MainGroup" id="7">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="GroupMainExtendedTooltip" id="142"/>
+					<ChildItems>
+						<InputField name="RegistrationPeriod" id="131">
+							<DataPath>RegistrationPeriodPresentation</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Wrap>false</Wrap>
+							<ChoiceButton>true</ChoiceButton>
+							<SpinButton>true</SpinButton>
+							<TextEdit>false</TextEdit>
+							<ChoiceButtonPicture>
+								<xr:Ref>StdPicture.Calendar</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</ChoiceButtonPicture>
+							<BackColor>0:da164c9a-4836-4c07-ace9-1c2e2382eceb</BackColor>
+							<ContextMenu name="RegistrationPeriodContextMenu" id="132"/>
+							<ExtendedTooltip name="RegistrationPeriodExtendedTooltip" id="143"/>
+							<Events>
+								<Event name="StartChoice">RegistrationPeriodStartChoice</Event>
+								<Event name="Tuning">RegistrationPeriodTuning</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="GroupCounterpartyDepartment" id="234">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupCounterpartyDepartmentExtendedTooltip" id="235"/>
+							<ChildItems>
+								<InputField name="Company" id="85">
+									<DataPath>Object.Company</DataPath>
+									<SkipOnInput>true</SkipOnInput>
+									<Wrap>false</Wrap>
+									<ContextMenu name="CounterpartyContextMenu" id="86"/>
+									<ExtendedTooltip name="CounterpartyExtendedTooltip" id="140"/>
+									<Events>
+										<Event name="OnChange">CompanyOnChange</Event>
+									</Events>
+								</InputField>
+								<InputField name="StructuralUnit" id="8">
+									<DataPath>Object.StructuralUnit</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<Wrap>false</Wrap>
+									<InputHint>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Department</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="StructuralUnitContextMenu" id="9"/>
+									<ExtendedTooltip name="StructuralUnitExtendedTooltip" id="141"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="LeftColumn" id="2">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="LeftColumnExtendedTooltip" id="136"/>
+					<ChildItems>
+						<InputField name="Number" id="81">
+							<DataPath>Object.Number</DataPath>
+							<SkipOnInput>true</SkipOnInput>
+							<Width>10</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Wrap>false</Wrap>
+							<InputHint>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>&lt;Auto&gt;</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="NumberContextMenu" id="82"/>
+							<ExtendedTooltip name="NumberExtendedTooltip" id="138"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Pages" id="116">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Pages</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Pages</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="PagesExtendedTooltip" id="145"/>
+			<ChildItems>
+				<Page name="PageEarningsAndDeductions" id="106">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Earnings and deductions</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="PageEarningsAndDeductionsExtendedTooltip" id="146"/>
+					<ChildItems>
+						<Table name="EarningsDeductions" id="10">
+							<Representation>List</Representation>
+							<SkipOnInput>false</SkipOnInput>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Object.EarningsDeductions</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="EarningsDeductionsContextMenu" id="11"/>
+							<AutoCommandBar name="EarningsDeductionsCommandBar" id="12"/>
+							<ExtendedTooltip name="EarningsDeductionsExtendedTooltip" id="147"/>
+							<SearchStringAddition name="EarningsDeductionsSearchString" id="204">
+								<AdditionSource>
+									<Item>EarningsDeductions</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="EarningsDeductionsSearchStringContextMenu" id="205"/>
+								<ExtendedTooltip name="EarningsDeductionsSearchStringExtendedTooltip" id="206"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="EarningsDeductionsViewStatus" id="207">
+								<AdditionSource>
+									<Item>EarningsDeductions</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="EarningsDeductionsViewStatusContextMenu" id="208"/>
+								<ExtendedTooltip name="EarningsDeductionsViewStatusExtendedTooltip" id="209"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="EarningsDeductionsSearchControl" id="210">
+								<AdditionSource>
+									<Item>EarningsDeductions</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="EarningsDeductionsSearchControlContextMenu" id="211"/>
+								<ExtendedTooltip name="EarningsDeductionsSearchControlExtendedTooltip" id="212"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnStartEdit">EarningsDeductionsOnStartEdit</Event>
+								<Event name="OnChange">EarningsDeductionsOnChange</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="EarningsDeductionsLineNumber" id="13">
+									<DataPath>Object.EarningsDeductions.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
+									<Width>4</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Wrap>false</Wrap>
+									<ContextMenu name="EarningsDeductionsLineNumberContextMenu" id="14"/>
+									<ExtendedTooltip name="EarningsDeductionsLineNumberExtendedTooltip" id="148"/>
+								</InputField>
+								<CheckBoxField name="EarningsDeductionsManualCorrection" id="41">
+									<DataPath>Object.EarningsDeductions.ManualCorrection</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Manual adjustment</v8:content>
+										</v8:item>
+									</ToolTip>
+									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="EarningsDeductionsManualCorrectionContextMenu" id="42"/>
+									<ExtendedTooltip name="EarningsDeductionsManualCorrectionExtendedTooltip" id="149"/>
+								</CheckBoxField>
+								<ColumnGroup name="GroupEmployee" id="55">
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Group employee</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Group employee</v8:content>
+										</v8:item>
+									</ToolTip>
+									<FixingInTable>Left</FixingInTable>
+									<ExtendedTooltip name="FolderEmployeeExtendedTooltip" id="150"/>
+									<ChildItems>
+										<ColumnGroup name="GroupEmployeeCode" id="87">
+											<Title>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Group employee code</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Group employee code</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>InCell</Group>
+											<ExtendedTooltip name="GroupEmployeeCodeExtendedTooltip" id="152"/>
+											<ChildItems>
+												<InputField name="EarningsDeductionsEmployee" id="15">
+													<DataPath>Object.EarningsDeductions.Employee</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>22</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<Wrap>false</Wrap>
+													<ContextMenu name="EarningsDeductionsEmployeeContextMenu" id="16"/>
+													<ExtendedTooltip name="EarningsDeductionsEmployeeExtendedTooltip" id="151"/>
+													<Events>
+														<Event name="OnChange">EarningsDeductionsEmployeeOnChange</Event>
+													</Events>
+												</InputField>
+												<InputField name="EarningsDeductionsEmployeeCode" id="88">
+													<DataPath>Object.EarningsDeductions.Employee.Code</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ShowInHeader>false</ShowInHeader>
+													<Width>7</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<Wrap>false</Wrap>
+													<ContextMenu name="EarningsDeductionsEmployeeCodeContextMenu" id="89"/>
+													<ExtendedTooltip name="EarningsDeductionsEmployeeCodeExtendedTooltip" id="153"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<InputField name="EarningsDeductionsPosition" id="17">
+											<DataPath>Object.EarningsDeductions.Position</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInHeader>false</ShowInHeader>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Wrap>false</Wrap>
+											<InputHint>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Position</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="EarningsDeductionsPositionContextMenu" id="18"/>
+											<ExtendedTooltip name="EarningsDeductionsPositionExtendedTooltip" id="154"/>
+										</InputField>
+										<InputField name="EarningsDeductionsEarningAndDeductionType" id="19">
+											<DataPath>Object.EarningsDeductions.EarningAndDeductionType</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInHeader>false</ShowInHeader>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Wrap>false</Wrap>
+											<InputHint>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Earning or deduction</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="EarningsDeductionsEarningAndDeductionTypeContextMenu" id="20"/>
+											<ExtendedTooltip name="EarningsDeductionsEarningAndDeductionTypeExtendedTooltip" id="155"/>
+											<Events>
+												<Event name="OnChange">EarningsDeductionsEarningAndDeductionTypeOnChange</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="RowsGroup" id="56">
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Data for the period</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Group lines</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ShowInHeader>true</ShowInHeader>
+									<ExtendedTooltip name="FolderStringsExtendedTooltip" id="156"/>
+									<ChildItems>
+										<ColumnGroup name="ColumnsGroup" id="62">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Group columns</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="GroupColumnsExtendedTooltip" id="157"/>
+											<ChildItems>
+												<ColumnGroup name="LeftGroup" id="57">
+													<Title>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Left group</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Left group</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="LeftGroupExtendedTooltip" id="158"/>
+													<ChildItems>
+														<InputField name="EarningsDeductionsStartDate" id="21">
+															<DataPath>Object.EarningsDeductions.StartDate</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ShowInHeader>false</ShowInHeader>
+															<Width>10</Width>
+															<Wrap>false</Wrap>
+															<ContextMenu name="EarningsDeductionsStartDateContextMenu" id="22"/>
+															<ExtendedTooltip name="EarningsDeductionsStartDateExtendedTooltip" id="159"/>
+															<Events>
+																<Event name="OnChange">EarningsDeductionsStartDateOnChange</Event>
+															</Events>
+														</InputField>
+														<InputField name="EarningsDeductionsDaysWorked" id="25">
+															<DataPath>Object.EarningsDeductions.DaysWorked</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ShowInHeader>false</ShowInHeader>
+															<Width>8</Width>
+															<Wrap>false</Wrap>
+															<ContextMenu name="EarningsDeductionsDaysWorkedContextMenu" id="26"/>
+															<ExtendedTooltip name="EarningsDeductionsDaysWorkedExtendedTooltip" id="160"/>
+														</InputField>
+													</ChildItems>
+												</ColumnGroup>
+												<ColumnGroup name="FirstGroup" id="58">
+													<Title>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Right group</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Right group</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="FolderRightExtendedTooltip" id="161"/>
+													<ChildItems>
+														<InputField name="EarningsDeductionsEndDate" id="23">
+															<DataPath>Object.EarningsDeductions.EndDate</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ShowInHeader>false</ShowInHeader>
+															<Width>8</Width>
+															<Wrap>false</Wrap>
+															<ContextMenu name="EarningsDeductionsEndDateContextMenu" id="24"/>
+															<ExtendedTooltip name="EarningsDeductionsEndDateExtendedTooltip" id="162"/>
+														</InputField>
+														<InputField name="EarningsDeductionsHoursWorked" id="27">
+															<DataPath>Object.EarningsDeductions.HoursWorked</DataPath>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Hours</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>ShowAuto</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<ShowInHeader>false</ShowInHeader>
+															<Width>8</Width>
+															<Wrap>false</Wrap>
+															<ContextMenu name="EarningsDeductionsHoursWorkedContextMenu" id="28"/>
+															<ExtendedTooltip name="EarningsDeductionsHoursWorkedExtendedTooltip" id="163"/>
+														</InputField>
+													</ChildItems>
+												</ColumnGroup>
+											</ChildItems>
+										</ColumnGroup>
+										<InputField name="EarningsDeductionsSize" id="29">
+											<DataPath>Object.EarningsDeductions.Size</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInHeader>false</ShowInHeader>
+											<Width>16</Width>
+											<Wrap>false</Wrap>
+											<ContextMenu name="EarningsDeductionsSizeContextMenu" id="30"/>
+											<ExtendedTooltip name="EarningsDeductionsSizeExtendedTooltip" id="164"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="GroupIndicators" id="60">
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Indicators</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Group indicators</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ShowInHeader>true</ShowInHeader>
+									<ExtendedTooltip name="FolderIndicatorsExtendedTooltip" id="165"/>
+									<ChildItems>
+										<InputField name="EarningsDeductionsIndicator1" id="43">
+											<DataPath>Object.EarningsDeductions.Presentation1</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInHeader>false</ShowInHeader>
+											<Wrap>false</Wrap>
+											<ContextMenu name="EarningsDeductionsIndicator1ContextMenu" id="44"/>
+											<ExtendedTooltip name="EarningsDeductionsIndicator1ExtendedTooltip" id="166"/>
+										</InputField>
+										<InputField name="EarningsDeductionsIndicator2" id="47">
+											<DataPath>Object.EarningsDeductions.Presentation2</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInHeader>false</ShowInHeader>
+											<Width>10</Width>
+											<Wrap>false</Wrap>
+											<ContextMenu name="EarningsDeductionsIndicator2ContextMenu" id="48"/>
+											<ExtendedTooltip name="EarningsDeductionsIndicator2ExtendedTooltip" id="167"/>
+										</InputField>
+										<InputField name="EarningsDeductionsIndicator3" id="51">
+											<DataPath>Object.EarningsDeductions.Presentation3</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInHeader>false</ShowInHeader>
+											<Width>10</Width>
+											<Wrap>false</Wrap>
+											<ContextMenu name="EarningsDeductionsIndicator3ContextMenu" id="52"/>
+											<ExtendedTooltip name="EarningsDeductionsIndicator3ExtendedTooltip" id="168"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="GroupValues" id="61">
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Values</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Group values</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ShowInHeader>true</ShowInHeader>
+									<ExtendedTooltip name="FolderValuesExtendedTooltip" id="169"/>
+									<ChildItems>
+										<InputField name="EarningsDeductionsValue1" id="45">
+											<DataPath>Object.EarningsDeductions.Value1</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInHeader>false</ShowInHeader>
+											<Wrap>false</Wrap>
+											<ContextMenu name="EarningsDeductionsValue1ContextMenu" id="46"/>
+											<ExtendedTooltip name="EarningsDeductionsValue1ExtendedTooltip" id="170"/>
+										</InputField>
+										<InputField name="EarningsDeductionsValue2" id="49">
+											<DataPath>Object.EarningsDeductions.Value2</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInHeader>false</ShowInHeader>
+											<Wrap>false</Wrap>
+											<ContextMenu name="EarningsDeductionsValue2ContextMenu" id="50"/>
+											<ExtendedTooltip name="EarningsDeductionsValue2ExtendedTooltip" id="171"/>
+										</InputField>
+										<InputField name="EarningsDeductionsValue3" id="53">
+											<DataPath>Object.EarningsDeductions.Value3</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInHeader>false</ShowInHeader>
+											<Wrap>false</Wrap>
+											<ContextMenu name="EarningsDeductionsValue3ContextMenu" id="54"/>
+											<ExtendedTooltip name="EarningsDeductionsValue3ExtendedTooltip" id="172"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="EarningsDeductionsAmount" id="31">
+									<DataPath>Object.EarningsDeductions.Amount</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Wrap>false</Wrap>
+									<ContextMenu name="EarningsDeductionsAmountContextMenu" id="32"/>
+									<ExtendedTooltip name="EarningsDeductionsAmountExtendedTooltip" id="173"/>
+								</InputField>
+								<ColumnGroup name="CostsGroup" id="59">
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Analytics</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Group costs</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ShowInHeader>true</ShowInHeader>
+									<ExtendedTooltip name="FolderCostsExtendedTooltip" id="174"/>
+									<ChildItems>
+										<InputField name="EarningsDeductionsExpensesAccount" id="35">
+											<DataPath>Object.EarningsDeductions.GLExpenseAccount</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInHeader>false</ShowInHeader>
+											<Wrap>false</Wrap>
+											<ContextMenu name="EarningsDeductionsExpensesAccountContextMenu" id="36"/>
+											<ExtendedTooltip name="EarningsDeductionsExpensesAccountExtendedTooltip" id="175"/>
+											<Events>
+												<Event name="OnChange">EarningsDeductionsExpensesAccountOnChange</Event>
+												<Event name="StartChoice">EarningsDeductionsExpensesAccountStartChoice</Event>
+											</Events>
+										</InputField>
+										<InputField name="EarningsDeductionsAccountType" id="266">
+											<DataPath>Object.EarningsDeductions.TypeOfAccount</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<Enabled>false</Enabled>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Attribute of conditional appearance management</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Balloon</ToolTipRepresentation>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInHeader>false</ShowInHeader>
+											<InputHint>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Attribute of conditional appearance management</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="EarningsDeductionsAccountTypeContextMenu" id="267"/>
+											<ExtendedTooltip name="EarningsDeductionsAccountTypeExtendedTooltip" id="268"/>
+										</InputField>
+										<InputField name="EarningsDeductionsBusinessLine" id="39">
+											<DataPath>Object.EarningsDeductions.BusinessLine</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInHeader>false</ShowInHeader>
+											<Wrap>false</Wrap>
+											<InputHint>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Business area</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="EarningsDeductionsBusinessLineContextMenu" id="40"/>
+											<ExtendedTooltip name="EarningsDeductionsBusinessLineExtendedTooltip" id="176"/>
+										</InputField>
+										<InputField name="EarningsDeductionsOrder" id="33">
+											<DataPath>Object.EarningsDeductions.SalesOrder</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInHeader>false</ShowInHeader>
+											<Wrap>false</Wrap>
+											<TextEdit>false</TextEdit>
+											<InputHint>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Sales order</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="EarningsDeductionsOrderContextMenu" id="34"/>
+											<ExtendedTooltip name="EarningsDeductionsOrderExtendedTooltip" id="177"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="PageIncomeTaxes" id="117">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Income taxes</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>PIT</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="PageIncomeTaxesExtendedTooltip" id="178"/>
+					<ChildItems>
+						<Table name="IncomeTaxes" id="118">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Object.IncomeTaxes</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="IncomeTaxesContextMenu" id="119"/>
+							<AutoCommandBar name="IncomeTaxesCommandPanel" id="120"/>
+							<ExtendedTooltip name="IncomeTaxesExtendedTooltip" id="179"/>
+							<SearchStringAddition name="IncomeTaxesSearchString" id="213">
+								<AdditionSource>
+									<Item>IncomeTaxes</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="IncomeTaxesSearchStringContextMenu" id="214"/>
+								<ExtendedTooltip name="IncomeTaxesSearchStringExtendedTooltip" id="215"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="IncomeTaxesViewStatus" id="216">
+								<AdditionSource>
+									<Item>IncomeTaxes</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="IncomeTaxesViewStatusContextMenu" id="217"/>
+								<ExtendedTooltip name="IncomeTaxesViewStatusExtendedTooltip" id="218"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="IncomeTaxesSearchManagement" id="219">
+								<AdditionSource>
+									<Item>IncomeTaxes</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="IncomeTaxesSearchManagementContextMenu" id="220"/>
+								<ExtendedTooltip name="IncomeTaxesSearchManagementExtendedTooltip" id="221"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">IncomeTaxesOnChange</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="IncomeTaxesLineNumber" id="121">
+									<DataPath>Object.IncomeTaxes.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="IncomeTaxesLineNumberContextMenu" id="122"/>
+									<ExtendedTooltip name="IncomeTaxesLineNumberExtendedTooltip" id="180"/>
+								</LabelField>
+								<ColumnGroup name="IncomeTaxesGroup1" id="229">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="IncomeTaxesGroup1ExtendedTooltip" id="230"/>
+									<ChildItems>
+										<InputField name="IncomeTaxesEmployee" id="123">
+											<DataPath>Object.IncomeTaxes.Employee</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="IncomeTaxesEmployeeContextMenu" id="124"/>
+											<ExtendedTooltip name="IncomeTaxesEmployeeExtendedTooltip" id="181"/>
+										</InputField>
+										<LabelField name="IncomeTaxesEmployeeCode" id="129">
+											<DataPath>Object.IncomeTaxes.Employee.Code</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>7</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="IncomeTaxesEmployeeCodeContextMenu" id="130"/>
+											<ExtendedTooltip name="IncomeTaxesEmployeeCodeExtendedTooltip" id="182"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="IncomeTaxEarningAndDeductionType" id="125">
+									<DataPath>Object.IncomeTaxes.EarningAndDeductionType</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="IncomeTaxEarningAndDeductionTypeContextMenu" id="126"/>
+									<ExtendedTooltip name="IncomeTaxEarningAndDeductionTypeExtendedTooltip" id="183"/>
+								</InputField>
+								<InputField name="TaxesOnIncomeSum" id="127">
+									<DataPath>Object.IncomeTaxes.Amount</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="IncomeTaxesAmountContextMenu" id="128"/>
+									<ExtendedTooltip name="IncomeTaxesAmountExtendedTooltip" id="184"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="PageLoanRepayment" id="269">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Loan repayment</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Loan repayment</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="PageLoanRepaymentExtendedTooltip" id="270"/>
+					<ChildItems>
+						<Table name="LoanRepayment" id="271">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Object.LoanRepayment</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="LoanRepaymentContextMenu" id="272"/>
+							<AutoCommandBar name="LoanRepaymentCommandBar" id="273"/>
+							<ExtendedTooltip name="LoanRepaymentExtendedTooltip" id="274"/>
+							<SearchStringAddition name="LoanRepaymentSearchString" id="275">
+								<AdditionSource>
+									<Item>LoanRepayment</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="LoanRepaymentSearchStringContextMenu" id="276"/>
+								<ExtendedTooltip name="LoanRepaymentSearchStringExtendedTooltip" id="277"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="LoanRepaymentViewStatus" id="278">
+								<AdditionSource>
+									<Item>LoanRepayment</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="LoanRepaymentViewStatusContextMenu" id="279"/>
+								<ExtendedTooltip name="LoanRepaymentViewStatusExtendedTooltip" id="280"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="LoanRepaymentSearchControl" id="281">
+								<AdditionSource>
+									<Item>LoanRepayment</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="LoanRepaymentSearchControlContextMenu" id="282"/>
+								<ExtendedTooltip name="LoanRepaymentSearchControlExtendedTooltip" id="283"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">LoanRepaymentOnChange</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="LoanRepaymentLineNumber" id="284">
+									<DataPath>Object.LoanRepayment.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="LoanRepaymentLineNumberContextMenu" id="285"/>
+									<ExtendedTooltip name="LoanRepaymentLineNumberExtendedTooltip" id="286"/>
+								</LabelField>
+								<InputField name="LoanRepaymentEmployee" id="287">
+									<DataPath>Object.LoanRepayment.Employee</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="LoanRepaymentEmployeeContextMenu" id="288"/>
+									<ExtendedTooltip name="LoanRepaymentEmployeeExtendedTooltip" id="289"/>
+								</InputField>
+								<InputField name="LoanRepaymentPrincipalCharged" id="293">
+									<DataPath>Object.LoanRepayment.PrincipalCharged</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="LoanRepaymentPrincipalChargedContextMenu" id="294"/>
+									<ExtendedTooltip name="LoanRepaymentPrincipalChargedExtendedTooltip" id="295"/>
+								</InputField>
+								<InputField name="LoanRepaymentInterestAccrued" id="296">
+									<DataPath>Object.LoanRepayment.InterestAccrued</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="LoanRepaymentInterestAccruedContextMenu" id="297"/>
+									<ExtendedTooltip name="LoanRepaymentInterestAccruedExtendedTooltip" id="298"/>
+								</InputField>
+								<InputField name="LoanRepaymentInterestCharged" id="299">
+									<DataPath>Object.LoanRepayment.InterestCharged</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="LoanRepaymentInterestChargedContextMenu" id="300"/>
+									<ExtendedTooltip name="LoanRepaymentInterestChargedExtendedTooltip" id="301"/>
+								</InputField>
+								<InputField name="LoanRepaymentLoanContract" id="290">
+									<DataPath>Object.LoanRepayment.LoanContract</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="LoanRepaymentLoanContractContextMenu" id="291"/>
+									<ExtendedTooltip name="LoanRepaymentLoanContractExtendedTooltip" id="292"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="AdvancedPage" id="222">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Additional Information</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Advanced page</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="AdvancedPageExtendedTooltip" id="223"/>
+					<ChildItems>
+						<UsualGroup name="Additionally" id="245">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="AdditionallyExtendedTooltip" id="246"/>
+							<ChildItems>
+								<UsualGroup name="AdditionallyLeftColumn" id="247">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="AdditionallyLeftColumnExtendedTooltip" id="248"/>
+									<ChildItems>
+										<LabelField name="DocumentAuthor" id="114">
+											<DataPath>Object.Author</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Document author</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+											</Border>
+											<TextColor>#993300</TextColor>
+											<ContextMenu name="AuthorDocumentContextMenu" id="115"/>
+											<ExtendedTooltip name="DocumentAuthorExtendedTooltip" id="203"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="AdditionallyRightColumn" id="252">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="AdditionallyRightColumnExtendedTooltip" id="253"/>
+									<ChildItems>
+										<InputField name="Date" id="83">
+											<DataPath>Object.Date</DataPath>
+											<SkipOnInput>true</SkipOnInput>
+											<Width>15</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Wrap>false</Wrap>
+											<ContextMenu name="DateContextMenu" id="84"/>
+											<ExtendedTooltip name="DateExtendedTooltip" id="139"/>
+											<Events>
+												<Event name="OnChange">DateOnChange</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="Footer" id="241">
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="FooterExtendedTooltip" id="242"/>
+			<ChildItems>
+				<InputField name="Comment" id="3">
+					<DataPath>Object.Comment</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<MultiLine>false</MultiLine>
+					<OpenButton>true</OpenButton>
+					<InputHint>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Note</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="CommentContextMenu" id="4"/>
+					<ExtendedTooltip name="CommentExtendedTooltip" id="186"/>
+				</InputField>
+				<UsualGroup name="Totals" id="243">
+					<HorizontalStretch>false</HorizontalStretch>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>0:1df935d0-dbff-44ad-b3b5-057382fc07e1</BackColor>
+					<ExtendedTooltip name="TotalsExtendedTooltip" id="244"/>
+					<ChildItems>
+						<InputField name="AmountAccrued" id="98">
+							<DataPath>AmountAccrued</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Width>9</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ChoiceButton>false</ChoiceButton>
+							<ClearButton>false</ClearButton>
+							<SpinButton>false</SpinButton>
+							<OpenButton>false</OpenButton>
+							<ChoiceListButton>false</ChoiceListButton>
+							<ContextMenu name="AmountAccruedContextMenu" id="99"/>
+							<ExtendedTooltip name="AmountAddedExtendedTooltip" id="189"/>
+						</InputField>
+						<InputField name="AmountWithheld" id="100">
+							<DataPath>AmountWithheld</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Width>9</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ChoiceButton>false</ChoiceButton>
+							<ClearButton>false</ClearButton>
+							<SpinButton>false</SpinButton>
+							<OpenButton>false</OpenButton>
+							<ChoiceListButton>false</ChoiceListButton>
+							<ContextMenu name="AmountWithheldContextMenu" id="101"/>
+							<ExtendedTooltip name="AmountRetainExtendedTooltip" id="192"/>
+						</InputField>
+						<InputField name="DocumentAmount" id="102">
+							<DataPath>DocumentAmount</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<Width>9</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ChoiceButton>false</ChoiceButton>
+							<ClearButton>false</ClearButton>
+							<SpinButton>false</SpinButton>
+							<OpenButton>false</OpenButton>
+							<ChoiceListButton>false</ChoiceListButton>
+							<ContextMenu name="DocumentAmountContextMenu" id="103"/>
+							<ExtendedTooltip name="DocumentAmountExtendedTooltip" id="195"/>
+						</InputField>
+						<InputField name="DocumentCurrency" id="76">
+							<DataPath>Object.DocumentCurrency</DataPath>
+							<SkipOnInput>true</SkipOnInput>
+							<TitleLocation>None</TitleLocation>
+							<Width>8</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Wrap>false</Wrap>
+							<OpenButton>false</OpenButton>
+							<InputHint>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Currency</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="DocumentCurrencyContextMenu" id="77"/>
+							<ExtendedTooltip name="DocumentCurrencyExtendedTooltip" id="144"/>
+							<Events>
+								<Event name="OnChange">DocumentCurrencyOnChange</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.Payroll</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Object.RegisterRecords</Field>
+			</UseAlways>
+			<Columns>
+				<AdditionalColumns table="Object.EarningsDeductions">
+					<Column name="TypeOfAccount" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Account type</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:EnumRef.GLAccountsTypes</v8:Type>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="DocumentDate" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Document date</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ParentCompany" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ParentCompany</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Companies</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="DocumentCurrency" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Currency</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Currencies</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="AmountAccrued" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Accrued</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="AmountWithheld" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Deducted</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="DocumentAmount" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Total</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="PostingIsAllowed" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Posting is allowed</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="RegistrationPeriodPresentation" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Registration period</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>EarningsDeductionsSize</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Object.EarningsDeductions.Size</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>TextColor</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">0:0d0ada8a-09bb-4634-bf50-199f3779dad5</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Text</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Size</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>EarningsDeductionsDaysWorked</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Object.EarningsDeductions.DaysWorked</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>TextColor</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">0:0d0ada8a-09bb-4634-bf50-199f3779dad5</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Text</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Days</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>EarningsDeductionsHoursWorked</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Object.EarningsDeductions.HoursWorked</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>TextColor</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">0:0d0ada8a-09bb-4634-bf50-199f3779dad5</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Text</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Hours</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>EarningsDeductionsOrder</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>EarningsDeductionsBusinessLine</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Object.EarningsDeductions.TypeOfAccount</dcsset:left>
+						<dcsset:comparisonType>InList</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Enum.GLAccountsTypes.OtherIncome</dcsset:right>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Enum.GLAccountsTypes.OtherExpenses</dcsset:right>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Enum.GLAccountsTypes.OtherCurrentAssets</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>TextColor</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">0:0d0ada8a-09bb-4634-bf50-199f3779dad5</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Text</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>&lt;Leave empty&gt;</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="Calculate" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Calculate</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Calculate</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Calculate</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Fill" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Fill in</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Fill in</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Fill</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

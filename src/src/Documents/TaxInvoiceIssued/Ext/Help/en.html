@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link></head><body>
+<h1>Managing VAT</h1>
+<p>The legislation in your country might oblige you to register documents that contain VAT.</p>
+<h2>VAT accounting overview</h2>
+<p>The following VAT-applicable documents can be used:</p>
+<ul><li>In most countries, you can use invoices that contain all data required by the legislation (such as details of both parties, VAT rates, and VAT amounts). 
+</li><li>In some countries, you must use tax invoices (specific documents that make VAT charges legal). A supplier issues a tax invoice with VAT details to a customer. 
+</li><li>In some countries, a supplier can issue a summary tax invoice for several shipments to the same customer during a tax period (usually, a month). </li></ul><p>For details on using VAT-applicable documents in your country, see your local VAT legislation.</p>
+<h2>Documents for tracking output VAT and input VAT</h2>
+<p>If your company is VAT-registered, turn on the <a href="InformationRegister.AccountingPolicy/Help#registered_for_vat"><strong>Registered for VAT</strong></a> option.</p>
+<p>To keep records of the output VAT, you issue VAT-applicable documents and then send them to your customers.</p>
+<p>To keep records of the input VAT, you use the same document set that you issue for the output VAT, though your company becomes the receiver of these documents.</p>
+<h2>VAT output</h2>
+<p>Before using the scenarios listed below, refer to your VAT legislation.</p>
+<p>To issue a tax invoice to your customer, use one of the following scenarios:</p>
+<ul><a name="sales_invoice_is_tax_invoice_issued"></a>
+<li>Using a sales invoice in the meaning of a tax invoice 
+<p>If you can use sales invoices in the meaning of tax invoices, issue a sales invoice:</p>
+<ol><li>Ensure that the <strong><a href="InformationRegister.AccountingPolicy/Help#use_tax_invoices">Register VAT entries with</a></strong> option is set to <strong>Source documents (sales invoices, supplier invoices, and so on)</strong>. 
+</li><li>Register, post, and print the sales invoice. 
+</li><li>Send the printed sales invoice to the customer. </li></ol><p><strong>Note.</strong> Posting a sales invoice adds records to the <strong>VAT Output</strong> accumulation register, which stores records on the VAT charged by your company.</p><a name="sales_invoice_is_not_tax_invoice_issued"></a>
+</li><li>Using a sales invoice as a source for printing a tax invoice 
+<p>If you need to use both a sales invoice and a tax invoice for each shipment, issue a sales invoice and use it to print a tax invoice for this shipment:</p>
+<ol><li>Ensure that the <strong><a href="InformationRegister.AccountingPolicy/Help#use_tax_invoices">Register VAT entries with</a></strong> option is set to <strong>Source documents (sales invoices, supplier invoices, and so on)</strong>. 
+</li><li>Register, post, and print the sales invoice. 
+</li><li>Print the tax invoice. 
+</li><li>Send both printed invoices to the customer. </li></ol><p><strong>Note.</strong> Posting a sales invoice adds records to the <strong>VAT Output</strong> accumulation register, which stores records on the VAT charged by your company.</p><a name="tax_invoice_issued"></a>
+</li><li>Issuing a tax invoice automatically for each sales invoice 
+<p>If you need to use both a sales invoice and a tax invoice for each shipment, issue a sales invoice and get a tax invoice issued automatically for this shipment:</p>
+<ol><li>Ensure that the <strong><a href="InformationRegister.AccountingPolicy/Help#use_tax_invoices">Register VAT entries with</a></strong> option is set to <strong>Tax invoices</strong>. 
+</li><li>Ensure that the <strong><a href="InformationRegister.AccountingPolicy/Help#issue_automatically_based_on_sales_documents">Issue automatically based on sales documents</a></strong> option is turned on. 
+</li><li>Register, post, and print the sales invoice. 
+<p>Upon posting the sales invoice, 1C:Drive automatically registers and posts a tax invoice based on the sales invoice.</p>
+</li><li>Print the tax invoice. 
+</li><li>Send both printed invoices to the customer. </li></ol><p><strong>Note.</strong> Posting a tax invoice adds records to the <strong>VAT Output</strong> accumulation register, which stores records on the VAT charged by your company. Posting a sales invoice itself in this scenario does not affect the <strong>VAT Output</strong> accumulation register, but it leads to posting the tax invoice.</p><a name="summary_tax_invoice_issued"></a>
+</li><li>Including multiple sales invoices into a single summary tax invoice 
+<p>If it is easier for your business to issue a single tax invoice for a number of shipments to the same customer during the same period, issue all the sales invoices and the summary tax invoice:</p>
+<ol><li>Ensure that the <strong><a href="InformationRegister.AccountingPolicy/Help#use_tax_invoices">Register VAT entries with</a></strong> option is set to <strong>Tax invoices</strong>. 
+</li><li>Ensure that the option <strong><a href="InformationRegister.AccountingPolicy/Help#issue_automatically_based_on_sales_documents">Issue automatically based on sales documents</a></strong> is turned off. 
+</li><li>For each of the sales to the given customer made during the tax period (typically, a month): 
+<ol type="a"><li>Register, post, and print the sales invoice. 
+</li><li>Send the printed sales invoice to the customer.</li></ol></li><li>At the end of the tax period: 
+<ol type="a"><li>Register the tax invoice issued that includes all of the sales invoices issued to the customer during the tax period. 
+</li><li>Post and print the tax invoice. 
+</li><li>Send the printed tax invoice to the customer.</li></ol></li></ol><p><strong>Note.</strong> Posting a tax invoice adds records to the <strong>VAT Output</strong> accumulation register, which stores records on the VAT charged by your company. Posting a sales invoice in this scenario does not affect the <strong>VAT Output</strong> accumulation register.</p></li></ul><a name="tax_invoices_for_credit_notes"></a>
+<h3>Tax invoices for credit notes</h3>
+<p>If your company is VAT-registered and you issue a credit note to your customer, your company is interested in reducing the VAT output. For more information, see <a href="Document.CreditNote/Help">Credit notes</a>.</p>
+<p>If you must use tax invoices in this scenario, in 1C:Drive, create a credit note document, then create a tax invoice issued based on the credit note, and finally send it to your customer.</p><a name="vat_on_incoming_advance_payments"></a>
+<h3>VAT on incoming advance payments</h3>
+<p>When your company receives an advance payment for goods and services you are to supply, you should also issue an advance payment invoice, provided that your comany is VAT-registered. The advance payment invoice increases the amount of your company's VAT output.</p>
+<p>The reasonable approach to decide whether you issue an advance payment invoice or not depends on the period between the payment date and the actual supply date. For instance, if you receive a payment in the morning and supply the goods in the evening of the same day, you will issue a tax invoice on the date. In this scenario, there is no need to issue an intermediate advance payment invoice.</p>
+<p>To issue an advance payment invoice to your customer, use one of the following scenarios:</p>
+<ul><li>Using a bank receipt or a cash receipt in the meaning of an advance payment invoice 
+<p>If you can use bank receipts or cash receipts in the meaning of tax invoices, register the bank or cash receipt and use it to print the advance payment invoice for this payment: </p>
+<ol><li>Ensure that the <strong><a href="InformationRegister.AccountingPolicy/Help#register_VAT_entries_on_advance_payments_with">Register VAT entries on advance payments with</a></strong> option is set to <strong>Source documents (bank payments, bank receipts, and so on)</strong>. 
+</li><li>Register and post the bank or cash receipt. 
+</li><li>Print the advance payment invoice for this payment and send it to the customer. </li></ol><p><strong>Note.</strong> Posting a bank or cash receipt adds records to the <strong>VAT Output</strong> accumulation register, which stores records on the VAT charged by your company.</p>
+</li><li>Issuing an advance payment invoice for each bank or cash receipt 
+<p>If you need to use both a bank or cash receipt and an advance payment invoice for each advance payment you receive, register the bank or cash receipt and use it to issue the advance payment invoice:</p>
+<ol><li>Ensure that the <strong><a href="InformationRegister.AccountingPolicy/Help#register_VAT_entries_on_advance_payments_with">Register VAT entries on advance payments with</a></strong> option is set to <strong>Advance payment invoices</strong>. 
+</li><li>Register and post the bank or cash receipt from the customer. 
+</li><li>Based on the bank or cash receipt, register an advance payment invoice for the customer. 
+</li><li>Post and print the advance payment invoice. 
+</li><li>Send the printed advance payment invoice to the customer. </li></ol><p><strong>Note.</strong> Posting an advance payment invoice adds records to the <strong>VAT Output</strong> accumulation register, which stores records on the VAT charged by your company. Posting a bank or cash receipt in this scenario does not affect the <strong>VAT Output</strong> accumulation register.</p>
+</li><li>Issuing an advance payment invoice for multiple incoming advance payments 
+<p>If it is easier for your business to issue a single advance payment invoice for a number of advance payments you received from the same customer during the same period, register all the bank or cash receipts and then issue the advance payment invoice (a tax invoice issued) based on them:</p>
+<ol><li>Ensure that the <strong><a href="InformationRegister.AccountingPolicy/Help#register_VAT_entries_on_advance_payments_with">Register VAT entries on advance payments with</a></strong> option is set to <strong>Advance payment invoices</strong>. 
+</li><li>Register and post each bank or cash receipt from the customer. 
+</li><li>At the end of the tax period: 
+<ol type="a"><li>Register a tax invoice issued, set its <strong>Operation</strong> field to "Advance payment" and then, in the tax invoice, include all of the bank or cash receipts your received from the customer during the tax period. 
+</li><li>Post and print the tax invoice. 
+</li><li>Send the printed the tax invoice as an advance payment invoice to the customer. </li></ol></li></ol><p><strong>Note.</strong> Posting an advance payment invoice adds records to the <strong>VAT Output</strong> accumulation register, which stores records on the VAT charged by your company. Posting a bank or cash receipt in this scenario does not affect the <strong>VAT Output</strong> accumulation register.</p></li></ul><h3>Setting off VAT on incoming advance payments</h3>
+<p>When you issue a sales invoice (an account sales to consignor or a subcontractor report) in 1C:Drive and you have advance payments you received from your customer, you can decide how to set off these incoming advance payments.</p>
+<p>For this purpose, use the <b>Prepayment</b> tab of the sales invoice.</p>
+<p>If the <b>Settings &gt; Accounting settings &gt; Cash management &gt; Advances and debts &gt; Set off advance payments automatically</b> option is set to <strong>Yes</strong>, after you save the sales invoice, 1C:Drive fills the table on the <b>Prepayment</b> tab according to the advance payments your received. Otherwise, fill the table manually.</p>
+<p>Depending on the <strong><a href="InformationRegister.AccountingPolicy/Help#use_tax_invoices">Register VAT entries with</a></strong> option's value, 1C:Drive adds new and correcting records to the <strong>VAT Output</strong> accumulation register: </p>
+<ul><li><strong>Source documents (sales invoices, supplier invoices, and so on)</strong>: after you post the sales invoice 
+</li><li><strong>Tax invoices</strong>: after you post the tax invoice issued </li></ul><h2>VAT input</h2>
+<p>Before using the scenarios listed below, refer to your VAT legislation.</p>
+<p>To register a tax invoice received from your supplier, use one of the following scenarios:</p>
+<ul><a name="supplier_invoice_is_tax_invoice_received"></a>
+<li>Using a supplier invoice in the meaning of a tax invoice 
+<p>If you can use supplier invoices in the meaning of tax invoices, register a supplier invoice:</p>
+<ol><li>Ensure that the <strong><a href="InformationRegister.AccountingPolicy/Help#use_tax_invoices">Register VAT entries with</a></strong> option is set to <strong>Source documents (sales invoices, supplier invoices, and so on)</strong>. 
+</li><li>Ensure that you received the supplier invoice. 
+</li><li>Register and post the supplier invoice. </li></ol><p><strong>Note.</strong> Posting a supplier invoice adds records to the following registers:</p>
+<ul><li><strong>VAT Input</strong> accumulation register, which stores records on the VAT amount to deduct from the VAT payable. 
+</li><li><strong>VAT Incurred</strong> accumulation register, which stores records on the total VAT amount charged by your suppliers. </li></ul><a name="supplier_invoice_is_not_tax_invoice_received"></a>
+</li><li>Using a supplier invoice to record the fact that you received a tax invoice 
+<p>If you need to use both a supplier invoice and a tax invoice for each shipment and your supplier guarantees that each supplier invoice is accompanied with a tax invoice, register a supplier invoice only:</p>
+<ol><li>Ensure that the <strong><a href="InformationRegister.AccountingPolicy/Help#use_tax_invoices">Register VAT entries with</a></strong> option is set to <strong>Source documents (sales invoices, supplier invoices, and so on)</strong>. 
+</li><li>Ensure that you received both the supplier invoice and the tax invoice. 
+</li><li>Register and post the supplier invoice.</li></ol><p><strong>Note.</strong> Posting a supplier invoice adds records to the following registers:</p>
+<ul><li><strong>VAT Input</strong> accumulation register, which stores records on the VAT amount to deduct from the VAT payable. 
+</li><li><strong>VAT Incurred</strong> accumulation register, which stores records on the total VAT amount charged by your suppliers. </li></ul><a name="using_tax_invoice"></a>
+</li><li>Using a tax invoice 
+<p>If you need to use both a supplier invoice and a tax invoice for each shipment and a tax invoice can arrive long after the matching supplier invoice from your customer, register both the supplier invoice and the tax invoice:</p>
+<ol><li>Ensure that the <strong><a href="InformationRegister.AccountingPolicy/Help#use_tax_invoices">Register VAT entries with</a></strong> option is set to <strong>Tax invoices</strong>. 
+</li><li>Ensure that you received the supplier invoice. 
+</li><li>Register and post the supplier invoice. 
+</li><li>Ensure that you received the tax invoice. 
+</li><li>Register and post the tax invoice. </li></ol><p><strong>Note.</strong> Posting a tax invoice received adds records to the <strong>VAT Input</strong> accumulation register, which stores records on the VAT amount to deduct from the VAT payable.</p>
+<p>Posting a supplier invoice adds records to the <strong>VAT Incurred</strong> accumulation register, which stores records on the total VAT amount charged by your suppliers. Such invoices do not result in VAT deduction, so you are interested in requesting the missing tax invoices from your suppliers.</p><a name="summary_tax_invoice_received"></a>
+</li><li>Including multiple supplier invoices into a single summary tax invoice 
+<p>If your supplier can issue a single tax invoice for a number of shipments to your company during the same period, register all the supplier invoices and the summary tax invoice:</p>
+<ol><li>Ensure that the <strong><a href="InformationRegister.AccountingPolicy/Help#use_tax_invoices">Register VAT entries with</a></strong> option is set to <strong>Tax invoices</strong> 
+</li><li>For each of the purchases from the given supplier made during the tax period (typically, a month): 
+<ol type="a"><li>Ensure that you received the supplier invoice. 
+</li><li>Register and post the supplier invoice. </li></ol></li><li>At the end of the tax period: 
+<ol type="a"><li>Ensure that you received the summary tax invoice. 
+</li><li>Register the tax invoice that includes all of the supplier invoices received from the supplier during the tax period. 
+</li><li>Post the tax invoice. </li></ol></li></ol><p><strong>Note.</strong> Posting a tax invoice received adds records to the <strong>VAT Input</strong> accumulation register, which stores records on the VAT amount to deduct from the VAT payable.</p>
+<p>Posting a supplier invoice adds records to the <strong>VAT Incurred</strong> accumulation register, which stores records on the total VAT amount charged by your suppliers. Such invoices do not result in VAT deduction, so you are interested in requesting the missing tax invoices from your suppliers.</p></li></ul><a name="tax_invoices_for_debit_notes"></a>
+<h3>Tax invoices for debit notes</h3>
+<p>If your company is VAT-registered and you register a debit note from your supplier, your company might need to deduct the VAT input. For more information, see <a href="Document.DebitNote/Help">Debit notes</a>.</p>
+<p>If you must use tax invoices in this scenario, in 1C:Drive, create a debit note document and then create a tax invoice received based on the debit note.</p><a name="vat_on_outgoing_advance_payments"></a>
+<h3>VAT on outgoing advance payments</h3>
+<p>When your company pays in advance to your supplier, first ensure that you received their advance payment invoice for your payment and then register it in 1C:Drive. This increases the amount of your company's VAT input and thus allows your company to claim the VAT amount for recovery.</p>
+<p>To register an advance payment invoice your receive from your supplier, use one of the following scenarios:</p>
+<ul><li>Using a cash voucher or a bank payment in the meaning of an advance payment invoice 
+<p>If you can use cash vouchers or bank payments in the meaning of advance payment invoices, register a cash voucher or a bank payment for the advance payment you made to your supplier:</p>
+<ol><li>Ensure that the <strong><a href="InformationRegister.AccountingPolicy/Help#register_VAT_entries_on_advance_payments_with">Register VAT entries on advance payments with</a></strong> option is set to <strong>Source documents (bank payments, bank receipts, and so on)</strong>. 
+</li><li>Register and post the cash voucher or the bank payment. </li></ol><p><strong>Note.</strong> Posting a cash voucher or a bank payment adds records to the <strong>VAT Input</strong> accumulation register, which stores records on the VAT amount to deduct from your company's VAT payable.</p>
+</li><li>Using an advance payment invoice 
+<p>If your supplier sends you an advance payment invoice for each advance payment you made to them, register the advance payment invoice:</p>
+<ol><li>Ensure that the <strong><a href="InformationRegister.AccountingPolicy/Help#register_VAT_entries_on_advance_payments_with">Register VAT entries on advance payments with</a></strong> option is set to <strong>Advance payment invoices</strong>. 
+</li><li>Register and post the cash voucher or the bank payment for the advance payment you made to the supplier. 
+</li><li>Ensure that you received the advance payment invoice. 
+</li><li>Based on the cash voucher or the bank payment, register and post an advance payment invoice from your supplier. </li></ol><p><strong>Note.</strong> Posting a cash voucher or a bank payment adds records to the <strong>VAT Incurred</strong> accumulation register, which stores records on the total VAT amount charged by your suppliers. This is not the amount to deduct from your company's VAT payable. So, you are interested in requesting the missing tax invoices or supplier invoices from your suppliers. Posting an advance payment invoice adds deducting records to the <strong>VAT Incurred</strong> accumulation register and records to the <strong>VAT Input</strong> accumulation register, which stores records on the VAT amount to deduct from your company's VAT payable.</p>
+<p>If you paid an advance, your supplier sent you a supplier invoice before an advance payment invoice, and then you registered and posted the supplier invoice, this added records to the <strong>VAT Incurred</strong> and <strong>VAT Input</strong> accumulation registers likewise posting an advance payment invoice does. Thus, if later your supplier sends you the advance payment invoice for this advance, there is no need to register and post it.</p>
+</li><li>Including multiple cash vouchers or bank payments into a single advance payment invoice 
+<p>If your supplier sends you a single advance payment invoice for a number of advance payments you made to the supplier during the same period, register all the cash vouchers and bank payments and then register the advance payment invoice (as a tax invoice received):</p>
+<ol><li>Ensure that the <strong><a href="InformationRegister.AccountingPolicy/Help#register_VAT_entries_on_advance_payments_with">Register VAT entries on advance payments with</a></strong> option is set to <strong>Advance payment invoices</strong>. 
+</li><li>Register and post each cash voucher and bank payment for advance payments you made to the supplier. 
+</li><li>At the end of the tax period: 
+<ol type="a"><li>Ensure that you received the summary advance payment invoice. 
+</li><li>Register a tax invoice received, set its <strong>Operation</strong> field to "Advance payment" and then, in the tax invoice, include all of the cash vouchers and bank payments for advance payments you made to the supplier during the tax period. 
+</li><li>Post the tax invoice. </li></ol></li></ol><p><strong>Note.</strong> Posting a cash voucher or a bank payment adds records to the <strong>VAT Incurred</strong> accumulation register, which stores records on the total VAT amount charged by your suppliers. This is not the amount to deduct from your company's VAT payable. So, you are interested in requesting the missing tax invoices or supplier invoices from your suppliers. Posting an advance payment invoice adds deducting records to the <strong>VAT Incurred</strong> accumulation register and records to the <strong>VAT Input</strong> accumulation register, which stores records on the VAT amount to deduct from your company's VAT payable.</p>
+<p>If you paid an advance, your supplier sent you a supplier invoice before an advance payment invoice, and then you registered and posted the supplier invoice, this added records to the <strong>VAT Incurred</strong> and <strong>VAT Input</strong> accumulation registers likewise posting an advance payment invoice does. Thus, if later your supplier sends you the advance payment invoice for this advance, there is no need to register and post it.</p></li></ul><h3>Setting off VAT on outgoing advance payments</h3>
+<p>When you register a supplier invoice in 1C:Drive and you have advance payments you made to your supplier, you can decide how to set off these outgoing advance payments.</p>
+<p>For this purpose, use the <b>Prepayment</b> tab of the supplier invoice.</p>
+<p>If the <b>Settings &gt; Accounting settings &gt; Cash management &gt; Advances and debts &gt; Set off advance payments automatically</b> option is set to <strong>Yes</strong>, after you save the supplier invoice, 1C:Drive fills the table on the <b>Prepayment</b> tab according to the advance payments your made. Otherwise, fill the table manually.</p>
+<p>Depending on the <strong><a href="InformationRegister.AccountingPolicy/Help#use_tax_invoices">Register VAT entries with</a></strong> option's value:</p>
+<ul><li><strong>Source documents (sales invoices, supplier invoices, and so on)</strong>: 
+<ul><li>1C:Drive adds new and correcting records to the <strong>VAT Input</strong> and <strong>VAT Incurred</strong> accumulation registers after you post the supplier invoice </li></ul></li><li><strong>Tax invoices</strong>: 
+<ul><li>1C:Drive adds new records to the <strong>VAT Incurred</strong> accumulation register after you post the supplier invoice 
+</li><li>1C:Drive adds new and correcting records to the <strong>VAT Input</strong> accumulation register after you post the tax invoice received </li></ul></li></ul><h2>VAT reverse charge</h2>
+<p>VAT reverse charges simplify VAT reporting across the states that form an economic union. They move the responsibility for reporting VAT transactions from sellers to buyers.</p>
+<p>When a transaction is subject to VAT reverse charge, the buyer reports both their purchase (input VAT) and the seller's sale (output VAT) in their VAT return. These two records offset each other, but the authorities have full visibility of the transactions.</p>
+<p>If the buyer is not VAT-registered, the input VAT cannot be recovered because the buyer has no taxable supplies for output VAT. As a result, the buyer is to pay it to the budget.</p><a name="vat_reverse_charge_sales"></a>
+<h3>Specifying VAT reverse charge in sales documents</h3>
+<p>If both your company and your customer are eligible for using VAT reverse charges, issue a sales invoice with a VAT reverse charge note. Perform the following steps:</p>
+<ol><li>Create a sales invoice. 
+</li><li>Select the customer. 
+</li><li>Select the <strong>Reverse charge VAT</strong> tax category. 
+</li><li>Add the items you sold. 
+</li><li>Post the sales invoice. 
+</li><li>Print the sales invoice and ensure that it includes the VAT reverse charge note. 
+</li><li>Send the printed sales invoice to the customer. </li></ol><p>According to the sales invoice, your company's output VAT is not changed.</p><a name="vat_reverse_charge_purchase"></a>
+<h3>Specifying VAT reverse charge in purchase documents</h3>
+<p>If both your company and your supplier are eligible for using VAT reverse charges and you received a printed invoice with a VAT reverse charge note from the supplier, register the supplier invoice in 1C:Drive. Perform the following steps:</p>
+<ol><li>Create a supplier invoice. 
+</li><li>Select a supplier. 
+</li><li>Select the <strong>Reverse charge VAT</strong> tax category. 
+</li><li>Add the items you purchased. 
+</li><li>For each item, specify the reverse charge VAT rate and the reverse charge VAT amount. 
+</li><li>Post the supplier invoice. </li></ol><p>If your company is VAT-registered, posting the supplier invoice adds records to both the <strong>VAT Input</strong> and <strong>VAT Output</strong> accumulation registers. Thus, this does not change VAT payable.</p>
+<p>If your company is not VAT-registered, posting the supplier invoice adds records to the <strong>Tax payable </strong>accumulation register, which stores records on your company's balance with tax authorities. Thus, your tax liabilities are increased by the total reverse charge VAT amount specified in the supplier invoice.</p></body></html>

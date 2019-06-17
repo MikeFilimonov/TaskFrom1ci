@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<Width>50</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Pages" id="1">
+			<ExtendedTooltip name="PagesExtendedTooltip" id="2"/>
+			<ChildItems>
+				<Page name="PageSalesOrders" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Sales orders</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="PageSalesOrdersExtendedTooltip" id="4"/>
+					<ChildItems>
+						<Table name="SalesOrders" id="90">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Object.SalesOrders</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="SalesOrdersContextMenu" id="91"/>
+							<AutoCommandBar name="SalesOrdersCommandBar" id="92">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="SalesOrdersMarkAll" id="115">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.MarkAll</CommandName>
+										<ExtendedTooltip name="SalesOrdersMarkAllExtendedTooltip" id="116"/>
+									</Button>
+									<Button name="SalesOrdersClearAll" id="117">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ClearAll</CommandName>
+										<ExtendedTooltip name="SalesOrdersClearAllExtendedTooltip" id="118"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="SalesOrdersExtendedTooltip" id="93"/>
+							<SearchStringAddition name="SalesOrdersSearchString" id="94">
+								<AdditionSource>
+									<Item>SalesOrders</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="SalesOrdersSearchStringContextMenu" id="95"/>
+								<ExtendedTooltip name="SalesOrdersSearchStringExtendedTooltip" id="96"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="SalesOrdersViewStatus" id="97">
+								<AdditionSource>
+									<Item>SalesOrders</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="SalesOrdersViewStatusContextMenu" id="98"/>
+								<ExtendedTooltip name="SalesOrdersViewStatusExtendedTooltip" id="99"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="SalesOrdersSearchControl" id="100">
+								<AdditionSource>
+									<Item>SalesOrders</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="SalesOrdersSearchControlContextMenu" id="101"/>
+								<ExtendedTooltip name="SalesOrdersSearchControlExtendedTooltip" id="102"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<CheckBoxField name="SalesOrdersMark" id="168">
+									<DataPath>Object.SalesOrders.Mark</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="SalesOrdersMarkContextMenu" id="169"/>
+									<ExtendedTooltip name="SalesOrdersMarkExtendedTooltip" id="170"/>
+								</CheckBoxField>
+								<InputField name="SalesOrdersOrder" id="171">
+									<DataPath>Object.SalesOrders.Order</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="SalesOrdersOrderContextMenu" id="172"/>
+									<ExtendedTooltip name="SalesOrdersOrderExtendedTooltip" id="173"/>
+								</InputField>
+								<CheckBoxField name="SalesOrdersCompleted" id="174">
+									<DataPath>Object.SalesOrders.Completed</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="SalesOrdersCompletedContextMenu" id="175"/>
+									<ExtendedTooltip name="SalesOrdersCompletedExtendedTooltip" id="176"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="PagePurchaseOrders" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Purchase orders</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="PagePurchaseOrdersExtendedTooltip" id="6"/>
+					<ChildItems>
+						<Table name="PurchaseOrders" id="31">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Object.PurchaseOrders</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="PurchaseOrdersContextMenu" id="32"/>
+							<AutoCommandBar name="PurchaseOrdersCommandBar" id="33">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="PurchaseOrdersMarkAll" id="119">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.MarkAll</CommandName>
+										<ExtendedTooltip name="PurchaseOrdersMarkAllExtendedTooltip" id="120"/>
+									</Button>
+									<Button name="PurchaseOrdersClearAll" id="121">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ClearAll</CommandName>
+										<ExtendedTooltip name="PurchaseOrdersClearAllExtendedTooltip" id="122"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="PurchaseOrdersExtendedTooltip" id="34"/>
+							<SearchStringAddition name="PurchaseOrdersSearchString" id="35">
+								<AdditionSource>
+									<Item>PurchaseOrders</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="PurchaseOrdersSearchStringContextMenu" id="36"/>
+								<ExtendedTooltip name="PurchaseOrdersSearchStringExtendedTooltip" id="37"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="PurchaseOrdersViewStatus" id="38">
+								<AdditionSource>
+									<Item>PurchaseOrders</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="PurchaseOrdersViewStatusContextMenu" id="39"/>
+								<ExtendedTooltip name="PurchaseOrdersViewStatusExtendedTooltip" id="40"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="PurchaseOrdersSearchControl" id="41">
+								<AdditionSource>
+									<Item>PurchaseOrders</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="PurchaseOrdersSearchControlContextMenu" id="42"/>
+								<ExtendedTooltip name="PurchaseOrdersSearchControlExtendedTooltip" id="43"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<CheckBoxField name="PurchaseOrdersMark" id="180">
+									<DataPath>Object.PurchaseOrders.Mark</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="PurchaseOrdersMarkContextMenu" id="181"/>
+									<ExtendedTooltip name="PurchaseOrdersMarkExtendedTooltip" id="182"/>
+								</CheckBoxField>
+								<InputField name="PurchaseOrdersOrder" id="183">
+									<DataPath>Object.PurchaseOrders.Order</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="PurchaseOrdersOrderContextMenu" id="184"/>
+									<ExtendedTooltip name="PurchaseOrdersOrderExtendedTooltip" id="185"/>
+								</InputField>
+								<CheckBoxField name="PurchaseOrdersCompleted" id="186">
+									<DataPath>Object.PurchaseOrders.Completed</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="PurchaseOrdersCompletedContextMenu" id="187"/>
+									<ExtendedTooltip name="PurchaseOrdersCompletedExtendedTooltip" id="188"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="PageProductionOrders" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Production orders</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="PageProductionOrdersExtendedTooltip" id="8"/>
+					<ChildItems>
+						<Table name="ProductionOrders" id="53">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Object.ProductionOrders</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ProductionOrdersContextMenu" id="54"/>
+							<AutoCommandBar name="ProductionOrdersCommandBar" id="55">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ProductionOrdersMarkAll" id="123">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.MarkAll</CommandName>
+										<ExtendedTooltip name="ProductionOrdersMarkAllExtendedTooltip" id="124"/>
+									</Button>
+									<Button name="ProductionOrdersClearAll" id="125">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ClearAll</CommandName>
+										<ExtendedTooltip name="ProductionOrdersClearAllExtendedTooltip" id="126"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ProductionOrdersExtendedTooltip" id="56"/>
+							<SearchStringAddition name="ProductionOrdersSearchString" id="57">
+								<AdditionSource>
+									<Item>ProductionOrders</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ProductionOrdersSearchStringContextMenu" id="58"/>
+								<ExtendedTooltip name="ProductionOrdersSearchStringExtendedTooltip" id="59"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ProductionOrdersViewStatus" id="60">
+								<AdditionSource>
+									<Item>ProductionOrders</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ProductionOrdersViewStatusContextMenu" id="61"/>
+								<ExtendedTooltip name="ProductionOrdersViewStatusExtendedTooltip" id="62"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ProductionOrdersSearchControl" id="63">
+								<AdditionSource>
+									<Item>ProductionOrders</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ProductionOrdersSearchControlContextMenu" id="64"/>
+								<ExtendedTooltip name="ProductionOrdersSearchControlExtendedTooltip" id="65"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<CheckBoxField name="ProductionOrdersMark" id="192">
+									<DataPath>Object.ProductionOrders.Mark</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ProductionOrdersMarkContextMenu" id="193"/>
+									<ExtendedTooltip name="ProductionOrdersMarkExtendedTooltip" id="194"/>
+								</CheckBoxField>
+								<InputField name="ProductionOrdersOrder" id="195">
+									<DataPath>Object.ProductionOrders.Order</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ProductionOrdersOrderContextMenu" id="196"/>
+									<ExtendedTooltip name="ProductionOrdersOrderExtendedTooltip" id="197"/>
+								</InputField>
+								<CheckBoxField name="ProductionOrdersCompleted" id="198">
+									<DataPath>Object.ProductionOrders.Completed</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ProductionOrdersCompletedContextMenu" id="199"/>
+									<ExtendedTooltip name="ProductionOrdersCompletedExtendedTooltip" id="200"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="PageWorkOrders" id="201">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Work orders</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Page work orders</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="PageWorkOrdersExtendedTooltip" id="202"/>
+					<ChildItems>
+						<Table name="WorkOrders" id="203">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Object.WorkOrders</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="WorkOrdersContextMenu" id="204"/>
+							<AutoCommandBar name="WorkOrdersCommandBar" id="205">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="WorkOrdersMarkAll" id="225">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.MarkAll</CommandName>
+										<ExtendedTooltip name="WorkOrdersMarkAllExtendedTooltip" id="226"/>
+									</Button>
+									<Button name="WorkOrdersClearAll" id="227">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ClearAll</CommandName>
+										<ExtendedTooltip name="WorkOrdersClearAllExtendedTooltip" id="228"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="WorkOrdersExtendedTooltip" id="206"/>
+							<SearchStringAddition name="WorkOrdersSearchString" id="207">
+								<AdditionSource>
+									<Item>WorkOrders</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="WorkOrdersSearchStringContextMenu" id="208"/>
+								<ExtendedTooltip name="WorkOrdersSearchStringExtendedTooltip" id="209"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="WorkOrdersViewStatus" id="210">
+								<AdditionSource>
+									<Item>WorkOrders</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="WorkOrdersViewStatusContextMenu" id="211"/>
+								<ExtendedTooltip name="WorkOrdersViewStatusExtendedTooltip" id="212"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="WorkOrdersSearchControl" id="213">
+								<AdditionSource>
+									<Item>WorkOrders</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="WorkOrdersSearchControlContextMenu" id="214"/>
+								<ExtendedTooltip name="WorkOrdersSearchControlExtendedTooltip" id="215"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<CheckBoxField name="WorkOrdersMark" id="232">
+									<DataPath>Object.WorkOrders.Mark</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="WorkOrdersMarkContextMenu" id="233"/>
+									<ExtendedTooltip name="WorkOrdersMarkExtendedTooltip" id="234"/>
+								</CheckBoxField>
+								<InputField name="WorkOrdersOrder" id="235">
+									<DataPath>Object.WorkOrders.Order</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="WorkOrdersOrderContextMenu" id="236"/>
+									<ExtendedTooltip name="WorkOrdersOrderExtendedTooltip" id="237"/>
+								</InputField>
+								<CheckBoxField name="WorkOrdersCompleted" id="238">
+									<DataPath>Object.WorkOrders.Completed</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="WorkOrdersCompletedContextMenu" id="239"/>
+									<ExtendedTooltip name="WorkOrdersCompletedExtendedTooltip" id="240"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<LabelDecoration name="DecorationAllOrdersClosed" id="162">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>All orders are already closed or do not require closing.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="DecorationAllOrdersClosedContextMenu" id="163"/>
+			<ExtendedTooltip name="DecorationAllOrdersClosedExtendedTooltip" id="164"/>
+		</LabelDecoration>
+		<UsualGroup name="Footer" id="88">
+			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="FooterExtendedTooltip" id="89"/>
+			<ChildItems>
+				<Button name="CloseOrders" id="75">
+					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.Complete</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Close orders</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="CloseOrdersExtendedTooltip" id="76"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.OrdersClosing</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Complete" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Complete</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Complete</Action>
+		</Command>
+		<Command name="MarkAll" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Mark all</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Mark all</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>MarkAllExecute</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ClearAll" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Clear all</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Clear all</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ClearAllExecute</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.7">
+	<Item id="aef2da87-b905-467c-a65d-abef847a5e33">
+		<Name>InterestOnLoan</Name>
+		<Code>PREDEF03 </Code>
+		<Description>Interest on loan</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="6ae2062e-69b3-4abd-abd0-300fc20c18b3">
+		<Name>PieceRatePay</Name>
+		<Code>00-000001</Code>
+		<Description>Piece-rate pay</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="bb1abe57-0422-401c-a72d-7b279835de7c">
+		<Name>PieceRatePayFixedAmount</Name>
+		<Code>PREDEF01</Code>
+		<Description>Piece-rate pay (fixed amount)</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="1cca57bf-a47d-478d-bb46-6073c2d9cae2">
+		<Name>PieceRatePayPercent</Name>
+		<Code>00-000002</Code>
+		<Description>Piece-rate pay (percent)</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="41a7aa9d-9b3e-4cfe-a340-70bf1977fe77">
+		<Name>RepaymentOfLoanFromSalary</Name>
+		<Code>PREDEF02</Code>
+		<Description>Repayment of loan from salary</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

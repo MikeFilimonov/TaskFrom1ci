@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<h1>Importing data from external sources</h1>
+<p>When working with table data in 1C:Drive (in lists, in documents, and so on), you may need to enter information that is originally stored in electronic spreadsheets like Microsoft Excel files.</p>
+<p>You can manually retype the data into a table from such a spreadsheet or copy and paste the data cell by cell.</p>
+<p>Instead, you may prefer to import the data of the entire spreadsheet or its selected records to the matching columns of the table you are populating in 1C:Drive. This significantly reduces the time and effort you spend on data entry.</p>
+<p>You simply either select the spreadsheet file whose data you want to import, or paste the spreadsheet content from the clipboard, then set the mapping between the columns of the spreadsheet and the columns of the target table, mark the records you are going to import, and finally have the data imported automatically.</p>
+<p>For instance, you can use this capability to populate the list of customers and the list of products.</p>
+<p>You can import data from XLSX, MXL, or CSV files.</p>
+<p>To import data from a spreadsheet stored outside of 1C:Drive to a table in 1C:Drive:</p>
+<ol><li>Open the table. 
+</li><li>Click <b>Import data from an external source</b> <img src="_files/import_data_from_an_external_source.png"></img>. 
+</li><li>Do any of the following: 
+<ul><li>To import all data from the spreadsheet file, click <b>import data from external file</b> and select the file. 
+</li><li>To import selected data from the spreadsheet, open the spreadsheet in an application that supports the spreadsheet's format (like Microsoft Excel), copy the spreadsheet content to the clipboard, then, in 1C:Drive, click <b>copy and paste data to spreadsheet template</b>, and paste the data from the clipboard. </li></ul><p>1C:Drive displays the content of the spreadsheet in the template.</p>
+<p>Here you can edit the data in cells and also insert and delete rows likewise you do this in Microsoft Excel.</p>
+<p>By default, the header of each column in the template contains the "Do not import" text, which means that you are not going to import the column's data to the table.</p>
+</li><li>For each column you want to import to a table column, do the following: 
+<ol type="a"><li>Click the column header. 
+<p>1C:Drive displays the list of available table columns.</p>
+<p>You have to provide the mapping at least for required table columns, which are marked in red. Table columns that you have already used in the mapping are marked in gray.</p>
+</li><li>Double-click the name of the target table column. 
+<p>Now 1C:Drive displays the name of the target table column in the header of the column in the template.</p>
+</li><li>If you have already mapped a column to a target table column and you want to clear the mapping, click the column's header and double-click <b>Do not import</b>. </li></ol></li><li>Click <b>Next</b>. 
+</li><li>Do any of the following: 
+<ul><li>If there are errors or warnings, review them, click <b>Back</b> to return to the previous step, correct the mapping, and then click <b>Next</b> twice to proceed to the next step. 
+</li><li>If there are no errors and warnings at all, or there are warnings you can treat as insignificant ones, click <b>Next</b> to proceed to the next step. </li></ul><p>1C:Drive lets you review the data to be imported and the data in the target table, compare them record by record, and decide what to do with matched and unmatched items.</p>
+<p>A matched item is an external spreadsheet row for which 1C:Drive found the matching row in its table. An unmatched item is an external spreadsheet row for which there is no matching row in the table.</p>
+<p>To review the matches, click <b>Show rows</b> and then do any of the following:</p>
+<ul><li>To view all items, in the <b>Show in table</b> list, select <b>All data</b>. 
+</li><li>To view only matched items, in the <b>Show in table</b> list, select <b>Matched</b>. 
+</li><li>To view only unmatched items, in the <b>Show in table</b> list, select <b>Data with no match in the database</b>. 
+</li><li>To view only items that cannot be imported because they are incomplete or contain errors, in the <b>Show in table</b> list, select <b>Data containing error (incomplete)</b>. </li></ul><p>To add data from the matched template rows to the table, select the <b>Update mapped items</b> check box.</p>
+<p>To skip adding data from the matched template rows to the table, clear the <b>Update mapped items</b> check box.</p>
+<p>To add data from the unmatched template rows to the table as new rows, select the <b>Create new items if not mapped</b> check box.</p>
+<p>To skip adding data from the unmatched template rows to the table, clear the <b>Create new items if not mapped</b> check box.</p>
+<p>To specify the group to which you want to add new rows, in the <b>Group to import in</b> field, select the target group.</p>
+</li><li>Click <b>Import data to application</b>. </li></ol><p>Now you can verify the imported data in the resulting table.</p></body></html>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<Subsystem uuid="33b4dce7-a479-4b26-9efb-33376b9069d3">
+		<Properties>
+			<Name>Sales</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Sales</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.NetSales</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ReportSalesTrendByPeriods</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ReportNetSales</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ReportSalesTrendByProducts</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ReportSalesTrendByProductCategories</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ReportSalesTrendByCustomers</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ReportSalesTrendBySalesManagers</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ReportNetSalesByProductsCategories</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ReportNetSalesByCustomers</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ReportNetSalesBySalesManagers</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ReportSalesVariance</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.SalesVariance</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ReportAutomaticDiscountsApplied</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.SalesWithCardBasedDiscounts</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.AutomaticDiscountSales</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.GoodsShippedNotInvoiced</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ReportGoodsShippedNotInvoiced</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.GoodsInvoicedNotShipped</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ReportGoodsInvoicedNotShipped</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ReportNetSalesBySalesRep</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

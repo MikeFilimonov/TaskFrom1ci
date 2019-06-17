@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.19267"></meta></head><body>
+<h1>Sales invoices</h1>
+<p>A sales invoice is the written verification of an agreement between a buyer and a seller of goods and services. When you sell goods or services to your customer, you register a sales invoice in 1C:Drive and send a hard copy to the customer to confirm the customer's obligation to pay for your goods and services.</p>
+<p>Your sales process can include sales invoice as a final step that follows quotation, sales order, or goods issue. Or the sales process can simply start with sales invoice.</p>
+<p>As the next step of your sales process, depending on the local legislation, you might need to register a tax invoice issued based on the sales invoice. For more information, see <a href="Document.TaxInvoiceIssued/Help">Tax invoices issued</a>.</p>
+<h2>Viewing sales invoices</h2>
+<p>To view the list of sales invoices:</p>
+<ul><li>Click <strong>Sales &gt; Sales &gt; Sales invoices</strong> and then click the <strong>Sales invoices</strong> tab. </li></ul><p>In the list, the <strong>Payment status</strong> column indicates whether the sales invoice is fully paid, partly paid, unpaid, or overdue.</p>
+<p>You can create, edit, or delete sales invoices.</p><a name="sales_invoice_fields"></a>
+<h2>Sales invoice fields</h2>
+<p>A sales invoice has the following fields:</p>
+<ul><li><strong>Customer</strong> (required). The customer name. 
+</li><li><strong>Contract</strong> (required). The contract governing the sale. This field is only available if the billing details of the customer include contracts. 
+</li><li><strong>Base document</strong>. The document that is a base for the sales invoice. It can be a quotation or a supplier invoice. 
+</li><li><strong>Order</strong>. The sales order that is a base for the sales invoice. 
+</li><li><strong>Number</strong>. A unique sales invoice number. 
+</li><li><strong>Date</strong>. The date and time when the sales invoice was created. 
+</li><li><strong>Company</strong> (required). The company that issues the sales invoice. 
+</li><li><strong>Warehouse</strong> (required). The company's warehouse you sell goods from. 
+</li><li><strong>Prices and currency</strong>. Indicates the currency, price type, and VAT tax category of the sales invoice. 
+</li><li><strong>Note</strong>. Comments on the sales invoice. </li></ul><h2>Creating sales invoices</h2>
+<p>To create a sales invoice:</p>
+<ol><li>Do any of the following: 
+<ul><li>To create a sales invoice from scratch: 
+<ul><li>Click <strong>Sales &gt; Sales &gt; Sales invoices</strong>, click the <strong>Sales invoices</strong> tab, and then click <strong>Create</strong>. </li></ul></li><li>To create a sales invoice based on an existing quotation, sales order, or goods issue: 
+<ul><li>Open the quotation, sales order, or goods issue and click <strong>Generate &gt; Sales invoice</strong>. </li></ul></li></ul></li><li>Fill in the sales invoice fields. 
+<p>For more information, see <a href="#sales_invoice_fields">Sales invoice fields</a>.</p>
+</li><li>Specify the goods and services to include in the sales invoice. 
+<p>For more information, see <a href="#goods_and_services_to_sell">Specifying goods and services to sell</a>.</p>
+</li><li>Optional. Specify discounts for the goods and services. 
+<p>For more information, see <a href="DataProcessor.DiscountTypes/Help">Discounts</a>.</p>
+</li><li>Optional. Perform advance clearance for the sales invoice. 
+<p>For more information, see <a href="#advance_clearance">Performing advance clearance</a>.</p>
+</li><li>Optional. Specify payment terms for the sales invoice. 
+<p>For more information, see <a href="Catalog.CounterpartyContracts.Form.StagesOfPaymentForm/Help">Payment terms</a>.</p>
+</li><li>Optional. Specify the delivery terms. 
+<p>For more information, see <a href="#delivery_terms">Specifying delivery terms</a>.</p>
+</li><li>Click <strong>Post</strong>. 
+</li><li>Print the invoice and send to the customer. 
+</li><li>Optional. Print the delivery note and send it to the customer. </li></ol><p>Posting a sales invoice impacts accounts receivable.</p><a name="goods_and_services_to_sell"></a>
+<h2>Specifying goods and services to sell</h2>
+<p>To specify the goods and services your company sells to a customer according to a sales invoice, use the <strong>Products</strong> tab of the sales invoice page.</p>
+<p>The table on the tab lists all goods and services the customer is to pay for, their prices, quantities, the VAT amount, and the total amount. In the table, you can add, edit, and delete items.</p>
+<p>If the sales invoice is based on a sales order or another document, the table includes the goods and services the base document includes.</p>
+<p>Adding an item and filling its fields is the straightforward way to populate the products table. Also, you can copy existing items, paste them to the table, and update their fields.</p>
+<p>The other ways to populate the products table are as follows: </p>
+<ul><li><a href="DataProcessor.DataImportFromExternalSources/Help">Importing sales invoice data from external sources</a> 
+</li><li><a href="#selecting_products_from_stock_and_reserve">Selecting products from stock and reserves</a> 
+</li><li><a href="#selecting_ordered_products">Selecting ordered products</a> </li></ul><p></p><a name="selecting_products_from_stock_and_reserve"></a>
+<h3>Selecting products from stock and reserves</h3>
+<p>When selling a product you might want to check the product's availability before adding it to the sales invoice (whether it is possible to sell it immediately) and put the product in reserve after adding it to the sales invoice (whether it is possible to sell it if the sales invoice is canceled).</p>
+<p>For this purpose, use the product selection tool. To open it:</p>
+<ul><li>On the <strong>Products</strong> tab of the sales invoice, click <strong>Select &gt; Goods</strong>. </li></ul><p>For more information, see <a href="DataProcessor.ProductsSelection/Help">Selecting products for sales documents</a>.</p><a name="selecting_ordered_products"></a>
+<h3>Selecting ordered products</h3>
+<p>When populating information on products in a sale invoice, you might want to include some of the products the customer already ordered or even received but you have not invoiced them yet.</p>
+<p>For this purpose, use the <strong>Select ordered goods</strong> window. To open it for a sales invoice:</p>
+<ol><li>On the Products tab of the sales invoice, click <strong>Select &gt; Ordered goods</strong>. 
+</li><li>In the <strong>Select ordered goods</strong> window, select the check boxes for the goods you want to add and enter the quantities. </li></ol><p>The <strong>Select ordered goods</strong> window displays goods included in sales orders and goods issues for the customer. For each of the goods, it indicates its ordered or shipped quantity, price and VAT amount, and the sales order (goods issue). Also, it displays the remaining quantity to invoice.</p>
+<p>To switch between goods of the base sales order only and goods of all sales orders and goods issues, select or clear the <strong>Display products from dependent documents only</strong> check box.</p><a name="advance_clearance"></a>
+<h2>Performing advance clearance</h2>
+<p>If your customer made an advance payment by the moment you issue a sales invoice, you can reduce the customer's debt for the sales invoice.</p>
+<p>The table on the <strong>Advance clearing</strong> tab of a sales invoice lists the advance payment documents and the amounts you decided to set off. In the table, you can add, edit, and delete items.</p>
+<p>To perform the advance clearance for a sales invoice:</p>
+<ol><li>Open the sales invoice and click the <strong>Advance clearing</strong> tab. 
+</li><li>Do any of the following: 
+<ul><li>Click <strong>Add</strong>, select a payment document from the customer, and specify the clearing amount. 
+</li><li>Click <strong>Select</strong>, then, in the <strong>Advance payments clearing</strong> window, in the <strong>Advance balance</strong> table, double-click an advance payment document, then, in the <strong>To be cleared</strong> table, for the payment document, specify the clearing amount, and click <strong>OK</strong>. 
+<p>Alternatively, to populate the exact clearing amount that equals to the sales invoice's total amount, click <strong>Fill in</strong>.</p></li></ul></li></ol><a name="delivery_terms"></a>
+<h2>Specifying delivery terms</h2>
+<p>In the sales invoice, you can specify the delivery terms for the goods ordered.</p>
+<p>The following delivery term fields are available:</p>
+<ul><li><strong>Delivery option</strong>. The way your company ships the ordered goods to the customer. Available values: 
+<ul><li><strong>Self pickup</strong>. The customer is to pick up the goods from your company's warehouse. 
+</li><li><strong>Delivery</strong>. Your company is to deliver the goods to the customer. 
+</li><li><strong>Logistics company</strong>. A third-party logistics company is to deliver the goods to the customer. </li></ul></li><li><strong>Logistics company</strong>. The logistics company name. The field is only available if the <strong>Delivery option</strong> field is set to <strong>Logistics company</strong>. 
+</li><li><strong>Shipping address</strong>. The customer's shipping address. The field is only available if the <strong>Delivery option</strong> field is set to <strong>Delivery</strong> or <strong>Logistics company</strong>. 
+</li><li><strong>Contact person</strong>. The customer's contact person for delivery-specific questions. The field is only available if the <strong>Delivery option</strong> field is set to <strong>Delivery</strong> or <strong>Logistics company</strong>. 
+</li><li><strong>Goods marking</strong>. The text of the label on the goods to ship. The field is only available if the <strong>Delivery option</strong> field is set to <strong>Delivery</strong> or <strong>Logistics company</strong>. 
+</li><li><strong>Delivery from ... till</strong>. The preferred delivery time period during the day. The field is only available if the <strong>Delivery option</strong> field is set to <strong>Delivery</strong> or <strong>Logistics company</strong>. 
+</li><li><strong>Incoterms</strong>. The Incoterms rule to use for delivery. The field is only available if the <strong>Delivery option</strong> field is set to <strong>Delivery</strong> or <strong>Logistics company</strong>. </li></ul><p>To specify the delivery term fields for a sales invoice:</p>
+<ol><li>Open the sales invoice. 
+</li><li>Click the <strong>Delivery</strong> tab. 
+</li><li>Fill the delivery term fields. </li></ol><p>For more information on customer-specific delivery terms, see <a href="Catalog.Counterparties/Help">Counterparties</a>.</p>
+<h2>Sales invoice analysis reports</h2>
+<p>The following reports that help you analyze a sales invoice are available:</p>
+<ul><li><strong>Order analysis</strong>. Displays which items of the sales invoice were ordered, shipped, reserved, allocated in purchase and production orders, and not allocated, and which items are remaining in stock. 
+</li><li><strong>Available stock</strong>. For all warehouses, displays which items mentioned in the sales invoice are on hand, ordered, or available. 
+</li><li><strong>Statement of account</strong>. For the sales invoice's customer, displays debits and credits of your company's receivables and payables for an accounting period. 
+</li><li><strong>Accounts receivable balance</strong>. For sales invoice's customer, displays the total amount the customer is due to your company as well as their overdue balance and advance payment balance. </li></ul><p>The reports are built-in to the sales invoice page. To generate any of them for a sales invoice:</p>
+<ul><li>Open the sales invoice and click the link with the report name. </li></ul></body></html>

@@ -1,0 +1,1568 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<V8Exch:_1CV8DtUD xmlns:V8Exch="http://www.1c.ru/V8/1CV8DtUD/" xmlns:core="http://v8.1c.ru/data" xmlns:v8="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<V8Exch:Data>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e8550f-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Discount received</v8:Description>
+			<v8:PredefinedDataName>DiscountReceived</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">c504cd63-7869-11e8-878e-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e8552b-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Tax refund</v8:Description>
+			<v8:PredefinedDataName>TaxRefund</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f7b-542c-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e8550e-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Discount allowed</v8:Description>
+			<v8:PredefinedDataName>DiscountAllowed</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">c504cd62-7869-11e8-878e-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85506-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Bank fees expense account</v8:Description>
+			<v8:PredefinedDataName>BankFeesExpenseAccount</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">fb89f917-5434-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85518-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Interest expenses on loans borrowed</v8:Description>
+			<v8:PredefinedDataName>InterestExpensesOnLoansBorrowed</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">fb89f918-5434-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85514-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Foreign currency exchange loss</v8:Description>
+			<v8:PredefinedDataName>ForeignCurrencyExchangeLoss</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">fb89f91a-5434-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85510-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Expenses</v8:Description>
+			<v8:PredefinedDataName>Expenses</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">fb89f919-5434-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85525-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Purchase returns</v8:Description>
+			<v8:PredefinedDataName>PurchaseReturns</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">c504cd64-7869-11e8-878e-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85513-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Foreign currency exchange gain</v8:Description>
+			<v8:PredefinedDataName>ForeignCurrencyExchangeGain</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f7f-542c-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e8552d-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>VAT on advance payments paid to suppliers</v8:Description>
+			<v8:PredefinedDataName>VATAdvancesToSuppliers</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">a1b4e42e-9019-11e8-95b6-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e8550a-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Comission expenses on loans borrowed</v8:Description>
+			<v8:PredefinedDataName>ComissionExpensesOnLoansBorrowed</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">fb89f91b-5434-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85519-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Interest income</v8:Description>
+			<v8:PredefinedDataName>InterestIncome</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">fb89f91c-5434-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e8551d-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Inventory in retail</v8:Description>
+			<v8:PredefinedDataName>InventoryInRetail</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f6e-542c-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85523-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Payroll payable</v8:Description>
+			<v8:PredefinedDataName>PayrollPayable</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f79-542c-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85511-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Fixed assets</v8:Description>
+			<v8:PredefinedDataName>FixedAssets</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f71-542c-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85530-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>VAT reverse charge</v8:Description>
+			<v8:PredefinedDataName>VATReverseCharge</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">a729d4ae-e2a4-11e8-8794-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85526-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Retail markup</v8:Description>
+			<v8:PredefinedDataName>RetailMarkup</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f64-542c-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e8551b-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Interest receivable</v8:Description>
+			<v8:PredefinedDataName>InterestReceivable</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">fb89f91d-5434-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85515-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Funds transfers being processed</v8:Description>
+			<v8:PredefinedDataName>FundsTransfersBeingProcessed</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">468667e4-7ddd-11e8-878e-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85524-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Petty cash account</v8:Description>
+			<v8:PredefinedDataName>PettyCashAccount</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f6d-542c-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e8550d-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Deferred revenue</v8:Description>
+			<v8:PredefinedDataName>DeferredRevenue</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">71033f95-3075-11e9-879d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85527-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Retained earnings</v8:Description>
+			<v8:PredefinedDataName>RetainedEarnings</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f7d-542c-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e854ff-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Accounts payable</v8:Description>
+			<v8:PredefinedDataName>AccountsPayable</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f75-542c-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85509-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>COGS of main business activity</v8:Description>
+			<v8:PredefinedDataName>COGSOfMainBusinessLine</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f80-542c-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85529-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Sales returns</v8:Description>
+			<v8:PredefinedDataName>SalesReturns</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">765e8e96-7868-11e8-878e-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e8552c-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>VAT input</v8:Description>
+			<v8:PredefinedDataName>VATInput</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">a1b4e441-9019-11e8-95b6-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85516-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Goods received not invoiced</v8:Description>
+			<v8:PredefinedDataName>GoodsReceivedNotInvoiced</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">3ad289cc-bda8-11e8-8793-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e8552f-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>VAT output</v8:Description>
+			<v8:PredefinedDataName>VATOutput</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">a1b4e440-9019-11e8-95b6-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85517-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Goods shipped not invoiced</v8:Description>
+			<v8:PredefinedDataName>GoodsShippedNotInvoiced</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">3ad289cd-bda8-11e8-8793-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e8550c-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Customer advances</v8:Description>
+			<v8:PredefinedDataName>CustomerAdvances</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f78-542c-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e8550b-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Credit card sales received at a later date</v8:Description>
+			<v8:PredefinedDataName>CreditCardSalesReceivedAtALaterDate</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f6b-542c-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85521-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Other income</v8:Description>
+			<v8:PredefinedDataName>OtherIncome</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">fb89f91f-5434-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85502-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Advance holders payable</v8:Description>
+			<v8:PredefinedDataName>AdvanceHoldersPayable</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f7a-542c-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85531-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Work-in-process</v8:Description>
+			<v8:PredefinedDataName>WorkInProcess</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f81-542c-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e8551e-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Loans borrowed</v8:Description>
+			<v8:PredefinedDataName>LoansBorrowed</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f77-542c-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85508-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Cash account</v8:Description>
+			<v8:PredefinedDataName>CashAccount</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f6c-542c-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85528-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Revenue from main business activity</v8:Description>
+			<v8:PredefinedDataName>RevenueFromMainBusinessLine</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f7e-542c-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85505-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Bank fees credit account</v8:Description>
+			<v8:PredefinedDataName>BankFeesCreditAccount</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f6b-542c-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85504-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Bank account</v8:Description>
+			<v8:PredefinedDataName>BankAccount</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f6b-542c-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85522-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Payroll expenses</v8:Description>
+			<v8:PredefinedDataName>PayrollExpenses</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">fb89f920-5434-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85507-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Capital introduction</v8:Description>
+			<v8:PredefinedDataName>CapitalIntroduction</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f7c-542c-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85501-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Advance holders</v8:Description>
+			<v8:PredefinedDataName>AdvanceHolders</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f74-542c-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85500-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Accounts receivable</v8:Description>
+			<v8:PredefinedDataName>AccountsReceivable</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f70-542c-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85520-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Opening balance equity account (to balance opening entries)</v8:Description>
+			<v8:PredefinedDataName>OpeningBalanceEquity</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">f1e2339b-7dd4-11e8-878e-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e8552a-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>VAT</v8:Description>
+			<v8:PredefinedDataName>TaxPayable</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f7b-542c-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85503-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Advances to suppliers</v8:Description>
+			<v8:PredefinedDataName>AdvancesToSuppliers</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f73-542c-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e85512-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Fixed assets depreciation</v8:Description>
+			<v8:PredefinedDataName>FixedAssetsDepreciation</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f72-542c-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e8551a-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Interest payable</v8:Description>
+			<v8:PredefinedDataName>InterestPayable</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f76-542c-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e8551f-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Loans lent to employee</v8:Description>
+			<v8:PredefinedDataName>LoansLentToEmployee</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">fb89f91e-5434-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e8552e-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>VAT on advance payments received from customers</v8:Description>
+			<v8:PredefinedDataName>VATAdvancesFromCustomers</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">a1b4e42f-9019-11e8-95b6-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:CatalogObject.DefaultGLAccounts>
+			<v8:Ref xsi:type="v8:CatalogRef.DefaultGLAccounts">78e8551c-4954-11e9-879f-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Description>Inventory</v8:Description>
+			<v8:PredefinedDataName>Inventory</v8:PredefinedDataName>
+			<v8:GLAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f6e-542c-11e8-878d-b06ebfcc6763</v8:GLAccount>
+		</v8:CatalogObject.DefaultGLAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f57-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:Parent>
+			<v8:Code>4000000</v8:Code>
+			<v8:Description>REVENUE</v8:Description>
+			<v8:Order>4000000</v8:Order>
+			<v8:Type>Passive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Header</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>IncomeStatement</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f66-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f57-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>4020000</v8:Code>
+			<v8:Description>Other income</v8:Description>
+			<v8:Order>4020000</v8:Order>
+			<v8:Type>Passive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Header</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>IncomeStatement</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">c504cd63-7869-11e8-878e-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f66-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>4020400</v8:Code>
+			<v8:Description>Discount received</v8:Description>
+			<v8:Order>4020400</v8:Order>
+			<v8:Type>Passive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>OtherIncome</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>SalesVolume</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>IncomeStatement</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f55-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:Parent>
+			<v8:Code>2000000</v8:Code>
+			<v8:Description>LIABILITIES</v8:Description>
+			<v8:Order>2000000</v8:Order>
+			<v8:Type>Passive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Header</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f61-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f55-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>2040000</v8:Code>
+			<v8:Description>Other current liabilities</v8:Description>
+			<v8:Order>2040000</v8:Order>
+			<v8:Type>Passive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Header</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f7b-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f61-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>2040400</v8:Code>
+			<v8:Description>VAT Payable</v8:Description>
+			<v8:Order>2040400</v8:Order>
+			<v8:Type>Passive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>OtherShorttermObligations</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f65-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f57-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>4010000</v8:Code>
+			<v8:Description>Revenue</v8:Description>
+			<v8:Order>4010000</v8:Order>
+			<v8:Type>Passive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Header</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>IncomeStatement</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">c504cd62-7869-11e8-878e-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f65-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>4010300</v8:Code>
+			<v8:Description>Discount allowed</v8:Description>
+			<v8:Order>4010300</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Revenue</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>SalesVolume</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>IncomeStatement</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f59-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:Parent>
+			<v8:Code>6000000</v8:Code>
+			<v8:Description>EXPENSES</v8:Description>
+			<v8:Order>6000000</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Header</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>IncomeStatement</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f69-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f59-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>6050000</v8:Code>
+			<v8:Description>Finance costs</v8:Description>
+			<v8:Order>6050000</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Header</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>IncomeStatement</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">fb89f917-5434-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f69-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>6050100</v8:Code>
+			<v8:Description>Bank fees</v8:Description>
+			<v8:Order>6050100</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Expenses</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>IncomeStatement</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">fb89f918-5434-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f69-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>6050200</v8:Code>
+			<v8:Description>Interest</v8:Description>
+			<v8:Order>6050200</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Expenses</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>IncomeStatement</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f6a-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f59-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>6080000</v8:Code>
+			<v8:Description>Other expenses</v8:Description>
+			<v8:Order>6080000</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Header</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>IncomeStatement</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">fb89f91a-5434-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f6a-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>6080200</v8:Code>
+			<v8:Description>Foreign exchange loss</v8:Description>
+			<v8:Order>6080200</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Expenses</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>IncomeStatement</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">fb89f919-5434-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f6a-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>6080100</v8:Code>
+			<v8:Description>Expenses</v8:Description>
+			<v8:Order>6080100</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Expenses</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>IncomeStatement</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">c504cd64-7869-11e8-878e-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f66-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>4020500</v8:Code>
+			<v8:Description>Purchase returns</v8:Description>
+			<v8:Order>4020500</v8:Order>
+			<v8:Type>Passive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>OtherIncome</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>SalesVolume</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>IncomeStatement</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f7f-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f66-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>4020100</v8:Code>
+			<v8:Description>Foreign exchange gain</v8:Description>
+			<v8:Order>4020100</v8:Order>
+			<v8:Type>Passive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>OtherIncome</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>SalesVolume</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>IncomeStatement</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">a1b4e42e-9019-11e8-95b6-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f61-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>2040500</v8:Code>
+			<v8:Description>VAT on advance payments paid to suppliers</v8:Description>
+			<v8:Order>2040500</v8:Order>
+			<v8:Type>Passive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>OtherShorttermObligations</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">fb89f91b-5434-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f69-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>6050300</v8:Code>
+			<v8:Description>Loan commission fee</v8:Description>
+			<v8:Order>6050300</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Expenses</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>IncomeStatement</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">fb89f91c-5434-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f66-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>4020200</v8:Code>
+			<v8:Description>Interest accrued income</v8:Description>
+			<v8:Order>4020200</v8:Order>
+			<v8:Type>Passive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>OtherIncome</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>IncomeStatement</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f54-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:Parent>
+			<v8:Code>1000000</v8:Code>
+			<v8:Description>ASSETS</v8:Description>
+			<v8:Order>1000000</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Header</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f5b-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f54-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>1020000</v8:Code>
+			<v8:Description>Inventory</v8:Description>
+			<v8:Order>1020000</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Header</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f6e-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f5b-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>1020100</v8:Code>
+			<v8:Description>Inventory</v8:Description>
+			<v8:Order>1020100</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Inventory</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f79-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f61-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>2040200</v8:Code>
+			<v8:Description>Payroll payable</v8:Description>
+			<v8:Order>2040200</v8:Order>
+			<v8:Type>Passive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>AccountsPayable</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f5d-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f54-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>1040000</v8:Code>
+			<v8:Description>Property, plant and equipment</v8:Description>
+			<v8:Order>1040000</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Header</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f71-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f5d-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>1040100</v8:Code>
+			<v8:Description>Equipment</v8:Description>
+			<v8:Order>1040100</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>ProfitLosses</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">a729d4ae-e2a4-11e8-8794-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f61-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>2040800</v8:Code>
+			<v8:Description>Reverse charged VAT</v8:Description>
+			<v8:Order>2040800</v8:Order>
+			<v8:Type>Passive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>OtherShorttermObligations</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f56-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:Parent>
+			<v8:Code>3000000</v8:Code>
+			<v8:Description>EQUITY</v8:Description>
+			<v8:Order>3000000</v8:Order>
+			<v8:Type>ActivePassive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Header</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f64-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f56-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>3030000</v8:Code>
+			<v8:Description>Retail markup</v8:Description>
+			<v8:Order>3030000</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>RetailMarkup</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f5e-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f54-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>1050000</v8:Code>
+			<v8:Description>Other current assets</v8:Description>
+			<v8:Order>1050000</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Header</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">fb89f91d-5434-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f5e-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>1050300</v8:Code>
+			<v8:Description>Interest receivable</v8:Description>
+			<v8:Order>1050300</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>AccountsReceivable</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>true</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f5a-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f54-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>1010000</v8:Code>
+			<v8:Description>Cash and cash equivalents</v8:Description>
+			<v8:Order>1010000</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Header</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">468667e4-7ddd-11e8-878e-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f5a-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>1010400</v8:Code>
+			<v8:Description>Funds transfers being processed</v8:Description>
+			<v8:Order>1010400</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>CashAndCashEquivalents</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>true</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f6d-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f5a-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>1010300</v8:Code>
+			<v8:Description>Petty cash</v8:Description>
+			<v8:Order>1010300</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>CashAndCashEquivalents</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>true</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">71033f95-3075-11e9-879d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f61-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>2040900</v8:Code>
+			<v8:Description>Unearned revenue</v8:Description>
+			<v8:Order>2040900</v8:Order>
+			<v8:Type>Passive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>OtherShorttermObligations</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f63-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f56-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>3020000</v8:Code>
+			<v8:Description>Retained earnings</v8:Description>
+			<v8:Order>3020000</v8:Order>
+			<v8:Type>ActivePassive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Header</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f7d-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f63-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>3010200</v8:Code>
+			<v8:Description>Retained earnings</v8:Description>
+			<v8:Order>3010200</v8:Order>
+			<v8:Type>ActivePassive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>RetainedEarnings</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f5f-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f55-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>2010000</v8:Code>
+			<v8:Description>Accounts payable</v8:Description>
+			<v8:Order>2010000</v8:Order>
+			<v8:Type>Passive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Header</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f75-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f5f-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>2010100</v8:Code>
+			<v8:Description>Accounts payable</v8:Description>
+			<v8:Order>2010100</v8:Order>
+			<v8:Type>Passive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>AccountsPayable</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>true</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f58-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:Parent>
+			<v8:Code>5000000</v8:Code>
+			<v8:Description>COST OF SALES</v8:Description>
+			<v8:Order>5000000</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Header</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>IncomeStatement</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f67-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f58-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>5010000</v8:Code>
+			<v8:Description>Cost of sales</v8:Description>
+			<v8:Order>5010000</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Header</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>IncomeStatement</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f80-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f67-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>5010100</v8:Code>
+			<v8:Description>COGS</v8:Description>
+			<v8:Order>5010100</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>CostOfSales</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>IncomeStatement</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">765e8e96-7868-11e8-878e-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f65-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>4010200</v8:Code>
+			<v8:Description>Sales returns and allowances</v8:Description>
+			<v8:Order>4010200</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Revenue</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>SalesVolume</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>IncomeStatement</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">a1b4e441-9019-11e8-95b6-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f5e-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>1050600</v8:Code>
+			<v8:Description>VAT input</v8:Description>
+			<v8:Order>1050600</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>OtherCurrentAssets</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">3ad289cc-bda8-11e8-8793-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f61-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>2040700</v8:Code>
+			<v8:Description>Goods received not invoiced</v8:Description>
+			<v8:Order>2040700</v8:Order>
+			<v8:Type>Passive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Inventory</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">a1b4e440-9019-11e8-95b6-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f61-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>2040600</v8:Code>
+			<v8:Description>VAT output</v8:Description>
+			<v8:Order>2040600</v8:Order>
+			<v8:Type>Passive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>OtherShorttermObligations</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">3ad289cd-bda8-11e8-8793-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f5b-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>1020300</v8:Code>
+			<v8:Description>Goods shipped not invoiced</v8:Description>
+			<v8:Order>1020300</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Inventory</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f78-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f61-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>2040100</v8:Code>
+			<v8:Description>Customer advances</v8:Description>
+			<v8:Order>2040100</v8:Order>
+			<v8:Type>Passive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>AccountsPayable</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>true</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f6b-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f5a-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>1010100</v8:Code>
+			<v8:Description>Bank account</v8:Description>
+			<v8:Order>1010100</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>CashAndCashEquivalents</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>true</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">fb89f91f-5434-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f66-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>4020300</v8:Code>
+			<v8:Description>Other income</v8:Description>
+			<v8:Order>4020300</v8:Order>
+			<v8:Type>Passive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>OtherIncome</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>IncomeStatement</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f7a-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f61-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>2040300</v8:Code>
+			<v8:Description>Advance holders payable</v8:Description>
+			<v8:Order>2040300</v8:Order>
+			<v8:Type>Passive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>AccountsPayable</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>true</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f68-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f59-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>6030000</v8:Code>
+			<v8:Description>Work-in-process</v8:Description>
+			<v8:Order>6030000</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Header</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>IncomeStatement</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f81-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f68-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>6030100</v8:Code>
+			<v8:Description>Work-in-process inventory</v8:Description>
+			<v8:Order>6030100</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>WorkInProcess</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f6e-542c-11e8-878d-b06ebfcc6763</v8:ClosingAccount>
+			<v8:FinancialStatement>IncomeStatement</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f60-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f55-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>2030000</v8:Code>
+			<v8:Description>Long-term liabilities</v8:Description>
+			<v8:Order>2030000</v8:Order>
+			<v8:Type>Passive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Header</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f77-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f60-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>2030100</v8:Code>
+			<v8:Description>Loans borrowed</v8:Description>
+			<v8:Order>2030100</v8:Order>
+			<v8:Type>Passive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>LongtermLiabilities</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>true</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f6c-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f5a-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>1010200</v8:Code>
+			<v8:Description>Cash account</v8:Description>
+			<v8:Order>1010200</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>CashAndCashEquivalents</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>true</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f7e-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f65-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>4010100</v8:Code>
+			<v8:Description>Revenue</v8:Description>
+			<v8:Order>4010100</v8:Order>
+			<v8:Type>Passive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Revenue</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>SalesVolume</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>IncomeStatement</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">fb89f920-5434-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f6a-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>6080300</v8:Code>
+			<v8:Description>Payroll expenses</v8:Description>
+			<v8:Order>6080300</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Expenses</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>IncomeStatement</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f62-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f56-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>3010000</v8:Code>
+			<v8:Description>Capital</v8:Description>
+			<v8:Order>3010000</v8:Order>
+			<v8:Type>Passive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Header</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f7c-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f62-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>3010100</v8:Code>
+			<v8:Description>Capital introduction</v8:Description>
+			<v8:Order>3010100</v8:Order>
+			<v8:Type>Passive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Capital</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f74-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f5e-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>1050200</v8:Code>
+			<v8:Description>Advance holders receivable</v8:Description>
+			<v8:Order>1050200</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>AccountsReceivable</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>true</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f5c-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f54-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>1030000</v8:Code>
+			<v8:Description>Accounts receivable</v8:Description>
+			<v8:Order>1030000</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Header</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f70-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f5c-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>1030100</v8:Code>
+			<v8:Description>Accounts receivable</v8:Description>
+			<v8:Order>1030100</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>AccountsReceivable</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>true</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">f1e2339b-7dd4-11e8-878e-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f56-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>3040000</v8:Code>
+			<v8:Description>Opening balance equity</v8:Description>
+			<v8:Order>3040000</v8:Order>
+			<v8:Type>ActivePassive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>OtherCurrentAssets</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f73-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f5e-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>1050100</v8:Code>
+			<v8:Description>Advances to suppliers</v8:Description>
+			<v8:Order>1050100</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>AccountsReceivable</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>true</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f72-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f5d-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>1040200</v8:Code>
+			<v8:Description>Equipment depreciation</v8:Description>
+			<v8:Order>1040200</v8:Order>
+			<v8:Type>Passive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Depreciation</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f76-542c-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f5f-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>2010200</v8:Code>
+			<v8:Description>Interest payable</v8:Description>
+			<v8:Order>2010200</v8:Order>
+			<v8:Type>Passive</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>AccountsPayable</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>true</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">fb89f91e-5434-11e8-878d-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f5e-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>1050400</v8:Code>
+			<v8:Description>Loans lent </v8:Description>
+			<v8:Order>1050400</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>AccountsReceivable</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>true</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">a1b4e42f-9019-11e8-95b6-b06ebfcc6763</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f5e-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>1050500</v8:Code>
+			<v8:Description>VAT on advance payments received from customers</v8:Description>
+			<v8:Order>1050500</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>OtherCurrentAssets</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">e99ea6b6-46fa-11e9-87a5-b06ebfbbdfac</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f5b-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>1020400</v8:Code>
+			<v8:Description>Inventory transferred</v8:Description>
+			<v8:Order>1020400</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Inventory</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">e99ea6b7-46fa-11e9-87a5-b06ebfbbdfac</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f5b-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>1020500</v8:Code>
+			<v8:Description>Inventory received</v8:Description>
+			<v8:Order>1020500</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Inventory</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">e99ea6b9-46fa-11e9-87a5-b06ebfbbdfac</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f5d-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>1040300</v8:Code>
+			<v8:Description>Signed out equipment</v8:Description>
+			<v8:Order>1040300</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Inventory</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">e99ea6b8-46fa-11e9-87a5-b06ebfbbdfac</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f5e-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>1050700</v8:Code>
+			<v8:Description>Goods invoiced not received</v8:Description>
+			<v8:Order>1050700</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>OtherCurrentAssets</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>BalanceSheet</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+			<v8:Ref xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">e99ea6ba-46fa-11e9-87a5-b06ebfbbdfac</v8:Ref>
+			<v8:DeletionMark>false</v8:DeletionMark>
+			<v8:Parent xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f6a-542c-11e8-878d-b06ebfcc6763</v8:Parent>
+			<v8:Code>6080400</v8:Code>
+			<v8:Description>Consumption</v8:Description>
+			<v8:Order>6080400</v8:Order>
+			<v8:Type>Active</v8:Type>
+			<v8:OffBalance>false</v8:OffBalance>
+			<v8:TypeOfAccount>Expenses</v8:TypeOfAccount>
+			<v8:MethodOfDistribution>DoNotDistribute</v8:MethodOfDistribution>
+			<v8:ClosingAccount xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">00000000-0000-0000-0000-000000000000</v8:ClosingAccount>
+			<v8:FinancialStatement>IncomeStatement</v8:FinancialStatement>
+			<v8:Currency>false</v8:Currency>
+		</v8:ChartOfAccountsObject.PrimaryChartOfAccounts>
+		<v8:InformationRegisterRecordSet.ProductGLAccounts>
+			<v8:Filter>
+				<FilterItem xmlns="http://v8.1c.ru/8.1/data/enterprise">
+					<Name xsi:type="xs:string">Company</Name>
+					<Value xsi:type="v8:CatalogRef.Companies">00000000-0000-0000-0000-000000000000</Value>
+				</FilterItem>
+				<FilterItem xmlns="http://v8.1c.ru/8.1/data/enterprise">
+					<Name xsi:type="xs:string">Product</Name>
+					<Value xsi:type="v8:CatalogRef.Products">00000000-0000-0000-0000-000000000000</Value>
+				</FilterItem>
+				<FilterItem xmlns="http://v8.1c.ru/8.1/data/enterprise">
+					<Name xsi:type="xs:string">ProductCategory</Name>
+					<Value xsi:type="v8:CatalogRef.ProductsCategories">00000000-0000-0000-0000-000000000000</Value>
+				</FilterItem>
+				<FilterItem xmlns="http://v8.1c.ru/8.1/data/enterprise">
+					<Name xsi:type="xs:string">StructuralUnit</Name>
+					<Value xsi:type="v8:CatalogRef.BusinessUnits">00000000-0000-0000-0000-000000000000</Value>
+				</FilterItem>
+			</v8:Filter>
+			<v8:Record>
+				<v8:Company xsi:type="v8:CatalogRef.Companies">00000000-0000-0000-0000-000000000000</v8:Company>
+				<v8:Product xsi:type="v8:CatalogRef.Products">00000000-0000-0000-0000-000000000000</v8:Product>
+				<v8:ProductCategory xsi:type="v8:CatalogRef.ProductsCategories">00000000-0000-0000-0000-000000000000</v8:ProductCategory>
+				<v8:StructuralUnit xsi:type="v8:CatalogRef.BusinessUnits">00000000-0000-0000-0000-000000000000</v8:StructuralUnit>
+				<v8:Inventory xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f6e-542c-11e8-878d-b06ebfcc6763</v8:Inventory>
+				<v8:InventoryTransferred xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">e99ea6b6-46fa-11e9-87a5-b06ebfbbdfac</v8:InventoryTransferred>
+				<v8:InventoryReceived xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">e99ea6b7-46fa-11e9-87a5-b06ebfbbdfac</v8:InventoryReceived>
+				<v8:SignedOutEquipment xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">e99ea6b9-46fa-11e9-87a5-b06ebfbbdfac</v8:SignedOutEquipment>
+				<v8:GoodsShippedNotInvoiced xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">3ad289cd-bda8-11e8-8793-b06ebfcc6763</v8:GoodsShippedNotInvoiced>
+				<v8:GoodsReceivedNotInvoiced xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">3ad289cc-bda8-11e8-8793-b06ebfcc6763</v8:GoodsReceivedNotInvoiced>
+				<v8:GoodsInvoicedNotDelivered xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">e99ea6b8-46fa-11e9-87a5-b06ebfbbdfac</v8:GoodsInvoicedNotDelivered>
+				<v8:UnearnedRevenue xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">71033f95-3075-11e9-879d-b06ebfcc6763</v8:UnearnedRevenue>
+				<v8:VATInput xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">a1b4e441-9019-11e8-95b6-b06ebfcc6763</v8:VATInput>
+				<v8:VATOutput xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">a1b4e440-9019-11e8-95b6-b06ebfcc6763</v8:VATOutput>
+				<v8:Revenue xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f7e-542c-11e8-878d-b06ebfcc6763</v8:Revenue>
+				<v8:COGS xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">d2c21f80-542c-11e8-878d-b06ebfcc6763</v8:COGS>
+				<v8:Consumption xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">e99ea6ba-46fa-11e9-87a5-b06ebfbbdfac</v8:Consumption>
+				<v8:SalesReturn xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">765e8e96-7868-11e8-878e-b06ebfcc6763</v8:SalesReturn>
+				<v8:PurchaseReturn xsi:type="v8:ChartOfAccountsRef.PrimaryChartOfAccounts">c504cd64-7869-11e8-878e-b06ebfcc6763</v8:PurchaseReturn>
+			</v8:Record>
+		</v8:InformationRegisterRecordSet.ProductGLAccounts>
+	</V8Exch:Data>
+	<PredefinedData>
+		<Catalog.DefaultGLAccounts>
+			<item Ref="78e8550f-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="DiscountReceived"/>
+			<item Ref="78e8552b-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="TaxRefund"/>
+			<item Ref="78e8550e-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="DiscountAllowed"/>
+			<item Ref="78e85506-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="BankFeesExpenseAccount"/>
+			<item Ref="78e85518-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="InterestExpensesOnLoansBorrowed"/>
+			<item Ref="78e85514-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="ForeignCurrencyExchangeLoss"/>
+			<item Ref="78e85510-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="Expenses"/>
+			<item Ref="78e85525-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="PurchaseReturns"/>
+			<item Ref="78e85513-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="ForeignCurrencyExchangeGain"/>
+			<item Ref="78e8552d-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="VATAdvancesToSuppliers"/>
+			<item Ref="78e8550a-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="ComissionExpensesOnLoansBorrowed"/>
+			<item Ref="78e85519-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="InterestIncome"/>
+			<item Ref="78e8551d-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="InventoryInRetail"/>
+			<item Ref="78e85523-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="PayrollPayable"/>
+			<item Ref="78e85511-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="FixedAssets"/>
+			<item Ref="78e85530-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="VATReverseCharge"/>
+			<item Ref="78e85526-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="RetailMarkup"/>
+			<item Ref="78e8551b-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="InterestReceivable"/>
+			<item Ref="78e85515-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="FundsTransfersBeingProcessed"/>
+			<item Ref="78e85524-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="PettyCashAccount"/>
+			<item Ref="78e8550d-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="DeferredRevenue"/>
+			<item Ref="78e85527-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="RetainedEarnings"/>
+			<item Ref="78e854ff-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="AccountsPayable"/>
+			<item Ref="78e85509-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="COGSOfMainBusinessLine"/>
+			<item Ref="78e85529-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="SalesReturns"/>
+			<item Ref="78e8552c-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="VATInput"/>
+			<item Ref="78e85516-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="GoodsReceivedNotInvoiced"/>
+			<item Ref="78e8552f-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="VATOutput"/>
+			<item Ref="78e85517-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="GoodsShippedNotInvoiced"/>
+			<item Ref="78e8550c-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="CustomerAdvances"/>
+			<item Ref="78e8550b-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="CreditCardSalesReceivedAtALaterDate"/>
+			<item Ref="78e85521-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="OtherIncome"/>
+			<item Ref="78e85502-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="AdvanceHoldersPayable"/>
+			<item Ref="78e85531-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="WorkInProcess"/>
+			<item Ref="78e8551e-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="LoansBorrowed"/>
+			<item Ref="78e85508-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="CashAccount"/>
+			<item Ref="78e85528-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="RevenueFromMainBusinessLine"/>
+			<item Ref="78e85505-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="BankFeesCreditAccount"/>
+			<item Ref="78e85504-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="BankAccount"/>
+			<item Ref="78e85522-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="PayrollExpenses"/>
+			<item Ref="78e85507-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="CapitalIntroduction"/>
+			<item Ref="78e85501-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="AdvanceHolders"/>
+			<item Ref="78e85500-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="AccountsReceivable"/>
+			<item Ref="78e85520-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="OpeningBalanceEquity"/>
+			<item Ref="78e8552a-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="TaxPayable"/>
+			<item Ref="78e85503-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="AdvancesToSuppliers"/>
+			<item Ref="78e85512-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="FixedAssetsDepreciation"/>
+			<item Ref="78e8551a-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="InterestPayable"/>
+			<item Ref="78e8551f-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="LoansLentToEmployee"/>
+			<item Ref="78e8552e-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="VATAdvancesFromCustomers"/>
+			<item Ref="78e8551c-4954-11e9-879f-b06ebfcc6763" PredefinedDataName="Inventory"/>
+		</Catalog.DefaultGLAccounts>
+	</PredefinedData>
+</V8Exch:_1CV8DtUD>

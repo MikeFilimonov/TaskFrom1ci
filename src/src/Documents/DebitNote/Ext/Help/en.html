@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<h1>Debit notes</h1>
+<p>When you order goods or services from your supplier and you have already registered a supplier invoice, you may need to reduce your company's debt to the supplier. For example, your supplier agreed to give you an extra discount or you request a goods return because there was a supply of damaged goods.</p>
+<p>In this scenario, your supplier issues a credit note document to your company and, once you receive it, you register a debit note document in 1C:Drive. This document serves as the evidence of the reduction in your purchases.</p>
+<p>In the debit note, you list the products, quantities, and agreed prices for products or services that your company ordered from the supplier, but your company returned or did not receive them. Also, you can use a debit note if you simply want to adjust the debt amount provided that the supplier confirmed this.</p>
+<p>Typically, you state the reason for the debit note and refer to the original supplier invoice.</p>
+<p>You can get the credit from the supplier as reduction of your debt to their company, or you can apply the credit to the future purchases.</p>
+<h2>Viewing debit notes</h2>
+<p>To view the list of debit notes:</p>
+<ul><li>Click <b>Purchases &gt; Purchases &gt; Debit notes</b>. </li></ul><a name="debit_note_fields"></a>
+<h2>Debit note fields</h2>
+<p>A debit note has the following fields:</p>
+<ul><li><b>Counterparty</b> (required). The supplier you register the debit note for. 
+</li><li><b>Contract</b> (required). The supplier's contract that governs the registration of the debit note. 
+</li><li><b>Basis</b>. The supplier invoice or the goods return where you want to apply the debit note. This field is available only if the <b>Operation</b> field of the debit note is set to "Purchase return." 
+</li><li><b>Adjustment amount</b>. The money amount to reduce your company's debt to the supplier. 1C:Drive changes the value of this field automatically according to the content of the debit note you edit. You can change the value of this field explicitly only if the <b>Operation</b> field of the debit note is set to "Accounts payable adjustments" or "Discount received." 
+</li><li><b>Number</b>. A unique debit note number. It helps you identify the debit note. 
+</li><li><b>Dated</b>. The date and time when the debit note was registered. 
+</li><li><b>Operation</b>. The debit note type. It can have one of the following values: 
+<ul><li><b>Accounts payable adjustments</b>. Reduces your company's debt to the supplier with a reason rather than a discount or a purchase return. For instance, the supplier delayed the goods delivery and wants to compensate this to your company. 
+</li><li><b>Discount received</b>. Applies a discount to the purchase after you have already registered a supplier invoice. For instance, the supplier wants to give your company a fast payment bonus for the supplier invoice. 
+</li><li><b>Purchase return</b>. The debit note initiates a goods return document or is based on a goods return document. A debit note of this type itself does not assume physical transfer of goods in the inventory. To register a goods transfer, use a separate goods return document. </li></ul></li><li><b>Company</b> (required). Your company that registers the debit note. 
+</li><li><b>Warehouse</b>. Your company's warehouse from which you return the goods. This field is available only if the <b><a href="InformationRegister.AccountingPolicy/Help#purchase_return_flow_option">Purchase return flow</a></b> option is set to "Debit note document posts all entries, including inventory." 
+</li><li><b>GL account</b> (required). The GL account for recording the adjusted amount. Typically, it is a contra expense account. </li></ul><h2>Creating debit notes</h2>
+<p>To create a debit note:</p>
+<ol><li>Do any of the following: 
+<ul><li>Click <b>Purchases &gt; Purchases &gt; Debit notes</b> and then click <b>Create</b>. 
+</li><li>Open a supplier invoice or goods return and click <b>Generate &gt; Debit note</b>. </li></ul></li><li>Fill the debit note fields. 
+<p>For more information, see <a href="#debit_note_fields">Debit note fields</a>.</p>
+</li><li>If the debit note has the "Purchase return" operation type, specify the purchase return products. 
+<p>For more information, see <a href="#specifying_return_products">Specifying return products</a>.</p>
+</li><li>If the debit note has the "Accounts payable adjustments" or "Discount received" operation type, specify the allowances or discounts. 
+<p>For more information, see <a href="#specifying_allowances_or_discounts">Specifying allowances or discounts</a>.</p>
+</li><li>Specify the debit note amount allocation. 
+<p>For more information, see <a href="#specifying_debit_note_amount_allocation">Specifying debit note amount allocation</a>.</p>
+</li><li>Specify the debit note reason. 
+<p>For more information, see <a href="#specifying_debit_note_reason">Specifying debit note reason</a>.</p>
+</li><li>Click <b>Post</b>. </li></ol><a name="specifying_return_products"></a>
+<h3>Specifying return products</h3>
+<p>When you register a debit note for a purchase return reason, you select "Purchase return" in the debit note's <b>Operation</b> field. For more information, see <a href="#debit_note_fields">Debit note fields</a>.</p>
+<p>For such a debit note, you also have to specify the products your company returns to the supplier and the adjustment amount. To do this:</p>
+<ol><li>Open the debit note. 
+</li><li>Click the <b>Products</b> tab. 
+</li><li>Click <b>Fill in by basis</b>. 
+<p>1C:Drive populates the table on the <b>Products</b> tab according to the supplier invoice or goods return document you specified in the <b>Basis</b> field.</p>
+</li><li>For each returned product, do the following: 
+<ol type="a"><li>If the debit note is based on a supplier invoice, in the <b>Return quantity</b> column, specify the returned quantity. 
+<p>1C:Drive calculates the value of the <b>Adjustment amount</b> column.</p>
+</li><li>If the debit note is based on a goods return, in the <b>Adjustment amount</b> column, specify the amount you want to subtract from your company's debt. </li></ol></li></ol><p>1C:Drive calculates the resulting adjustment amount of the debit note and displays it in the <b>Adjustment amount</b> field.</p><a name="specifying_allowances_or_discounts"></a>
+<h3>Specifying allowances or discounts</h3>
+<p>When you register a debit note for the reason of discounts or allowances for your company, you select "Discount received" or "Accounts payable adjustments" in the debit note's <b>Operation</b> field. For more information, see <a href="#debit_note_fields">Debit note fields</a>.</p>
+<p>For such a debit note, you need to specify one or several supplier invoice documents to apply the debt reduction to and the amount of the allowance or discount. To do this:</p>
+<ol><li>Open the debit note. 
+</li><li>Click the <b>Debited transactions</b> tab. 
+</li><li>Do any of the following: 
+<ul><li>To populate the table on the <b>Debited transactions</b> tab with appropriate basis documents automatically, click <b>Fill by period</b>, specify the period when the documents were issued, and click <b>Select</b>. 
+</li><li>To select a particular basis document, click <b>Select</b>, click <b>Supplier invoice</b>, click the desired document, and click <b>Select</b>. 
+<p>Also, you can add, edit, or delete table records.</p></li></ul></li><li>In the <b>Adjustment amount</b> field, specify the amount of the allowance or discount. </li></ol><a name="specifying_debit_note_amount_allocation"></a>
+<h3>Specifying debit note amount allocation</h3>
+<p>When you register a debit note for a supplier, you need to decide how to allocate the adjusted amount. Mainly, it depends on whether your company has performed a payment to the supplier for the basis invoice before you register the debit note.</p>
+<p>If there was a payment to the supplier, reduce your company's debt for the invoice by the debit note's amount. If there was no payment to the supplier so far, allocate the amount as an advance payment.</p>
+<p>To allocate the amount of a debit note:</p>
+<ol><li>Open the debit note. 
+</li><li>Click the <b>Amount allocation</b> tab. 
+</li><li>Click <b>Fill in</b>. 
+<p>1C:Drive populates the table on the <b>Amount allocation</b> tab according to the payments your company made for the basis invoice.</p>
+</li><li>To allocate the amount as an advance payment, select the <b>Is advance</b> check box for the allocated amount record. 
+</li><li>If necessary, in the <b>Offset amount</b> column, change the offset amount for the allocated amount record. 
+</li><li>If necessary, in the <b>Document</b> column, select another invoice for the allocated amount record. 
+<p>There is no need to specify the document for the offset amount if you specified that you allocate it as an advance payment.</p>
+</li><li>If necessary, in the <b>Order</b> column, specify the purchase order for the allocated amount record. 
+<p>Also, you can add, edit, or delete table records.</p></li></ol><a name="specifying_debit_note_reason"></a>
+<h3>Specifying debit note reason</h3>
+<p>For each debit note, you have to specify the reason why you registered it. To do this:</p>
+<ol><li>Open the debit note. 
+</li><li>Click the <b>Additional Information</b> tab. 
+</li><li>In the <b>Reason for correction</b> field, specify the brief description of the reason. 
+</li><li>If necessary, in the <b>Note</b> field, specify a detailed description of the reason. </li></ol></body></html>

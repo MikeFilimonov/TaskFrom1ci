@@ -1,0 +1,2014 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<Title>
+		<v8:item>
+			<v8:lang>en</v8:lang>
+			<v8:content>Business pulse</v8:content>
+		</v8:item>
+	</Title>
+	<EnterKeyBehavior>DefaultButton</EnterKeyBehavior>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="FormCommandBar" id="-1"/>
+	<Events>
+		<Event name="ChoiceProcessing">ChoiceProcessing</Event>
+		<Event name="NotificationProcessing">NotificationProcessing</Event>
+		<Event name="OnOpen">OnOpen</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="PagesDataWaiting" id="267">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Pages data waiting</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Pages data waiting</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="PagesDataWaitingExtendedTooltip" id="268"/>
+			<ChildItems>
+				<Page name="PageWaiting" id="269">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Page waiting</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Page waiting</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="PageWaitingExtendedTooltip" id="270"/>
+					<ChildItems>
+						<UsualGroup name="GroupWaiting" id="271">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupWaitingAdvancedTooltip" id="272"/>
+							<ChildItems>
+								<PictureDecoration name="PictureUploader" id="273">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Picture uploader</v8:content>
+										</v8:item>
+									</Title>
+									<PictureSize>AutoSize</PictureSize>
+									<Picture>
+										<xr:Ref>CommonPicture.LongOperation48</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="PictureUploaderContextMenu" id="274"/>
+									<ExtendedTooltip name="PictureUploaderExtendedTooltip" id="275"/>
+								</PictureDecoration>
+								<LabelDecoration name="LabelWaiting" id="276">
+									<Height>3</Height>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Calculating...</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Center</VerticalAlign>
+									<ContextMenu name="LabelWaitingContextMenu" id="277"/>
+									<ExtendedTooltip name="LabelWaitingExtendedTooltip" id="278"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="PageData" id="157">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Page data</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Page data</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="PageDataExtendedTooltip" id="158"/>
+					<ChildItems>
+						<UsualGroup name="DataGroup" id="392">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="DataGroupExtendedTooltip" id="393"/>
+							<ChildItems>
+								<UsualGroup name="LeftColumnGroup" id="239">
+									<Width>24</Width>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="LeftColumnGroupExtendedTooltip" id="240"/>
+									<ChildItems>
+										<LabelDecoration name="DecorationAddObjectBefore" id="233">
+											<Height>1</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<ContextMenu name="DecorationAddObjectBeforeContextMenu" id="234"/>
+											<ExtendedTooltip name="DecorationAddObjectBeforeExtendedTooltip" id="235"/>
+										</LabelDecoration>
+										<UsualGroup name="GroupIndicators" id="159">
+											<Width>25</Width>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="GroupIndicatorsExtendedTooltip" id="160"/>
+											<ChildItems>
+												<UsualGroup name="GroupAddedIndicators" id="260">
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="GroupAddedIndicatorsExtendedTooltip" id="261"/>
+													<ChildItems>
+														<UsualGroup name="GroupIndicatorsBalanceDate" id="331">
+															<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="GroupIndicatorsBalanceDateExtendedTooltip" id="332"/>
+															<ChildItems>
+																<LabelDecoration name="DecorationDateSelection" id="403">
+																	<HorizontalStretch>true</HorizontalStretch>
+																	<TextColor>style:FieldTextColor</TextColor>
+																	<Font ref="style:NormalTextFont" faceName="Arial" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Date selection</v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+																	<Hyperlink>true</Hyperlink>
+																	<HorizontalAlign>Center</HorizontalAlign>
+																	<ContextMenu name="DecorationDateSelectionContextMenu" id="404"/>
+																	<ExtendedTooltip name="DecorationDateSelectionExtendedTooltip" id="405"/>
+																	<Events>
+																		<Event name="Click">SelectDate</Event>
+																	</Events>
+																</LabelDecoration>
+																<Button name="SelectDate" id="333">
+																	<Type>UsualButton</Type>
+																	<Visible>false</Visible>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<Height>1</Height>
+																	<HorizontalStretch>true</HorizontalStretch>
+																	<CommandName>Form.Command.SelectDate</CommandName>
+																	<Font ref="style:NormalTextFont" faceName="Arial" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>For today</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ShapeRepresentation>None</ShapeRepresentation>
+																	<ExtendedTooltip name="SelectDateExtendedTooltip" id="334"/>
+																</Button>
+																<LabelDecoration name="DecorationDateRightIndent" id="335">
+																	<Visible>false</Visible>
+																	<Width>1</Width>
+																	<Height>1</Height>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<ContextMenu name="DecorationDateRightIndentContextMenu" id="336"/>
+																	<ExtendedTooltip name="DecorationDateRightIndentExtendedTooltip" id="337"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="GroupMenuBasisDate" id="338">
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="GroupMenuBasisDateExtendedTooltip" id="339"/>
+															<ChildItems>
+																<LabelDecoration name="DecorationIndentDateLeft" id="340">
+																	<HorizontalStretch>true</HorizontalStretch>
+																	<SkipOnInput>true</SkipOnInput>
+																	<Font ref="style:NormalTextFont" height="2" kind="StyleItem"/>
+																	<ContextMenu name="DecorationIndentDateLeftContextMenu" id="341"/>
+																	<ExtendedTooltip name="DecorationIndentDateLeftExtendedTooltip" id="342"/>
+																</LabelDecoration>
+																<LabelDecoration name="DecorationIndentDateCenter" id="346">
+																	<Width>21</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<SkipOnInput>true</SkipOnInput>
+																	<Font ref="style:NormalTextFont" height="2" kind="StyleItem"/>
+																	<ContextMenu name="DecorationIndentDateCenterContextMenu" id="347"/>
+																	<ExtendedTooltip name="DecorationIndentDateCenterExtendedTooltip" id="348"/>
+																</LabelDecoration>
+																<LabelDecoration name="DecorationIndentDateRight" id="343">
+																	<HorizontalStretch>true</HorizontalStretch>
+																	<SkipOnInput>true</SkipOnInput>
+																	<Font ref="style:NormalTextFont" height="2" kind="StyleItem"/>
+																	<ContextMenu name="DecorationIndentDateRightContextMenu" id="344"/>
+																	<ExtendedTooltip name="DecorationIndentDateRightExtendedTooltip" id="345"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="GroupIndicatorsBalanceComparisonDate" id="311">
+															<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="GroupIndicatorsBalanceComparisonDateExtendedTooltip" id="312"/>
+															<ChildItems>
+																<PictureDecoration name="DecorationComparisonDateBack1" id="397">
+																	<Width>2</Width>
+																	<Height>1</Height>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<SkipOnInput>true</SkipOnInput>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Decoration comparison date back</v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupVerticalAlign>Center</GroupVerticalAlign>
+																	<Hyperlink>true</Hyperlink>
+																	<NonselectedPictureText>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>asdf</v8:content>
+																		</v8:item>
+																	</NonselectedPictureText>
+																	<Picture>
+																		<xr:Ref>CommonPicture.LeftArrow</xr:Ref>
+																		<xr:LoadTransparent>true</xr:LoadTransparent>
+																	</Picture>
+																	<FileDragMode>AsFile</FileDragMode>
+																	<ContextMenu name="DecorationComparisonDateBack1ContextMenu" id="398"/>
+																	<ExtendedTooltip name="DecorationComparisonDateBack1ExtendedTooltip" id="399"/>
+																	<Events>
+																		<Event name="Click">ComparisonDateBack</Event>
+																	</Events>
+																</PictureDecoration>
+																<Button name="ComparisonDateBack" id="313">
+																	<Type>UsualButton</Type>
+																	<Visible>false</Visible>
+																	<SkipOnInput>true</SkipOnInput>
+																	<Width>3</Width>
+																	<Height>1</Height>
+																	<CommandName>Form.Command.ComparisonDateBack</CommandName>
+																	<ShapeRepresentation>None</ShapeRepresentation>
+																	<ExtendedTooltip name="ComparisonDateBackExtendedTooltip" id="314"/>
+																</Button>
+																<LabelDecoration name="DecorationComparisonDateSelection" id="400">
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<MaxWidth>999</MaxWidth>
+																	<HorizontalStretch>true</HorizontalStretch>
+																	<TextColor>style:FieldTextColor</TextColor>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Comparison date selection</v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+																	<Hyperlink>true</Hyperlink>
+																	<HorizontalAlign>Center</HorizontalAlign>
+																	<ContextMenu name="DecorationComparisonDateSelectionContextMenu" id="401"/>
+																	<ExtendedTooltip name="DecorationComparisonDateSelectionExtendedTooltip" id="402"/>
+																	<Events>
+																		<Event name="Click">ComparisonDateSelection</Event>
+																	</Events>
+																</LabelDecoration>
+																<Button name="ComparisonDateSelection" id="315">
+																	<Type>UsualButton</Type>
+																	<Visible>false</Visible>
+																	<SkipOnInput>true</SkipOnInput>
+																	<Width>20</Width>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<Height>1</Height>
+																	<HorizontalStretch>true</HorizontalStretch>
+																	<CommandName>Form.Command.ComparisonDateSelection</CommandName>
+																	<Font ref="style:NormalTextFont" faceName="Arial" height="9" kind="StyleItem"/>
+																	<ShapeRepresentation>None</ShapeRepresentation>
+																	<ExtendedTooltip name="ComparisonDateSelectionExtendedTooltip" id="316"/>
+																</Button>
+																<Button name="ComparisonDateForward" id="317">
+																	<Type>UsualButton</Type>
+																	<Visible>false</Visible>
+																	<SkipOnInput>true</SkipOnInput>
+																	<Width>3</Width>
+																	<Height>1</Height>
+																	<CommandName>Form.Command.ComparisonDateForward</CommandName>
+																	<ShapeRepresentation>None</ShapeRepresentation>
+																	<ExtendedTooltip name="ComparisonDateForwardExtendedTooltip" id="318"/>
+																</Button>
+																<PictureDecoration name="DecorationComparisonDateForward" id="394">
+																	<Width>2</Width>
+																	<Height>1</Height>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<SkipOnInput>true</SkipOnInput>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Decoration comparison date forward</v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupVerticalAlign>Center</GroupVerticalAlign>
+																	<Hyperlink>true</Hyperlink>
+																	<NonselectedPictureText>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>asdf</v8:content>
+																		</v8:item>
+																	</NonselectedPictureText>
+																	<Picture>
+																		<xr:Ref>CommonPicture.RightArrow</xr:Ref>
+																		<xr:LoadTransparent>true</xr:LoadTransparent>
+																	</Picture>
+																	<FileDragMode>AsFile</FileDragMode>
+																	<ContextMenu name="DecorationComparisonDateForwardContextMenu" id="395"/>
+																	<ExtendedTooltip name="DecorationComparisonDateForwardExtendedTooltip" id="396"/>
+																	<Events>
+																		<Event name="Click">ComparisonDateForward</Event>
+																	</Events>
+																</PictureDecoration>
+																<LabelDecoration name="DecorationComparisonDateRightIndent" id="328">
+																	<Visible>false</Visible>
+																	<Width>1</Width>
+																	<Height>1</Height>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<ContextMenu name="DecorationComparisonDateRightIndentContextMenu" id="329"/>
+																	<ExtendedTooltip name="DecorationComparisonDateRightIndentExtendedTooltip" id="330"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="GroupMenuBasisComparisonDate" id="349">
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="GroupMenuBasisComparisonDateExtendedTooltip" id="350"/>
+															<ChildItems>
+																<LabelDecoration name="DecorationIndentComparisonDateLeft" id="351">
+																	<HorizontalStretch>true</HorizontalStretch>
+																	<SkipOnInput>true</SkipOnInput>
+																	<Font ref="style:NormalTextFont" height="2" kind="StyleItem"/>
+																	<ContextMenu name="DecorationIndentComparisonDateLeftContextMenu" id="352"/>
+																	<ExtendedTooltip name="DecorationIndentComparisonDateLeftExtendedTooltip" id="353"/>
+																</LabelDecoration>
+																<LabelDecoration name="DecorationIndentComparisonDateCenter" id="354">
+																	<Width>21</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<SkipOnInput>true</SkipOnInput>
+																	<Font ref="style:NormalTextFont" height="2" kind="StyleItem"/>
+																	<ContextMenu name="DecorationIndentComparisonDateCenterContextMenu" id="355"/>
+																	<ExtendedTooltip name="DecorationIndentComparisonDateCenterExtendedTooltip" id="356"/>
+																</LabelDecoration>
+																<LabelDecoration name="DecorationIndentComparisonDateRight" id="357">
+																	<HorizontalStretch>true</HorizontalStretch>
+																	<SkipOnInput>true</SkipOnInput>
+																	<Font ref="style:NormalTextFont" height="2" kind="StyleItem"/>
+																	<ContextMenu name="DecorationIndentComparisonDateRightContextMenu" id="358"/>
+																	<ExtendedTooltip name="DecorationIndentComparisonDateRightExtendedTooltip" id="359"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="GroupIndicatorsBalance" id="283">
+															<Group>Vertical</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="GroupIndicatorsBalanceExtendedTooltip" id="284"/>
+														</UsualGroup>
+														<LabelDecoration name="DecorationVerticalPaddingIndicators" id="303">
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<HorizontalStretch>true</HorizontalStretch>
+															<VerticalStretch>false</VerticalStretch>
+															<ContextMenu name="DecorationVerticalPaddingIndicatorsContextMenu" id="304"/>
+															<ExtendedTooltip name="DecorationVerticalPaddingIndicatorsExtendedTooltip" id="305"/>
+														</LabelDecoration>
+														<UsualGroup name="GroupIndicatorsTurnoversPeriod" id="287">
+															<HorizontalStretch>true</HorizontalStretch>
+															<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+															<Group>Horizontal</Group>
+															<HorizontalAlign>Center</HorizontalAlign>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="GroupIndicatorsTurnoversPeriodExtendedTooltip" id="288"/>
+															<ChildItems>
+																<PictureDecoration name="DecorationComparisonDateBack2" id="409">
+																	<Width>2</Width>
+																	<Height>1</Height>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<SkipOnInput>true</SkipOnInput>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Decoration comparison date back</v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupVerticalAlign>Center</GroupVerticalAlign>
+																	<Hyperlink>true</Hyperlink>
+																	<NonselectedPictureText>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>asdf</v8:content>
+																		</v8:item>
+																	</NonselectedPictureText>
+																	<Picture>
+																		<xr:Ref>CommonPicture.LeftArrowBig</xr:Ref>
+																		<xr:LoadTransparent>true</xr:LoadTransparent>
+																	</Picture>
+																	<FileDragMode>AsFile</FileDragMode>
+																	<ContextMenu name="DecorationComparisonDateBack2ContextMenu" id="410"/>
+																	<ExtendedTooltip name="DecorationComparisonDateBack2ExtendedTooltip" id="411"/>
+																	<Events>
+																		<Event name="Click">PeriodBack</Event>
+																	</Events>
+																</PictureDecoration>
+																<Button name="PeriodBack" id="296">
+																	<Type>UsualButton</Type>
+																	<Visible>false</Visible>
+																	<SkipOnInput>true</SkipOnInput>
+																	<Width>3</Width>
+																	<Height>1</Height>
+																	<CommandName>Form.Command.PeriodBack</CommandName>
+																	<ShapeRepresentation>None</ShapeRepresentation>
+																	<ExtendedTooltip name="PeriodBackExtendedTooltip" id="297"/>
+																</Button>
+																<LabelDecoration name="DecorationPeriodSelection" id="406">
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<MaxWidth>999</MaxWidth>
+																	<HorizontalStretch>true</HorizontalStretch>
+																	<TextColor>style:FieldTextColor</TextColor>
+																	<Font ref="style:NormalTextFont" faceName="Arial" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Period selection</v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+																	<Hyperlink>true</Hyperlink>
+																	<HorizontalAlign>Center</HorizontalAlign>
+																	<ContextMenu name="DecorationPeriodSelectionContextMenu" id="407"/>
+																	<ExtendedTooltip name="DecorationPeriodSelectionExtendedTooltip" id="408"/>
+																	<Events>
+																		<Event name="Click">PeriodSelection</Event>
+																	</Events>
+																</LabelDecoration>
+																<Button name="PeriodSelection" id="298">
+																	<Type>UsualButton</Type>
+																	<Visible>false</Visible>
+																	<SkipOnInput>true</SkipOnInput>
+																	<Width>20</Width>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<Height>1</Height>
+																	<HorizontalStretch>true</HorizontalStretch>
+																	<CommandName>Form.Command.PeriodSelection</CommandName>
+																	<Font ref="style:NormalTextFont" faceName="Arial" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+																	<ShapeRepresentation>None</ShapeRepresentation>
+																	<ExtendedTooltip name="PeriodSelectionExtendedTooltip" id="299"/>
+																</Button>
+																<PictureDecoration name="DecorationComparisonDateForward1" id="412">
+																	<Width>2</Width>
+																	<Height>1</Height>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<SkipOnInput>true</SkipOnInput>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Decoration comparison date forward</v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupVerticalAlign>Center</GroupVerticalAlign>
+																	<Hyperlink>true</Hyperlink>
+																	<NonselectedPictureText>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>asdf</v8:content>
+																		</v8:item>
+																	</NonselectedPictureText>
+																	<Picture>
+																		<xr:Ref>CommonPicture.RightArrowBig</xr:Ref>
+																		<xr:LoadTransparent>true</xr:LoadTransparent>
+																	</Picture>
+																	<FileDragMode>AsFile</FileDragMode>
+																	<ContextMenu name="DecorationComparisonDateForward1ContextMenu" id="413"/>
+																	<ExtendedTooltip name="DecorationComparisonDateForward1ExtendedTooltip" id="414"/>
+																	<Events>
+																		<Event name="Click">PeriodForward</Event>
+																	</Events>
+																</PictureDecoration>
+																<Button name="PeriodForward" id="294">
+																	<Type>UsualButton</Type>
+																	<Visible>false</Visible>
+																	<SkipOnInput>true</SkipOnInput>
+																	<Width>3</Width>
+																	<Height>1</Height>
+																	<CommandName>Form.Command.PeriodForward</CommandName>
+																	<ShapeRepresentation>None</ShapeRepresentation>
+																	<ExtendedTooltip name="PeriodForwardExtendedTooltip" id="295"/>
+																</Button>
+																<LabelDecoration name="DecorationPeriodRightIndent" id="308">
+																	<Visible>false</Visible>
+																	<Width>1</Width>
+																	<Height>1</Height>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<ContextMenu name="DecorationPeriodRightIndentContextMenu" id="309"/>
+																	<ExtendedTooltip name="DecorationPeriodRightIndentExtendedTooltip" id="310"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="GroupMenuBasisPeriod" id="360">
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="GroupMenuBasisPeriodExtendedTooltip" id="361"/>
+															<ChildItems>
+																<LabelDecoration name="DecorationIndentPeriodLeft" id="362">
+																	<HorizontalStretch>true</HorizontalStretch>
+																	<SkipOnInput>true</SkipOnInput>
+																	<Font ref="style:NormalTextFont" height="2" kind="StyleItem"/>
+																	<ContextMenu name="DecorationIndentPeriodLeftContextMenu" id="363"/>
+																	<ExtendedTooltip name="DecorationIndentPeriodLeftExtendedTooltip" id="364"/>
+																</LabelDecoration>
+																<LabelDecoration name="DecorationIndentPeriodCenter" id="365">
+																	<Width>21</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<SkipOnInput>true</SkipOnInput>
+																	<Font ref="style:NormalTextFont" height="2" kind="StyleItem"/>
+																	<ContextMenu name="DecorationIndentPeriodCenterContextMenu" id="366"/>
+																	<ExtendedTooltip name="DecorationIndentPeriodCenterExtendedTooltip" id="367"/>
+																</LabelDecoration>
+																<LabelDecoration name="DecorationIndentPeriodRight" id="368">
+																	<HorizontalStretch>true</HorizontalStretch>
+																	<SkipOnInput>true</SkipOnInput>
+																	<Font ref="style:NormalTextFont" height="2" kind="StyleItem"/>
+																	<ContextMenu name="DecorationIndentPeriodRightContextMenu" id="369"/>
+																	<ExtendedTooltip name="DecorationIndentPeriodRightExtendedTooltip" id="370"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="GroupIndicatorsTurnoversComparisonPeriod" id="289">
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="GroupIndicatorsTurnoversComparisonPeriodExtendedTooltip" id="290"/>
+															<ChildItems>
+																<PictureDecoration name="DecorationComparisonDateBack3" id="418">
+																	<Width>2</Width>
+																	<Height>1</Height>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<SkipOnInput>true</SkipOnInput>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Decoration comparison date back</v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupVerticalAlign>Center</GroupVerticalAlign>
+																	<Hyperlink>true</Hyperlink>
+																	<NonselectedPictureText>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>asdf</v8:content>
+																		</v8:item>
+																	</NonselectedPictureText>
+																	<Picture>
+																		<xr:Ref>CommonPicture.LeftArrow</xr:Ref>
+																		<xr:LoadTransparent>true</xr:LoadTransparent>
+																	</Picture>
+																	<FileDragMode>AsFile</FileDragMode>
+																	<ContextMenu name="DecorationComparisonDateBack3ContextMenu" id="419"/>
+																	<ExtendedTooltip name="DecorationComparisonDateBack3ExtendedTooltip" id="420"/>
+																	<Events>
+																		<Event name="Click">ComparisonPeriodBack</Event>
+																	</Events>
+																</PictureDecoration>
+																<Button name="ComparisonPeriodBack" id="319">
+																	<Type>UsualButton</Type>
+																	<Visible>false</Visible>
+																	<SkipOnInput>true</SkipOnInput>
+																	<Width>3</Width>
+																	<Height>1</Height>
+																	<CommandName>Form.Command.ComparisonPeriodBack</CommandName>
+																	<ShapeRepresentation>None</ShapeRepresentation>
+																	<ExtendedTooltip name="ComparisonPeriodBackExtendedTooltip" id="320"/>
+																</Button>
+																<LabelDecoration name="DecorationComparisonPeriodSelection" id="415">
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<MaxWidth>999</MaxWidth>
+																	<HorizontalStretch>true</HorizontalStretch>
+																	<TextColor>style:FieldTextColor</TextColor>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Comparison period selection</v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+																	<Hyperlink>true</Hyperlink>
+																	<HorizontalAlign>Center</HorizontalAlign>
+																	<ContextMenu name="DecorationComparisonPeriodSelectionContextMenu" id="416"/>
+																	<ExtendedTooltip name="DecorationComparisonPeriodSelectionExtendedTooltip" id="417"/>
+																	<Events>
+																		<Event name="Click">ComparisonPeriodSelection</Event>
+																	</Events>
+																</LabelDecoration>
+																<Button name="ComparisonPeriodSelection" id="321">
+																	<Type>UsualButton</Type>
+																	<Visible>false</Visible>
+																	<SkipOnInput>true</SkipOnInput>
+																	<Width>20</Width>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<Height>1</Height>
+																	<HorizontalStretch>true</HorizontalStretch>
+																	<CommandName>Form.Command.ComparisonPeriodSelection</CommandName>
+																	<Font ref="style:NormalTextFont" faceName="Arial" height="9" kind="StyleItem"/>
+																	<ShapeRepresentation>None</ShapeRepresentation>
+																	<ExtendedTooltip name="ComparisonPeriodSelectionExtendedTooltip" id="322"/>
+																</Button>
+																<PictureDecoration name="DecorationComparisonDateForward2" id="421">
+																	<Width>2</Width>
+																	<Height>1</Height>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<SkipOnInput>true</SkipOnInput>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Decoration comparison date forward</v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupVerticalAlign>Center</GroupVerticalAlign>
+																	<Hyperlink>true</Hyperlink>
+																	<NonselectedPictureText>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>asdf</v8:content>
+																		</v8:item>
+																	</NonselectedPictureText>
+																	<Picture>
+																		<xr:Ref>CommonPicture.RightArrow</xr:Ref>
+																		<xr:LoadTransparent>true</xr:LoadTransparent>
+																	</Picture>
+																	<FileDragMode>AsFile</FileDragMode>
+																	<ContextMenu name="DecorationComparisonDateForward2ContextMenu" id="422"/>
+																	<ExtendedTooltip name="DecorationComparisonDateForward2ExtendedTooltip" id="423"/>
+																	<Events>
+																		<Event name="Click">ComparisonPeriodForward</Event>
+																	</Events>
+																</PictureDecoration>
+																<Button name="ComparisonPeriodForward" id="323">
+																	<Type>UsualButton</Type>
+																	<Visible>false</Visible>
+																	<SkipOnInput>true</SkipOnInput>
+																	<Width>3</Width>
+																	<Height>1</Height>
+																	<CommandName>Form.Command.ComparisonPeriodForward</CommandName>
+																	<ShapeRepresentation>None</ShapeRepresentation>
+																	<ExtendedTooltip name="ComparisonPeriodForwardExtendedTooltip" id="324"/>
+																</Button>
+																<LabelDecoration name="DecorationComparisonPeriodRightIndent" id="325">
+																	<Visible>false</Visible>
+																	<Width>1</Width>
+																	<Height>1</Height>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<ContextMenu name="DecorationComparisonPeriodRightIndentContextMenu" id="326"/>
+																	<ExtendedTooltip name="DecorationComparisonPeriodRightIndentExtendedTooltip" id="327"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="GroupMenuBasisComparisonPeriod" id="371">
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="GroupMenuBasisComparisonPeriodExtendedTooltip" id="372"/>
+															<ChildItems>
+																<LabelDecoration name="DecorationIndentComparisonPeriodLeft" id="373">
+																	<HorizontalStretch>true</HorizontalStretch>
+																	<SkipOnInput>true</SkipOnInput>
+																	<Font ref="style:NormalTextFont" height="2" kind="StyleItem"/>
+																	<ContextMenu name="DecorationIndentComparisonPeriodLeftContextMenu" id="374"/>
+																	<ExtendedTooltip name="DecorationIndentComparisonPeriodLeftExtendedTooltip" id="375"/>
+																</LabelDecoration>
+																<LabelDecoration name="DecorationIndentComparisonPeriodCenter" id="376">
+																	<Width>21</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<SkipOnInput>true</SkipOnInput>
+																	<Font ref="style:NormalTextFont" height="2" kind="StyleItem"/>
+																	<ContextMenu name="DecorationIndentComparisonPeriodCenterContextMenu" id="377"/>
+																	<ExtendedTooltip name="DecorationIndentComparisonPeriodCenterExtendedTooltip" id="378"/>
+																</LabelDecoration>
+																<LabelDecoration name="DecorationIndentComparisonPeriodRight" id="379">
+																	<HorizontalStretch>true</HorizontalStretch>
+																	<SkipOnInput>true</SkipOnInput>
+																	<Font ref="style:NormalTextFont" height="2" kind="StyleItem"/>
+																	<ContextMenu name="DecorationIndentComparisonPeriodRightContextMenu" id="380"/>
+																	<ExtendedTooltip name="DecorationIndentComparisonPeriodRightExtendedTooltip" id="381"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="GroupIndicatorsTurnovers" id="285">
+															<Group>Vertical</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="GroupIndicatorsTurnoversExtendedTooltip" id="286"/>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+												<LabelDecoration name="DecorationIndentIndicators" id="249">
+													<HorizontalStretch>true</HorizontalStretch>
+													<SkipOnInput>true</SkipOnInput>
+													<ContextMenu name="DecorationIndentIndicatorsContextMenu" id="250"/>
+													<ExtendedTooltip name="DecorationIndentIndicatorsExtendedTooltip" id="251"/>
+												</LabelDecoration>
+												<LabelDecoration name="DecorationAddIndicator" id="424">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>999</MaxWidth>
+													<HorizontalStretch>true</HorizontalStretch>
+													<TextColor>style:FieldTextColor</TextColor>
+													<Font faceName="Arial" height="12" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>+ Add</v8:content>
+														</v8:item>
+													</Title>
+													<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+													<Hyperlink>true</Hyperlink>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<ContextMenu name="DecorationAddIndicatorContextMenu" id="425"/>
+													<ExtendedTooltip name="DecorationAddIndicatorExtendedTooltip" id="426"/>
+													<Events>
+														<Event name="Click">AddIndicatorCommand</Event>
+													</Events>
+												</LabelDecoration>
+												<Button name="AddIndicator" id="279">
+													<Type>UsualButton</Type>
+													<Visible>false</Visible>
+													<HorizontalStretch>true</HorizontalStretch>
+													<CommandName>Form.Command.AddIndicator</CommandName>
+													<Font faceName="Arial" height="12" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+													<ShapeRepresentation>None</ShapeRepresentation>
+													<ExtendedTooltip name="AddIndicatorExtendedTooltip" id="280"/>
+												</Button>
+												<LabelDecoration name="DecorationSeparatorIndicators" id="147">
+													<SkipOnInput>true</SkipOnInput>
+													<ContextMenu name="DecorationSeparatorIndicatorsContextMenu" id="148"/>
+													<ExtendedTooltip name="DecorationSeparatorIndicatorsExtendedTooltip" id="149"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="GroupCommonButtons" id="255">
+									<Width>2</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="GroupCommonButtonsExtendedTooltip" id="256"/>
+									<ChildItems>
+										<PictureDecoration name="DecorationRefresh" id="257">
+											<HorizontalStretch>false</HorizontalStretch>
+											<SkipOnInput>true</SkipOnInput>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Refresh</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Refresh</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Hyperlink>true</Hyperlink>
+											<Picture>
+												<xr:Ref>StdPicture.Refresh</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="DecorationRefreshContextMenu" id="258"/>
+											<ExtendedTooltip name="DecorationRefreshExtendedTooltip" id="259"/>
+											<Events>
+												<Event name="Click">DecorationRefreshClick</Event>
+											</Events>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="RightColumnGroup" id="241">
+									<Width>20</Width>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="RightColumnGroupExtendedTooltip" id="242"/>
+									<ChildItems>
+										<LabelDecoration name="DecorationAddObjectAfter" id="236">
+											<Height>1</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<ContextMenu name="DecorationAddObjectAfterContextMenu" id="237"/>
+											<ExtendedTooltip name="DecorationAddObjectAfterExtendedTooltip" id="238"/>
+										</LabelDecoration>
+										<UsualGroup name="GroupCharts" id="161">
+											<Width>25</Width>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="GroupChartsExtendedTooltip" id="162"/>
+											<ChildItems>
+												<UsualGroup name="GroupAddedCharts" id="262">
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="GroupAddedChartsExtendedTooltip" id="263"/>
+												</UsualGroup>
+												<LabelDecoration name="DecorationChartIndent" id="246">
+													<HorizontalStretch>true</HorizontalStretch>
+													<SkipOnInput>true</SkipOnInput>
+													<ContextMenu name="DecorationChartIndentContextMenu" id="247"/>
+													<ExtendedTooltip name="DecorationChartIndentExtendedTooltip" id="248"/>
+												</LabelDecoration>
+												<LabelDecoration name="DecorationAddChart" id="427">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>999</MaxWidth>
+													<HorizontalStretch>true</HorizontalStretch>
+													<TextColor>style:FieldTextColor</TextColor>
+													<Font faceName="Arial" height="12" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>+ Add</v8:content>
+														</v8:item>
+													</Title>
+													<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+													<Hyperlink>true</Hyperlink>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<ContextMenu name="DecorationAddChartContextMenu" id="428"/>
+													<ExtendedTooltip name="DecorationAddChartExtendedTooltip" id="429"/>
+													<Events>
+														<Event name="Click">AddChartCommand</Event>
+													</Events>
+												</LabelDecoration>
+												<Button name="AddChart" id="281">
+													<Type>UsualButton</Type>
+													<Visible>false</Visible>
+													<HorizontalStretch>true</HorizontalStretch>
+													<CommandName>Form.Command.AddChart</CommandName>
+													<Font faceName="Arial" height="12" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+													<ShapeRepresentation>None</ShapeRepresentation>
+													<ExtendedTooltip name="AddChartExtendedTooltip" id="282"/>
+												</Button>
+												<LabelDecoration name="DecorationChartSeparator" id="166">
+													<SkipOnInput>true</SkipOnInput>
+													<ContextMenu name="DecorationChartSeparatorContextMenu" id="167"/>
+													<ExtendedTooltip name="DecorationChartSeparatorExtendedTooltip" id="168"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.BusinessPulse</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="AddedIndicators" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Added indicators</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Indicator" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Indicator</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Resource" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Resource</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Value" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Value</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="Presentation" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Presentation</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Filters" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Filters</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="Update" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Update</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Settings" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Settings</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="SettingLineID" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Setting line ID</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="GroupName" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group name</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Tooltip" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Tooltip</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="EnterBalance" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Enter balance</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Balance" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Balance</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="SchemaURL" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Scheme address</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="AddedCharts" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Added charts</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Chart" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Chart</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Series" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Series</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Point" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Point</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Value" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Value</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="Presentation" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Presentation</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="SeriesPresentations" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Series presentations</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="PointPresentations" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Point presentations</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="Filters" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Filters</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="Settings" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Settings</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="SettingLineID" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Setting line ID</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="GroupName" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group name</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="AttributeName" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Attribute name</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Period" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Period</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="ComparisonPeriod" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Comparison period</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="IndicatorSettings" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Indicator settings</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Indicator" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Indicator</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Resource" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Resource</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Presentation" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Presentation</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ResourcePresentation" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Resource presentation</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Format" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Format</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="TemplateName" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Template name</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Balance" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Balance</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ReportName" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Report name</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="VariantKey" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Option key</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Currency" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Currency</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Variant" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Option</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ReportsVariants</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ReportColumns" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Report columns</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="AccountingSection" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Accounting section</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ChartSettings" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Chart settings</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Chart" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Chart</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Presentation" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Presentation</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Series" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Series</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="Points" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Points</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="TemplateName" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Template name</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ReportName" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Report name</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="VariantKey" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Variant key</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Balance" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Balance</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Variant" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Option</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ReportsVariants</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ProhibitComparison" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Prohibit comparison</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ComplCurrencyCharacter" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Compl currency character</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>3</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="OpenedNotOnHomePage" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Opened not on the home page</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="BackgroundJobRunning" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Background job is started</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="BackgroundJobResultAddress" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Background job result address</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="BackgroundJobCompleted" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Background job is executed</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="BackgroundJobID" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Background job ID</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="IndicatorSettingAddress" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Indicator setting address</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ChartSettingAddress" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Chart setting address</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="BalanceInputModes" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Balance input modes</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="Period" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Period</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ComparisonPeriod" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Comparison period</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ComparisonDate" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Comparison date</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="Date" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Date</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ComparisonDateType" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Comparison date type</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="PeriodType" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Period type</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ComparisonPeriodType" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Comparison period type</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ThereBalanceInput" id="51">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>There is balance input</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="RefreshInterface" id="52">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>DefaultInterface Refresh</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="AddIndicator" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>+ Add</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Add indicator</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>AddIndicatorCommand</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="AddChart" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>+ Add</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Add chart</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>AddChartCommand</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="PeriodBack" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Period back</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.LeftArrowBig</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>PeriodBack</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="PeriodForward" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Period forward</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.RightArrowBig</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>PeriodForward</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="PeriodSelection" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Period selection</v8:content>
+				</v8:item>
+			</Title>
+			<Action>PeriodSelection</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ComparisonPeriodForward" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Comparison period forward</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Comparison period forward</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.RightArrow</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ComparisonPeriodForward</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ComparisonPeriodSelection" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Comparison period selection</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Comparison period selection</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ComparisonPeriodSelection</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ComparisonPeriodBack" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Comparison period back</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Comparison period back</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.LeftArrow</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ComparisonPeriodBack</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ComparisonDateForward" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Comparison date forward</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Comparison date forward</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.RightArrow</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ComparisonDateForward</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ComparisonDateSelection" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Comparison date selection</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Comparison date selection</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ComparisonDateSelection</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ComparisonDateBack" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Comparison date back</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Comparison date back</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.LeftArrow</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ComparisonDateBack</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="SelectDate" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Date select</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Comparison date selection</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>SelectDate</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

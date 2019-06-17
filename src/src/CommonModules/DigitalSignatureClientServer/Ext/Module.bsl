@@ -1,0 +1,497 @@
+﻿////////////////////////////////////////////////////////////////////////////////
+// Digital signature subsystem.
+// 
+////////////////////////////////////////////////////////////////////////////////
+
+#Region ProgramInterface
+
+// Returns the certificate presentation in catalog, formed
+// - either from surname, name, company, position, validation.
+// L or from the common name and validity (if surname and name are not defined).
+//
+// Parameters:
+//   ElectronicSignature   - CryptoCertificate - Cryptography manager.
+//   Patronymic     - Boolean - include patronymic into the presentation.
+//   ValidityPeriod - Boolean - include validity into the presentation.
+//
+// Returns:
+//  String - certificate presentation in the catalog.
+//
+Function CertificatePresentation(ElectronicSignature, Patronymic = False, ValidityPeriod = True) Export
+	
+	Return SubjectPresentation(ElectronicSignature, Patronymic) + ", "
+		+ StringFunctionsClientServer.SubstituteParametersInString(
+			NStr("en = 'until %1'"), Format(ElectronicSignature.EndDate, "DF=MM.yyyy"));
+	
+EndFunction
+
+// Returns the certificate subject presentation (IssuedToWhom).
+//
+// Parameters:
+//   ElectronicSignature - CryptoCertificate - Cryptography manager.
+//
+//   Patronymic - Boolean - include patronymic into the presentation.
+//
+// Returns:
+//   String   - presentation of the subject in the Surname Name, Company, Department, Position format.
+//              If it is impossible to define full name, then it is replaced with CommonName.
+//              Company, Department and Position may be missing if
+//              they are not specified or it was impossible to define them.
+//
+Function SubjectPresentation(ElectronicSignature, Patronymic = True) Export
+	
+	Subject = CertificateSubjectProperties(ElectronicSignature);
+	
+	Presentation = "";
+	
+	If ValueIsFilled(Subject.Surname)
+	   AND ValueIsFilled(Subject.Name) Then
+		
+		Presentation = Subject.Surname + " " + Subject.Name;
+		
+	ElsIf ValueIsFilled(Subject.Surname) Then
+		Presentation = Subject.Surname;
+		
+	ElsIf ValueIsFilled(Subject.Name) Then
+		Presentation = Subject.Name;
+	EndIf;
+	
+	If Patronymic AND ValueIsFilled(Subject.Patronymic) Then
+		Presentation = Presentation + " " + Subject.Patronymic;
+	EndIf;
+	
+	If ValueIsFilled(Presentation) Then
+		If ValueIsFilled(Subject.Company) Then
+			Presentation = Presentation + ", " + Subject.Company;
+		EndIf;
+		If ValueIsFilled(Subject.Department) Then
+			Presentation = Presentation + ", " + Subject.Department;
+		EndIf;
+		If ValueIsFilled(Subject.Position) Then
+			Presentation = Presentation + ", " + Subject.Position;
+		EndIf;
+		
+	ElsIf ValueIsFilled(Subject.CommonName) Then
+		Presentation = Subject.CommonName;
+	EndIf;
+	
+	Return Presentation;
+	
+EndFunction
+
+// Returns the presentation of issuer certificate (IssuingAuthority).
+//
+// Parameters:
+//   ElectronicSignature - CryptoCertificate - Cryptography manager.
+//
+// Returns:
+//   String - presentation of an issuer
+//            in the CommonName, Company, Department format Company and Department may be missing if they are not specified.
+//
+Function PublisherRepresentation(ElectronicSignature) Export
+	
+	Issuer = CertificateIssuerProperties(ElectronicSignature);
+	
+	Presentation = "";
+	
+	If ValueIsFilled(Issuer.CommonName) Then
+		Presentation = Issuer.CommonName;
+	EndIf;
+	
+	If ValueIsFilled(Issuer.CommonName)
+	   AND ValueIsFilled(Issuer.Company)
+	   AND Find(Issuer.CommonName, Issuer.Company) = 0 Then
+		
+		Presentation = Issuer.CommonName + ", " + Issuer.Company;
+	EndIf;
+	
+	If ValueIsFilled(Issuer.Department) Then
+		Presentation = Presentation + ", " + Issuer.Department;
+	EndIf;
+	
+	Return Presentation;
+	
+EndFunction
+
+// Fills the structure with certificate fields.
+//
+// Parameters:
+//   ElectronicSignature - CryptoCertificate - Cryptography manager.
+//
+// Returns:
+//   Structure - Structure with certificate fields.
+//
+Function FillCertificateStructure(ElectronicSignature) Export
+	
+	Properties = New Structure;
+	Properties.Insert("Imprint",      Base64String(ElectronicSignature.Imprint));
+	Properties.Insert("Presentation",  CertificatePresentation(ElectronicSignature));
+	Properties.Insert("IssuedToWhom",      SubjectPresentation(ElectronicSignature));
+	Properties.Insert("WhoIssued",       PublisherRepresentation(ElectronicSignature));
+	Properties.Insert("ValidUntil", ElectronicSignature.EndDate);
+	Properties.Insert("Purpose",     GetPurpose(ElectronicSignature));
+	
+	Return Properties;
+	
+EndFunction
+
+#EndRegion
+
+#Region ServiceProceduresAndFunctions
+
+// Returns a structure containing various common settings.
+//
+// Returns:
+//  See EmailCommonSettings().
+//
+// See also:
+//   CommonForm.ElectronicSignatureAndEncriptionSettings - place where parameters data
+//   and their text descriptions are defined.
+//
+Function CommonSettings() Export
+	#If Server Or ThickClientOrdinaryApplication Or ExternalConnection Then
+		Return DigitalSignature.CommonSettings();
+	#Else
+		Return StandardSubsystemsClientReUse.ClientWorkParameters().DigitalSignature.CommonSettings;
+	#EndIf
+EndFunction
+
+// Returns the structure containing personal settings.
+//
+// Returns:
+//   Structure - Personal settings to work with a digital signature.
+//       * ActionsOnSaveWithDS - String - What to do when files with digital signature are being saved:
+//           ** Ask - Show a dialog of signatues selection for saving.
+//           ** SaveAllSignatures - Always all signatures.
+//       * PathToDigitalSignatureAndEncryptionApplications - Map - where:
+//           ** Key     - CatalogRef.DigitalSignatureAndEncryptionApplications - application.
+//           ** Value - String - path to application on user's computer.
+//       * ExtensionForSignatureFiles - String - Extension for DS files.
+//       * ExtensionForDecryptedFiles - String - Extension for decrypted files.
+//
+// See also:
+//   CommonForm.ElectronicSignatureAndEncriptionSettings - place of the current
+//   parameters input and their custom presentations.
+//
+Function PersonalSettingsTip() Export
+	#If Server Or ThickClientOrdinaryApplication Or ExternalConnection Then
+		Return DigitalSignature.PersonalSettingsTip();
+	#Else
+		Return StandardSubsystemsClientReUse.ClientWorkParameters().DigitalSignature.PersonalSettingsTip;
+	#EndIf
+EndFunction
+
+// Returns properties of the cryptography certificate subject taking into account their content (LE,SE,Ind).
+//
+// Parameters:
+//   ElectronicSignature - CryptoCertificate - for which subject properties need to be returned.
+//
+// Returns:
+//  Structure - return value, with properties:
+//     * Common name         - String(64) - retrieved from the CN field.
+//                          LE: Depending on the type of the SKPEP target owner
+//                              - company name;
+//                              - name of the automated system;
+//                              - other display name according to the requirements of the information system.
+//                          Ind: Full name.
+//                        - Undefined - required certificate property is not found.
+//
+//     * Country           - String(2) - retrieved from the C field - Country
+//                          two-character code according to ISO 3166-1:1997.
+//                        - Undefined - required certificate property is not found.
+//
+//     * State           - String(128) - retrieved from the S field - RF territorial entity name.
+//                          LE: By the location address.
+//                          Ind: By the registration address.
+//                        - Undefined - required certificate property is not found.
+//
+//     * Settlement  - String(128) - retrieved from the L field - locality name.
+//                          LE: By the location address.
+//                          Ind: By the registration address.
+//                        - Undefined - required certificate property is not found.
+//
+//     * Street            - String(128) - retrieved from the Street field - street, house, office name.
+//                          LE: By the location address.
+//                          Ind: By the registration address.
+//                        - Undefined - required certificate property is not found.
+//
+//     *Company      - String(64) - retrieved from the O field.
+//                          LP: Full or short company name.
+//                        - Undefined - required certificate property is not found.
+//
+//     * Department    - String(64) - retrieved from the OU field.
+//                          LE: in case of SKPEP release for the official - company department.
+//                              Department - this is a territorial entity
+//                              of a large company that is usually not filled in the certificate.
+//                        - Undefined - required certificate property is not found.
+//
+//     * Position        - String(64) - retrieved from the T field.
+//                          LE: in case of SKPEP release for the official - their position.
+//                        - Undefined - required certificate property is not found.
+//
+//     * Email - String(128) - retrieved from the E field - email address.
+//                          LE: email address of the official.
+//                          Ind: email address of an individual.
+//                        - Undefined - required certificate property is not found.
+//
+//
+//     * TIN              - String(12) - retrieved from the TIN field.
+//                          Ind: TIN.
+//                          Ent: TIN.
+//                          LE: Optional but could be filled to interact with FTS.
+//                        - Undefined - required certificate property is not found.
+//
+//     * Last name          - String(64) - retrieved from the SN field if it is filled.
+//                        - Undefined - required certificate property is not found.
+//
+//     (actual name              - String(64) - retrieved from the GN field if it is filled.
+//                        - Undefined - required certificate property is not found.
+//
+//     * Patronymic         - String(64) - retrieved from the GN field if it is filled.
+//                        - Undefined - required certificate property is not found.
+//
+Function CertificateSubjectProperties(ElectronicSignature) Export
+	
+	Subject = ElectronicSignature.Subject;
+	
+	Properties = New Structure;
+	Properties.Insert("CommonName");
+	Properties.Insert("Country");
+	Properties.Insert("Region");
+	Properties.Insert("Settlement");
+	Properties.Insert("Street");
+	Properties.Insert("Company");
+	Properties.Insert("Department");
+	Properties.Insert("Position");
+	Properties.Insert("Email");
+	Properties.Insert("TIN");
+	Properties.Insert("Surname");
+	Properties.Insert("Name");
+	Properties.Insert("Patronymic");
+	
+	If Subject.Property("CN") Then
+		Properties.CommonName = PrepareString(Subject.CN);
+	EndIf;
+	
+	If Subject.Property("C") Then
+		Properties.Country = PrepareString(Subject.C);
+	EndIf;
+	
+	If Subject.Property("ST") Then
+		Properties.Region = PrepareString(Subject.ST);
+	EndIf;
+	
+	If Subject.Property("L") Then
+		Properties.Settlement = PrepareString(Subject.L);
+	EndIf;
+	
+	If Subject.Property("Street") Then
+		Properties.Street = PrepareString(Subject.Street);
+	EndIf;
+	
+	If Subject.Property("O") Then
+		Properties.Company = PrepareString(Subject.O);
+	EndIf;
+	
+	If Subject.Property("OU") Then
+		Properties.Department = PrepareString(Subject.OU);
+	EndIf;
+	
+	If Subject.Property("E") Then
+		Properties.Email = PrepareString(Subject.E);
+	EndIf;
+		
+	If Subject.Property("TIN") Then
+		Properties.TIN = PrepareString(Subject.TIN);
+	EndIf;
+	
+	If Subject.Property("SN") Then // Surname (usually for the official).
+		
+		// Retrieve full name from the SN and GN field.
+		Properties.Surname = PrepareString(Subject.SN);
+		
+		If Subject.Property("GN") Then
+			GivenName = PrepareString(Subject.GN);
+			Position = Find(GivenName, " ");
+			If Position = 0 Then
+				Properties.Name = GivenName;
+			Else
+				Properties.Name = Left(GivenName, Position - 1);
+				Properties.Patronymic = PrepareString(Mid(GivenName, Position + 1));
+			EndIf;
+		EndIf;
+		
+		If Subject.Property("T") Then
+			Properties.Position = PrepareString(Subject.T);
+		EndIf;
+	
+	EndIf;
+	
+	Return Properties;
+	
+EndFunction
+
+// Returns the properties of cryptography certificate issuer.
+//
+// Parameters:
+//   ElectronicSignature - CryptoCertificate - for which issuer properties need to be returned.
+//
+// Returns:
+//  Structure - return value, with properties:
+//     * Common name         - String(64) - retrieved from the CN field - alias of the certification center.
+//                        - Undefined - required certificate property is not found.
+//
+//     * Country           - String(2) - retrieved from the C field - Country
+//                          two-character code according to ISO 3166-1:1997.
+//                        - Undefined - required certificate property is not found.
+//
+//     * State           - String(128) - retrieved from the S field - RF territorial
+//                          entity name on PAK CC location address.
+//                        - Undefined - required certificate property is not found.
+//
+//     * Settlement  - String(128) - retrieved from the L field - locality name
+//                          by the PAK CC location address.
+//                        - Undefined - required certificate property is not found.
+//
+//     * Street            - String(128) - retrieved from the Street field - name of the
+//                          street, house, office by PAK CC location address.
+//                        - Undefined - required certificate property is not found.
+//
+//     *Company      - String(64) - retrieved
+//                          from the O full or short company name field.
+//                        - Undefined - required certificate property is not found.
+//
+//     * Department    - String(64) - retrieved from the OU company department field.
+//                            Department - this is a territorial entity
+//                            of a large company that is usually not filled in the certificate.
+//                        - Undefined - required certificate property is not found.
+//
+//     * Email - String(128) - retrieved from the E field - email address of the certification center.
+//                        - Undefined - required certificate property is not found.
+//
+//     * TIN              - String(12) - retrieved from the TIN field - Certification center company TIN.
+//                        - Undefined - required certificate property is not found.
+//
+Function CertificateIssuerProperties(ElectronicSignature) Export
+	
+	Issuer = ElectronicSignature.Issuer;
+	
+	Properties = New Structure;
+	Properties.Insert("CommonName");
+	Properties.Insert("Country");
+	Properties.Insert("Region");
+	Properties.Insert("Settlement");
+	Properties.Insert("Street");
+	Properties.Insert("Company");
+	Properties.Insert("Department");
+	Properties.Insert("Email");
+	Properties.Insert("TIN");
+	
+	If Issuer.Property("CN") Then
+		Properties.CommonName = PrepareString(Issuer.CN);
+	EndIf;
+	
+	If Issuer.Property("C") Then
+		Properties.Country = PrepareString(Issuer.C);
+	EndIf;
+	
+	If Issuer.Property("ST") Then
+		Properties.Region = PrepareString(Issuer.ST);
+	EndIf;
+	
+	If Issuer.Property("L") Then
+		Properties.Settlement = PrepareString(Issuer.L);
+	EndIf;
+	
+	If Issuer.Property("Street") Then
+		Properties.Street = PrepareString(Issuer.Street);
+	EndIf;
+	
+	If Issuer.Property("O") Then
+		Properties.Company = PrepareString(Issuer.O);
+	EndIf;
+	
+	If Issuer.Property("OU") Then
+		Properties.Department = PrepareString(Issuer.OU);
+	EndIf;
+	
+	If Issuer.Property("E") Then
+		Properties.Email = PrepareString(Issuer.E);
+	EndIf;
+	
+	If Issuer.Property("TIN") Then
+		Properties.TIN = PrepareString(Issuer.TIN);
+	EndIf;
+	
+	Return Properties;
+	
+EndFunction
+
+// Fills the table of certificate description containing four fields: IssuedToWhom, IssuingAuthority, ValidUntil, Purpose.
+Function FillCertificateDataDescription(Table, ElectronicSignature) Export
+	
+	CertificateStructure = FillCertificateStructure(ElectronicSignature);
+	
+	If ElectronicSignature.UseToSign AND ElectronicSignature.UseForEncryption Then
+		Purpose = NStr("en = 'Data signing, Data encryption'");
+		
+	ElsIf ElectronicSignature.UseToSign Then
+		Purpose = NStr("en = 'Data signing'");
+	Else
+		Purpose = NStr("en = 'Data encryption'");
+	EndIf;
+	
+	Table.Clear();
+	String = Table.Add();
+	String.Property = NStr("en = 'Issued to:'");
+	String.Value = CertificateStructure.IssuedToWhom;
+	
+	String = Table.Add();
+	String.Property = NStr("en = 'Issued by:'");
+	String.Value = CertificateStructure.WhoIssued;
+	
+	String = Table.Add();
+	String.Property = NStr("en = 'Valid until:'");
+	String.Value = Format(CertificateStructure.ValidUntil, "DLF=D");
+	
+	String = Table.Add();
+	String.Property = NStr("en = 'Assignment:'");
+	String.Value = Purpose;
+	
+EndFunction
+
+#Region HelperProcedureAndFunctions
+
+// Receives the certificate purpose.
+//
+// Parameters:
+//   ElectronicSignature - CryptoCertificate - certificate which appointment you need to receive.
+//
+Function GetPurpose(ElectronicSignature)
+	
+	If Not ElectronicSignature.Extensions.Property("EKU") Then
+		Return "";
+	EndIf;
+	
+	PropertiesFixedArray = ElectronicSignature.Extensions.EKU;
+	
+	Purpose = "";
+	
+	For IndexOf = 0 To PropertiesFixedArray.Count() - 1 Do
+		Purpose = Purpose + PropertiesFixedArray.Get(IndexOf);
+		Purpose = Purpose + Chars.LF;
+	EndDo;
+	
+	Return PrepareString(Purpose);
+	
+EndFunction
+
+Function PrepareString(RowFromCertificate)
+	
+	Return TrimAll(CommonUseClientServer.ReplaceInadmissibleCharsXML(RowFromCertificate));
+	
+EndFunction
+
+#EndRegion
+
+#EndRegion

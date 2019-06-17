@@ -1,0 +1,64 @@
+﻿SELECT
+	ProductsTable.Products AS Products,
+	ProductsTable.Characteristic AS Characteristic
+INTO ProductsTable
+FROM
+	&ProductsTable AS ProductsTable
+;
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	MAX(ExchangeRates.Period) AS Period,
+	ExchangeRates.ExchangeRate AS ExchangeRate,
+	ExchangeRates.Multiplicity AS Multiplicity
+INTO PriceKindExchangeRatesource
+FROM
+	InformationRegister.ExchangeRates.SliceLast(&ToDate, Currency = &CurrencySource) AS ExchangeRates
+
+GROUP BY
+	ExchangeRates.ExchangeRate,
+	ExchangeRates.Multiplicity
+;
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	MAX(ExchangeRates.Period) AS Period,
+	ExchangeRates.ExchangeRate AS ExchangeRate,
+	ExchangeRates.Multiplicity AS Multiplicity
+INTO PriceKindCurrencyRateReceiver
+FROM
+	InformationRegister.ExchangeRates.SliceLast(&ToDate, Currency = &CurrencyOfReceiver) AS ExchangeRates
+
+GROUP BY
+	ExchangeRates.ExchangeRate,
+	ExchangeRates.Multiplicity
+;
+////////////////////////////////////////////////////////////////////////////////
+
+SELECT
+	TRUE AS Check,
+	PricesSliceLast.Products AS Products,
+	PricesSliceLast.Characteristic,
+	PricesSliceLast.MeasurementUnit,
+	CASE
+		WHEN &CurrencyOfReceiver <> &CurrencySource
+			THEN PricesSliceLast.Price * PriceKindExchangeRatesource.ExchangeRate * PriceKindCurrencyRateReceiver.Multiplicity / PriceKindCurrencyRateReceiver.ExchangeRate * PriceKindExchangeRatesource.Multiplicity
+		ELSE PricesSliceLast.Price
+	END AS Price
+	
+FROM
+	InformationRegister.Prices.SliceLast(
+			&ToDate,
+			PriceKind = &PriceKind
+				AND Actuality
+				AND Not (Products, Characteristic) In
+						(SELECT
+							ProductsTable.Products,
+							ProductsTable.Characteristic
+						FROM
+							ProductsTable AS ProductsTable)) AS PricesSliceLast, 
+	PriceKindExchangeRatesource AS PriceKindExchangeRatesource,
+	PriceKindCurrencyRateReceiver AS PriceKindCurrencyRateReceiver
+WHERE
+	&CharacteristicCondition
+
+ORDER BY
+	Products

@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<items xmlns="http://1c.com/first_launch_1_0" version="1.0">
+
+<!-- Primary chart of accounts and default accounts settings -->
+   <item item_type="sl_data_xml" item_name="default/default_gl_accounts.xml" initial_filling="True"/>
+
+   <item item_type="catalog" item_name="LinesOfBusiness" initial_filling="True">
+      <element>
+         <Description>Main line</Description>
+		 <Predefined>true</Predefined>
+         <PredefinedDataName>MainLine</PredefinedDataName>
+		 <GLAccountRevenueFromSales>4010100</GLAccountRevenueFromSales>
+		 <GLAccountCostOfSales>5010100</GLAccountCostOfSales>
+		 <ProfitGLAccount>3010200</ProfitGLAccount>
+      </element>
+      <element>
+         <Description>Other</Description>
+		 <Predefined>true</Predefined>
+         <PredefinedDataName>Other</PredefinedDataName>
+		 <GLAccountRevenueFromSales>4010100</GLAccountRevenueFromSales>
+		 <GLAccountCostOfSales>5010100</GLAccountCostOfSales>
+		 <ProfitGLAccount>3010200</ProfitGLAccount>
+      </element>
+   </item>
+
+   <item item_type="catalog" item_name="Employees" initial_filling="True">
+      <element>
+         <Description>Administrator</Description>
+		 <Predefined>true</Predefined>
+         <PredefinedDataName>Administrator</PredefinedDataName>
+		 <SettlementsHumanResourcesGLAccount>2040200</SettlementsHumanResourcesGLAccount>
+		 <AdvanceHoldersGLAccount>1050200</AdvanceHoldersGLAccount>
+		 <OverrunGLAccount>2040300</OverrunGLAccount>
+      </element>
+   </item>
+
+   <item item_type="catalog" item_name="EarningAndDeductionTypes" initial_filling="True">
+      <element>
+         <Description>Payment by jobs</Description>
+		 <Predefined>true</Predefined>
+         <PredefinedDataName>Payment by jobs</PredefinedDataName>
+		 <GLExpenseAccount>6080300</GLExpenseAccount>
+      </element>
+      <element>
+         <Description>Salary by days</Description>
+		 <Predefined>true</Predefined>
+         <PredefinedDataName>Salary by days</PredefinedDataName>
+		 <GLExpenseAccount>6080300</GLExpenseAccount>
+      </element>
+      <element>
+         <Description>Salary by hours</Description>
+		 <Predefined>true</Predefined>
+         <PredefinedDataName>Salary by hours</PredefinedDataName>
+		 <GLExpenseAccount>6080300</GLExpenseAccount>
+      </element>
+      <element>
+         <Description>Sales fee by responsible</Description>
+		 <Predefined>true</Predefined>
+         <PredefinedDataName>Sales fee by responsible</PredefinedDataName>
+		 <GLExpenseAccount>6080300</GLExpenseAccount>
+      </element>
+      <element>
+         <Description>Interest on loan</Description>
+		 <Predefined>true</Predefined>
+         <PredefinedDataName>Interest on loan</PredefinedDataName>
+		 <GLExpenseAccount>4020200</GLExpenseAccount>
+      </element>
+      <element>
+         <Description>Piece-rate pay</Description>
+		 <Predefined>true</Predefined>
+         <PredefinedDataName>Piece-rate pay</PredefinedDataName>
+		 <GLExpenseAccount>6080300</GLExpenseAccount>
+      </element>
+      <element>
+         <Description>Piece-rate pay (fixed amount)</Description>
+		 <Predefined>true</Predefined>
+         <PredefinedDataName>Piece-rate pay (fixed amount)</PredefinedDataName>
+		 <GLExpenseAccount>6080300</GLExpenseAccount>
+      </element>
+      <element>
+         <Description>Piece-rate pay (percent)</Description>
+		 <Predefined>true</Predefined>
+         <PredefinedDataName>Piece-rate pay (percent)</PredefinedDataName>
+		 <GLExpenseAccount>6080300</GLExpenseAccount>
+      </element>
+      <element>
+         <Description>Repayment of loan from salary</Description>
+		 <Predefined>true</Predefined>
+         <PredefinedDataName>Repayment of loan from salary</PredefinedDataName>
+		 <GLExpenseAccount>1050400</GLExpenseAccount>
+      </element>	  
+  </item>
+
+   <item item_type="catalog" item_name="TaxTypes" initial_filling="True">
+      <element>
+         <Description>VAT</Description>
+		 <Predefined>true</Predefined>
+		 <PredefinedDataName>VAT</PredefinedDataName>
+		 <GLAccount>2040400</GLAccount>
+		 <GLAccountForReimbursement>2040400</GLAccountForReimbursement>
+      </element>
+   </item>
+
+<!-- Regional settings  -->   
+   <item item_type="constant" item_name="ForeignExchangeAccounting" value="True" initial_filling="True" />
+   <item item_type="catalog" item_name="Currencies" initial_filling="True" >
+      <element>
+         <Description>EUR</Description>
+         <Code>978</Code>
+         <DescriptionFull>Euro</DescriptionFull>
+         <SetRateMethod>ExportFromInternet</SetRateMethod>
+         <InWordParametersInHomeLanguage>euro, euro, euros, m, cent, cent, cents, m, 2 digits</InWordParametersInHomeLanguage>
+		 <InWordParametersInEnglish>euro, euro, cent, cents, 2 digits</InWordParametersInEnglish>
+      </element>
+	  <element>
+         <Description>USD</Description>
+         <Code>840</Code>
+         <DescriptionFull>US Dollar</DescriptionFull>
+         <SetRateMethod>ExportFromInternet</SetRateMethod>
+         <InWordParametersInHomeLanguage>dollar, dollars, dollars, m, cent, cents, cents, m, 2 digits</InWordParametersInHomeLanguage>
+		 <InWordParametersInEnglish>dollar, dollars, cent, cents, 2 digits</InWordParametersInEnglish>
+      </element>
+   </item>
+   <item item_type="constant" item_name="PresentationCurrency" value="EUR" initial_filling="True" />
+   <item item_type="constant" item_name="FunctionalCurrency" value="EUR" initial_filling="True" />
+   <item item_type="constant" item_name="ForeignCurrencyRevaluationPeriodicity" value="OnlyOnPeriodClosure" initial_filling="True" />
+   <item item_type="catalog" item_name="PriceTypes" initial_filling="True">
+      <element>
+         <Description>Wholesale price</Description>
+         <PriceCurrency>EUR</PriceCurrency>
+		 <Predefined>true</Predefined>
+         <PredefinedDataName>Wholesale</PredefinedDataName>
+      </element>
+      <element>
+         <Description>Accounting price</Description>
+         <PriceCurrency>EUR</PriceCurrency>
+         <Predefined>true</Predefined>
+         <PredefinedDataName>Accounting</PredefinedDataName>
+      </element>
+   </item>
+   <item item_type="catalog" item_name="LegalForms" initial_filling="True">
+      <element>
+         <Description>Limited Liability Company</Description>
+         <ShortName>LLC</ShortName>
+      </element>
+   </item>
+   <item item_type="catalog" item_name="VATRates" initial_filling="True">
+      <element>
+         <Description>Exempt</Description>
+         <Predefined>true</Predefined>
+         <PredefinedDataName>Exempt</PredefinedDataName>
+         <Rate>0</Rate>
+         <NotTaxable>True</NotTaxable>
+         <Calculated>False</Calculated>
+      </element>
+      <element>
+         <Description>0%</Description>
+         <Predefined>true</Predefined>
+         <PredefinedDataName>ZeroRate</PredefinedDataName>
+         <Rate>0</Rate>
+         <NotTaxable>False</NotTaxable>
+         <Calculated>False</Calculated>
+      </element>
+      <element>
+         <Description>15%</Description>
+         <Rate>15</Rate>
+         <NotTaxable>False</NotTaxable>
+         <Calculated>False</Calculated>
+      </element>
+   </item>
+   <item item_type="catalog" item_name="Counterparties" initial_filling="True">
+      <element>
+         <Description>Retail customer</Description>
+		 <Predefined>true</Predefined>
+		 <PredefinedDataName>RetailCustomer</PredefinedDataName>
+		 <DescriptionFull>Retail customer</DescriptionFull>
+		 <Customer>true</Customer>
+		 <LegalEntityIndividual>Individual</LegalEntityIndividual>
+		 <GLAccountCustomerSettlements>1030100</GLAccountCustomerSettlements>
+		 <CustomerAdvancesGLAccount>2040100</CustomerAdvancesGLAccount>
+		 <GLAccountVendorSettlements>2010100</GLAccountVendorSettlements>
+		 <VendorAdvancesGLAccount>1050100</VendorAdvancesGLAccount>
+      </element>
+   </item>
+   <item item_type="catalog" item_name="DocumentTypes" initial_filling="True">
+      <element>
+         <Description>Individuals</Description>
+         <Folder>True</Folder>
+      </element>
+      <element>
+         <Description>Identity document</Description>
+         <Parent>Individuals</Parent>
+         <Predefined>true</Predefined>
+         <PredefinedDataName>IdentityDocument</PredefinedDataName>
+      </element>
+   </item>
+   <item item_type="constant" item_name="ApplicationTitle" value="1C:Drive. Demo settings." initial_filling="True" />
+   <item item_type="catalog" item_name="Countries" initial_filling="True">
+      <element>
+         <Description>GERMANY</Description>
+         <Code>276</Code>
+         <AlphaCode2>DE</AlphaCode2>
+         <AlphaCode3>DEU</AlphaCode3>
+         <LongDescription>Federal Republic of Germany</LongDescription>
+      </element>
+   </item>
+   <item item_type="constant" item_name="HomeCountry" value="GERMANY" initial_filling="True"/>
+   <item item_type="catalog" item_name="UOMClassifier" initial_filling="True">
+      <element>
+         <Description>pcs</Description>
+		 <DescriptionFull>Pieces</DescriptionFull>
+         <Predefined>true</Predefined>
+         <PredefinedDataName>pcs</PredefinedDataName>
+      </element>
+      <element>
+         <Description>h</Description>
+		 <DescriptionFull>Hour</DescriptionFull>
+         <Predefined>true</Predefined>
+         <PredefinedDataName>h</PredefinedDataName>
+      </element>	
+      <element>
+         <Description>kg</Description>
+		 <DescriptionFull>Kilogram</DescriptionFull>
+      </element>	
+      <element>
+         <Description>m</Description>
+		 <DescriptionFull>Meter</DescriptionFull>
+      </element>	
+      <element>
+         <Description>nmp</Description>
+		 <DescriptionFull>Number of packs</DescriptionFull>
+      </element>	
+      <element>
+         <Description>m2</Description>
+		 <DescriptionFull>Square meter</DescriptionFull>
+      </element>	
+      <element>
+         <Description>l</Description>
+		 <DescriptionFull>Liter</DescriptionFull>
+      </element>	
+      <element>
+         <Description>ml</Description>
+		 <DescriptionFull>Milliliter</DescriptionFull>
+      </element>	
+       <element>
+         <Description>g</Description>
+		 <DescriptionFull>Gram</DescriptionFull>
+      </element>	
+      <element>
+         <Description>t</Description>
+		 <DescriptionFull>Ton</DescriptionFull>
+      </element>	
+      <element>
+         <Description>m3</Description>
+		 <DescriptionFull>Cubic meter</DescriptionFull>
+      </element>	
+  </item>   
+   <item item_type="information_register" item_name="ExchangeRates" initial_filling="True">
+      <element>
+         <Period>19800101</Period>
+         <Currency>USD</Currency>
+         <ExchangeRate>1</ExchangeRate>
+         <Multiplicity>1</Multiplicity>
+      </element>
+	  <element>
+         <Period>19800101</Period>
+         <Currency>EUR</Currency>
+         <ExchangeRate>1</ExchangeRate>
+         <Multiplicity>1</Multiplicity>
+      </element>
+   </item>
+   <item item_type="sl_data_xml" item_name="default/order_statuses.xml" initial_filling="True" />
+   <item item_type="catalog" item_name="PayCodes" initial_filling="True" >
+      <element>
+         <Description>BTP</Description>
+		 <FullDescr>Business travel. Travel with business purpose paid with standard hourly rate.</FullDescr>
+         <Predefined>true</Predefined>
+         <PredefinedDataName>BusinessTrip</PredefinedDataName>
+      </element>
+      <element>
+         <Description>HOL</Description>
+		 <FullDescr>National holiday. Will be automatically added to timesheet due to business calendar days marked as "Holiday".</FullDescr>
+         <Predefined>true</Predefined>
+         <PredefinedDataName>Holidays</PredefinedDataName>
+      </element>
+      <element>
+         <Description>OTM</Description>
+		 <FullDescr>Overtime. Work in excess of standard schedule paid with a higher hourly rate.</FullDescr>
+         <Predefined>true</Predefined>
+         <PredefinedDataName>Overtime</PredefinedDataName>
+      </element>
+      <element>
+         <Description>REG</Description>
+		 <FullDescr>Regular work</FullDescr>
+         <Predefined>true</Predefined>
+         <PredefinedDataName>Work</PredefinedDataName>
+      </element>
+      <element>
+         <Description>SCK</Description>
+		 <FullDescr>Sick leave. Sick hours taken with pay.</FullDescr>
+         <Predefined>true</Predefined>
+         <PredefinedDataName>SickLeave</PredefinedDataName>
+      </element>
+      <element>
+         <Description>ANN</Description>
+		 <FullDescr>Annual leave. Paid time-off granted by employers to employees to be used for whatever the employee wishes.</FullDescr>
+         <Predefined>true</Predefined>
+         <PredefinedDataName>AnnualLeave</PredefinedDataName>
+      </element>
+      <element>
+         <Description>WKD</Description>
+		 <FullDescr>Weekend. Will be automatically added to timesheet due to business calendar days marked as "Weekend".</FullDescr>
+         <Predefined>true</Predefined>
+         <PredefinedDataName>WeekEnd</PredefinedDataName>
+      </element>
+   </item>   
+   <item item_type="information_register" item_name="AccountingPolicy" initial_filling="True">
+      <element>
+         <Period>19800101</Period>
+         <Company>Our company</Company>
+         <RegisteredForVAT>False</RegisteredForVAT>
+         <PostVATEntriesBySourceDocuments>True</PostVATEntriesBySourceDocuments>
+         <PostAdvancePaymentsBySourceDocuments>False</PostAdvancePaymentsBySourceDocuments>
+         <DefaultVATRate>15%</DefaultVATRate>
+         <VATThreshold>0</VATThreshold>		 
+         <CashMethodOfAccounting>False</CashMethodOfAccounting>
+         <InventoryValuationMethod>WeightedAverage</InventoryValuationMethod>		 
+      </element>
+   </item>
+   <!-- It is needed to trigger 'Main group' to create the corresponding item in additional attributes catalog -->
+   <item item_type="catalog" item_name="ProductsCategories" initial_filling="True">
+    <element>
+     <Description>Main group</Description>
+     <Predefined>true</Predefined>
+     <PredefinedDataName>MainGroup</PredefinedDataName>
+    </element>
+   </item>
+   <item item_type="constant" item_name="AdditionalReportsAndDataProcessorsIndependentUseSaaS" value="True" initial_filling="True" />
+   <item item_type="constant" item_name="AddressForAccountPasswordRecovery" value="int@1c.com" initial_filling="True" />
+   <item item_type="constant" item_name="AllowAdditionalReportsAndDataProcessorsPerformByProceduralTasksSaaS" value="True" initial_filling="True" />
+   <item item_type="constant" item_name="CheckStockBalanceWhenIssuingSalesSlips" value="True" initial_filling="True" />
+   <item item_type="constant" item_name="CheckStockBalanceOnPosting" value="True" initial_filling="True" />
+   <item item_type="constant" item_name="CheckContractsOnPosting" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="UseOneCompany" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="DontUseSeparationByDataAreas" value="True" initial_filling="True" />
+   <item item_type="constant" item_name="GeneratePriceListForInStockProductsOnly" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="UseStorageBins" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="UseSeveralLinesOfBusiness" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="AccountingByMultipleCompanies" value="True" initial_filling="True" />
+   <item item_type="constant" item_name="UseSeveralDepartments" value="True" initial_filling="True" />
+   <item item_type="constant" item_name="UseSeveralWarehouses" value="True" initial_filling="True" />
+   <item item_type="constant" item_name="UseProjects" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="UsePersonalIncomeTaxCalculation" value="True" initial_filling="True" />
+   <item item_type="constant" item_name="UseFixedAssets" value="True" initial_filling="True" />
+   <item item_type="constant" item_name="UseSeveralUnitsForProduct" value="True" initial_filling="True" />
+   <item item_type="constant" item_name="UseRetail" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="UseHeadcountBudget" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="UseInventoryReservation" value="True" initial_filling="True" />
+   <item item_type="constant" item_name="UsePaymentCalendar" value="True" initial_filling="True" />
+   <item item_type="constant" item_name="UseResourcesWorkloadPlanning" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="AcceptConsignedGoods" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="AcceptInventoryInTheCustody" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="UseSubcontractingManufacturing" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="SendGoodsOnConsignment" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="UseSubcontractorManufacturers" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="UseAutomaticDiscounts" value="True" initial_filling="True" />
+   <item item_type="constant" item_name="UseBankCharges" value="True" initial_filling="True" />
+   <item item_type="constant" item_name="UseBatches" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="UseBudgeting" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="UseCharacteristics" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="UseCounterpartyContractTypes" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="UseDiscountCards" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="UseManualDiscounts" value="True" initial_filling="True" />
+   <item item_type="constant" item_name="UseSecondaryEmployment" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="UsePeripherals" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="UsePayrollSubsystem" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="UseProductionSubsystem" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="UseOperationsManagement" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="FunctionalOptionUseVAT" value="True" initial_filling="True" />
+   <item item_type="constant" item_name="UseWorkOrders" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="ListSeparator" value=";" initial_filling="True" />
+   <item item_type="constant" item_name="SetOffAdvancePaymentsAutomatically" value="Yes" initial_filling="True" />
+   <item item_type="constant" item_name="DisplayItemNumberInThePriceList" value="Yes" initial_filling="True" />
+   <item item_type="constant" item_name="DisplayDetailedDescriptionInThePriceList" value="Yes" initial_filling="True" />
+   <item item_type="constant" item_name="GeneratePriceListAccordingToProductsHierarchy" value="True" initial_filling="True" />
+   <item item_type="constant" item_name="AddItemNumberToProductDescriptionOnPrinting" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="UseSerialNumbersAsInventoryRecordDetails" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="ThereAreAutomaticDiscounts" value="True" initial_filling="True" />
+   <item item_type="constant" item_name="UseCounterpartiesAccessGroups" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="UseSalesOrderStatuses" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="UseFullTextSearch" value="True" initial_filling="True" />
+   <item item_type="constant" item_name="UseObjectVersioning" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="UseProductionOrderStatuses" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="UsePurchaseOrderStatuses" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="UseSerialNumbers" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="UseSeveralBusinessCalendars" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="UseSeveralCompanies" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="UseUserGroups" value="False" initial_filling="True" />
+   <item item_type="constant" item_name="UseReminders" value="True" initial_filling="True" />
+   <item item_type="constant" item_name="UseWorkOrderStatuses" value="True" initial_filling="False" />
+   <item item_type="DefaultLanguage" item_name="English" initial_filling="True" />
+</items>

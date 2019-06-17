@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<EventSubscription uuid="e425b9d1-c6ce-457e-941f-bf7341374322">
+		<Properties>
+			<Name>WriteDocumentVersion</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Write document version</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<Source>
+				<v8:Type>cfg:DocumentObject.JobSheet</v8:Type>
+				<v8:Type>cfg:DocumentObject.ReconciliationStatement</v8:Type>
+				<v8:Type>cfg:DocumentObject.Quote</v8:Type>
+				<v8:Type>cfg:DocumentObject.PaymentExpense</v8:Type>
+				<v8:Type>cfg:DocumentObject.SalesTarget</v8:Type>
+				<v8:Type>cfg:DocumentObject.CashVoucher</v8:Type>
+				<v8:Type>cfg:DocumentObject.GoodsIssue</v8:Type>
+				<v8:Type>cfg:DocumentObject.DebitNote</v8:Type>
+				<v8:Type>cfg:DocumentObject.SalesOrder</v8:Type>
+				<v8:Type>cfg:DocumentObject.TaxInvoiceIssued</v8:Type>
+				<v8:Type>cfg:DocumentObject.CashInflowForecast</v8:Type>
+				<v8:Type>cfg:DocumentObject.ObsoleteWorkOrder</v8:Type>
+				<v8:Type>cfg:DocumentObject.CashTransferPlan</v8:Type>
+				<v8:Type>cfg:DocumentObject.ExpenditureRequest</v8:Type>
+				<v8:Type>cfg:DocumentObject.CustomsDeclaration</v8:Type>
+				<v8:Type>cfg:DocumentObject.PurchaseOrder</v8:Type>
+				<v8:Type>cfg:DocumentObject.GoodsReturn</v8:Type>
+				<v8:Type>cfg:DocumentObject.Event</v8:Type>
+				<v8:Type>cfg:DocumentObject.ProductionOrder</v8:Type>
+				<v8:Type>cfg:DocumentObject.CreditNote</v8:Type>
+				<v8:Type>cfg:DocumentObject.SalesInvoice</v8:Type>
+				<v8:Type>cfg:DocumentObject.GoodsReceipt</v8:Type>
+				<v8:Type>cfg:DocumentObject.PaymentReceipt</v8:Type>
+				<v8:Type>cfg:DocumentObject.TaxInvoiceReceived</v8:Type>
+				<v8:Type>cfg:DocumentObject.CashReceipt</v8:Type>
+			</Source>
+			<Event>BeforeWrite</Event>
+			<Handler>CommonModule.VersioningEventObjects.WriteDocumentVersion</Handler>
+		</Properties>
+	</EventSubscription>
+</MetaDataObject>

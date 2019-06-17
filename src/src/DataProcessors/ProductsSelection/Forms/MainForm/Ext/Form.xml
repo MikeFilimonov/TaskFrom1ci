@@ -1,0 +1,2622 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">OnOpen</Event>
+		<Event name="BeforeClose">BeforeClose</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+		<Event name="OnClose">OnClose</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="HeaderGroup" id="1">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="HeaderGroupExtendedTooltip" id="2"/>
+			<ChildItems>
+				<UsualGroup name="FormCommands" id="350">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="FormCommandsExtendedTooltip" id="351"/>
+					<ChildItems>
+						<Button name="MoveIntoDocument" id="334">
+							<Type>UsualButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<CommandName>Form.Command.MoveToDocument</CommandName>
+							<ExtendedTooltip name="MoveToDocumentExtendedTooltip" id="335"/>
+						</Button>
+						<CommandBar name="FormCommandsBar" id="352">
+							<HorizontalLocation>Right</HorizontalLocation>
+							<CommandSource>Form</CommandSource>
+							<ExtendedTooltip name="FormCommandsBarExtendedTooltip" id="353"/>
+							<ChildItems>
+								<Popup name="FormCommandsShortcuts" id="538">
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Shortcuts</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="FormCommandsShortcutsExtendedTooltip" id="539"/>
+									<ChildItems>
+										<Button name="FormTransitionSearch" id="542">
+											<Type>CommandBarButton</Type>
+											<OnlyInAllActions>false</OnlyInAllActions>
+											<CommandName>Form.Command.TransitionSearch</CommandName>
+											<ExtendedTooltip name="FormTransitionSearchExtendedTooltip" id="543"/>
+										</Button>
+										<Button name="FormTransitionProductsList" id="544">
+											<Type>CommandBarButton</Type>
+											<OnlyInAllActions>false</OnlyInAllActions>
+											<CommandName>Form.Command.TransitionProductsList</CommandName>
+											<ExtendedTooltip name="FormTransitionProductsListExtendedTooltip" id="545"/>
+										</Button>
+										<Button name="FormTransitionHierarchy" id="540">
+											<Type>CommandBarButton</Type>
+											<OnlyInAllActions>false</OnlyInAllActions>
+											<CommandName>Form.Command.TransitionGroups</CommandName>
+											<ExtendedTooltip name="FormTransitionHierarchyExtendedTooltip" id="541"/>
+										</Button>
+										<Button name="FormTransitionCart" id="546">
+											<Type>CommandBarButton</Type>
+											<OnlyInAllActions>false</OnlyInAllActions>
+											<CommandName>Form.Command.TransitionCart</CommandName>
+											<ExtendedTooltip name="FormTransitionCartExtendedTooltip" id="547"/>
+										</Button>
+									</ChildItems>
+								</Popup>
+								<Popup name="FormCommandsSettings" id="818">
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Settings</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="FormCommandsSettingsExtendedTooltip" id="819"/>
+									<ChildItems>
+										<Button name="FormCommandsSettingsRequestQuantity" id="820">
+											<Type>CommandBarButton</Type>
+											<OnlyInAllActions>false</OnlyInAllActions>
+											<CommandName>Form.Command.RequestQuantity</CommandName>
+											<ExtendedTooltip name="FormCommandsSettingsRequestQuantityExtendedTooltip" id="821"/>
+										</Button>
+										<Button name="FormCommandsSettingsRequestPrice" id="822">
+											<Type>CommandBarButton</Type>
+											<OnlyInAllActions>false</OnlyInAllActions>
+											<CommandName>Form.Command.RequestPrice</CommandName>
+											<ExtendedTooltip name="FormCommandsSettingsRequestPriceExtendedTooltip" id="823"/>
+										</Button>
+									</ChildItems>
+								</Popup>
+								<ButtonGroup name="Other" id="662">
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Other</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Other</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="OtherExtendedTooltip" id="663"/>
+									<ChildItems>
+										<Button name="InformationAboutDocument" id="651">
+											<Type>CommandBarButton</Type>
+											<OnlyInAllActions>false</OnlyInAllActions>
+											<CommandName>Form.Command.InformationAboutDocument</CommandName>
+											<ExtendedTooltip name="InformationAboutDocumentExtendedTooltip" id="652"/>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
+								<Button name="ChangeForm" id="534">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+									<ExtendedTooltip name="ChangeFormExtendedTooltip" id="535"/>
+								</Button>
+								<Button name="FormHelp" id="536">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.Help</CommandName>
+									<ExtendedTooltip name="FormHelpExtendedTooltip" id="537"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="GroupBody" id="3">
+			<Height>30</Height>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="GroupBodyExtendedTooltip" id="4"/>
+			<ChildItems>
+				<UsualGroup name="MainGroup" id="25">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="GroupMainExtendedTooltip" id="26"/>
+					<ChildItems>
+						<Pages name="PagesProductsCharacteristics" id="27">
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="PagesProductsCharacteristicsExtendedTooltip" id="28"/>
+							<ChildItems>
+								<Page name="PageProducts" id="29">
+									<ExtendedTooltip name="PageProductsExtendedTooltip" id="30"/>
+									<ChildItems>
+										<UsualGroup name="ListInventoryCommands" id="908">
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ListInventoryCommandsExtendedTooltip" id="909"/>
+											<ChildItems>
+												<CommandBar name="ListInventoryMainCommands" id="916">
+													<HorizontalStretch>false</HorizontalStretch>
+													<ExtendedTooltip name="ListInventoryMainCommandsExtendedTooltip" id="917"/>
+													<ChildItems>
+														<Button name="ListInventoryAddToCart" id="792">
+															<Type>CommandBarButton</Type>
+															<OnlyInAllActions>true</OnlyInAllActions>
+															<CommandName>Form.Command.AddToCart</CommandName>
+															<ExtendedTooltip name="ListInventoryAddToCartExtendedTooltip" id="793"/>
+														</Button>
+													</ChildItems>
+												</CommandBar>
+												<UsualGroup name="ListInventoryFilters" id="7">
+													<HorizontalStretch>true</HorizontalStretch>
+													<Group>AlwaysHorizontal</Group>
+													<HorizontalAlign>Right</HorizontalAlign>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ListInventoryFiltersExtendedTooltip" id="8"/>
+													<ChildItems>
+														<RadioButtonField name="ListInventoryStockStatusFilter" id="953">
+															<DataPath>StockStatusFilter</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<RadioButtonType>Tumbler</RadioButtonType>
+															<ChoiceList>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.StockStatusFilters.EnumValue.All</Value>
+																	</xr:Value>
+																</xr:Item>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.StockStatusFilters.EnumValue.InStock</Value>
+																	</xr:Value>
+																</xr:Item>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.StockStatusFilters.EnumValue.Available</Value>
+																	</xr:Value>
+																</xr:Item>
+															</ChoiceList>
+															<ContextMenu name="ListInventoryStockStatusFilterContextMenu" id="954"/>
+															<ExtendedTooltip name="ListInventoryStockStatusFilterExtendedTooltip" id="955"/>
+															<Events>
+																<Event name="OnChange">StockStatusFilterOnChange</Event>
+															</Events>
+														</RadioButtonField>
+														<InputField name="ListInventoryStockWarehouse" id="956">
+															<DataPath>StockWarehouse</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<Width>20</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<ClearButton>true</ClearButton>
+															<OpenButton>false</OpenButton>
+															<CreateButton>false</CreateButton>
+															<QuickChoice>true</QuickChoice>
+															<ChoiceParameters>
+																<app:item name="Filter.StructuralUnitType">
+																	<app:value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.BusinessUnitsTypes.EnumValue.Warehouse</Value>
+																	</app:value>
+																</app:item>
+															</ChoiceParameters>
+															<InputHint>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>&lt;all warehouses&gt;</v8:content>
+																</v8:item>
+															</InputHint>
+															<ContextMenu name="ListInventoryStockWarehouseContextMenu" id="957"/>
+															<ExtendedTooltip name="ListInventoryStockWarehouseExtendedTooltip" id="958"/>
+															<Events>
+																<Event name="OnChange">StockWarehouseOnChange</Event>
+															</Events>
+														</InputField>
+														<CheckBoxField name="ListInventoryShowItemsWithPriceOnly" id="961">
+															<DataPath>ShowItemsWithPriceOnly</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ListInventoryShowItemsWithPriceOnlyContextMenu" id="962"/>
+															<ExtendedTooltip name="ListInventoryShowItemsWithPriceOnlyExtendedTooltip" id="963"/>
+															<Events>
+																<Event name="OnChange">ShowItemsWithPriceOnlyOnChange</Event>
+															</Events>
+														</CheckBoxField>
+														<InputField name="ListInventorySearchText" id="9">
+															<DataPath>ListInventorySearchText</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<Width>20</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<ClearButton>true</ClearButton>
+															<EditTextUpdate>DontUse</EditTextUpdate>
+															<ContextMenu name="ListInventorySearchTextContextMenu" id="10"/>
+															<ExtendedTooltip name="ListInventorySearchTextExtendedTooltip" id="11"/>
+															<Events>
+																<Event name="EditTextChange">SearchTextEditTextChange</Event>
+																<Event name="Clearing">SearchTextClearing</Event>
+															</Events>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<CommandBar name="ListInventoryCommandsBar" id="910">
+													<HorizontalStretch>false</HorizontalStretch>
+													<HorizontalLocation>Right</HorizontalLocation>
+													<ExtendedTooltip name="ListInventoryCommandsBarExtendedTooltip" id="911"/>
+													<ChildItems>
+														<ButtonGroup name="ListInventoryCommandsBarGroup1" id="912">
+															<ExtendedTooltip name="ListInventoryCommandsBarGroup1ExtendedTooltip" id="913"/>
+															<ChildItems>
+																<Button name="ListInventorySubstituteGoods" id="647">
+																	<Type>CommandBarButton</Type>
+																	<OnlyInAllActions>false</OnlyInAllActions>
+																	<CommandName>Form.Command.SubstituteGoods</CommandName>
+																	<ExtendedTooltip name="ListInventorySubstituteGoodsExtendedTooltip" id="648"/>
+																</Button>
+																<Button name="ListInventoryGoToParent" id="475">
+																	<Type>CommandBarButton</Type>
+																	<OnlyInAllActions>false</OnlyInAllActions>
+																	<CommandName>Form.Command.GoToParent</CommandName>
+																	<ExtendedTooltip name="ListInventoryGoToParentExtendedTooltip" id="476"/>
+																</Button>
+															</ChildItems>
+														</ButtonGroup>
+														<ButtonGroup name="ListInventoryCommandsBarGroup2" id="914">
+															<ExtendedTooltip name="ListInventoryCommandsBarGroup2ExtendedTooltip" id="915"/>
+															<ChildItems>
+																<Button name="ListInventoryRefresh" id="798">
+																	<Type>CommandBarButton</Type>
+																	<CommandName>Form.Item.ListInventory.StandardCommand.Refresh</CommandName>
+																	<ExtendedTooltip name="ListInventoryRefreshExtendedTooltip" id="799"/>
+																</Button>
+																<Button name="ListInventoryOutputList" id="794">
+																	<Type>CommandBarButton</Type>
+																	<CommandName>Form.Item.ListInventory.StandardCommand.OutputList</CommandName>
+																	<ExtendedTooltip name="ListInventoryOutputListExtendedTooltip" id="795"/>
+																</Button>
+																<Button name="ListInventoryListSettings" id="796">
+																	<Type>CommandBarButton</Type>
+																	<CommandName>Form.Item.ListInventory.StandardCommand.ListSettings</CommandName>
+																	<ExtendedTooltip name="ListInventoryListSettingsExtendedTooltip" id="797"/>
+																</Button>
+															</ChildItems>
+														</ButtonGroup>
+													</ChildItems>
+												</CommandBar>
+											</ChildItems>
+										</UsualGroup>
+										<Table name="ListInventory" id="380">
+											<Representation>List</Representation>
+											<CommandBarLocation>None</CommandBarLocation>
+											<DefaultItem>true</DefaultItem>
+											<RowSelectionMode>Row</RowSelectionMode>
+											<UseAlternationRowColor>true</UseAlternationRowColor>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>ListInventory</DataPath>
+											<RowPictureDataPath>ListInventory.PictureIndex</RowPictureDataPath>
+											<RowsPicture>
+												<xr:Ref>CommonPicture.PickProducts</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</RowsPicture>
+											<CommandSet>
+												<ExcludedCommand>CancelSearch</ExcludedCommand>
+												<ExcludedCommand>Find</ExcludedCommand>
+												<ExcludedCommand>HierarchicalList</ExcludedCommand>
+												<ExcludedCommand>List</ExcludedCommand>
+												<ExcludedCommand>MoveItem</ExcludedCommand>
+												<ExcludedCommand>SearchHistory</ExcludedCommand>
+												<ExcludedCommand>Tree</ExcludedCommand>
+											</CommandSet>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<AutoRefresh>false</AutoRefresh>
+											<AutoRefreshPeriod>60</AutoRefreshPeriod>
+											<Period>
+												<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+												<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+												<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+											</Period>
+											<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+											<RestoreCurrentRow>false</RestoreCurrentRow>
+											<TopLevelParent xsi:nil="true"/>
+											<ShowRoot>false</ShowRoot>
+											<AllowRootChoice>false</AllowRootChoice>
+											<UpdateOnDataChange>Auto</UpdateOnDataChange>
+											<ContextMenu name="ListInventoryContextMenu" id="381">
+												<Autofill>false</Autofill>
+												<ChildItems>
+													<ButtonGroup name="ListInventoryContextMenuGroup1" id="810">
+														<ExtendedTooltip name="ListInventoryContextMenuGroup1ExtendedTooltip" id="811"/>
+														<ChildItems>
+															<Button name="ListInventoryContextMenuAddToCart" id="465">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.AddToCart</CommandName>
+																<ExtendedTooltip name="ListInventoryContextMenuAddToCartExtendedTooltip" id="466"/>
+															</Button>
+														</ChildItems>
+													</ButtonGroup>
+													<ButtonGroup name="ListInventoryContextMenuGroup2" id="467">
+														<ExtendedTooltip name="ListInventoryContextMenuGroup2ExtendedTooltip" id="468"/>
+														<ChildItems>
+															<Button name="ListInventoryContextMenuSubstituteGoods" id="816">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.SubstituteGoods</CommandName>
+																<ExtendedTooltip name="ListInventoryContextMenuSubstituteGoodsExtendedTooltip" id="817"/>
+															</Button>
+															<Button name="ListInventoryContextMenuGoToParent" id="814">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.GoToParent</CommandName>
+																<ExtendedTooltip name="ListInventoryContextMenuGoToParentExtendedTooltip" id="815"/>
+															</Button>
+														</ChildItems>
+													</ButtonGroup>
+													<ButtonGroup name="ListInventoryContextMenuGroup3" id="812">
+														<ExtendedTooltip name="ListInventoryContextMenuGroup3ExtendedTooltip" id="813"/>
+														<ChildItems>
+															<Button name="ListInventoryContextMenuReservationDetails" id="641">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ReservationDetails</CommandName>
+																<ExtendedTooltip name="ListInventoryContextMenuReservationDetailsExtendedTooltip" id="642"/>
+															</Button>
+															<Button name="ListInventoryContextMenuChangePrice" id="477">
+																<Type>CommandBarButton</Type>
+																<Visible>false</Visible>
+																<CommandName>Form.Command.ChangePrice</CommandName>
+																<ExtendedTooltip name="ListInventoryContextMenuChangePriceExtendedTooltip" id="478"/>
+															</Button>
+														</ChildItems>
+													</ButtonGroup>
+													<ButtonGroup name="ListInventoryContextMenuGroup4" id="836">
+														<ExtendedTooltip name="ListInventoryContextMenuGroup4ExtendedTooltip" id="837"/>
+														<ChildItems>
+															<Button name="ListInventoryContextMenuCreate" id="804">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Item.ListInventory.StandardCommand.Create</CommandName>
+																<ExtendedTooltip name="ListInventoryContextMenuCreateExtendedTooltip" id="805"/>
+															</Button>
+															<Button name="ListInventoryContextMenuChange" id="806">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Item.ListInventory.StandardCommand.Change</CommandName>
+																<ExtendedTooltip name="ListInventoryContextMenuChangeExtendedTooltip" id="807"/>
+															</Button>
+															<Button name="ListInventoryContextMenuCopy" id="808">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Item.ListInventory.StandardCommand.Copy</CommandName>
+																<ExtendedTooltip name="ListInventoryContextMenuCopyExtendedTooltip" id="809"/>
+															</Button>
+														</ChildItems>
+													</ButtonGroup>
+												</ChildItems>
+											</ContextMenu>
+											<AutoCommandBar name="ListInventoryCommandBar" id="382">
+												<Autofill>false</Autofill>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ListInventoryExtendedTooltip" id="383"/>
+											<SearchStringAddition name="ListInventorySearchString" id="675">
+												<AdditionSource>
+													<Item>ListInventory</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ListInventorySearchStringContextMenu" id="676"/>
+												<ExtendedTooltip name="ListInventorySearchStringExtendedTooltip" id="677"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ListInventoryViewStatus" id="678">
+												<AdditionSource>
+													<Item>ListInventory</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ListInventoryViewStatusContextMenu" id="679"/>
+												<ExtendedTooltip name="ListInventoryViewStatusExtendedTooltip" id="680"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ListInventorySearchManagement" id="681">
+												<AdditionSource>
+													<Item>ListInventory</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ListInventorySearchManagementContextMenu" id="682"/>
+												<ExtendedTooltip name="ListInventorySearchManagementExtendedTooltip" id="683"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="Selection">ListInventorySelection</Event>
+												<Event name="OnActivateRow">ListInventoryOnActivateRow</Event>
+												<Event name="DragEnd">ListInventoryDragEnd</Event>
+											</Events>
+											<ChildItems>
+												<LabelField name="ListInventoryDescription" id="387">
+													<DataPath>ListInventory.Description</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Description</v8:content>
+														</v8:item>
+													</Title>
+													<Width>20</Width>
+													<ContextMenu name="ListInventoryDescriptionContextMenu" id="388"/>
+													<ExtendedTooltip name="ListInventoryDescriptionExtendedTooltip" id="389"/>
+												</LabelField>
+												<LabelField name="ListInventorySKU" id="390">
+													<DataPath>ListInventory.SKU</DataPath>
+													<Width>10</Width>
+													<ContextMenu name="ListInventorySKUContextMenu" id="391"/>
+													<ExtendedTooltip name="ListInventorySKUExtendedTooltip" id="392"/>
+												</LabelField>
+												<LabelField name="ListInventoryCode" id="384">
+													<DataPath>ListInventory.Code</DataPath>
+													<UserVisible>
+														<xr:Common>false</xr:Common>
+													</UserVisible>
+													<Width>6</Width>
+													<ContextMenu name="ListInventoryCodeContextMenu" id="385"/>
+													<ExtendedTooltip name="ListInventoryCodeExtendedTooltip" id="386"/>
+												</LabelField>
+												<LabelField name="ListInventoryPrice" id="459">
+													<DataPath>ListInventory.Price</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Price</v8:content>
+														</v8:item>
+													</Title>
+													<Width>10</Width>
+													<Format>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>ND=15; NFD=2</v8:content>
+														</v8:item>
+													</Format>
+													<ContextMenu name="ListInventoryPriceContextMenu" id="460"/>
+													<ExtendedTooltip name="ListInventoryPriceExtendedTooltip" id="461"/>
+												</LabelField>
+												<ColumnGroup name="ListInventoryGroupAvailable" id="639">
+													<Group>InCell</Group>
+													<ExtendedTooltip name="ListInventoryGroupAvailableExtendedTooltip" id="640"/>
+													<ChildItems>
+														<PictureField name="ListInventoryReserve" id="423">
+															<DataPath>ListInventory.Reserve</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Available</v8:content>
+																</v8:item>
+															</Title>
+															<TitleLocation>None</TitleLocation>
+															<HorizontalStretch>false</HorizontalStretch>
+															<ValuesPicture>
+																<xr:Ref>CommonPicture.Reserved32</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</ValuesPicture>
+															<FileDragMode>AsFile</FileDragMode>
+															<ContextMenu name="ListInventoryReserveContextMenu" id="424"/>
+															<ExtendedTooltip name="ListInventoryReserveExtendedTooltip" id="425"/>
+														</PictureField>
+														<LabelField name="ListInventoryAvailable" id="429">
+															<DataPath>ListInventory.Available</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Available</v8:content>
+																</v8:item>
+															</Title>
+															<Width>5</Width>
+															<ContextMenu name="ListInventoryAvailableContextMenu" id="430"/>
+															<ExtendedTooltip name="ListInventoryAvailableExtendedTooltip" id="431"/>
+														</LabelField>
+													</ChildItems>
+												</ColumnGroup>
+												<LabelField name="ListInventoryInStock" id="417">
+													<DataPath>ListInventory.InStock</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>In stock</v8:content>
+														</v8:item>
+													</Title>
+													<Width>10</Width>
+													<ContextMenu name="ListInventoryInStockContextMenu" id="418"/>
+													<ExtendedTooltip name="ListInventoryInStockExtendedTooltip" id="419"/>
+												</LabelField>
+												<LabelField name="ListInventoryMeasurementUnit" id="393">
+													<DataPath>ListInventory.MeasurementUnit</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>UOM</v8:content>
+														</v8:item>
+													</Title>
+													<Width>6</Width>
+													<ContextMenu name="ListInventoryMeasurementUnitContextMenu" id="394"/>
+													<ExtendedTooltip name="ListInventoryMeasurementUnitExtendedTooltip" id="395"/>
+												</LabelField>
+												<LabelField name="ListInventoryProductsCategory" id="414">
+													<DataPath>ListInventory.ProductsCategory</DataPath>
+													<UserVisible>
+														<xr:Common>false</xr:Common>
+													</UserVisible>
+													<ContextMenu name="ListInventoryProductsCategoryContextMenu" id="415"/>
+													<ExtendedTooltip name="ListInventoryProductsCategoryExtendedTooltip" id="416"/>
+												</LabelField>
+												<LabelField name="ListInventoryBusinessLine" id="408">
+													<DataPath>ListInventory.BusinessLine</DataPath>
+													<UserVisible>
+														<xr:Common>false</xr:Common>
+													</UserVisible>
+													<ContextMenu name="ListInventoryBusinessLineContextMenu" id="409"/>
+													<ExtendedTooltip name="ListInventoryBusinessLineExtendedTooltip" id="410"/>
+												</LabelField>
+												<LabelField name="ListInventoryPriceGroup" id="462">
+													<DataPath>ListInventory.PriceGroup</DataPath>
+													<UserVisible>
+														<xr:Common>false</xr:Common>
+													</UserVisible>
+													<ContextMenu name="ListInventoryPriceGroupContextMenu" id="463"/>
+													<ExtendedTooltip name="ListInventoryPriceGroupExtendedTooltip" id="464"/>
+												</LabelField>
+												<LabelField name="ListInventoryVendor" id="420">
+													<DataPath>ListInventory.Vendor</DataPath>
+													<UserVisible>
+														<xr:Common>false</xr:Common>
+													</UserVisible>
+													<ContextMenu name="ListInventoryVendorContextMenu" id="421"/>
+													<ExtendedTooltip name="ListInventoryVendorExtendedTooltip" id="422"/>
+												</LabelField>
+												<LabelField name="ListInventoryVATRate" id="441">
+													<DataPath>ListInventory.VATRate</DataPath>
+													<UserVisible>
+														<xr:Common>false</xr:Common>
+													</UserVisible>
+													<Title>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>VAT rate</v8:content>
+														</v8:item>
+													</Title>
+													<Width>6</Width>
+													<ContextMenu name="ListInventoryVATRateContextMenu" id="442"/>
+													<ExtendedTooltip name="ListInventoryVATRateExtendedTooltip" id="443"/>
+												</LabelField>
+												<LabelField name="ListInventoryProductsType" id="453">
+													<DataPath>ListInventory.ProductsType</DataPath>
+													<UserVisible>
+														<xr:Common>false</xr:Common>
+													</UserVisible>
+													<ContextMenu name="ListInventoryProductsTypeContextMenu" id="454"/>
+													<ExtendedTooltip name="ListInventoryProductsTypeExtendedTooltip" id="455"/>
+												</LabelField>
+												<LabelField name="ListInventoryRef" id="736">
+													<DataPath>ListInventory.ProductsRef</DataPath>
+													<UserVisible>
+														<xr:Common>false</xr:Common>
+													</UserVisible>
+													<Title>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Ref</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ListInventoryRefContextMenu" id="737"/>
+													<ExtendedTooltip name="ListInventoryRefExtendedTooltip" id="738"/>
+												</LabelField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+								<Page name="PageCharacteristics" id="109">
+									<ExtendedTooltip name="PageCharacteristicsExtendedTooltip" id="110"/>
+									<ChildItems>
+										<UsualGroup name="ListCharacteristicsCommands" id="918">
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ListCharacteristicsCommandsExtendedTooltip" id="919"/>
+											<ChildItems>
+												<CommandBar name="ListCharacteristicsMainCommands" id="951">
+													<HorizontalStretch>false</HorizontalStretch>
+													<ExtendedTooltip name="ListCharacteristicsMainCommandsExtendedTooltip" id="952"/>
+													<ChildItems>
+														<Button name="ListCharacteristicsAddToCart" id="824">
+															<Type>CommandBarButton</Type>
+															<OnlyInAllActions>true</OnlyInAllActions>
+															<CommandName>Form.Command.AddToCart</CommandName>
+															<ExtendedTooltip name="ListCharacteristicsAddToCartExtendedTooltip" id="825"/>
+														</Button>
+														<Button name="ListCharacteristicsBack" id="864">
+															<Type>CommandBarButton</Type>
+															<OnlyInAllActions>true</OnlyInAllActions>
+															<CommandName>Form.Command.Back</CommandName>
+															<ExtendedTooltip name="ListCharacteristicsBackExtendedTooltip" id="865"/>
+														</Button>
+													</ChildItems>
+												</CommandBar>
+												<UsualGroup name="ListCharacteristicsFilters" id="922">
+													<HorizontalStretch>true</HorizontalStretch>
+													<Group>AlwaysHorizontal</Group>
+													<HorizontalAlign>Right</HorizontalAlign>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ListCharacteristicsFiltersExtendedTooltip" id="923"/>
+													<ChildItems>
+														<RadioButtonField name="ListCharacteristicsStockStatusFilter" id="964">
+															<DataPath>StockStatusFilter</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<RadioButtonType>Tumbler</RadioButtonType>
+															<ChoiceList>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.StockStatusFilters.EnumValue.All</Value>
+																	</xr:Value>
+																</xr:Item>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.StockStatusFilters.EnumValue.InStock</Value>
+																	</xr:Value>
+																</xr:Item>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.StockStatusFilters.EnumValue.Available</Value>
+																	</xr:Value>
+																</xr:Item>
+															</ChoiceList>
+															<ContextMenu name="ListCharacteristicsStockStatusFilterContextMenu" id="965"/>
+															<ExtendedTooltip name="ListCharacteristicsStockStatusFilterExtendedTooltip" id="966"/>
+															<Events>
+																<Event name="OnChange">StockStatusFilterOnChange</Event>
+															</Events>
+														</RadioButtonField>
+														<InputField name="ListCharacteristicsStockWarehouse" id="967">
+															<DataPath>StockWarehouse</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<Width>20</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<ClearButton>true</ClearButton>
+															<OpenButton>false</OpenButton>
+															<CreateButton>false</CreateButton>
+															<QuickChoice>true</QuickChoice>
+															<ChoiceParameters>
+																<app:item name="Filter.StructuralUnitType">
+																	<app:value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.BusinessUnitsTypes.EnumValue.Warehouse</Value>
+																	</app:value>
+																</app:item>
+															</ChoiceParameters>
+															<InputHint>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>&lt;all warehouses&gt;</v8:content>
+																</v8:item>
+															</InputHint>
+															<ContextMenu name="ListCharacteristicsStockWarehouseContextMenu" id="968"/>
+															<ExtendedTooltip name="ListCharacteristicsStockWarehouseExtendedTooltip" id="969"/>
+															<Events>
+																<Event name="OnChange">StockWarehouseOnChange</Event>
+															</Events>
+														</InputField>
+														<CheckBoxField name="ListCharacteristicsShowItemsWithPriceOnly" id="970">
+															<DataPath>ShowItemsWithPriceOnly</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ListCharacteristicsShowItemsWithPriceOnlyContextMenu" id="971"/>
+															<ExtendedTooltip name="ListCharacteristicsShowItemsWithPriceOnlyExtendedTooltip" id="972"/>
+															<Events>
+																<Event name="OnChange">ShowItemsWithPriceOnlyOnChange</Event>
+															</Events>
+														</CheckBoxField>
+														<InputField name="ListCharacteristicsSearchText" id="929">
+															<DataPath>ListCharacteristicsSearchText</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<Width>20</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<ClearButton>true</ClearButton>
+															<EditTextUpdate>DontUse</EditTextUpdate>
+															<ContextMenu name="ListCharacteristicsSearchTextContextMenu" id="930"/>
+															<ExtendedTooltip name="ListCharacteristicsSearchTextExtendedTooltip" id="931"/>
+															<Events>
+																<Event name="EditTextChange">SearchTextEditTextChange</Event>
+																<Event name="Clearing">SearchTextClearing</Event>
+															</Events>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<CommandBar name="ListCharacteristicsCommandsBar" id="924">
+													<HorizontalStretch>false</HorizontalStretch>
+													<HorizontalLocation>Right</HorizontalLocation>
+													<ExtendedTooltip name="ListCharacteristicsCommandsBarExtendedTooltip" id="925"/>
+													<ChildItems>
+														<Button name="ListCharacteristicsRefresh" id="828">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Item.ListCharacteristics.StandardCommand.Refresh</CommandName>
+															<ExtendedTooltip name="ListCharacteristicsRefreshExtendedTooltip" id="829"/>
+														</Button>
+														<Button name="ListCharacteristicsOutputList" id="830">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Item.ListCharacteristics.StandardCommand.OutputList</CommandName>
+															<ExtendedTooltip name="ListCharacteristicsOutputListExtendedTooltip" id="831"/>
+														</Button>
+														<Button name="ListCharacteristicsListSettings" id="826">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Item.ListCharacteristics.StandardCommand.ListSettings</CommandName>
+															<ExtendedTooltip name="ListCharacteristicsListSettingsExtendedTooltip" id="827"/>
+														</Button>
+													</ChildItems>
+												</CommandBar>
+											</ChildItems>
+										</UsualGroup>
+										<Table name="ListCharacteristics" id="111">
+											<Representation>List</Representation>
+											<CommandBarLocation>None</CommandBarLocation>
+											<UseAlternationRowColor>true</UseAlternationRowColor>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>ListCharacteristics</DataPath>
+											<RowPictureDataPath>ListCharacteristics.PictureIndex</RowPictureDataPath>
+											<RowsPicture>
+												<xr:Ref>CommonPicture.PickProducts</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</RowsPicture>
+											<CommandSet>
+												<ExcludedCommand>CancelSearch</ExcludedCommand>
+												<ExcludedCommand>Find</ExcludedCommand>
+												<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+												<ExcludedCommand>SearchHistory</ExcludedCommand>
+											</CommandSet>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<AutoRefresh>false</AutoRefresh>
+											<AutoRefreshPeriod>60</AutoRefreshPeriod>
+											<Period>
+												<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+												<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+												<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+											</Period>
+											<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+											<RestoreCurrentRow>false</RestoreCurrentRow>
+											<TopLevelParent xsi:nil="true"/>
+											<ShowRoot>true</ShowRoot>
+											<AllowRootChoice>false</AllowRootChoice>
+											<UpdateOnDataChange>Auto</UpdateOnDataChange>
+											<ContextMenu name="ListCharacteristicsContextMenu" id="112">
+												<Autofill>false</Autofill>
+												<ChildItems>
+													<ButtonGroup name="ListCharacteristicsContextMenuGroup1" id="138">
+														<ExtendedTooltip name="ListCharacteristicsContextMenuGroup1ExtendedTooltip" id="139"/>
+														<ChildItems>
+															<Button name="ListCharacteristicsContextMenuAddProduct" id="136">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.AddToCart</CommandName>
+																<ExtendedTooltip name="ListCharacteristicsContextMenuAddProductExtendedTooltip" id="137"/>
+															</Button>
+														</ChildItems>
+													</ButtonGroup>
+													<ButtonGroup name="ListCharacteristicsContextMenuGroup2" id="148">
+														<ExtendedTooltip name="ListCharacteristicsContextMenuGroup2ExtendedTooltip" id="149"/>
+														<ChildItems>
+															<Button name="ListCharacteristicsContextMenuReservationDetails" id="643">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ReservationDetails</CommandName>
+																<ExtendedTooltip name="ListCharacteristicsContextMenuReservationDetailsExtendedTooltip" id="644"/>
+															</Button>
+															<Button name="ListCharacteristicsContextMenuPriceSetNew" id="146">
+																<Type>CommandBarButton</Type>
+																<Visible>false</Visible>
+																<CommandName>Form.Command.ChangePrice</CommandName>
+																<ExtendedTooltip name="ListCharacteristicsContextMenuPriceSetNewExtendedTooltip" id="147"/>
+															</Button>
+														</ChildItems>
+													</ButtonGroup>
+													<ButtonGroup name="ListCharacteristicsContextMenuGroup3" id="844">
+														<ExtendedTooltip name="ListCharacteristicsContextMenuGroup3ExtendedTooltip" id="845"/>
+														<ChildItems>
+															<Button name="ListCharacteristicsContextMenuCreate" id="140">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Item.ListCharacteristics.StandardCommand.Create</CommandName>
+																<ExtendedTooltip name="ListCharacteristicsContextMenuCreateExtendedTooltip" id="141"/>
+															</Button>
+															<Button name="ListCharacteristicsContextMenuChange" id="142">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Item.ListCharacteristics.StandardCommand.Change</CommandName>
+																<ExtendedTooltip name="ListCharacteristicsContextMenuChangeExtendedTooltip" id="143"/>
+															</Button>
+															<Button name="ListCharacteristicsContextMenuCopy" id="846">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Item.ListCharacteristics.StandardCommand.Copy</CommandName>
+																<ExtendedTooltip name="ListCharacteristicsContextMenuCopyExtendedTooltip" id="847"/>
+															</Button>
+														</ChildItems>
+													</ButtonGroup>
+												</ChildItems>
+											</ContextMenu>
+											<AutoCommandBar name="ListCharacteristicsCommandBar" id="113">
+												<Autofill>false</Autofill>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ListCharacteristicsExtendedTooltip" id="114"/>
+											<SearchStringAddition name="ListCharacteristicsSearchString" id="684">
+												<AdditionSource>
+													<Item>ListCharacteristics</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ListCharacteristicsSearchStringContextMenu" id="685"/>
+												<ExtendedTooltip name="ListCharacteristicsSearchStringExtendedTooltip" id="686"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ListCharacteristicsViewStatus" id="687">
+												<AdditionSource>
+													<Item>ListCharacteristics</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ListCharacteristicsViewStatusContextMenu" id="688"/>
+												<ExtendedTooltip name="ListCharacteristicsViewStatusExtendedTooltip" id="689"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ListCharacteristicsSearchControl" id="690">
+												<AdditionSource>
+													<Item>ListCharacteristics</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ListCharacteristicsSearchControlContextMenu" id="691"/>
+												<ExtendedTooltip name="ListCharacteristicsSearchControlExtendedTooltip" id="692"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="Selection">ListCharacteristicsSelection</Event>
+												<Event name="OnActivateRow">ListCharacteristicsOnActivateRow</Event>
+												<Event name="DragEnd">ListCharacteristicsDragEnd</Event>
+											</Events>
+											<ChildItems>
+												<LabelField name="ListCharacteristicsCharacteristicRef" id="374">
+													<DataPath>ListCharacteristics.CharacteristicRef</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Characteristic</v8:content>
+														</v8:item>
+													</Title>
+													<Width>20</Width>
+													<ContextMenu name="ListCharacteristicsCharacteristicRefContextMenu" id="375"/>
+													<ExtendedTooltip name="ListCharacteristicsCharacteristicRefExtendedTooltip" id="376"/>
+												</LabelField>
+												<LabelField name="ListCharacteristicsPrice" id="377">
+													<DataPath>ListCharacteristics.Price</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Price</v8:content>
+														</v8:item>
+													</Title>
+													<Width>10</Width>
+													<Format>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>ND=15; NFD=2</v8:content>
+														</v8:item>
+													</Format>
+													<ContextMenu name="ListCharacteristicsPriceContextMenu" id="378"/>
+													<ExtendedTooltip name="ListCharacteristicsPriceExtendedTooltip" id="379"/>
+												</LabelField>
+												<ColumnGroup name="ListCharacteristicsGroupAvailable" id="645">
+													<Group>InCell</Group>
+													<ExtendedTooltip name="ListCharacteristicsGroupAvailableExtendedTooltip" id="646"/>
+													<ChildItems>
+														<PictureField name="ListCharacteristicsReserve" id="365">
+															<DataPath>ListCharacteristics.Reserve</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Reserve</v8:content>
+																</v8:item>
+															</Title>
+															<TitleLocation>None</TitleLocation>
+															<HorizontalStretch>false</HorizontalStretch>
+															<ValuesPicture>
+																<xr:Ref>CommonPicture.Reserved32</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</ValuesPicture>
+															<FileDragMode>AsFile</FileDragMode>
+															<ContextMenu name="ListCharacteristicsReserveContextMenu" id="366"/>
+															<ExtendedTooltip name="ListCharacteristicsReserveExtendedTooltip" id="367"/>
+														</PictureField>
+														<LabelField name="ListCharacteristicsAvailable" id="368">
+															<DataPath>ListCharacteristics.Available</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Available</v8:content>
+																</v8:item>
+															</Title>
+															<Width>5</Width>
+															<ContextMenu name="ListCharacteristicsAvailableContextMenu" id="369"/>
+															<ExtendedTooltip name="ListCharacteristicsAvailableExtendedTooltip" id="370"/>
+														</LabelField>
+													</ChildItems>
+												</ColumnGroup>
+												<LabelField name="ListCharacteristicsInStock" id="362">
+													<DataPath>ListCharacteristics.InStock</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>In stock</v8:content>
+														</v8:item>
+													</Title>
+													<Width>10</Width>
+													<ContextMenu name="ListCharacteristicsInStockContextMenu" id="363"/>
+													<ExtendedTooltip name="ListCharacteristicsInStockExtendedTooltip" id="364"/>
+												</LabelField>
+												<LabelField name="ListCharacteristicsMeasurementUnit" id="356">
+													<DataPath>ListCharacteristics.MeasurementUnit</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>UOM</v8:content>
+														</v8:item>
+													</Title>
+													<Width>6</Width>
+													<ContextMenu name="ListCharacteristicsMeasurementUnitContextMenu" id="357"/>
+													<ExtendedTooltip name="ListCharacteristicsMeasurementUnitExtendedTooltip" id="358"/>
+												</LabelField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+								<Page name="PageBatches" id="714">
+									<ExtendedTooltip name="PageBatchesExtendedTooltip" id="715"/>
+									<ChildItems>
+										<UsualGroup name="ListBatchesCommands" id="934">
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ListBatchesCommandsExtendedTooltip" id="935"/>
+											<ChildItems>
+												<CommandBar name="ListBatchesMainCommands" id="936">
+													<HorizontalStretch>false</HorizontalStretch>
+													<ExtendedTooltip name="ListBatchesMainCommandsExtendedTooltip" id="937"/>
+													<ChildItems>
+														<Button name="ListBatchesAddToCart" id="870">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.AddToCart</CommandName>
+															<ExtendedTooltip name="ListBatchesAddToCartExtendedTooltip" id="871"/>
+														</Button>
+														<Button name="ListBatchesBack" id="866">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.Back</CommandName>
+															<ExtendedTooltip name="ListBatchesBackExtendedTooltip" id="867"/>
+														</Button>
+														<Button name="ListBatchesBackToProducts" id="868">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.BackToProducts</CommandName>
+															<ExtendedTooltip name="ListBatchesBackToProductsExtendedTooltip" id="869"/>
+														</Button>
+													</ChildItems>
+												</CommandBar>
+												<UsualGroup name="ListBatchesFilters" id="942">
+													<HorizontalStretch>true</HorizontalStretch>
+													<Group>AlwaysHorizontal</Group>
+													<HorizontalAlign>Right</HorizontalAlign>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ListBatchesFiltersExtendedTooltip" id="943"/>
+													<ChildItems>
+														<RadioButtonField name="ListBatchesStockStatusFilter" id="973">
+															<DataPath>StockStatusFilter</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<RadioButtonType>Tumbler</RadioButtonType>
+															<ChoiceList>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.StockStatusFilters.EnumValue.All</Value>
+																	</xr:Value>
+																</xr:Item>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.StockStatusFilters.EnumValue.InStock</Value>
+																	</xr:Value>
+																</xr:Item>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.StockStatusFilters.EnumValue.Available</Value>
+																	</xr:Value>
+																</xr:Item>
+															</ChoiceList>
+															<ContextMenu name="ListBatchesStockStatusFilterContextMenu" id="974"/>
+															<ExtendedTooltip name="ListBatchesStockStatusFilterExtendedTooltip" id="975"/>
+															<Events>
+																<Event name="OnChange">StockStatusFilterOnChange</Event>
+															</Events>
+														</RadioButtonField>
+														<InputField name="ListBatchesStockWarehouse" id="976">
+															<DataPath>StockWarehouse</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<Width>20</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<ClearButton>true</ClearButton>
+															<OpenButton>false</OpenButton>
+															<CreateButton>false</CreateButton>
+															<QuickChoice>true</QuickChoice>
+															<ChoiceParameters>
+																<app:item name="Filter.StructuralUnitType">
+																	<app:value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.BusinessUnitsTypes.EnumValue.Warehouse</Value>
+																	</app:value>
+																</app:item>
+															</ChoiceParameters>
+															<InputHint>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>&lt;all warehouses&gt;</v8:content>
+																</v8:item>
+															</InputHint>
+															<ContextMenu name="ListBatchesStockWarehouseContextMenu" id="977"/>
+															<ExtendedTooltip name="ListBatchesStockWarehouseExtendedTooltip" id="978"/>
+															<Events>
+																<Event name="OnChange">StockWarehouseOnChange</Event>
+															</Events>
+														</InputField>
+														<CheckBoxField name="ListBatchesShowItemsWithPriceOnly" id="979">
+															<DataPath>ShowItemsWithPriceOnly</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ListBatchesShowItemsWithPriceOnlyContextMenu" id="980"/>
+															<ExtendedTooltip name="ListBatchesShowItemsWithPriceOnlyExtendedTooltip" id="981"/>
+															<Events>
+																<Event name="OnChange">ShowItemsWithPriceOnlyOnChange</Event>
+															</Events>
+														</CheckBoxField>
+														<InputField name="ListBatchesSearchText" id="944">
+															<DataPath>ListBatchesSearchText</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<Width>20</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<ClearButton>true</ClearButton>
+															<EditTextUpdate>DontUse</EditTextUpdate>
+															<ContextMenu name="ListBatchesSearchTextContextMenu" id="945"/>
+															<ExtendedTooltip name="ListBatchesSearchTextExtendedTooltip" id="946"/>
+															<Events>
+																<Event name="EditTextChange">SearchTextEditTextChange</Event>
+																<Event name="Clearing">SearchTextClearing</Event>
+															</Events>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<CommandBar name="ListBatchesCommandsBar" id="949">
+													<HorizontalStretch>false</HorizontalStretch>
+													<HorizontalLocation>Right</HorizontalLocation>
+													<ExtendedTooltip name="ListBatchesCommandsBarExtendedTooltip" id="950"/>
+													<ChildItems>
+														<Button name="ListBatchesRefresh" id="878">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Item.ListBatches.StandardCommand.Refresh</CommandName>
+															<ExtendedTooltip name="ListBatchesRefreshExtendedTooltip" id="879"/>
+														</Button>
+														<Button name="ListBatchesOutputList" id="880">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Item.ListBatches.StandardCommand.OutputList</CommandName>
+															<ExtendedTooltip name="ListBatchesOutputListExtendedTooltip" id="881"/>
+														</Button>
+														<Button name="ListBatchesListSettings" id="882">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Item.ListBatches.StandardCommand.ListSettings</CommandName>
+															<ExtendedTooltip name="ListBatchesListSettingsExtendedTooltip" id="883"/>
+														</Button>
+													</ChildItems>
+												</CommandBar>
+											</ChildItems>
+										</UsualGroup>
+										<Table name="ListBatches" id="743">
+											<Representation>List</Representation>
+											<CommandBarLocation>None</CommandBarLocation>
+											<UseAlternationRowColor>true</UseAlternationRowColor>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>ListBatches</DataPath>
+											<RowPictureDataPath>ListBatches.PictureIndex</RowPictureDataPath>
+											<RowsPicture>
+												<xr:Ref>CommonPicture.PickProducts</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</RowsPicture>
+											<CommandSet>
+												<ExcludedCommand>CancelSearch</ExcludedCommand>
+												<ExcludedCommand>Find</ExcludedCommand>
+												<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+												<ExcludedCommand>SearchHistory</ExcludedCommand>
+											</CommandSet>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<AutoRefresh>false</AutoRefresh>
+											<AutoRefreshPeriod>60</AutoRefreshPeriod>
+											<Period>
+												<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+												<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+												<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+											</Period>
+											<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+											<RestoreCurrentRow>false</RestoreCurrentRow>
+											<TopLevelParent xsi:nil="true"/>
+											<ShowRoot>true</ShowRoot>
+											<AllowRootChoice>false</AllowRootChoice>
+											<UpdateOnDataChange>Auto</UpdateOnDataChange>
+											<ContextMenu name="ListBatchesContextMenu" id="744">
+												<Autofill>false</Autofill>
+												<ChildItems>
+													<ButtonGroup name="ListBatchesContextMenuGroup1" id="892">
+														<ExtendedTooltip name="ListBatchesContextMenuGroup1ExtendedTooltip" id="893"/>
+														<ChildItems>
+															<Button name="ListBatchesContextMenuAddToCart" id="898">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.AddToCart</CommandName>
+																<ExtendedTooltip name="ListBatchesContextMenuAddToCartExtendedTooltip" id="899"/>
+															</Button>
+														</ChildItems>
+													</ButtonGroup>
+													<ButtonGroup name="ListBatchesContextMenuGroup2" id="894">
+														<ExtendedTooltip name="ListBatchesContextMenuGroup2ExtendedTooltip" id="895"/>
+														<ChildItems>
+															<Button name="ListBatchesContextMenuReservationDetails" id="900">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ReservationDetails</CommandName>
+																<ExtendedTooltip name="ListBatchesContextMenuReservationDetailsExtendedTooltip" id="901"/>
+															</Button>
+														</ChildItems>
+													</ButtonGroup>
+													<ButtonGroup name="ListBatchesContextMenuGroup3" id="896">
+														<ExtendedTooltip name="ListBatchesContextMenuGroup3ExtendedTooltip" id="897"/>
+														<ChildItems>
+															<Button name="ListBatchesContextMenuCreate" id="902">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Item.ListBatches.StandardCommand.Create</CommandName>
+																<ExtendedTooltip name="ListBatchesContextMenuCreateExtendedTooltip" id="903"/>
+															</Button>
+															<Button name="ListBatchesContextMenuChange" id="906">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Item.ListBatches.StandardCommand.Change</CommandName>
+																<ExtendedTooltip name="ListBatchesContextMenuChangeExtendedTooltip" id="907"/>
+															</Button>
+															<Button name="ListBatchesContextMenuCopy" id="904">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Item.ListBatches.StandardCommand.Copy</CommandName>
+																<ExtendedTooltip name="ListBatchesContextMenuCopyExtendedTooltip" id="905"/>
+															</Button>
+														</ChildItems>
+													</ButtonGroup>
+												</ChildItems>
+											</ContextMenu>
+											<AutoCommandBar name="ListBatchesCommandBar" id="745">
+												<Autofill>false</Autofill>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ListBatchesExtendedTooltip" id="746"/>
+											<SearchStringAddition name="ListBatchesSearchString" id="747">
+												<AdditionSource>
+													<Item>ListBatches</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ListBatchesSearchStringContextMenu" id="748"/>
+												<ExtendedTooltip name="ListBatchesSearchStringExtendedTooltip" id="749"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ListBatchesViewStatus" id="750">
+												<AdditionSource>
+													<Item>ListBatches</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ListBatchesViewStatusContextMenu" id="751"/>
+												<ExtendedTooltip name="ListBatchesViewStatusExtendedTooltip" id="752"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ListBatchesSearchControl" id="753">
+												<AdditionSource>
+													<Item>ListBatches</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ListBatchesSearchControlContextMenu" id="754"/>
+												<ExtendedTooltip name="ListBatchesSearchControlExtendedTooltip" id="755"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="Selection">ListBatchesSelection</Event>
+												<Event name="OnActivateRow">ListBatchesOnActivateRow</Event>
+												<Event name="DragEnd">ListBatchesDragEnd</Event>
+											</Events>
+											<ChildItems>
+												<LabelField name="ListBatchesBatchRef" id="759">
+													<DataPath>ListBatches.BatchRef</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Batch</v8:content>
+														</v8:item>
+													</Title>
+													<FixingInTable>Left</FixingInTable>
+													<Width>20</Width>
+													<ContextMenu name="ListBatchesBatchRefContextMenu" id="760"/>
+													<ExtendedTooltip name="ListBatchesBatchRefExtendedTooltip" id="761"/>
+												</LabelField>
+												<LabelField name="ListBatchesPrice" id="774">
+													<DataPath>ListBatches.Price</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Price</v8:content>
+														</v8:item>
+													</Title>
+													<Width>10</Width>
+													<Format>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>ND=15; NFD=2</v8:content>
+														</v8:item>
+													</Format>
+													<ContextMenu name="ListBatchesPriceContextMenu" id="775"/>
+													<ExtendedTooltip name="ListBatchesPriceExtendedTooltip" id="776"/>
+												</LabelField>
+												<ColumnGroup name="ListBatchesGroupAvailable" id="786">
+													<Group>InCell</Group>
+													<ExtendedTooltip name="ListBatchesGroupAvailableExtendedTooltip" id="787"/>
+													<ChildItems>
+														<PictureField name="ListBatchesReserve" id="780">
+															<DataPath>ListBatches.Reserve</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Available</v8:content>
+																</v8:item>
+															</Title>
+															<TitleLocation>None</TitleLocation>
+															<ValuesPicture>
+																<xr:Ref>CommonPicture.Reserved32</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</ValuesPicture>
+															<FileDragMode>AsFile</FileDragMode>
+															<ContextMenu name="ListBatchesReserveContextMenu" id="781"/>
+															<ExtendedTooltip name="ListBatchesReserveExtendedTooltip" id="782"/>
+														</PictureField>
+														<LabelField name="ListBatchesAvailable" id="765">
+															<DataPath>ListBatches.Available</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Available</v8:content>
+																</v8:item>
+															</Title>
+															<Width>5</Width>
+															<ContextMenu name="ListBatchesAvailableContextMenu" id="766"/>
+															<ExtendedTooltip name="ListBatchesAvailableExtendedTooltip" id="767"/>
+														</LabelField>
+													</ChildItems>
+												</ColumnGroup>
+												<LabelField name="ListBatchesInStock" id="756">
+													<DataPath>ListBatches.InStock</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>In stock</v8:content>
+														</v8:item>
+													</Title>
+													<Width>10</Width>
+													<ContextMenu name="ListBatchesInStockContextMenu" id="757"/>
+													<ExtendedTooltip name="ListBatchesInStockExtendedTooltip" id="758"/>
+												</LabelField>
+												<LabelField name="ListBatchesMeasurementUnit" id="768">
+													<DataPath>ListBatches.MeasurementUnit</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>UOM</v8:content>
+														</v8:item>
+													</Title>
+													<Width>6</Width>
+													<ContextMenu name="ListBatchesMeasurementUnitContextMenu" id="769"/>
+													<ExtendedTooltip name="ListBatchesMeasurementUnitExtendedTooltip" id="770"/>
+												</LabelField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="FiltersGroup" id="16">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="FiltersGroupExtendedTooltip" id="17"/>
+					<ChildItems>
+						<Table name="ListProductsHierarchy" id="18">
+							<Representation>Tree</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<SkipOnInput>true</SkipOnInput>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialListView>Beginning</InitialListView>
+							<InitialTreeView>ExpandTopLevel</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ListProductsHierarchy</DataPath>
+							<RowPictureDataPath>ListProductsHierarchy.DefaultPicture</RowPictureDataPath>
+							<CommandSet>
+								<ExcludedCommand>CancelSearch</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>Create</ExcludedCommand>
+								<ExcludedCommand>CreateFolder</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>DynamicListStandardSettings</ExcludedCommand>
+								<ExcludedCommand>Find</ExcludedCommand>
+								<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+								<ExcludedCommand>HierarchicalList</ExcludedCommand>
+								<ExcludedCommand>LevelDown</ExcludedCommand>
+								<ExcludedCommand>LevelUp</ExcludedCommand>
+								<ExcludedCommand>List</ExcludedCommand>
+								<ExcludedCommand>ListSettings</ExcludedCommand>
+								<ExcludedCommand>LoadDynamicListSettings</ExcludedCommand>
+								<ExcludedCommand>MoveItem</ExcludedCommand>
+								<ExcludedCommand>OutputList</ExcludedCommand>
+								<ExcludedCommand>Refresh</ExcludedCommand>
+								<ExcludedCommand>SaveDynamicListSettings</ExcludedCommand>
+								<ExcludedCommand>SearchHistory</ExcludedCommand>
+								<ExcludedCommand>SetDeletionMark</ExcludedCommand>
+								<ExcludedCommand>Tree</ExcludedCommand>
+							</CommandSet>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>120</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Folders</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>true</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ListProductsHierarchyContextMenu" id="19"/>
+							<AutoCommandBar name="ListProductsHierarchyCommandBar" id="20"/>
+							<ExtendedTooltip name="ListProductsHierarchyExtendedTooltip" id="21"/>
+							<SearchStringAddition name="ListProductsHierarchySearchString" id="666">
+								<AdditionSource>
+									<Item>ListProductsHierarchy</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ListProductsHierarchySearchStringContextMenu" id="667"/>
+								<ExtendedTooltip name="ListProductsHierarchySearchStringExtendedTooltip" id="668"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ListProductsHierarchyViewStatus" id="669">
+								<AdditionSource>
+									<Item>ListProductsHierarchy</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ListProductsHierarchyViewStatusContextMenu" id="670"/>
+								<ExtendedTooltip name="ListProductsHierarchyViewStatusExtendedTooltip" id="671"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ListProductsHierarchySearchControl" id="672">
+								<AdditionSource>
+									<Item>ListProductsHierarchy</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ListProductsHierarchySearchControlContextMenu" id="673"/>
+								<ExtendedTooltip name="ListProductsHierarchySearchControlExtendedTooltip" id="674"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnActivateRow">ListProductsHierarchyOnActivateRow</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ListProductsHierarchyRef" id="22">
+									<DataPath>ListProductsHierarchy.Ref</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Groups</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ListProductsHierarchyRefContextMenu" id="23"/>
+									<ExtendedTooltip name="ListProductsHierarchyRefExtendedTooltip" id="24"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+						<Table name="ListWarehouseBalances" id="272">
+							<CommandBarLocation>None</CommandBarLocation>
+							<SkipOnInput>true</SkipOnInput>
+							<HeightInTableRows>3</HeightInTableRows>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ListWarehouseBalances</DataPath>
+							<RowPictureDataPath>ListWarehouseBalances.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ListWarehouseBalancesContextMenu" id="273">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<ButtonGroup name="ListWarehouseBalancesContextMenuGroup1" id="491">
+										<ExtendedTooltip name="ListWarehouseBalancesContextMenuGroup1ExtendedTooltip" id="492"/>
+										<ChildItems>
+											<Button name="ListWarehouseBalancesContextMenuRefresh" id="493">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.ListWarehouseBalances.StandardCommand.Refresh</CommandName>
+												<ExtendedTooltip name="ListWarehouseBalancesContextMenuRefreshExtendedTooltip" id="494"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="ListWarehouseBalancesContextMenuShowList" id="495">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ListWarehouseBalances.StandardCommand.OutputList</CommandName>
+										<ExtendedTooltip name="ListWarehouseBalancesContextMenuShowListExtendedTooltip" id="496"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="ListWarehouseBalancesCommandBar" id="274"/>
+							<ExtendedTooltip name="ListWarehouseBalancesExtendedTooltip" id="275"/>
+							<SearchStringAddition name="ListWarehouseBalancesSearchString" id="693">
+								<AdditionSource>
+									<Item>ListWarehouseBalances</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ListWarehouseBalancesSearchStringContextMenu" id="694"/>
+								<ExtendedTooltip name="ListWarehouseBalancesSearchStringExtendedTooltip" id="695"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ListWarehouseBalancesViewStatus" id="696">
+								<AdditionSource>
+									<Item>ListWarehouseBalances</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ListWarehouseBalancesViewStatusContextMenu" id="697"/>
+								<ExtendedTooltip name="ListWarehouseBalancesViewStatusExtendedTooltip" id="698"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ListWarehouseBalancesSearchManagement" id="699">
+								<AdditionSource>
+									<Item>ListWarehouseBalances</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ListWarehouseBalancesSearchManagementContextMenu" id="700"/>
+								<ExtendedTooltip name="ListWarehouseBalancesSearchManagementExtendedTooltip" id="701"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ListWarehouseBalancesSelection</Event>
+								<Event name="DragEnd">ListWarehouseBalancesDragEnd</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ListWarehouseBalancesStructuralUnit" id="285">
+									<DataPath>ListWarehouseBalances.StructuralUnit</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Warehouse</v8:content>
+										</v8:item>
+									</Title>
+									<Width>10</Width>
+									<ContextMenu name="ListWarehouseBalancesStructuralUnitContextMenu" id="286"/>
+									<ExtendedTooltip name="ListWarehouseBalancesStructuralUnitExtendedTooltip" id="287"/>
+								</LabelField>
+								<LabelField name="ListWarehouseBalancesAvailable" id="282">
+									<DataPath>ListWarehouseBalances.Available</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Available</v8:content>
+										</v8:item>
+									</Title>
+									<Width>8</Width>
+									<ContextMenu name="ListWarehouseBalancesAvailableContextMenu" id="283"/>
+									<ExtendedTooltip name="ListWarehouseBalancesAvailableExtendedTooltip" id="284"/>
+								</LabelField>
+								<LabelField name="ListWarehouseBalancesInStock" id="276">
+									<DataPath>ListWarehouseBalances.InStock</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>In stock</v8:content>
+										</v8:item>
+									</Title>
+									<Width>8</Width>
+									<ContextMenu name="ListWarehouseBalancesInStockContextMenu" id="277"/>
+									<ExtendedTooltip name="ListWarehouseBalancesInStockExtendedTooltip" id="278"/>
+								</LabelField>
+								<LabelField name="ListWarehouseBalancesReserved" id="279">
+									<DataPath>ListWarehouseBalances.Reserved</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Reserved</v8:content>
+										</v8:item>
+									</Title>
+									<Width>8</Width>
+									<ContextMenu name="ListWarehouseBalancesReservedContextMenu" id="280"/>
+									<ExtendedTooltip name="ListWarehouseBalancesReservedExtendedTooltip" id="281"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="FooterGroup" id="5">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="FooterGroupExtendedTooltip" id="6"/>
+			<ChildItems>
+				<UsualGroup name="GroupCartInfo" id="887">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="GroupCartInfoExtendedTooltip" id="888"/>
+					<ChildItems>
+						<LabelField name="CartInfoLabel" id="889">
+							<DataPath>CartInfoLabel</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>70</Width>
+							<TextColor>0:757b547b-b79c-459a-a64a-eef19a09a38f</TextColor>
+							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ContextMenu name="CartInfoLabelContextMenu" id="890"/>
+							<ExtendedTooltip name="CartInfoLabelExtendedTooltip" id="891"/>
+						</LabelField>
+						<LabelField name="CartShowHideLabel" id="884">
+							<DataPath>CartShowHideLabel</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Hiperlink>true</Hiperlink>
+							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ContextMenu name="CartShowHideLabelContextMenu" id="885"/>
+							<ExtendedTooltip name="CartShowHideLabelExtendedTooltip" id="886"/>
+							<Events>
+								<Event name="Click">CartShowHideLabelClick</Event>
+							</Events>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+				<Table name="ShoppingCart" id="293">
+					<Representation>List</Representation>
+					<CommandBarLocation>None</CommandBarLocation>
+					<HeightInTableRows>7</HeightInTableRows>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Object.ShoppingCart</DataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ShoppingCartContextMenu" id="294">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="ShoppingCartContextMenuAdd" id="508">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ShoppingCart.StandardCommand.Add</CommandName>
+								<ExtendedTooltip name="ShoppingCartContextMenuAddExtendedTooltip" id="509"/>
+							</Button>
+							<Button name="ShoppingCartContextMenuCopy" id="510">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ShoppingCart.StandardCommand.Copy</CommandName>
+								<ExtendedTooltip name="ShoppingCartContextMenuCopyExtendedTooltip" id="511"/>
+							</Button>
+							<Button name="ShoppingCartContextMenuChange" id="512">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ShoppingCart.StandardCommand.Change</CommandName>
+								<ExtendedTooltip name="ShoppingCartContextMenuChangeExtendedTooltip" id="513"/>
+							</Button>
+							<Button name="ShoppingCartContextMenuDelete" id="514">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ShoppingCart.StandardCommand.Delete</CommandName>
+								<ExtendedTooltip name="ShoppingCartContextMenuDeleteExtendedTooltip" id="515"/>
+							</Button>
+							<ButtonGroup name="ShoppingCartContextMenuGroup1" id="528">
+								<ExtendedTooltip name="ShoppingCartContextMenuGroup1ExtendedTooltip" id="529"/>
+								<ChildItems>
+									<Button name="ShoppingCartContextMenuFind" id="516">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ShoppingCart.StandardCommand.Find</CommandName>
+										<ExtendedTooltip name="ShoppingCartContextMenuFindExtendedTooltip" id="517"/>
+									</Button>
+									<Button name="ShoppingCartContextMenuCancelSearch" id="518">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ShoppingCart.StandardCommand.CancelSearch</CommandName>
+										<ExtendedTooltip name="ShoppingCartContextMenuCancelSearchExtendedTooltip" id="519"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<Button name="ShoppingCartContextMenuMoveUp" id="520">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ShoppingCart.StandardCommand.MoveUp</CommandName>
+								<ExtendedTooltip name="ShoppingCartContextMenuMoveUpExtendedTooltip" id="521"/>
+							</Button>
+							<Button name="ShoppingCartContextMenuMoveDown" id="522">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ShoppingCart.StandardCommand.MoveDown</CommandName>
+								<ExtendedTooltip name="ShoppingCartContextMenuMoveDownExtendedTooltip" id="523"/>
+							</Button>
+							<Button name="ShoppingCartContextMenuSortListAscending" id="524">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ShoppingCart.StandardCommand.SortListAsc</CommandName>
+								<ExtendedTooltip name="ShoppingCartContextMenuSortListAscendingExtendedTooltip" id="525"/>
+							</Button>
+							<Button name="ShoppingCartContextMenuSortListDescending" id="526">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ShoppingCart.StandardCommand.SortListDesc</CommandName>
+								<ExtendedTooltip name="ShoppingCartContextMenuSortListDescendingExtendedTooltip" id="527"/>
+							</Button>
+							<ButtonGroup name="ShoppingCartContextMenuGroup2" id="741">
+								<ExtendedTooltip name="ShoppingCartContextMenuGroup2ExtendedTooltip" id="742"/>
+								<ChildItems>
+									<Button name="ShoppingCartContextMenuShowList" id="530">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ShoppingCart.StandardCommand.OutputList</CommandName>
+										<ExtendedTooltip name="ShoppingCartContextMenuShowListExtendedTooltip" id="531"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+						</ChildItems>
+					</ContextMenu>
+					<AutoCommandBar name="ShoppingCartCommandBar" id="295"/>
+					<ExtendedTooltip name="ShoppingCartExtendedTooltip" id="296"/>
+					<SearchStringAddition name="ShoppingCartSearchString" id="702">
+						<AdditionSource>
+							<Item>ShoppingCart</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ShoppingCartSearchStringContextMenu" id="703"/>
+						<ExtendedTooltip name="ShoppingCartSearchStringExtendedTooltip" id="704"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ShoppingCartViewStatus" id="705">
+						<AdditionSource>
+							<Item>ShoppingCart</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ShoppingCartViewStatusContextMenu" id="706"/>
+						<ExtendedTooltip name="ShoppingCartViewStatusExtendedTooltip" id="707"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ShoppingCartSearchControl" id="708">
+						<AdditionSource>
+							<Item>ShoppingCart</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ShoppingCartSearchControlContextMenu" id="709"/>
+						<ExtendedTooltip name="ShoppingCartSearchControlExtendedTooltip" id="710"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnChange">ShoppingCartOnChange</Event>
+					</Events>
+					<ChildItems>
+						<LabelField name="ShoppingCartLineNumber" id="297">
+							<DataPath>Object.ShoppingCart.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ShoppingCartLineNumberContextMenu" id="298"/>
+							<ExtendedTooltip name="ShoppingCartLineNumberExtendedTooltip" id="299"/>
+						</LabelField>
+						<InputField name="ShoppingCartProducts" id="300">
+							<DataPath>Object.ShoppingCart.Products</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ShoppingCartProductsContextMenu" id="301"/>
+							<ExtendedTooltip name="ShoppingCartProductsExtendedTooltip" id="302"/>
+							<Events>
+								<Event name="OnChange">ShoppingCartProductsOnChange</Event>
+							</Events>
+						</InputField>
+						<InputField name="ShoppingCartCharacteristic" id="303">
+							<DataPath>Object.ShoppingCart.Characteristic</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ShoppingCartCharacteristicContextMenu" id="304"/>
+							<ExtendedTooltip name="ShoppingCartCharacteristicExtendedTooltip" id="305"/>
+							<Events>
+								<Event name="OnChange">ShoppingCartCharacteristicOnChange</Event>
+							</Events>
+						</InputField>
+						<InputField name="ShoppingCartBatch" id="653">
+							<DataPath>Object.ShoppingCart.Batch</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Filter.Owner</xr:Name>
+									<xr:DataPath xsi:type="xs:string">Items.ShoppingCart.CurrentData.Products</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
+							<ContextMenu name="ShoppingCartBatchContextMenu" id="654"/>
+							<ExtendedTooltip name="ShoppingCartBatchExtendedTooltip" id="655"/>
+						</InputField>
+						<InputField name="ShoppingCartQuantity" id="306">
+							<DataPath>Object.ShoppingCart.Quantity</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ShoppingCartQuantityContextMenu" id="307"/>
+							<ExtendedTooltip name="ShoppingCartQuantityExtendedTooltip" id="308"/>
+							<Events>
+								<Event name="OnChange">ShoppingCartQuantityOnChange</Event>
+							</Events>
+						</InputField>
+						<InputField name="ShoppingCartReserve" id="309">
+							<DataPath>Object.ShoppingCart.Reserve</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ShoppingCartReserveContextMenu" id="310"/>
+							<ExtendedTooltip name="ShoppingCartReserveExtendedTooltip" id="311"/>
+							<Events>
+								<Event name="OnChange">ShoppingCartReserveOnChange</Event>
+							</Events>
+						</InputField>
+						<InputField name="ShoppingCartMeasurementUnit" id="312">
+							<DataPath>Object.ShoppingCart.MeasurementUnit</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>UOM</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>6</Width>
+							<Wrap>false</Wrap>
+							<DropListButton>true</DropListButton>
+							<ChoiceButton>false</ChoiceButton>
+							<OpenButton>false</OpenButton>
+							<ChooseType>false</ChooseType>
+							<ContextMenu name="ShoppingCartMeasurementUnitContextMenu" id="313"/>
+							<ExtendedTooltip name="ShoppingCartMeasurementUnitExtendedTooltip" id="314"/>
+							<Events>
+								<Event name="OnChange">ShoppingCartMeasurementUnitOnChange</Event>
+							</Events>
+						</InputField>
+						<ColumnGroup name="ShoppingCartGroupPrice" id="982">
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="ShoppingCartGroupPriceExtendedTooltip" id="983"/>
+							<ChildItems>
+								<InputField name="ShoppingCartCharacteristicPrice" id="315">
+									<DataPath>Object.ShoppingCart.Price</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ShoppingCartCharacteristicPriceContextMenu" id="316"/>
+									<ExtendedTooltip name="ShoppingCartCharacteristicPriceExtendedTooltip" id="317"/>
+									<Events>
+										<Event name="OnChange">ShoppingCartPriceOnChange</Event>
+									</Events>
+								</InputField>
+								<InputField name="ShoppingCartDiscountMarkupPercent" id="711">
+									<DataPath>Object.ShoppingCart.DiscountMarkupPercent</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>9</Width>
+									<ContextMenu name="ShoppingCartDiscountMarkupPercentContextMenu" id="712"/>
+									<ExtendedTooltip name="ShoppingCartDiscountMarkupPercentExtendedTooltip" id="713"/>
+									<Events>
+										<Event name="OnChange">ShoppingCartDiscountMarkupPercentOnChange</Event>
+									</Events>
+								</InputField>
+								<InputField name="ShoppingCartAmount" id="318">
+									<DataPath>Object.ShoppingCart.Amount</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ShoppingCartAmountContextMenu" id="319"/>
+									<ExtendedTooltip name="ShoppingCartAmountExtendedTooltip" id="320"/>
+									<Events>
+										<Event name="OnChange">ShoppingCartAmountOnChange</Event>
+									</Events>
+								</InputField>
+								<InputField name="ShoppingCartVATRate" id="321">
+									<DataPath>Object.ShoppingCart.VATRate</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ShoppingCartVATRateContextMenu" id="322"/>
+									<ExtendedTooltip name="ShoppingCartVATRateExtendedTooltip" id="323"/>
+									<Events>
+										<Event name="OnChange">ShoppingCartVATRateOnChange</Event>
+									</Events>
+								</InputField>
+								<InputField name="ShoppingCartVATAmount" id="324">
+									<DataPath>Object.ShoppingCart.VATAmount</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ShoppingCartVATAmountContextMenu" id="325"/>
+									<ExtendedTooltip name="ShoppingCartVATAmountExtendedTooltip" id="326"/>
+									<Events>
+										<Event name="OnChange">ShoppingCartVATAmountOnChange</Event>
+									</Events>
+								</InputField>
+								<InputField name="ShoppingCartTotal" id="327">
+									<DataPath>Object.ShoppingCart.Total</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ShoppingCartTotalContextMenu" id="328"/>
+									<ExtendedTooltip name="ShoppingCartTotalExtendedTooltip" id="329"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ProductsSelection</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="UseFullTextSearch" id="2">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="RelevancyFullTextSearchIndex" id="3">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ListInventorySearchText" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Search string</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="SelectionSettingsCache" id="6">
+			<Type/>
+		</Attribute>
+		<Attribute name="ListProductsHierarchy" id="7">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>ListProductsHierarchy.Ref</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.Products</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">IsFolder</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>5283e538-ed80-4ee5-b9e2-dd05e47ecc7c</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ListCharacteristics" id="9">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>ListCharacteristics.Available</Field>
+				<Field>ListCharacteristics.AvailableBasicUOM</Field>
+				<Field>ListCharacteristics.BatchRef</Field>
+				<Field>ListCharacteristics.CharacteristicRef</Field>
+				<Field>ListCharacteristics.Factor</Field>
+				<Field>ListCharacteristics.InStock</Field>
+				<Field>ListCharacteristics.MeasurementUnit</Field>
+				<Field>ListCharacteristics.Price</Field>
+				<Field>ListCharacteristics.ProductsRef</Field>
+				<Field>ListCharacteristics.VATRate</Field>
+			</UseAlways>
+			<FunctionalOptions>
+				<Item>FunctionalOption.UseCharacteristics</Item>
+			</FunctionalOptions>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>SELECT
+	CASE
+		WHEN CatalogProducts.UseBatches
+			THEN 2
+		ELSE 0
+	END + CASE
+		WHEN CatalogCharacteristics.DeletionMark
+			THEN 1
+		ELSE 0
+	END AS PictureIndex,
+	CatalogCharacteristics.Owner AS ProductsRef,
+	CatalogProducts.VATRate AS VATRate,
+	CatalogCharacteristics.Ref AS CharacteristicRef,
+	VALUE(Catalog.ProductsBatches.EmptyRef) AS BatchRef,
+	ISNULL(PricesSliceLast.MeasurementUnit, CatalogProducts.MeasurementUnit) AS MeasurementUnit,
+	ISNULL(UOM.Factor, 1) AS Factor,
+	ISNULL((CAST(PricesSliceLast.Price * (&amp;PriceKindCurrencyRate * &amp;DocumentCurrencyMultiplicity) / (&amp;DocumentCurrencyRate * &amp;PriceKindCurrencyMultiplicity) AS NUMBER(15, 2))) + (CAST(PricesSliceLast.Price * (&amp;PriceKindCurrencyRate * &amp;DocumentCurrencyMultiplicity) / (&amp;DocumentCurrencyRate * &amp;PriceKindCurrencyMultiplicity) AS NUMBER(15, 2))) / 100 * &amp;DynamicPriceKindPercent, 0) AS Price,
+	CAST(ISNULL(InventoryRemains.QuantityBalance, 0) / ISNULL(UOM.Factor, 1) AS NUMBER(15, 3)) AS InStock,
+	CASE
+		WHEN ISNULL(InventoryReserves.QuantityBalance, 0) = 0
+			THEN 1
+		ELSE 0
+	END AS Reserve,
+	CAST((ISNULL(InventoryRemains.QuantityBalance, 0) - ISNULL(InventoryReserves.QuantityBalance, 0)) / ISNULL(UOM.Factor, 1) AS NUMBER(15, 3)) AS Available,
+	ISNULL(InventoryRemains.QuantityBalance, 0) - ISNULL(InventoryReserves.QuantityBalance, 0) AS AvailableBasicUOM
+FROM
+	Catalog.ProductsCharacteristics AS CatalogCharacteristics
+		LEFT JOIN Catalog.Products AS CatalogProducts
+		ON CatalogCharacteristics.Owner = CatalogProducts.Ref
+		LEFT JOIN InformationRegister.Prices.SliceLast(
+				&amp;PricePeriod,
+				PriceKind = &amp;PriceKind
+					AND Characteristic &lt;&gt; VALUE(Catalog.ProductsCharacteristics.EmptyRef)) AS PricesSliceLast
+		ON CatalogCharacteristics.Owner = PricesSliceLast.Products
+			AND CatalogCharacteristics.Ref = PricesSliceLast.Characteristic
+		LEFT JOIN Catalog.UOM AS UOM
+		ON (PricesSliceLast.MeasurementUnit = UOM.Ref)
+		LEFT JOIN AccumulationRegister.InventoryInWarehouses.Balance(
+				,
+				Company = &amp;Company
+					AND Characteristic &lt;&gt; VALUE(Catalog.ProductsCharacteristics.EmptyRef)
+					AND (StructuralUnit = &amp;StockWarehouse
+						OR &amp;StockWarehouse = VALUE(Catalog.BusinessUnits.EmptyRef))) AS InventoryRemains
+		ON CatalogCharacteristics.Owner = InventoryRemains.Products
+			AND CatalogCharacteristics.Ref = InventoryRemains.Characteristic
+		LEFT JOIN AccumulationRegister.Inventory.Balance(
+				,
+				Company = &amp;Company
+					AND Characteristic &lt;&gt; VALUE(Catalog.ProductsCharacteristics.EmptyRef)
+					AND SalesOrder &lt;&gt; UNDEFINED
+					AND StructuralUnit REFS Catalog.BusinessUnits
+					AND (StructuralUnit = &amp;StockWarehouse
+						OR &amp;StockWarehouse = VALUE(Catalog.BusinessUnits.EmptyRef))) AS InventoryReserves
+		ON CatalogCharacteristics.Owner = InventoryReserves.Products
+			AND CatalogCharacteristics.Ref = InventoryReserves.Characteristic</QueryText>
+				<MainTable>Catalog.ProductsCharacteristics</MainTable>
+				<AutoSaveUserSettings>false</AutoSaveUserSettings>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ListWarehouseBalances" id="10">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.UseSeveralWarehouses</Item>
+			</FunctionalOptions>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>SELECT
+	InventoryInWarehousesOfBalance.StructuralUnit AS StructuralUnit,
+	&amp;StructuralUnit AS DocumentStructuralUnit,
+	InventoryInWarehousesOfBalance.StructuralUnit = &amp;StructuralUnit AS IsDocumentStructuralUnit,
+	InventoryInWarehousesOfBalance.Products AS Products,
+	CAST(ISNULL(InventoryInWarehousesOfBalance.QuantityBalance, 0) / &amp;Factor AS NUMBER(15, 3)) AS InStock,
+	CAST(ISNULL(InventoryBalances.QuantityBalance, 0) / &amp;Factor AS NUMBER(15, 3)) AS Reserved,
+	CAST((ISNULL(InventoryInWarehousesOfBalance.QuantityBalance, 0) - ISNULL(InventoryBalances.QuantityBalance, 0)) / &amp;Factor AS NUMBER(15, 3)) AS Available
+FROM
+	AccumulationRegister.InventoryInWarehouses.Balance(, Company = &amp;Company) AS InventoryInWarehousesOfBalance
+		LEFT JOIN AccumulationRegister.Inventory.Balance(
+				,
+				Company = &amp;Company
+					AND StructuralUnit REFS Catalog.BusinessUnits
+					AND SalesOrder &lt;&gt; UNDEFINED) AS InventoryBalances
+		ON InventoryInWarehousesOfBalance.StructuralUnit = InventoryBalances.StructuralUnit
+			AND InventoryInWarehousesOfBalance.Products = InventoryBalances.Products</QueryText>
+				<AutoSaveUserSettings>false</AutoSaveUserSettings>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>IsDocumentStructuralUnit</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">StructuralUnit</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:Field">DocumentStructuralUnit</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Font</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ListInventory" id="11">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>ListInventory.Available</Field>
+				<Field>ListInventory.AvailableBasicUOM</Field>
+				<Field>ListInventory.BatchRef</Field>
+				<Field>ListInventory.CharacteristicRef</Field>
+				<Field>ListInventory.Factor</Field>
+				<Field>ListInventory.InStock</Field>
+				<Field>ListInventory.MeasurementUnit</Field>
+				<Field>ListInventory.Parent</Field>
+				<Field>ListInventory.Price</Field>
+				<Field>ListInventory.ProductsRef</Field>
+				<Field>ListInventory.UseBatches</Field>
+				<Field>ListInventory.UseCharacteristics</Field>
+				<Field>ListInventory.VATRate</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>SELECT ALLOWED
+	CASE
+		WHEN CatalogProducts.UseCharacteristics
+				OR CatalogProducts.UseBatches
+			THEN 2
+		ELSE 0
+	END + CASE
+		WHEN CatalogProducts.DeletionMark
+			THEN 1
+		ELSE 0
+	END AS PictureIndex,
+	CatalogProducts.Ref AS ProductsRef,
+	VALUE(Catalog.ProductsCharacteristics.EmptyRef) AS CharacteristicRef,
+	VALUE(Catalog.ProductsBatches.EmptyRef) AS BatchRef,
+	CatalogProducts.Parent AS Parent,
+	CatalogProducts.Code AS Code,
+	CatalogProducts.Description AS Description,
+	CatalogProducts.SKU AS SKU,
+	ISNULL(PricesSliceLast.MeasurementUnit, CatalogProducts.MeasurementUnit) AS MeasurementUnit,
+	ISNULL(UOM.Factor, 1) AS Factor,
+	CatalogProducts.BusinessLine AS BusinessLine,
+	CatalogProducts.ProductsCategory AS ProductsCategory,
+	CatalogProducts.Vendor AS Vendor,
+	CatalogProducts.Warehouse AS Warehouse,
+	CatalogProducts.ReplenishmentMethod AS ReplenishmentMethod,
+	CatalogProducts.ReplenishmentDeadline AS ReplenishmentDeadline,
+	CatalogProducts.VATRate AS VATRate,
+	CatalogProducts.ProductsType AS ProductsType,
+	CatalogProducts.Cell AS Cell,
+	CatalogProducts.PriceGroup AS PriceGroup,
+	CatalogProducts.UseCharacteristics AS UseCharacteristics,
+	CatalogProducts.UseBatches AS UseBatches,
+	CatalogProducts.CountryOfOrigin AS CountryOfOrigin,
+	ISNULL((CAST(PricesSliceLast.Price * (&amp;PriceKindCurrencyRate * &amp;DocumentCurrencyMultiplicity) / (&amp;DocumentCurrencyRate * &amp;PriceKindCurrencyMultiplicity) AS NUMBER(15, 2))) + (CAST(PricesSliceLast.Price * (&amp;PriceKindCurrencyRate * &amp;DocumentCurrencyMultiplicity) / (&amp;DocumentCurrencyRate * &amp;PriceKindCurrencyMultiplicity) AS NUMBER(15, 2))) / 100 * &amp;DynamicPriceKindPercent, 0) AS Price,
+	CAST(ISNULL(InventoryRemains.QuantityBalance, 0) / ISNULL(UOM.Factor, 1) AS NUMBER(15, 3)) AS InStock,
+	CASE
+		WHEN ISNULL(InventoryReserves.QuantityBalance, 0) = 0
+			THEN 1
+		ELSE 0
+	END AS Reserve,
+	CAST((ISNULL(InventoryRemains.QuantityBalance, 0) - ISNULL(InventoryReserves.QuantityBalance, 0)) / ISNULL(UOM.Factor, 1) AS NUMBER(15, 3)) AS Available,
+	ISNULL(InventoryRemains.QuantityBalance, 0) - ISNULL(InventoryReserves.QuantityBalance, 0) AS AvailableBasicUOM
+FROM
+	Catalog.Products AS CatalogProducts
+		LEFT JOIN InformationRegister.Prices.SliceLast(
+				&amp;PricePeriod,
+				PriceKind = &amp;PriceKind
+					AND Characteristic = VALUE(Catalog.ProductsCharacteristics.EmptyRef)) AS PricesSliceLast
+		ON CatalogProducts.Ref = PricesSliceLast.Products
+		LEFT JOIN Catalog.UOM AS UOM
+		ON (PricesSliceLast.MeasurementUnit = UOM.Ref)
+		LEFT JOIN AccumulationRegister.InventoryInWarehouses.Balance(
+				,
+				Company = &amp;Company
+					AND (StructuralUnit = &amp;StockWarehouse
+						OR &amp;StockWarehouse = VALUE(Catalog.BusinessUnits.EmptyRef))) AS InventoryRemains
+		ON CatalogProducts.Ref = InventoryRemains.Products
+		LEFT JOIN AccumulationRegister.Inventory.Balance(
+				,
+				Company = &amp;Company
+					AND SalesOrder &lt;&gt; UNDEFINED
+					AND StructuralUnit REFS Catalog.BusinessUnits
+					AND (StructuralUnit = &amp;StockWarehouse
+						OR &amp;StockWarehouse = VALUE(Catalog.BusinessUnits.EmptyRef))) AS InventoryReserves
+		ON CatalogProducts.Ref = InventoryReserves.Products
+WHERE
+	CatalogProducts.ProductsType IN(&amp;ProductsType)
+	AND NOT CatalogProducts.IsFolder</QueryText>
+				<MainTable>Catalog.Products</MainTable>
+				<AutoSaveUserSettings>false</AutoSaveUserSettings>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="CurrentProduct" id="8">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Products</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ReservationEnabled" id="12">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ListBatches" id="13">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>ListBatches.Available</Field>
+				<Field>ListBatches.AvailableBasicUOM</Field>
+				<Field>ListBatches.BatchRef</Field>
+				<Field>ListBatches.CharacteristicRef</Field>
+				<Field>ListBatches.Factor</Field>
+				<Field>ListBatches.InStock</Field>
+				<Field>ListBatches.MeasurementUnit</Field>
+				<Field>ListBatches.Price</Field>
+				<Field>ListBatches.ProductsRef</Field>
+				<Field>ListBatches.VATRate</Field>
+			</UseAlways>
+			<FunctionalOptions>
+				<Item>FunctionalOption.UseBatches</Item>
+			</FunctionalOptions>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>SELECT
+	CASE
+		WHEN CatalogBatches.DeletionMark
+			THEN 1
+		ELSE 0
+	END AS PictureIndex,
+	CatalogBatches.Owner AS ProductsRef,
+	CatalogProducts.VATRate AS VATRate,
+	CatalogBatches.Ref AS BatchRef,
+	&amp;Characteristic AS CharacteristicRef,
+	ISNULL(PricesSliceLast.MeasurementUnit, CatalogProducts.MeasurementUnit) AS MeasurementUnit,
+	ISNULL(UOM.Factor, 1) AS Factor,
+	ISNULL((CAST(PricesSliceLast.Price * (&amp;PriceKindCurrencyRate * &amp;DocumentCurrencyMultiplicity) / (&amp;DocumentCurrencyRate * &amp;PriceKindCurrencyMultiplicity) AS NUMBER(15, 2))) + (CAST(PricesSliceLast.Price * (&amp;PriceKindCurrencyRate * &amp;DocumentCurrencyMultiplicity) / (&amp;DocumentCurrencyRate * &amp;PriceKindCurrencyMultiplicity) AS NUMBER(15, 2))) / 100 * &amp;DynamicPriceKindPercent, 0) AS Price,
+	CAST(ISNULL(InventoryRemains.QuantityBalance, 0) / ISNULL(UOM.Factor, 1) AS NUMBER(15, 3)) AS InStock,
+	CASE
+		WHEN ISNULL(InventoryReserves.QuantityBalance, 0) = 0
+			THEN 1
+		ELSE 0
+	END AS Reserve,
+	CAST((ISNULL(InventoryRemains.QuantityBalance, 0) - ISNULL(InventoryReserves.QuantityBalance, 0)) / ISNULL(UOM.Factor, 1) AS NUMBER(15, 3)) AS Available,
+	ISNULL(InventoryRemains.QuantityBalance, 0) - ISNULL(InventoryReserves.QuantityBalance, 0) AS AvailableBasicUOM
+FROM
+	Catalog.ProductsBatches AS CatalogBatches
+		LEFT JOIN Catalog.Products AS CatalogProducts
+		ON CatalogBatches.Owner = CatalogProducts.Ref
+		LEFT JOIN InformationRegister.Prices.SliceLast(
+				&amp;PricePeriod,
+				PriceKind = &amp;PriceKind
+					AND Characteristic = &amp;Characteristic) AS PricesSliceLast
+		ON CatalogBatches.Owner = PricesSliceLast.Products
+		LEFT JOIN Catalog.UOM AS UOM
+		ON (PricesSliceLast.MeasurementUnit = UOM.Ref)
+		LEFT JOIN AccumulationRegister.InventoryInWarehouses.Balance(
+				,
+				Company = &amp;Company
+					AND Characteristic = &amp;Characteristic
+					AND (StructuralUnit = &amp;StockWarehouse
+						OR &amp;StockWarehouse = VALUE(Catalog.BusinessUnits.EmptyRef))) AS InventoryRemains
+		ON CatalogBatches.Owner = InventoryRemains.Products
+			AND CatalogBatches.Ref = InventoryRemains.Batch
+		LEFT JOIN AccumulationRegister.Inventory.Balance(
+				,
+				Company = &amp;Company
+					AND Characteristic = &amp;Characteristic
+					AND SalesOrder &lt;&gt; UNDEFINED
+					AND StructuralUnit REFS Catalog.BusinessUnits
+					AND (StructuralUnit = &amp;StockWarehouse
+						OR &amp;StockWarehouse = VALUE(Catalog.BusinessUnits.EmptyRef))) AS InventoryReserves
+		ON CatalogBatches.Owner = InventoryReserves.Products
+			AND CatalogBatches.Ref = InventoryReserves.Batch</QueryText>
+				<MainTable>Catalog.ProductsBatches</MainTable>
+				<AutoSaveUserSettings>false</AutoSaveUserSettings>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="StockStatusFilter" id="14">
+			<Type>
+				<v8:Type>cfg:EnumRef.StockStatusFilters</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ShowItemsWithPriceOnly" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>With price only</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CurrentCharacteristic" id="17">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ProductsCharacteristics</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CurrentProductUseCharacteristics" id="18">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CurrentProductUseBatches" id="19">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CartShowHideLabel" id="20">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="CartInfoLabel" id="21">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ListCharacteristicsSearchText" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Search string</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ListBatchesSearchText" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Search string</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="StockWarehouse" id="28">
+			<Type>
+				<v8:Type>cfg:CatalogRef.BusinessUnits</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="MoveToDocument" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Select</v8:content>
+				</v8:item>
+			</Title>
+			<Action>MoveToDocument</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="AddToCart" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Add to cart</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.ShoppingCart16</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>AddToCart</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="GoToParent" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Go to current group</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.Folder</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>GoToParent</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ChangePrice" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Edit price...</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.AllowObjectAttributesEditing</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ChangePrice</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="BackToProducts" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Back to products</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Back to products</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+BackSpace</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.GoToBegin</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>BackToProducts</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="TransitionProductsList" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Go to Product list</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>Alt+2</Shortcut>
+			<Action>TransitionProductsList</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="TransitionSearch" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Go to Search</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>Alt+1</Shortcut>
+			<Action>TransitionSearch</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="TransitionGroups" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Go to Groups</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>Alt+3</Shortcut>
+			<Action>TransitionHierarchy</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="TransitionCart" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Go to Shopping cart</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>Alt+4</Shortcut>
+			<Action>TransitionCart</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ReservationDetails" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Reservation details...</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.Reserved32</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ReservationDetails</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.UseInventoryReservation</Item>
+			</FunctionalOptions>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="SubstituteGoods" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show substitutes</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Properties</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>SubstituteGoods</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="InformationAboutDocument" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Information about document...</v8:content>
+				</v8:item>
+			</Title>
+			<Action>InformationAboutDocument</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Back" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Back</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Back</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>BackSpace</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.GoBack</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Back</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="RequestQuantity" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Input quantity</v8:content>
+				</v8:item>
+			</Title>
+			<Action>RequestQuantity</Action>
+		</Command>
+		<Command name="RequestPrice" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Input price</v8:content>
+				</v8:item>
+			</Title>
+			<Action>RequestPrice</Action>
+		</Command>
+	</Commands>
+</Form>

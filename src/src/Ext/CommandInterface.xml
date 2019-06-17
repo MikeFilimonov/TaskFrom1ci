@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<SubsystemsOrder>
+		<Subsystem>Subsystem.CRM</Subsystem>
+		<Subsystem>Subsystem.Sales</Subsystem>
+		<Subsystem>Subsystem.Purchases</Subsystem>
+		<Subsystem>Subsystem.Finances</Subsystem>
+		<Subsystem>Subsystem.Warehouse</Subsystem>
+		<Subsystem>Subsystem.Production</Subsystem>
+		<Subsystem>Subsystem.Services</Subsystem>
+		<Subsystem>Subsystem.Payroll</Subsystem>
+		<Subsystem>Subsystem.Enterprise</Subsystem>
+		<Subsystem>Subsystem.Analysis</Subsystem>
+		<Subsystem>Subsystem.SetupAndAdministration</Subsystem>
+	</SubsystemsOrder>
+</CommandInterface>

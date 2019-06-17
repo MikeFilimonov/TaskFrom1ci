@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<FunctionalOption uuid="d663bc58-63a6-40d8-8f52-a5cc5359d58f">
+		<Properties>
+			<Name>UseSeveralDepartments</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Use several departments</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Accounting by multiple departments in one infobase</Comment>
+			<Location>Constant.UseSeveralDepartments</Location>
+			<PrivilegedGetMode>true</PrivilegedGetMode>
+			<Content>
+				<xr:Object>Catalog.CashRegisters.Attribute.Department</xr:Object>
+				<xr:Object>Document.ExpenseReport.TabularSection.Expenses.Attribute.StructuralUnit</xr:Object>
+				<xr:Object>Document.AdditionalExpenses.Attribute.Department</xr:Object>
+				<xr:Object>Document.ObsoleteWorkOrder.Attribute.StructuralUnit</xr:Object>
+				<xr:Object>Document.FixedAssetDepreciationChanges.TabularSection.FixedAssets.Attribute.StructuralUnit</xr:Object>
+				<xr:Object>Document.TransferAndPromotion.TabularSection.Employees.Attribute.StructuralUnit</xr:Object>
+				<xr:Object>Document.Payroll.Attribute.StructuralUnit</xr:Object>
+				<xr:Object>Document.AccountSalesFromConsignee.Attribute.Department</xr:Object>
+				<xr:Object>Document.AccountSalesToConsignor.Attribute.Department</xr:Object>
+				<xr:Object>Document.SubcontractorReportIssued.Attribute.Department</xr:Object>
+				<xr:Object>Document.SubcontractorReport.Attribute.Department</xr:Object>
+				<xr:Object>Document.SalesTarget.Attribute.StructuralUnit</xr:Object>
+				<xr:Object>Document.PayrollSheet.Attribute.StructuralUnit</xr:Object>
+				<xr:Object>Document.EmploymentContract.TabularSection.Employees.Attribute.StructuralUnit</xr:Object>
+				<xr:Object>Document.FixedAssetRecognition.TabularSection.FixedAssets.Attribute.StructuralUnit</xr:Object>
+				<xr:Object>Document.SupplierInvoice.Attribute.Department</xr:Object>
+				<xr:Object>Document.SupplierInvoice.TabularSection.Expenses.Attribute.StructuralUnit</xr:Object>
+				<xr:Object>Document.OtherExpenses.Attribute.StructuralUnit</xr:Object>
+				<xr:Object>Document.CostAllocation.Attribute.StructuralUnit</xr:Object>
+				<xr:Object>Document.SalesInvoice.Attribute.Department</xr:Object>
+				<xr:Object>Document.JobSheet.Attribute.StructuralUnit</xr:Object>
+				<xr:Object>Document.Quote.Attribute.Department</xr:Object>
+				<xr:Object>Document.SupplierQuote.Attribute.Department</xr:Object>
+				<xr:Object>Document.Timesheet.Attribute.StructuralUnit</xr:Object>
+				<xr:Object>Document.WeeklyTimesheet.Attribute.StructuralUnit</xr:Object>
+				<xr:Object>InformationRegister.HeadcountBudget.Dimension.StructuralUnit</xr:Object>
+				<xr:Object>InformationRegister.FixedAssetParameters.Resource.StructuralUnit</xr:Object>
+				<xr:Object>Document.PurchaseOrder.Attribute.StructuralUnit</xr:Object>
+				<xr:Object>Document.SalesOrder.Attribute.SalesStructuralUnit</xr:Object>
+				<xr:Object>Document.Budget.TabularSection.Incomings.Attribute.StructuralUnit</xr:Object>
+				<xr:Object>Document.Budget.TabularSection.Expenses.Attribute.StructuralUnit</xr:Object>
+				<xr:Object>Document.OpeningBalanceEntry.TabularSection.FixedAssets.Attribute.StructuralUnit</xr:Object>
+				<xr:Object>Document.OpeningBalanceEntry.TabularSection.DirectCost.Attribute.StructuralUnit</xr:Object>
+				<xr:Object>Document.OpeningBalanceEntry.TabularSection.Payroll.Attribute.StructuralUnit</xr:Object>
+				<xr:Object>Document.SalesSlip.Attribute.Department</xr:Object>
+				<xr:Object>Document.ProductReturn.Attribute.Department</xr:Object>
+				<xr:Object>Document.CashReceipt.Attribute.Department</xr:Object>
+				<xr:Object>Document.CashVoucher.Attribute.Department</xr:Object>
+				<xr:Object>Document.PaymentExpense.Attribute.Department</xr:Object>
+				<xr:Object>Document.TaxAccrual.TabularSection.Taxes.Attribute.Department</xr:Object>
+				<xr:Object>Catalog.CounterpartyContracts.Attribute.Department</xr:Object>
+				<xr:Object>Document.ForeignCurrencyExchange.Attribute.StructuralUnit</xr:Object>
+				<xr:Object>Document.GoodsIssue.Attribute.Department</xr:Object>
+				<xr:Object>Document.GoodsReceipt.Attribute.Department</xr:Object>
+				<xr:Object>Document.CustomsDeclaration.Attribute.Department</xr:Object>
+			</Content>
+		</Properties>
+	</FunctionalOption>
+</MetaDataObject>

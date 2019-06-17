@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<DataProcessor uuid="bb33ce02-fb69-4017-a59a-50eafce58be3">
+		<InternalInfo>
+			<xr:GeneratedType name="DataProcessorObject.BusinessPulse" category="Object">
+				<xr:TypeId>cd3ee365-6859-4585-b799-61dfff2f85cb</xr:TypeId>
+				<xr:ValueId>905d12bd-bba8-4218-bc88-6ca288a957b4</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DataProcessorManager.BusinessPulse" category="Manager">
+				<xr:TypeId>e909472a-4a1d-4f2d-a898-d9da71835e35</xr:TypeId>
+				<xr:ValueId>e1c747ea-eb05-47b0-82ea-a88ad90ff54a</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>BusinessPulse</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Business pulse</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>true</UseStandardCommands>
+			<DefaultForm>DataProcessor.BusinessPulse.Form.BusinessPulse</DefaultForm>
+			<AuxiliaryForm/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Form>BusinessPulse</Form>
+			<Form>FilterAdditionForm</Form>
+			<Form>IndicatorSettingForm</Form>
+			<Form>ChartSettingForm</Form>
+			<Template>DCS_ACR_Management</Template>
+			<Template>DCS_AR_Funds</Template>
+			<Template>DCS_AR_PurchaseOrders</Template>
+			<Template>DCS_AR_Inventory</Template>
+			<Template>DCS_AR_Sales</Template>
+			<Template>DCS_NetAssets</Template>
+			<Template>DCS_Retail</Template>
+			<Template>DCS_AR_CashRegisterStatement</Template>
+		</ChildObjects>
+	</DataProcessor>
+</MetaDataObject>

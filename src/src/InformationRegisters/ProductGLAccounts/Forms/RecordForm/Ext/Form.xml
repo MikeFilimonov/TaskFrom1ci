@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="FormCommandBar" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="GroupDimensions" id="49">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="GroupDimensionsExtendedTooltip" id="50"/>
+			<ChildItems>
+				<UsualGroup name="GroupLeftColumn" id="51">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="GroupLeftColumnExtendedTooltip" id="52"/>
+					<ChildItems>
+						<InputField name="ProductCategory" id="7">
+							<DataPath>Record.ProductCategory</DataPath>
+							<ContextMenu name="ProductCategoryContextMenu" id="8"/>
+							<ExtendedTooltip name="ProductCategoryExtendedTooltip" id="9"/>
+						</InputField>
+						<InputField name="Product" id="4">
+							<DataPath>Record.Product</DataPath>
+							<ContextMenu name="ProductContextMenu" id="5"/>
+							<ExtendedTooltip name="ProductExtendedTooltip" id="6"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="GroupRightColumn" id="53">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="GroupRightColumnExtendedTooltip" id="54"/>
+					<ChildItems>
+						<InputField name="Company" id="1">
+							<DataPath>Record.Company</DataPath>
+							<ContextMenu name="CompanyContextMenu" id="2"/>
+							<ExtendedTooltip name="CompanyExtendedTooltip" id="3"/>
+						</InputField>
+						<InputField name="StructuralUnit" id="10">
+							<DataPath>Record.StructuralUnit</DataPath>
+							<ContextMenu name="StructuralUnitContextMenu" id="11"/>
+							<ExtendedTooltip name="StructuralUnitExtendedTooltip" id="12"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="GroupAccounts" id="55">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="GroupAccountsExtendedTooltip" id="56"/>
+			<ChildItems>
+				<UsualGroup name="GroupAccountsLeftColumn" id="65">
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="GroupAccountsLeftColumnExtendedTooltip" id="66"/>
+					<ChildItems>
+						<UsualGroup name="GroupInStock" id="57">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>In stock</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<United>false</United>
+							<ExtendedTooltip name="GroupInStockExtendedTooltip" id="58"/>
+							<ChildItems>
+								<InputField name="Inventory" id="13">
+									<DataPath>Record.Inventory</DataPath>
+									<ContextMenu name="InventoryContextMenu" id="14"/>
+									<ExtendedTooltip name="InventoryExtendedTooltip" id="15"/>
+								</InputField>
+								<InputField name="InventoryTransferred" id="16">
+									<DataPath>Record.InventoryTransferred</DataPath>
+									<ContextMenu name="InventoryTransferredContextMenu" id="17"/>
+									<ExtendedTooltip name="InventoryTransferredExtendedTooltip" id="18"/>
+								</InputField>
+								<InputField name="InventoryReceived" id="19">
+									<DataPath>Record.InventoryReceived</DataPath>
+									<ContextMenu name="InventoryReceivedContextMenu" id="20"/>
+									<ExtendedTooltip name="InventoryReceivedExtendedTooltip" id="21"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="SignedOutEquipment" id="79">
+							<DataPath>Record.SignedOutEquipment</DataPath>
+							<ContextMenu name="SignedOutEquipmentContextMenu" id="80"/>
+							<ExtendedTooltip name="SignedOutEquipmentExtendedTooltip" id="81"/>
+						</InputField>
+						<UsualGroup name="GroupDelayedInvoicing" id="63">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Delayed invoicing</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<United>false</United>
+							<ExtendedTooltip name="GroupDelayedInvoicingExtendedTooltip" id="64"/>
+							<ChildItems>
+								<InputField name="GoodsShippedNotInvoiced" id="22">
+									<DataPath>Record.GoodsShippedNotInvoiced</DataPath>
+									<ContextMenu name="GoodsShippedNotInvoicedContextMenu" id="23"/>
+									<ExtendedTooltip name="GoodsShippedNotInvoicedExtendedTooltip" id="24"/>
+								</InputField>
+								<InputField name="GoodsReceivedNotInvoiced" id="25">
+									<DataPath>Record.GoodsReceivedNotInvoiced</DataPath>
+									<ContextMenu name="GoodsReceivedNotInvoicedContextMenu" id="26"/>
+									<ExtendedTooltip name="GoodsReceivedNotInvoicedExtendedTooltip" id="27"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="GroupReturn" id="61">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Return</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<United>false</United>
+							<ExtendedTooltip name="GroupReturnExtendedTooltip" id="62"/>
+							<ChildItems>
+								<InputField name="SalesReturn" id="43">
+									<DataPath>Record.SalesReturn</DataPath>
+									<ContextMenu name="SalesReturnContextMenu" id="44"/>
+									<ExtendedTooltip name="SalesReturnExtendedTooltip" id="45"/>
+								</InputField>
+								<InputField name="PurchaseReturn" id="46">
+									<DataPath>Record.PurchaseReturn</DataPath>
+									<ContextMenu name="PurchaseReturnContextMenu" id="47"/>
+									<ExtendedTooltip name="PurchaseReturnExtendedTooltip" id="48"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="GroupAccountsRightColumn" id="67">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="GroupAccountsRightColumnExtendedTooltip" id="68"/>
+					<ChildItems>
+						<UsualGroup name="GroupIncomeAndExpenses" id="77">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Income and expenses</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<United>false</United>
+							<ExtendedTooltip name="GroupIncomeAndExpensesExtendedTooltip" id="78"/>
+							<ChildItems>
+								<InputField name="Revenue" id="34">
+									<DataPath>Record.Revenue</DataPath>
+									<ContextMenu name="RevenueContextMenu" id="35"/>
+									<ExtendedTooltip name="RevenueExtendedTooltip" id="36"/>
+								</InputField>
+								<InputField name="COGS" id="37">
+									<DataPath>Record.COGS</DataPath>
+									<ContextMenu name="COGSContextMenu" id="38"/>
+									<ExtendedTooltip name="COGSExtendedTooltip" id="39"/>
+								</InputField>
+								<InputField name="Consumption" id="40">
+									<DataPath>Record.Consumption</DataPath>
+									<ContextMenu name="ConsumptionContextMenu" id="41"/>
+									<ExtendedTooltip name="ConsumptionExtendedTooltip" id="42"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="GroupDelayedDelivery" id="69">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Delayed delivery</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<United>false</United>
+							<ExtendedTooltip name="GroupDelayedDeliveryExtendedTooltip" id="70"/>
+							<ChildItems>
+								<InputField name="GoodsInvoicedNotDelivered" id="71">
+									<DataPath>Record.GoodsInvoicedNotDelivered</DataPath>
+									<ContextMenu name="GoodsInvoicedNotDeliveredContextMenu" id="72"/>
+									<ExtendedTooltip name="GoodsInvoicedNotDeliveredExtendedTooltip" id="73"/>
+								</InputField>
+								<InputField name="UnearnedRevenue" id="74">
+									<DataPath>Record.UnearnedRevenue</DataPath>
+									<ContextMenu name="UnearnedRevenueContextMenu" id="75"/>
+									<ExtendedTooltip name="UnearnedRevenueExtendedTooltip" id="76"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="GroupVAT" id="59">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>VAT</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<United>false</United>
+							<ExtendedTooltip name="GroupVATExtendedTooltip" id="60"/>
+							<ChildItems>
+								<InputField name="VATInput" id="28">
+									<DataPath>Record.VATInput</DataPath>
+									<ContextMenu name="VATInputContextMenu" id="29"/>
+									<ExtendedTooltip name="VATInputExtendedTooltip" id="30"/>
+								</InputField>
+								<InputField name="VATOutput" id="31">
+									<DataPath>Record.VATOutput</DataPath>
+									<ContextMenu name="VATOutputContextMenu" id="32"/>
+									<ExtendedTooltip name="VATOutputExtendedTooltip" id="33"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Record" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ProductGLAccounts</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

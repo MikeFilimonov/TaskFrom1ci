@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.19267"></meta></head><body>
+<h1>Goods receipts</h1>
+<p>Sometimes your company might receive ordered goods from a supplier before you receive the invoice for the goods.</p>
+
+<p>In such a case, you register a <em>goods receipt</em> document in 1C:Drive to enter the information on the goods and their quantity.</p>
+
+<p>Using goods receipts in the purchase flow helps you to register the fact you received the goods without a supplier invoice.</p>
+
+<p>Typically, you register a goods receipt for one or several purchase orders. Also, you can register several goods receipts for a single purchase order.</p>
+
+
+<p>Similarly, you can register one or several supplier invoices from a goods receipt, or register a single supplier invoice from several goods receipts.</p>
+
+<h2>Viewing goods receipts</h2>
+<p>To view the list of goods receipts:</p>
+<ul><li>Click <strong>Purchases &gt; Purchases &gt; Goods receipts</strong>. </li></ul><p>You can create, edit, or delete sales goods receipts.</p>
+
+<h2>Checking which goods are received and invoiced</h2>
+
+<p>The <strong>Status</strong> column of the goods receipt list shows whether each goods receipt is invoiced. The following values are available:</p>
+
+<ul><li><strong>Draft</strong>. The goods receipt is saved but not posted yet.</li>
+<li><strong>Not invoiced</strong>. None of the goods registered in the goods receipt is included in supplier invoices.</li>
+<li><strong>Partially invoiced</strong>. Some of the goods registered in the goods receipt are included in supplier invoices.</li>
+<li><strong>Invoiced</strong>. All goods registered in the goods receipt are included in supplier invoices.</li>
+<li><strong>Not applicable</strong>. The goods registered in the goods receipt are not to be invoiced. For instance, consigned goods.</li>
+</ul><p>This helps you verify that you registered supplier invoices that your supplier can use to claim money for the goods you received.
+</p>
+
+<p>Alternatively, to check which goods your company received with or without invoices, you can use the <strong>Goods received not invoiced</strong> report.</p>
+
+<ul><li>To generate the report for all goods receipts, click <strong>Purchases &gt; Reports &gt; Goods receipts not invoiced</strong>. 
+
+</li><li>To generate the report for a specific goods receipt, open the goods receipt and click the <strong>Goods receipts not invoiced</strong> link.</li></ul><a name="goods_receipt_fields"></a>
+
+<h2>Goods receipt fields</h2>
+<p>A goods receipt has the following fields:</p>
+<ul><li><strong>Counterparty</strong> (required). The supplier name. 
+</li><li><strong>Contract</strong> (required). The contract governing the purchase. 
+</li><li><strong>Order</strong>. The purchase order that is a base for the goods receipt. 
+</li><li><strong>Number</strong>. A unique goods receipt number. 
+</li><li><strong>Dated</strong>. The date and time when the goods receipt was created. 
+</li><li><strong>Company</strong> (required). The company that receives the goods. 
+</li><li><strong>Warehouse</strong> (required). The target warehouse. </li></ul><h2>Creating goods receipts</h2>
+
+<p>To create a goods receipt:</p>
+
+<ol><li>Do any of the following: 
+<ul><li>Click <strong>Purchases &gt; Purchases &gt; Goods receipts</strong> and then click <strong>Create</strong>. 
+</li><li>Open a purchase order and click <strong>Generate &gt; Goods receipt</strong>. 
+</li><li>Select several purchase orders and click <strong>Generate &gt; Goods receipt</strong>. </li></ul></li><li>Fill the goods receipt fields. 
+<p>For more information, see <a href="#goods_receipt_fields">Goods receipt fields</a>.</p>
+</li><li>Click the <strong>Products</strong> tab and do any of the following: 
+<ul><li>Click <img src="_files/populate_btn.png"></img><strong>Populate with the order data</strong>. 
+<p>1C:Drive populates the list of goods according to the purchase order specified in the <strong>Order</strong> field.</p>
+</li><li>Click <strong>Select &gt; Ordered goods</strong> and then, in the <strong>Select ordered goods</strong> window, select the check boxes for the goods you want to add and enter the quantities. 
+<p>The <strong>Select ordered goods</strong> window displays goods included in purchase orders. For each of the goods, it indicates its ordered quantity and the purchase order. Also, it displays the remaining quantity to deliver as a difference of the quantity in the purchase order and the received quantity.</p>
+<p>To switch between goods of the base purchase order only and goods of all purchase orders, select or clear the <strong>Display products from dependent documents only</strong> checkbox.</p>
+</li><li>Click <strong>Add</strong> and then specify the goods item and its quantity. </li></ul></li><li>Click <strong>Post</strong>. </li></ol></body></html>

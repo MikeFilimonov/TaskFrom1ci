@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.19267"></meta></head><body>
+<h1>Customs declarations for imported goods</h1>
+<p>When your company imports goods, you need to fill in and submit a customs declaration according to your local legislation. Based on the declaration, customs fees and excises are accrued and import VAT is charged.</p>
+<p>Once you have such a declaration filled in and the extra expenses and import VAT paid out, you can register the declaration in 1C:Drive and thus register the expenses and import VAT for accounting purposes.</p>
+<h2>Viewing customer declarations</h2>
+<p>To view the list of customs declarations:</p>
+<ul><li>Click <strong>Purchases &gt; Purchases &gt; Customs declarations</strong>. </li></ul><p>You can create, edit, or delete customs declarations.</p><a name="customs_declaration_fields"></a>
+<h2>Customs declaration fields</h2>
+<p>A customs declaration has the following fields:</p>
+<ul><li><strong>Customs / Broker</strong> (required). The name of the customs or customs broker. 
+</li><li><strong>Deferment account / Contract</strong> (required). The contract governing the goods import or your company's deferment account. This field is only available if the billing details of the customs or customs broker include contracts. 
+</li><li><strong>Supplier</strong> (required). The supplier name. 
+</li><li><strong>Contract</strong> (required). The contract governing the purchase. This field is only available if the billing details of the supplier include contracts. 
+</li><li><strong>Other duty to expenses</strong>. Sets whether to charge other customs duties to the specified GL account or (by default) to inventory expenses. 
+</li><li><strong>Number</strong>. A unique customs declaration number. 
+</li><li><strong>Date</strong>. The date and time when the customs declaration was created. 
+</li><li><strong>Ext. #</strong>. The number specified in the customs declaration. 
+</li><li><strong>dated</strong>. The date specified in the customs declaration. 
+</li><li><strong>Company</strong>. Your company for which the customs declaration was issued. 
+</li><li><strong>VAT is due</strong>. Sets the way to deduct input VAT from VAT due. Available values: 
+<ul><li><strong>On the supply</strong>. Immediately after you pay input VAT according to the customs declaration. 
+</li><li><strong>In the VAT return</strong>. Along with your sales you reflect in the VAT return. This resembles the reverse charge VAT schema. </li></ul></li></ul><h2>Creating customs declarations</h2>
+<p>You register a customs declaration for a supplier invoice on goods where your supplier specified zero rate VAT. This is a sign you imported the goods and you need to submit the customs declaration and then register the declaration in 1C:Drive.</p>
+<p>To create a customs declaration:</p>
+<ol><li>Do any of the following: 
+<ul><li>To create a customs declaration from scratch: 
+<ul><li>Click <strong>Purchases &gt; Purchases &gt; Customs declarations</strong> and then click <strong>Create</strong>. </li></ul></li><li>To create a customs declaration based on a supplier invoice with the zero rate VAT tax category: 
+<ul><li>Open the supplier invoice and click <strong>Generate &gt; Customs declaration</strong>. </li></ul></li></ul></li><li>Fill in the customs declaration fields. 
+<p>For more information, see <a href="#customs_declaration_fields">Customs declaration fields</a>.</p>
+</li><li>Specify the goods to include in the customs declaration. 
+<p>For more information, see <a href="#declaring_imported_goods">Declaring imported goods</a>.</p>
+</li><li>Click <strong>Post</strong>. </li></ol><a name="declaring_imported_goods"></a>
+<h3>Declaring imported goods</h3>
+<p>In a customs declaration, you register each of the goods you imported, their quantity, and their customs value.</p>
+<p>In the declaration, the goods are unified into commodity groups by combinations of the following:</p>
+<ul><li>the first four digits of the goods' harmonized system code (HS code) 
+</li><li>the country of their origin 
+</li><li>the VAT rate </li></ul><p>For a commodity group, your local legislation can prescribe using a particular duty rate, other duty rate, excise, and VAT rate.</p>
+<p>Based on the customs declaration you filled in, you register commodity groups and goods included in them in 1C:Drive. To do this, use the <strong>Inventory</strong> tab of the customs declaration details.</p>
+<h4>Specifying commodity groups</h4>
+<p>The <strong>Commodity groups</strong> table lists existing commodity groups. For the group you selected in the <strong>Commodity groups</strong> table, the <strong>Inventory</strong> table displays the goods the group includes.</p>
+<p>For each group, you can specify its country of origin, customs value, duty rate, duty amount, other duty rate, other duty amount, excise amount, VAT rate, and VAT amount.</p>
+<p>In the <strong>Commodity groups</strong> table, you can add, edit, and delete commodity groups whose goods you include in the declaration.</p>
+<p>Alternatively, to populate the commodity groups and their goods with items from a supplier invoice:</p>
+<ul><li>On the <strong>Inventory</strong> tab of the customs declaration, in the <strong>Commodity groups</strong> table, click <strong>Select invoices</strong>, select the supplier invoice, and click <strong>Select</strong>. </li></ul><p>The sum of the customs value, duty amount, other duty amount, and excise amount is the base for applying the input VAT rate.</p>
+<p>If you have a commodity group with goods in it and you specified the amounts and rates in group, you can automatically populate the duty amount, other duty amount, excise amount, and VAT amount for all the goods of the group. To do this:</p>
+<ul><li>On the <strong>Inventory</strong> tab of the customs declaration, in the <strong>Commodity groups</strong> table, click <strong>Allocate costs to inventory</strong>. </li></ul><p>In this instance, 1C:Drive uses the customs value of each of the goods in the group to prorate these costs. The command affects all goods in all commodity groups of the declaration.</p>
+<p>If you have a commodity group with goods in it and you specified the amounts for each of the goods, you can automatically populate the amounts and rates for the group. To do this:</p>
+<ul><li>On the <strong>Inventory</strong> tab of the customs declaration, in the <strong>Commodity groups</strong> table, click <strong>Fill costs by inventory</strong>. </li></ul><p>The command affects all commodity groups of the declaration.</p>
+<h4>Specifying goods in commodity groups</h4>
+<p>In the Inventory table, you can add, edit, and delete goods that belong to the selected commodity group in the customs declaration.</p>
+<p>By default, the <strong>Inventory</strong> table displays the goods that belong to the commodity group selected in the <strong>Commodity groups</strong> table. To display all the goods of all groups in the <strong>Inventory</strong> table:</p>
+<ul><li>On the <strong>Inventory</strong> tab of the customs declaration, in the <strong>Inventory</strong> table, click <strong>Show all</strong>. </li></ul><p>For each of the goods, you can specify the purchased product, the commodity group it belongs to, the country of origin, HS code, quantity, customs value, duty amount, other duty amount, excise amount, VAT amount, supplier invoice, and warehouse.</p>
+<p>For each of the goods, the sum of the duty amount, other duty amount, and excise amount is the increase of the goods' value.</p>
+<p>Adding an item and filling its fields is a straightforward way to populate the <strong>Inventory</strong> table.</p>
+<p>The other ways to populate the <strong>Inventory</strong> table are as follows:</p>
+<ul><li>Importing customs declaration goods data from external sources 
+</li><li>Selecting imported products from stock </li></ul><h4>Selecting imported products from stock</h4>
+<p>When adding imported products to the customs declaration, you might want to select the products from the warehouse to which you imported it and use other flexible filters to quickly locate the products to add.</p>
+<p>For this purpose, use the product selection tool. To open it:</p>
+<ul><li>On the <strong>Inventory</strong> tab of the customs declaration, in the <strong>Inventory</strong> table, click <strong>Select products</strong>. </li></ul><p>For more information, see <a href="DataProcessor.ProductsSelection/Help">Product selection tool</a>.</p></body></html>

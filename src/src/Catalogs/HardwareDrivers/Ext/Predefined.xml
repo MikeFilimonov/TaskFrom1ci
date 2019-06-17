@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.7">
+	<Item id="3ed25985-ea6e-45f8-9ca8-ed3c30face07">
+		<Name>Driver1CBarCodeScanners</Name>
+		<Code xsi:type="xs:decimal">0</Code>
+		<Description>1C: Barcode scanners (COM)</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="4eca0a6e-8e58-45fa-ae38-344ee76401bb">
+		<Name>Driver1CBarCodeScannersNative</Name>
+		<Code xsi:type="xs:decimal">0</Code>
+		<Description>1C: Barcode scanners (NativeApi)</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="d30c1fe3-8271-47c6-aa28-8b5047b4a8dc">
+		<Name>Driver1CFiscalRegistersEmulator</Name>
+		<Code xsi:type="xs:decimal">0</Code>
+		<Description>1C: Fiscal register (emulator)</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="9a0eb32a-0c8b-497f-b9eb-5df7138961af">
+		<Name>Driver1CMagneticCardReaders</Name>
+		<Code xsi:type="xs:decimal">0</Code>
+		<Description>1C: magnetic card readers</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="8264e1a6-0984-4c31-9f9a-5cf6a64ebe2b">
+		<Name>DriverTremolFiscalRegisters</Name>
+		<Code xsi:type="xs:decimal">0</Code>
+		<Description>Tremol: Fiscal register</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="cb441233-e621-49d8-b654-22bfaf4bacbc">
+		<Name>DriverZekaFiscalRegisters</Name>
+		<Code xsi:type="xs:decimal">0</Code>
+		<Description>Zeka: Fiscal register</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

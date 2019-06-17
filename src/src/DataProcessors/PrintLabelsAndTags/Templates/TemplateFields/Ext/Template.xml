@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>DataSource1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>DataSet</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Quantity</dataPath>
+			<field>Quantity</field>
+			<useRestriction>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Products</dataPath>
+			<field>Products</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Characteristic</dataPath>
+			<field>Characteristic</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Price</dataPath>
+			<field>Price</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Barcode</dataPath>
+			<field>Barcode</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>BalanceAtWarehouse</dataPath>
+			<field>BalanceAtWarehouse</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Warehouse remaining goods</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>PricetagsForPrintCount</dataPath>
+			<field>PricetagsForPrintCount</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Number of price tags to print</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>LabelsQuantityToPrint</dataPath>
+			<field>LabelsQuantityToPrint</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Number of labels to print</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>PriceTagsTemplateToPrint</dataPath>
+			<field>PriceTagsTemplateToPrint</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Price tag template for printing</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>LabelTemplateToPrint</dataPath>
+			<field>LabelTemplateToPrint</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Label template for printing</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Company</dataPath>
+			<field>Company</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Company</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>CurrentTime</dataPath>
+			<field>CurrentTime</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Current time</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>CurrentUser</dataPath>
+			<field>CurrentUser</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Current user</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>LastPriceChangeDate</dataPath>
+			<field>LastPriceChangeDate</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Batch</dataPath>
+			<field>Batch</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>StructuralUnit</dataPath>
+			<field>StructuralUnit</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>PriceKind</dataPath>
+			<field>PriceKind</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ProductsDescriptionFull</dataPath>
+			<field>ProductsDescriptionFull</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Full name of products</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>DataSource1</dataSource>
+		<query>SELECT
+	SourceData.Products AS Products,
+	SourceData.Characteristic AS Characteristic,
+	SourceData.Batch AS Batch,
+	SourceData.Quantity AS Quantity,
+	"Barcode" AS Barcode,
+	"PriceTagsQuantity" AS PricetagsForPrintCount,
+	"LabelsQuantity" AS LabelsQuantityToPrint,
+	"LabelTemplate" AS LabelTemplateToPrint,
+	"PriceTagsTemplate" AS PriceTagsTemplateToPrint
+INTO SourceData
+FROM
+	Document.SupplierInvoice.Inventory AS SourceData
+
+INDEX BY
+	Products,
+	Characteristic,
+	Batch,
+	Barcode
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	Barcodes.Products AS Products,
+	Barcodes.Characteristic AS Characteristic,
+	Barcodes.Batch AS Batch,
+	Barcodes.Barcode AS Barcode
+INTO Barcodes
+FROM
+	InformationRegister.Barcodes AS Barcodes
+WHERE
+	(Barcodes.Products, Barcodes.Characteristic, Barcodes.Batch, Barcodes.Barcode) In
+			(SELECT
+				SourceData.Products,
+				SourceData.Characteristic,
+				SourceData.Batch,
+				SourceData.Barcode
+			FROM
+				SourceData)
+{WHERE
+	Barcodes.Products.*,
+	Barcodes.Characteristic.*,
+	Barcodes.Batch.*,
+	Barcodes.Barcode.*}
+
+GROUP BY
+	Barcodes.Products,
+	Barcodes.Characteristic,
+	Barcodes.Batch,
+	Barcodes.Barcode
+
+INDEX BY
+	Products,
+	Characteristic,
+	Batch,
+	Barcode
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	SourceDataLastQuery.Products AS Products,
+	CAST(SourceDataLastQuery.Products.DescriptionFull AS String(1024)) AS ProductsDescriptionFull,
+	SourceDataLastQuery.Characteristic AS Characteristic,
+	SourceDataLastQuery.Batch AS Batch,
+	MAX(SourceDataLastQuery.Quantity) AS Quantity,
+	MAX(SourceDataLastQuery.PricetagsForPrintCount) AS PricetagsForPrintCount,
+	MAX(SourceDataLastQuery.LabelsQuantityToPrint) AS LabelsQuantityToPrint,
+	MAX(SourceDataLastQuery.LabelTemplateToPrint) AS LabelTemplateToPrint,
+	MAX(SourceDataLastQuery.PriceTagsTemplateToPrint) AS PriceTagsTemplateToPrint,
+	Barcodes.Barcode AS Barcode,
+	MAX(PriceTypes.Ref) AS PriceKind,
+	MAX(Companies.Ref) AS Company,
+	MAX(PricesSliceLast.Price) AS Price,
+	MAX(PricesSliceLast.Period) AS LastPriceChangeDate,
+	MAX(InventoryInWarehousesOfBalance.QuantityBalance) AS BalanceAtWarehouse,
+	MAX(&amp;CurrentTime) AS CurrentTime,
+	MAX(Users.Ref) AS CurrentUser
+{SELECT
+	Products.*,
+	ProductsDescriptionFull,
+	Characteristic.*,
+	Batch.*,
+	Quantity,
+	PricetagsForPrintCount,
+	LabelsQuantityToPrint,
+	PriceTagsTemplateToPrint,
+	LabelTemplateToPrint,
+	Barcode,
+	PriceKind.*,
+	Company.*,
+	Price,
+	LastPriceChangeDate,
+	BalanceAtWarehouse,
+	CurrentTime,
+	CurrentUser.*}
+FROM
+	SourceData AS SourceDataLastQuery
+		{LEFT JOIN Barcodes AS Barcodes
+		ON SourceDataLastQuery.Products = Barcodes.Products
+			AND SourceDataLastQuery.Characteristic = Barcodes.Characteristic
+			AND SourceDataLastQuery.Batch = Barcodes.Batch
+			AND SourceDataLastQuery.Barcode = Barcodes.Barcode}
+		{LEFT JOIN InformationRegister.Prices.SliceLast(, PriceKind = &amp;PriceKind {(Products).* AS Products, (Characteristic).* AS Characteristic}) AS PricesSliceLast
+		ON SourceDataLastQuery.Products = PricesSliceLast.Products
+			AND (PricesSliceLast.Characteristic = SourceDataLastQuery.Characteristic)}
+		{LEFT JOIN Catalog.PriceTypes AS PriceTypes
+		ON (PriceTypes.Ref = &amp;PriceKind)}
+		{LEFT JOIN Catalog.Companies AS Companies
+		ON (Companies.Ref = &amp;Company)}
+		{LEFT JOIN Catalog.Users AS Users
+		ON (Users.Ref = &amp;CurrentUser)}
+		{LEFT JOIN AccumulationRegister.InventoryInWarehouses.Balance(, CASE WHEN &amp;Company = VALUE(Catalog.Companies.EmptyRef) THEN TRUE ELSE Company = &amp;Company END {(StructuralUnit).* AS StructuralUnit, (Products).* AS Products, (Characteristic).* AS Characteristic}) AS InventoryInWarehousesOfBalance
+		ON SourceDataLastQuery.Products = InventoryInWarehousesOfBalance.Products
+			AND SourceDataLastQuery.Characteristic = InventoryInWarehousesOfBalance.Characteristic
+			AND (SourceDataLastQuery.Batch = VALUE(Catalog.ProductsBatches.EmptyRef))}
+{WHERE
+	SourceDataLastQuery.Products.* AS Products,
+	SourceDataLastQuery.Characteristic.* AS Characteristic,
+	SourceDataLastQuery.Batch.* AS Batch,
+	Barcodes.Barcode AS Barcode,
+	PricesSliceLast.Price AS Price,
+	PricesSliceLast.Period AS LastPriceChangeDate,
+	InventoryInWarehousesOfBalance.QuantityBalance AS BalanceAtWarehouse}
+
+GROUP BY
+	SourceDataLastQuery.Products,
+	SourceDataLastQuery.Characteristic,
+	SourceDataLastQuery.Batch,
+	Barcodes.Barcode
+	
+ORDER BY
+	SourceDataLastQuery.Products.Description</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<parameter>
+		<name>Company</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Company</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Companies</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Catalog.Companies.EmptyRef</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>CurrentTime</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Current time</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>CurrentUser</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Current user</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Users</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Catalog.Users.EmptyRef</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>PriceKind</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Price kind</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.PriceTypes</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Catalog.PriceKinds.EmptyRef</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Default</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Default</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">StructuralUnit</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Catalog.BusinessUnits.EmptyRef</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Barcode</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Products</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Catalog.Products.EmptyRef</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Products.PriceGroup</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Catalog.PriceGroups.EmptyRef</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Barcode</dcsset:left>
+					<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					<dcsset:presentation xsi:type="xs:string">Only with barcode</dcsset:presentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Price</dcsset:left>
+					<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					<dcsset:presentation xsi:type="xs:string">Only with prices</dcsset:presentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">BalanceAtWarehouse</dcsset:left>
+					<dcsset:comparisonType>Greater</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					<dcsset:presentation xsi:type="xs:string">Only with stock balance</dcsset:presentation>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

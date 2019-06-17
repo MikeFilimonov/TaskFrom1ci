@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.19180"></meta></head><body>
+<h1>Goods issues</h1>
+<p>A <em>goods issue</em> is a document that registers the physical transfer of goods from your company to any third party without transfer of title. For instance, if your company sends goods to a customer, you can create a goods issue in 1C:Drive to register the fact that the goods departed from the warehouse to the customer's premises, print a <em>delivery note</em> in 1C:Drive, and accompany the goods with it. The delivery note is to be signed by the customer upon delivery.</p>
+<p>Typically, you generate a goods issue from one or several sales orders. Also, you can generate several goods issues from a single sales order.</p>
+<p>Similarly, you can generate one or several sales invoices from a goods issue, or generate a single sales invoice from several goods issues.</p>
+<p>Why you might need to use an intermediate goods issue document within the <em>sales order-sales invoice</em> sequence?</p>
+<p>If you issue a sales invoice before goods delivery and you need to change the sales invoice (for instance, the customer did not accept some of the goods), you have to issue a credit note, which may be inconvenient. With goods issues, you first supply the goods to your customer, and then, after you ensure that the customer accepted the goods, you issue one or several sales invoices for the goods you actually delivered. Thus, you minimize corrections in the sales invoices.</p>
+<p>If the customer accepts some of the goods and returns the rest back, you issue a <em>goods receipt</em> document.</p>
+<h2>Viewing goods issues</h2>
+<p>To view the list of goods issues:</p>
+<ul><li>Click <strong>Sales &gt; Sales &gt; Goods issues</strong>. </li></ul><h2>Checking which goods are shipped and invoiced</h2>
+<p>The <strong>Status</strong> column of the goods issue list shows whether each goods issue is covered with sales invoices. The following values are available:</p>
+<ul><li><strong>Not invoiced</strong>. None of the goods registered in the goods issue is included in sales invoices. 
+</li><li><strong>Partially invoiced</strong>. Some of the goods registered in the goods issue are included in sales invoices. 
+</li><li><strong>Invoiced</strong>. All goods registered in the goods issue are included in sales invoices. </li></ul><p>This helps you verify that you issued sales invoices that you can use to claim money for the shipped goods.</p>
+<p>Alternatively, to check which goods your company shipped with or without invoices, you can use the <strong>Goods shipped not invoiced</strong> report.</p>
+<ul><li>To generate the report for all goods issues, click <strong>Sales &gt; Reports &gt; Goods shipped not invoiced</strong>. 
+</li><li>To generate the report for a specific goods issue, open the goods issue and click the <strong>Goods shipped not invoiced</strong> tab. </li></ul><a name="goods_issue_fields"></a>
+<h2>Goods issue fields</h2>
+<p>A goods issue has the following fields:</p>
+<ul><li><strong>Counterparty</strong> (required). The customer name. 
+</li><li><strong>Contract</strong> (required). The contract governing the sale. 
+</li><li><strong>Order</strong>. The sales order that is a base for the goods issue. 
+</li><li><strong>Number</strong>. A unique goods issue number. 
+</li><li><strong>Dated</strong>. The date and time when the goods issue was created. 
+</li><li><strong>Company</strong> (required). The company that issues the goods. 
+</li><li><strong>Warehouse</strong> (required). The source warehouse. </li></ul><h2>Creating goods issues</h2>
+<p>To create a goods issue:</p>
+<ol><li>Do any of the following: 
+<ul><li>Click <strong>Sales &gt; Sales &gt; Goods issues</strong> and then click <strong>Create</strong>. 
+</li><li>Open a sales order and click <strong>Generate &gt; Goods issue</strong>. 
+</li><li>Select several sales orders and click <strong>Generate &gt; Goods issue</strong>. </li></ul></li><li>Fill the goods issue fields. 
+<p>For more information, see <a href="#goods_issue_fields">Goods issue fields</a>.</p>
+</li><li>Click the Products tab and do any of the following: 
+<ul><li>Click <img src="_files/populate_btn.png"></img><strong>Populate with the order data</strong>. 
+<p>1C:Drive populates the list of goods according to the sales order specified in the <strong>Order</strong> field.</p>
+</li><li>Click <strong>Select &gt; Ordered goods</strong> and then, in the <strong>Select ordered goods</strong> window, select the check boxes for the goods you want to add and enter the quantities. 
+<p>The <strong>Select ordered goods</strong> window displays goods included in sales orders. For each of the goods, it indicates its ordered quantity and the sales order. Also, it displays the remaining quantity to deliver as a difference of the quantity in the sales order and the quantity specified in the goods issue.</p>
+<p>To switch between goods of the base sales order only and goods of all sales orders, select or clear the <strong>Display products from dependent documents only</strong> check box.</p>
+</li><li>Click <strong>Add</strong> and then specify the goods item and its quantity. </li></ul></li><li>Click <strong>Post</strong>. 
+</li><li>Click <strong>Print delivery note</strong>. 
+</li><li>Send the printed delivery note to the customer along with the goods. </li></ol></body></html>

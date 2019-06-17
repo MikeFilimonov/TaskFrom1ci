@@ -1,0 +1,544 @@
+﻿
+#Region FormEventsHandlers
+
+&AtServer
+Procedure OnCreateAtServer(Cancel, StandardProcessing)
+
+	SetConditionalAppearance();
+	
+	If Parameters.Property("AutoTest") Then // Return if the form for analysis is received.
+		Return;
+	EndIf;
+	
+	If Parameters.User <> Undefined Then
+		UserArray = New Array;
+		UserArray.Add(Parameters.User);
+		
+		ExternalUsers = ?(
+			TypeOf(Parameters.User) = Type("CatalogRef.ExternalUsers"), True, False);
+		
+		Items.FormWriteAndClose.Title = NStr("en = 'Write'");
+		
+		OpenFromUserCardMode = True;
+	Else
+		UserArray = Parameters.Users;
+		ExternalUsers = Parameters.ExternalUsers;
+		OpenFromUserCardMode = False;
+	EndIf;
+	
+	UserCount = UserArray.Count();
+	If UserCount = 0 Then
+		Raise NStr("en = 'No user is selected.'");
+	EndIf;
+	
+	UsersType = Undefined;
+	For Each UserFromArray In UserArray Do
+		If UsersType = Undefined Then
+			UsersType = TypeOf(UserFromArray);
+		EndIf;
+		UserTypeFromArray = TypeOf(UserFromArray);
+		If UserTypeFromArray <> Type("CatalogRef.Users")
+			AND UserTypeFromArray <> Type("CatalogRef.ExternalUsers") Then
+			Raise NStr("en = 'Command cannot be executed for the specified object.'");
+		EndIf;
+		
+		If UsersType <> UserTypeFromArray Then
+			Raise NStr("en = 'Cannot execute the command for two different user kinds at once.'");
+		EndIf;
+	EndDo;
+		
+	If UserCount > 1
+		AND Parameters.User = Undefined Then
+		Title = NStr("en = 'User groups'");
+		Items.GroupsTreeMark.ThreeState = True;
+	EndIf;
+	
+	UsersList = New Structure;
+	UsersList.Insert("UserArray", UserArray);
+	UsersList.Insert("UserCount", UserCount);
+	FillGroupsTree();
+	
+	If GroupsTree.GetItems().Count() = 0 Then
+		Items.GroupsOrWarning.CurrentPage = Items.Warning;
+		Return;
+	EndIf;
+	
+EndProcedure
+
+&AtClient
+Procedure BeforeClose(Cancel, Exit, WarningText, StandardProcessing)	
+	
+	If Not OpenFromUserCardMode Then
+		
+		If Exit Then
+			WarningText = NStr("en = 'Data will be lost'"); 			
+			Return;
+		EndIf;
+		
+		Notification = New NotifyDescription("WriteAndCloseBegin", ThisObject);
+		CommonUseClient.ShowFormClosingConfirmation(Notification, Cancel, Exit);
+	EndIf;
+	
+EndProcedure
+
+#EndRegion
+
+#Region GroupsTreeFormTableItemsEventsHandlers
+
+&AtClient
+Procedure GroupsTreeChoice(Item, SelectedRow, Field, StandardProcessing)
+	
+	StandardProcessing = False;
+	ShowValue(,Item.CurrentData.Group);
+	
+EndProcedure
+
+&AtClient
+Procedure GroupsTreeMarkOnChange(Item)
+	Modified = True;
+EndProcedure
+
+#EndRegion
+
+#Region FormCommandsHandlers
+
+&AtClient
+Procedure WriteAndClose(Command)
+	WriteAndCloseBegin();
+EndProcedure
+
+&AtClient
+Procedure UncheckAll(Command)
+	
+	FillGroupsTree(True);
+	ExpandValueTree();
+	
+EndProcedure
+
+#EndRegion
+
+#Region ServiceProceduresAndFunctions
+
+&AtServer
+Procedure SetConditionalAppearance()
+
+	ConditionalAppearance.Items.Clear();
+
+	//
+
+	Item = ConditionalAppearance.Items.Add();
+
+	ItemField = Item.Fields.Items.Add();
+	ItemField.Field = New DataCompositionField(Items.GroupsTreeMark.Name);
+
+	FilterElement = Item.Filter.Items.Add(Type("DataCompositionFilterItem"));
+	FilterElement.LeftValue = New DataCompositionField("GroupsTree.GroupDoesNotChange");
+	FilterElement.ComparisonType = DataCompositionComparisonType.Equal;
+	FilterElement.RightValue = True;
+
+	Item.Appearance.SetParameterValue("ReadOnly", True);
+
+EndProcedure
+
+&AtClient
+Procedure WriteAndCloseBegin(Result = Undefined, AdditionalParameters = Undefined) Export
+	
+	UserNotification = New Structure;
+	UserNotification.Insert("Message");
+	UserNotification.Insert("HasErrors");
+	UserNotification.Insert("WholeTextMessages");
+	
+	WriteChanges(UserNotification);
+	
+	If UserNotification.HasErrors = False Then
+		If UserNotification.Message <> Undefined Then
+			ShowUserNotification(
+				NStr("en = 'Move users'"), , UserNotification.Message, PictureLib.Information32);
+		EndIf;
+	Else
+		
+		If UserNotification.WholeTextMessages <> Undefined Then
+			Report = New TextDocument;
+			Report.AddLine(UserNotification.WholeTextMessages);
+			
+			QuestionText = UserNotification.Message;
+			QuestionButtons = New ValueList;
+			QuestionButtons.Add("Ok", NStr("en = 'OK'"));
+			QuestionButtons.Add("ShowReport", NStr("en = 'Show report'"));
+			Notification = New NotifyDescription("WriteAndCloseQuestionDataProcessor", ThisObject, Report);
+			ShowQueryBox(Notification, QuestionText, QuestionButtons,, QuestionButtons[0].Value);
+		Else
+			Notification = New NotifyDescription("WriteAndCloseWarningDataProcessor", ThisObject);
+			ShowMessageBox(Notification, UserNotification.Message);
+		EndIf;
+		
+		Return;
+	EndIf;
+	
+	Modified = False;
+	WriteAndCloseEnd();
+	
+EndProcedure
+
+&AtServer
+Procedure FillGroupsTree(JustUncheckCheckBoxes = False)
+	
+	GroupsTreeReceiver = FormAttributeToValue("GroupsTree");
+	If Not JustUncheckCheckBoxes Then
+		GroupsTreeReceiver.Rows.Clear();
+	EndIf;
+	
+	If JustUncheckCheckBoxes Then
+		
+		WereChanges = False;
+		Found = GroupsTreeReceiver.Rows.FindRows(New Structure("Check", 1), True);
+		For Each TreeRow In Found Do
+			If Not TreeRow.GroupDoesNotChange Then
+				TreeRow.Check = 0;
+				WereChanges = True;
+			EndIf;
+		EndDo;
+		
+		Found = GroupsTreeReceiver.Rows.FindRows(New Structure("Check", 2), True);
+		For Each TreeRow In Found Do
+			TreeRow.Check = 0;
+			WereChanges = True;
+		EndDo;
+		
+		If WereChanges Then
+			Modified = True;
+		EndIf;
+		
+		ValueToFormAttribute(GroupsTreeReceiver, "GroupsTree");
+		Return;
+	EndIf;
+	
+	UserGroups = Undefined;
+	SubordinateGroups = New Array;
+	ParentsArray = New Array;
+	
+	If ExternalUsers Then
+		EmptyGroup = Catalogs.ExternalUserGroups.EmptyRef();
+		GetExternalUserGroups(UserGroups);
+	Else
+		EmptyGroup = Catalogs.UserGroups.EmptyRef();
+		GetUserGroups(UserGroups);
+	EndIf;
+	
+	If UserGroups.Count() <= 1 Then
+		Items.GroupsOrWarning.CurrentPage = Items.Warning;
+		Return;
+	EndIf;
+	
+	GetSubordinateGroups(UserGroups, SubordinateGroups, EmptyGroup);
+	
+	If TypeOf(UsersList.UserArray[0]) = Type("CatalogRef.Users") Then
+		UserType = "User";
+	Else
+		UserType = "ExternalUser";
+	EndIf;
+	
+	While SubordinateGroups.Count() > 0 Do
+		ParentsArray.Clear();
+		
+		For Each SubGroup In SubordinateGroups Do
+			
+			If SubGroup.Parent = EmptyGroup Then
+				GroupNewRow = GroupsTreeReceiver.Rows.Add();
+				GroupNewRow.Group = SubGroup.Ref;
+				GroupNewRow.Picture = ?(UserType = "User", 3, 9);
+				
+				If UsersList.UserCount = 1 Then
+					UserEnabledIndirectlyIntoGroup = False;
+					UserRef = UsersList.UserArray[0];
+					
+					If UserType = "ExternalUser" Then
+						UserEnabledIndirectlyIntoGroup = (SubGroup.AllAuthorizationObjects AND 
+							(TypeOf(UserRef.AuthorizationObject) = TypeOf(SubGroup.TypeOfAuthorizationObjects)));
+						GroupNewRow.GroupDoesNotChange = UserEnabledIndirectlyIntoGroup;
+					EndIf;
+					
+					FoundUser = SubGroup.Ref.Content.Find(UserRef, UserType);
+					GroupNewRow.Check = ?(FoundUser <> Undefined Or UserEnabledIndirectlyIntoGroup, 1, 0);
+				Else
+					GroupNewRow.Check = 2;
+				EndIf;
+				
+			Else
+				ParentGroup = 
+					GroupsTreeReceiver.Rows.FindRows(New Structure("Group", SubGroup.Parent), True);
+				SubordinatedGroupsNewRow = ParentGroup[0].Rows.Add();
+				SubordinatedGroupsNewRow.Group = SubGroup.Ref;
+				SubordinatedGroupsNewRow.Picture = ?(UserType = "User", 3, 9);
+				
+				If UsersList.UserCount = 1 Then
+					SubordinatedGroupsNewRow.Check = ?(SubGroup.Ref.Content.Find(
+						UsersList.UserArray[0], UserType) = Undefined, 0, 1);
+				Else
+					SubordinatedGroupsNewRow.Check = 2;
+				EndIf;
+				
+			EndIf;
+			
+			ParentsArray.Add(SubGroup.Ref);
+		EndDo;
+		SubordinateGroups.Clear();
+		
+		For Each Item In ParentsArray Do
+			GetSubordinateGroups(UserGroups, SubordinateGroups, Item);
+		EndDo;
+		
+	EndDo;
+	
+	GroupsTreeReceiver.Rows.Sort("Group Asc", True);
+	ValueToFormAttribute(GroupsTreeReceiver, "GroupsTree");
+	
+EndProcedure
+
+&AtServer
+Procedure GetUserGroups(UserGroups)
+	
+	Query = New Query;
+	Query.Text = "SELECT
+	|	UserGroups.Ref,
+	|	UserGroups.Parent
+	|FROM
+	|	Catalog.UserGroups AS UserGroups
+	|WHERE
+	|	UserGroups.DeletionMark <> TRUE";
+	
+	UserGroups = Query.Execute().Unload();
+	
+EndProcedure
+
+&AtServer
+Procedure GetExternalUserGroups(UserGroups)
+	
+	Query = New Query;
+	Query.Text = "SELECT
+	|	ExternalUserGroups.Ref,
+	|	ExternalUserGroups.Parent,
+	|	ExternalUserGroups.TypeOfAuthorizationObjects,
+	|	ExternalUserGroups.AllAuthorizationObjects
+	|FROM
+	|	Catalog.ExternalUserGroups AS ExternalUserGroups
+	|WHERE
+	|	ExternalUserGroups.DeletionMark <> TRUE";
+	
+	UserGroups = Query.Execute().Unload();
+	
+EndProcedure
+
+&AtServer
+Procedure GetSubordinateGroups(UserGroups, SubordinateGroups, ParentGroup)
+	
+	FilterParameters = New Structure("Parent", ParentGroup);
+	FilteredRows = UserGroups.FindRows(FilterParameters);
+	
+	For Each Item In FilteredRows Do
+		
+		If Item.Ref = Catalogs.UserGroups.AllUsers
+			Or Item.Ref = Catalogs.ExternalUserGroups.AllExternalUsers Then
+			Continue;
+		EndIf;
+		
+		SubordinateGroups.Add(Item);
+	EndDo;
+	
+EndProcedure
+
+&AtServer
+Procedure WriteChanges(UserNotification)
+	
+	UserArray = Undefined;
+	NotMovedUsers = New Map;
+	GroupsTreeSource = GroupsTree.GetItems();
+	RefillGroupsContent(GroupsTreeSource, UserArray, NotMovedUsers);
+	GenerateMessageText(UserArray, UserNotification, NotMovedUsers)
+	
+EndProcedure
+
+&AtServer
+Procedure RefillGroupsContent(GroupsTreeSource, DisplacedUsersArray, NotMovedUsers)
+	
+	UserArray = UsersList.UserArray;
+	If DisplacedUsersArray = Undefined Then
+		DisplacedUsersArray = New Array;
+	EndIf;
+	
+	For Each TreeRow In GroupsTreeSource Do
+		
+		If TreeRow.Check = 1
+			AND Not TreeRow.GroupDoesNotChange Then
+			
+			For Each UserRef In UserArray Do
+				
+				If TypeOf(UserRef) = Type("CatalogRef.Users") Then
+					UserType = "User";
+				Else
+					UserType = "ExternalUser";
+					TransferPossible = UsersService.PossibleUsersMove(TreeRow.Group, UserRef);
+					
+					If Not TransferPossible Then
+						
+						If NotMovedUsers.Get(UserRef) = Undefined Then
+							NotMovedUsers.Insert(UserRef, New Array);
+							NotMovedUsers[UserRef].Add(TreeRow.Group);
+						Else
+							NotMovedUsers[UserRef].Add(TreeRow.Group);
+						EndIf;
+						
+						Continue;
+					EndIf;
+					
+				EndIf;
+				
+				Add = ?(TreeRow.Group.Content.Find(
+					UserRef, UserType) = Undefined, True, False);
+				If Add Then
+					UsersService.AddUserToGroup(TreeRow.Group, UserRef, UserType);
+					
+					If DisplacedUsersArray.Find(UserRef) = Undefined Then
+						DisplacedUsersArray.Add(UserRef);
+					EndIf;
+					
+				EndIf;
+				
+			EndDo;
+			
+		ElsIf TreeRow.Check = 0
+			AND Not TreeRow.GroupDoesNotChange Then
+			
+			For Each UserRef In UserArray Do
+				
+				If TypeOf(UserRef) = Type("CatalogRef.Users") Then
+					UserType = "User";
+				Else
+					UserType = "ExternalUser";
+				EndIf;
+				
+				Delete = ?(TreeRow.Group.Content.Find(
+					UserRef, UserType) <> Undefined, True, False);
+				If Delete Then
+					UsersService.DeleteUserFromGroup(TreeRow.Group, UserRef, UserType);
+					
+					If DisplacedUsersArray.Find(UserRef) = Undefined Then
+						DisplacedUsersArray.Add(UserRef);
+					EndIf;
+					
+				EndIf;
+				
+			EndDo;
+			
+		EndIf;
+		
+		TreeRowItems = TreeRow.GetItems();
+		// Recursion
+		RefillGroupsContent(TreeRowItems, DisplacedUsersArray, NotMovedUsers);
+		
+	EndDo;
+	
+EndProcedure
+
+&AtServer
+Procedure GenerateMessageText(DisplacedUsersArray, UserNotification, NotMovedUsers)
+	
+	UserCount = DisplacedUsersArray.Count();
+	QuantityNotDisplacedUsers = NotMovedUsers.Count();
+	RowUsers = "";
+	
+	If QuantityNotDisplacedUsers > 0 Then
+		
+		If QuantityNotDisplacedUsers = 1 Then
+			For Each NotMovedUser In NotMovedUsers Do
+				Subject = String(NOTMovedUser.Key);
+			EndDo;
+			UserMessage = NStr("en = 'User ""%1"" has not managed to
+			                   |include in the selected group, as they have different types or the groups have the ""All users of the specified type"" sign installed.'");
+		Else
+			MeasurementUnitInWordParameters = NStr("en = 'user, users, users,,,,,,0'");
+			Subject = UsersService.WordEndingGenerating(QuantityNotDisplacedUsers, MeasurementUnitInWordParameters);
+			UserMessage = NStr("en = 'Not all users managed to include in
+			                   |the selected group, as they have different types or the groups have the ""All users of the specified type"" sign installed.'");
+			For Each NotMovedUser In NotMovedUsers Do
+			RowUsers = RowUsers + String(NOTMovedUser.Key) + " : " + 
+				StringFunctionsClientServer.RowFromArraySubrows(NOTMovedUser.Value) + Chars.LF;
+			EndDo;
+			UserNotification.WholeTextMessages = NStr("en = 'The following users were not included in groups:'") +
+				Chars.LF + Chars.LF + RowUsers;
+		EndIf;
+		UserNotification.Message = StringFunctionsClientServer.SubstituteParametersInString(
+			UserMessage, Subject);
+		UserNotification.HasErrors = True;
+		
+		Return;
+	ElsIf UserCount = 1 Then
+		DescriptionOfUser = CommonUse.ObjectAttributeValue(DisplacedUsersArray[0], "Description");
+		UserMessage = NStr("en = 'Groups of user ""%1"" are changed'");
+		UserNotification.Message = StringFunctionsClientServer.SubstituteParametersInString(
+			UserMessage, DescriptionOfUser);
+	ElsIf UserCount > 1 Then
+		
+		UserMessage = NStr("en = 'Groups of %1 are changed'");
+		RowObject = UsersService.WordEndingGenerating(
+			UserCount, NStr("en = 'user, users, users,,,,,,0'"));
+		UserNotification.Message = StringFunctionsClientServer.SubstituteParametersInString(
+			UserMessage, RowObject);
+		
+	EndIf;
+	UserNotification.HasErrors = False;
+	
+EndProcedure
+
+&AtClient
+Procedure ExpandValueTree()
+	
+	Rows = GroupsTree.GetItems();
+	For Each String In Rows Do
+		Items.GroupsTree.Expand(String.GetID(), True);
+	EndDo;
+	
+EndProcedure
+
+&AtClient
+Procedure WriteAndCloseQuestionDataProcessor(Response, Report) Export
+	
+	If Response = "Ok" Then
+		Return;
+	Else
+		Report.Show(NStr("en = 'Users not included in groups'"));
+		Return;
+	EndIf;
+	
+	Modified = False;
+	WriteAndCloseEnd();
+	
+EndProcedure
+
+&AtClient
+Procedure WriteAndCloseWarningDataProcessor(AdditionalParameters) Export
+	
+	WriteAndCloseEnd();
+	
+EndProcedure
+
+&AtClient
+Procedure WriteAndCloseEnd()
+	
+	Notify("PlacingUsersInGroups");
+	If ExternalUsers Then
+		Notify("Write_ExternalUserGroups");
+	Else
+		Notify("Write_UserGroups");
+	EndIf;
+	
+	If Not OpenFromUserCardMode Then
+		Close();
+	Else
+		FillGroupsTree();
+		ExpandValueTree();
+	EndIf;
+	
+EndProcedure
+
+#EndRegion

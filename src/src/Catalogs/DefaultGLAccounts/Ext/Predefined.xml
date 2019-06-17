@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.7">
+	<Item id="f0d68116-5a43-46ff-a04b-95664b93b84e">
+		<Name>AccountsPayable</Name>
+		<Code/>
+		<Description>Accounts payable</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="d3ed7a8b-4fec-407f-b7f1-4333cac261c4">
+		<Name>AccountsReceivable</Name>
+		<Code/>
+		<Description>Accounts receivable</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="d545c6ef-7203-4f5e-b6bb-2879e78a3492">
+		<Name>AdvanceHolders</Name>
+		<Code/>
+		<Description>Advance holders</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="a05fa3b6-9d1a-44cc-adef-b4616af0f0e1">
+		<Name>AdvanceHoldersPayable</Name>
+		<Code/>
+		<Description>Advance holders payable</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="a04a9a62-769d-488e-b92a-50396f3b294f">
+		<Name>AdvancesToSuppliers</Name>
+		<Code/>
+		<Description>Advances to suppliers</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="754355aa-3883-40e2-b3f4-0cc0fc5eb893">
+		<Name>BankAccount</Name>
+		<Code/>
+		<Description>Bank account</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="67e275c6-86a2-4513-b206-3eb205a8cf00">
+		<Name>BankFeesCreditAccount</Name>
+		<Code/>
+		<Description>Bank fees credit account</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="477538a0-5f46-4c46-8d98-ac6dd7cd0422">
+		<Name>BankFeesExpenseAccount</Name>
+		<Code/>
+		<Description>Bank fees expense account</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="c818f762-9dc3-4b13-b6b6-4782ba35f667">
+		<Name>CapitalIntroduction</Name>
+		<Code/>
+		<Description>Capital introduction</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="f6e6d678-b30c-4698-aec3-81c3fc9355ce">
+		<Name>CashAccount</Name>
+		<Code/>
+		<Description>Cash account</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="63f280b3-746c-4360-a2b7-8adf8d22875d">
+		<Name>COGSOfMainBusinessLine</Name>
+		<Code/>
+		<Description>COGS of main business activity</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="f9c77a62-6ae5-41d3-946e-fb11be32faf9">
+		<Name>ComissionExpensesOnLoansBorrowed</Name>
+		<Code/>
+		<Description>Comission expenses on loans borrowed</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="6dfae100-32c2-43b5-a6ac-9a0837b74a1d">
+		<Name>CreditCardSalesReceivedAtALaterDate</Name>
+		<Code/>
+		<Description>Credit card sales received at a later date</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="6f5763f7-1b9f-4bce-a680-269e5574cb90">
+		<Name>CustomerAdvances</Name>
+		<Code/>
+		<Description>Customer advances</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="5d459652-8bbc-4762-a011-ec49c36afb2c">
+		<Name>DeferredRevenue</Name>
+		<Code/>
+		<Description>Deferred revenue</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="54e1cb87-c9c9-4e16-885c-b245036450c4">
+		<Name>DiscountAllowed</Name>
+		<Code/>
+		<Description>Discount allowed</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="095b5419-2380-437d-8067-87a0d85f491e">
+		<Name>DiscountReceived</Name>
+		<Code/>
+		<Description>Discount received</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="9b2623f4-3233-4762-91d1-49591d574ef9">
+		<Name>Expenses</Name>
+		<Code/>
+		<Description>Expenses</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="ce022bf9-7937-4381-960a-163d561d8879">
+		<Name>FixedAssets</Name>
+		<Code/>
+		<Description>Fixed assets</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="622f8304-253b-430c-b9e7-8d61541eda6a">
+		<Name>FixedAssetsDepreciation</Name>
+		<Code/>
+		<Description>Fixed assets depreciation</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="d86b051d-914c-4db7-9208-2380ed5e8bda">
+		<Name>ForeignCurrencyExchangeGain</Name>
+		<Code/>
+		<Description>Foreign currency exchange gain</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="3b522978-cc14-45d2-9073-247902e7a40e">
+		<Name>ForeignCurrencyExchangeLoss</Name>
+		<Code/>
+		<Description>Foreign currency exchange loss</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="fb964723-dc7d-4911-9b68-4a4c54fafee9">
+		<Name>FundsTransfersBeingProcessed</Name>
+		<Code/>
+		<Description>Funds transfers being processed</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="a5f8d918-1ed8-4433-a3f2-9fa5fae5792e">
+		<Name>GoodsReceivedNotInvoiced</Name>
+		<Code/>
+		<Description>Goods received not invoiced</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="6adae226-2d28-4094-a618-b528d2e02683">
+		<Name>GoodsShippedNotInvoiced</Name>
+		<Code/>
+		<Description>Goods shipped not invoiced</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="fbf044ad-1cb6-4e95-8fee-290912cf4015">
+		<Name>InterestExpensesOnLoansBorrowed</Name>
+		<Code/>
+		<Description>Interest expenses on loans borrowed</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="8543cb75-fd98-4865-9580-7befe14fd0d7">
+		<Name>InterestIncome</Name>
+		<Code/>
+		<Description>Interest income</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="15927eec-1cdb-4598-bab6-1c23ec6f607b">
+		<Name>InterestPayable</Name>
+		<Code/>
+		<Description>Interest payable</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="1e5f0365-d87a-4856-9858-3beec13776a5">
+		<Name>InterestReceivable</Name>
+		<Code/>
+		<Description>Interest receivable</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="aacfb768-643d-4ad1-bf4e-e17fb86d1a91">
+		<Name>Inventory</Name>
+		<Code/>
+		<Description>Inventory</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="be5442ab-581e-4db6-95d2-41961dcfab62">
+		<Name>InventoryInRetail</Name>
+		<Code/>
+		<Description>Inventory in retail</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="2e88f246-8720-4085-ae70-d96237a07aa5">
+		<Name>LoansBorrowed</Name>
+		<Code/>
+		<Description>Loans borrowed</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="06b275ba-ba6f-4d8a-bb47-9609198bc5cf">
+		<Name>LoansLentToEmployee</Name>
+		<Code/>
+		<Description>Loans lent to employee</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="3fd93b49-599e-4630-b80a-c71f06a671cd">
+		<Name>OpeningBalanceEquity</Name>
+		<Code/>
+		<Description>Opening balance equity account (to balance opening entries)</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="40c3d058-1d67-4c90-aa1a-0960b459a740">
+		<Name>OtherIncome</Name>
+		<Code/>
+		<Description>Other income</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="c50cc996-397f-45a9-b45c-8d0b41fc08a1">
+		<Name>PayrollExpenses</Name>
+		<Code/>
+		<Description>Payroll expenses</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="24f9a030-10aa-4e57-95d2-f8a4e33f5d89">
+		<Name>PayrollPayable</Name>
+		<Code/>
+		<Description>Payroll payable</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="de8cbdab-23e3-488e-9f60-5b998b805d3c">
+		<Name>PettyCashAccount</Name>
+		<Code/>
+		<Description>Petty cash account</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="c5b1c500-a242-420a-91f0-8b9ada0b6e17">
+		<Name>PurchaseReturns</Name>
+		<Code/>
+		<Description>Purchase returns</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="9781ff23-7d3a-4f6c-97fe-c80616c21297">
+		<Name>RetailMarkup</Name>
+		<Code/>
+		<Description>Retail markup for retail inventory method</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="2433384d-e3ce-4f0b-a034-23b3eaf96b31">
+		<Name>RetainedEarnings</Name>
+		<Code/>
+		<Description>Retained earnings</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="6cbe57ed-23a1-40e5-b0a0-9625d4e0d72b">
+		<Name>RevenueFromMainBusinessLine</Name>
+		<Code/>
+		<Description>Revenue from main business activity</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="d2245ead-e684-4d47-a3af-daa7f72eb8be">
+		<Name>SalesReturns</Name>
+		<Code/>
+		<Description>Sales returns</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="8dfc3d0c-b4a2-4f2e-b914-7d7b2c52aa9f">
+		<Name>TaxPayable</Name>
+		<Code/>
+		<Description>Tax payable</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="0317dd53-5ca4-4351-82b5-bda78f135a17">
+		<Name>TaxRefund</Name>
+		<Code/>
+		<Description>Tax refund</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="eb44b6ac-d86e-42ed-a3de-40d7bc752aa1">
+		<Name>VATInput</Name>
+		<Code/>
+		<Description>VAT input</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="0314e495-0484-4667-9341-c284ff5b4675">
+		<Name>VATAdvancesToSuppliers</Name>
+		<Code/>
+		<Description>VAT on advance payments paid to suppliers</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="73378c6c-ccde-47ea-bd98-0ba446708b44">
+		<Name>VATAdvancesFromCustomers</Name>
+		<Code/>
+		<Description>VAT on advance payments received from customers</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="2f013c63-0118-4cf3-a570-612b01476005">
+		<Name>VATOutput</Name>
+		<Code/>
+		<Description>VAT output</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="2f5f6f2a-e8da-48e3-9684-fcb3b1789dac">
+		<Name>VATReverseCharge</Name>
+		<Code/>
+		<Description>VAT reverse charge</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="d7d16fb9-1117-4388-ae57-91a5d659ec3e">
+		<Name>WorkInProcess</Name>
+		<Code/>
+		<Description>Work-in-process</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

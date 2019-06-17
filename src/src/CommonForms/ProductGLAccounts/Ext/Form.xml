@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<Width>38</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="FormOK" id="49">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.OK</CommandName>
+				<ExtendedTooltip name="FormOKExtendedTooltip" id="50"/>
+			</Button>
+			<Button name="FormCancel" id="51">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Cancel</CommandName>
+				<ExtendedTooltip name="FormCancelExtendedTooltip" id="52"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeClose">BeforeClose</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+		<Event name="OnClose">OnClose</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="GroupAttribute" id="5">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="GroupAttributeExtendedTooltip" id="6"/>
+			<ChildItems>
+				<InputField name="InventoryGLAccount" id="7">
+					<DataPath>InventoryGLAccount</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Inventory</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="InventoryGLAccountContextMenu" id="8"/>
+					<ExtendedTooltip name="InventoryGLAccountExtendedTooltip" id="9"/>
+				</InputField>
+				<InputField name="InventoryReceivedGLAccount" id="10">
+					<DataPath>InventoryReceivedGLAccount</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Inventory received</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="InventoryReceivedGLAccountContextMenu" id="11"/>
+					<ExtendedTooltip name="InventoryReceivedGLAccountExtendedTooltip" id="12"/>
+				</InputField>
+				<InputField name="InventoryTransferredGLAccount" id="13">
+					<DataPath>InventoryTransferredGLAccount</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Inventory transferred</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="InventoryTransferredGLAccountContextMenu" id="14"/>
+					<ExtendedTooltip name="InventoryTransferredGLAccountExtendedTooltip" id="15"/>
+				</InputField>
+				<InputField name="InventoryFromGLAccount" id="56">
+					<DataPath>InventoryFromGLAccount</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>From</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="InventoryFromGLAccountContextMenu" id="57"/>
+					<ExtendedTooltip name="InventoryFromGLAccountExtendedTooltip" id="58"/>
+				</InputField>
+				<InputField name="InventoryToGLAccount" id="59">
+					<DataPath>InventoryToGLAccount</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>To</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="InventoryToGLAccountContextMenu" id="60"/>
+					<ExtendedTooltip name="InventoryToGLAccountExtendedTooltip" id="61"/>
+				</InputField>
+				<InputField name="SignedOutEquipmentGLAccount" id="53">
+					<DataPath>SignedOutEquipmentGLAccount</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Signed out equipment</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="SignedOutEquipmentGLAccountContextMenu" id="54"/>
+					<ExtendedTooltip name="SignedOutEquipmentGLAccountExtendedTooltip" id="55"/>
+				</InputField>
+				<InputField name="GoodsShippedNotInvoicedGLAccount" id="16">
+					<DataPath>GoodsShippedNotInvoicedGLAccount</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Goods shipped not invoiced</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="GoodsShippedNotInvoicedGLAccountContextMenu" id="17"/>
+					<ExtendedTooltip name="GoodsShippedNotInvoicedGLAccountExtendedTooltip" id="18"/>
+				</InputField>
+				<InputField name="GoodsReceivedNotInvoicedGLAccount" id="19">
+					<DataPath>GoodsReceivedNotInvoicedGLAccount</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Goods received not invoiced</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="GoodsReceivedNotInvoicedGLAccountContextMenu" id="20"/>
+					<ExtendedTooltip name="GoodsReceivedNotInvoicedGLAccountExtendedTooltip" id="21"/>
+				</InputField>
+				<InputField name="GoodsInvoicedNotDeliveredGLAccount" id="22">
+					<DataPath>GoodsInvoicedNotDeliveredGLAccount</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Goods invoiced not delivered</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="GoodsInvoicedNotDeliveredGLAccountContextMenu" id="23"/>
+					<ExtendedTooltip name="GoodsInvoicedNotDeliveredGLAccountExtendedTooltip" id="24"/>
+				</InputField>
+				<InputField name="UnearnedRevenueGLAccount" id="25">
+					<DataPath>UnearnedRevenueGLAccount</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Unearned revenue</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="UnearnedRevenueGLAccountContextMenu" id="26"/>
+					<ExtendedTooltip name="UnearnedRevenueGLAccountExtendedTooltip" id="27"/>
+				</InputField>
+				<InputField name="VATInputGLAccount" id="28">
+					<DataPath>VATInputGLAccount</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>VAT Input</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="VATInputGLAccountContextMenu" id="29"/>
+					<ExtendedTooltip name="VATInputGLAccountExtendedTooltip" id="30"/>
+				</InputField>
+				<InputField name="VATOutputGLAccount" id="31">
+					<DataPath>VATOutputGLAccount</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>VAT Output</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="VATOutputGLAccountContextMenu" id="32"/>
+					<ExtendedTooltip name="VATOutputGLAccountExtendedTooltip" id="33"/>
+				</InputField>
+				<InputField name="RevenueGLAccount" id="34">
+					<DataPath>RevenueGLAccount</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Revenue</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="RevenueGLAccountContextMenu" id="35"/>
+					<ExtendedTooltip name="RevenueGLAccountExtendedTooltip" id="36"/>
+				</InputField>
+				<InputField name="COGSGLAccount" id="37">
+					<DataPath>COGSGLAccount</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>COGS</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="COGSGLAccountContextMenu" id="38"/>
+					<ExtendedTooltip name="COGSGLAccountExtendedTooltip" id="39"/>
+				</InputField>
+				<InputField name="ConsumptionGLAccount" id="40">
+					<DataPath>ConsumptionGLAccount</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Consumption</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="ConsumptionGLAccountContextMenu" id="41"/>
+					<ExtendedTooltip name="ConsumptionGLAccountExtendedTooltip" id="42"/>
+				</InputField>
+				<InputField name="SalesReturnGLAccount" id="43">
+					<DataPath>SalesReturnGLAccount</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Sales return</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="SalesReturnGLAccountContextMenu" id="44"/>
+					<ExtendedTooltip name="SalesReturnGLAccountExtendedTooltip" id="45"/>
+				</InputField>
+				<InputField name="PurchaseReturnGLAccount" id="46">
+					<DataPath>PurchaseReturnGLAccount</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Purchase return</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="PurchaseReturnGLAccountContextMenu" id="47"/>
+					<ExtendedTooltip name="PurchaseReturnGLAccountExtendedTooltip" id="48"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="InventoryGLAccount" id="1">
+			<Type>
+				<v8:Type>cfg:ChartOfAccountsRef.PrimaryChartOfAccounts</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="InventoryTransferredGLAccount" id="2">
+			<Type>
+				<v8:Type>cfg:ChartOfAccountsRef.PrimaryChartOfAccounts</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="InventoryReceivedGLAccount" id="3">
+			<Type>
+				<v8:Type>cfg:ChartOfAccountsRef.PrimaryChartOfAccounts</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="GoodsShippedNotInvoicedGLAccount" id="4">
+			<Type>
+				<v8:Type>cfg:ChartOfAccountsRef.PrimaryChartOfAccounts</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="GoodsReceivedNotInvoicedGLAccount" id="5">
+			<Type>
+				<v8:Type>cfg:ChartOfAccountsRef.PrimaryChartOfAccounts</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="GoodsInvoicedNotDeliveredGLAccount" id="6">
+			<Type>
+				<v8:Type>cfg:ChartOfAccountsRef.PrimaryChartOfAccounts</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="UnearnedRevenueGLAccount" id="7">
+			<Type>
+				<v8:Type>cfg:ChartOfAccountsRef.PrimaryChartOfAccounts</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="VATInputGLAccount" id="8">
+			<Type>
+				<v8:Type>cfg:ChartOfAccountsRef.PrimaryChartOfAccounts</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="VATOutputGLAccount" id="9">
+			<Type>
+				<v8:Type>cfg:ChartOfAccountsRef.PrimaryChartOfAccounts</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="RevenueGLAccount" id="10">
+			<Type>
+				<v8:Type>cfg:ChartOfAccountsRef.PrimaryChartOfAccounts</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="COGSGLAccount" id="11">
+			<Type>
+				<v8:Type>cfg:ChartOfAccountsRef.PrimaryChartOfAccounts</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ConsumptionGLAccount" id="12">
+			<Type>
+				<v8:Type>cfg:ChartOfAccountsRef.PrimaryChartOfAccounts</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="SalesReturnGLAccount" id="13">
+			<Type>
+				<v8:Type>cfg:ChartOfAccountsRef.PrimaryChartOfAccounts</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="PurchaseReturnGLAccount" id="14">
+			<Type>
+				<v8:Type>cfg:ChartOfAccountsRef.PrimaryChartOfAccounts</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Products" id="15">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Products</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="TableName" id="17">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Select" id="18">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="SignedOutEquipmentGLAccount" id="20">
+			<Type>
+				<v8:Type>cfg:ChartOfAccountsRef.PrimaryChartOfAccounts</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="InventoryFromGLAccount" id="21">
+			<Type>
+				<v8:Type>cfg:ChartOfAccountsRef.PrimaryChartOfAccounts</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="InventoryToGLAccount" id="22">
+			<Type>
+				<v8:Type>cfg:ChartOfAccountsRef.PrimaryChartOfAccounts</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="OK" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>OK</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>OK</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>OK</Action>
+		</Command>
+		<Command name="Cancel" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Cancel</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Cancel</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Cancel</Action>
+		</Command>
+	</Commands>
+</Form>

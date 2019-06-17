@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><meta name="GENERATOR" content="MSHTML 11.00.9600.19081"></meta></head><body>
+<h1>Primary chart of accounts</h1>
+<p>The chart of accounts (COA) is a list of accounts used in the general ledger of an organization. 1C:Drive uses COA to aggregate information into financial statements of your organization.</p>
+<p>After you install 1C:Drive and enter your organization details, you will have the default chart of accounts preconfigured for your organization. In most cases, this default COA is sufficient for your accounting activities.</p>
+<p>If you need, you can change it: modify or delete existing accounts and create extra ones. For instance, if your organization has several bank accounts, you may decide to either record all your cash assets to one account in COA, or split it to several COA accounts. Likewise, you may prefer to split your accounts receivable into trade receivables, contract assets, other receivables, and adjustments.</p>
+<p>To open the chart of accounts for your company:</p>
+<ul><li>Click <b>Company &gt; Enterprise &gt; Primary chart of accounts</b>. </li></ul><p>The chart of accounts is a hierarchy of accounts. This means each account can have subordinate accounts and thus you have a tree-like structure of accounts.</p><a name="account_attributes"></a>
+<h2>Account attributes</h2>
+<p>Each account has the following attributes:</p>
+<ul><li><b>Description</b> (required). The name of the account. 
+</li><li><b>Financial statement</b> (required). Either a balance sheet, or a financial statement, depending on what the account affects. 
+</li><li><b>Account type</b> (required). The balance section that accumulates the data that is related to this account. Also, it is used for filtering out accounts in 1C:Drive. 
+</li><li><b>Allocation method</b> (required). The method of allocating expenses. 
+<p>Depending on the value of the <b>Account type</b> attribute, the <b>Allocation method</b> attribute can have one of the following values:</p>
+<table><tbody><tr><th><b>Allocation method</b></th>
+<th><b>Applicable to Account type</b></th></tr><tr><td>According to the sales volume, for financial result</td>
+<td>
+<ul><li>Expenses (allocated to the financial result) 
+</li><li>Loan interest (borrowed) 
+</li><li>Other expenses (allocated to the financial result) 
+</li><li>Other income 
+</li><li>Revenue </li></ul></td></tr><tr><td>Revenue from sales, for financial result</td>
+<td>
+<ul><li>Expenses (allocated to the financial result) 
+</li><li>Loan interest (borrowed) 
+</li><li>Other expenses (allocated to the financial result) 
+</li><li>Other income 
+</li><li>Revenue </li></ul></td></tr><tr><td>By sales cost, for financial result</td>
+<td>
+<ul><li>Expenses (allocated to the financial result) 
+</li><li>Loan interest (borrowed) 
+</li><li>Other expenses (allocated to the financial result) 
+</li><li>Other income 
+</li><li>Revenue </li></ul></td></tr><tr><td>By gross profit, for financial result</td>
+<td>
+<ul><li>Expenses (allocated to the financial result) 
+</li><li>Loan interest (borrowed) 
+</li><li>Other expenses (allocated to the financial result) 
+</li><li>Other income 
+</li><li>Revenue </li></ul></td></tr><tr><td>Direct allocation</td>
+<td>
+<ul><li>Expenses (allocated to the financial result) 
+</li><li>Loan interest (borrowed) 
+</li><li>Other expenses (allocated to the financial result) 
+</li><li>Other income 
+</li><li>Revenue </li></ul></td></tr><tr><td>By output volume, for product cost</td>
+<td>
+<ul><li>Work-in-process 
+</li><li>Indirect expenses (allocated to cost of goods manufactured) </li></ul></td></tr><tr><td>By direct expenses, for product cost</td>
+<td>
+<ul><li>Work-in-process 
+</li><li>Indirect expenses (allocated to cost of goods manufactured) </li></ul></td></tr><tr><td>Do not allocate</td>
+<td>
+<ul><li>Work-in-process 
+</li><li>Indirect expenses (allocated to cost of goods manufactured) </li></ul></td></tr></tbody></table></li><li><b>Closing account</b> (required). The closing account for the given account. It means that after you perform the month-end closing operation, 1C:Drive moves the closing balance of the account to its closing account. For instance, the Work-in progress account's closing balance is typically moved to the Inventory account. 
+<p>This attribute is available if the <b>Account type</b> attribute is set to:</p>
+<ul><li>Indirect expenses (allocated to cost of goods manufactured) 
+</li><li>Work-in-process </li></ul></li><li><b>Multi-currency</b>. Indicates whether transactions for the account can be in different currencies. 
+</li><li><b>Code</b>. An alphanumeric code of the account. 
+</li><li><b>Type</b>. Can have one of the following values: 
+<ul><li><b>Dr</b>. A debit account. Its closing balance cannot be negative. For instance, inventory or accounts receivable. 
+</li><li><b>(Cr)</b>. A credit account. Its closing balance cannot be positive. For instance, accounts payable, revenue, or interest payable. 
+</li><li><b>Dr/(Cr)</b>. A debit/credit account. For instance, retained earnings equity, which can be debit or credit depending on the organization's financial result. </li></ul></li><li><b>Subordinate to</b>. The parent account of the given account. 
+</li><li><b>Sort order</b>. The number that specifies the displaying order of the account among those that belong to the same parent account. The account having the least sort order is the first in the list. </li></ul><h2>Managing accounts</h2>
+<h3>Creating accounts</h3>
+<p>To create an account:</p>
+<ol><li>Click <b>Create</b>. 
+</li><li>Specify the account attributes. 
+<p>For more information, see <a href="#account_attributes">Account attributes</a>.</p>
+</li><li>Click <b>Save and close</b>. </li></ol><h3>Changing the parent account</h3>
+<p>To change an account's position in the account hierarchy, do any of the following:</p>
+<ul><li>Double-click the account, then, in the <b>Subordinate to</b> field, click the new parent for the account, and click <b>Save and close</b>. 
+</li><li>Select the account, then, on the <b>More actions</b> menu, click <b>Move to folder</b>, click the new parent for the account, and click <b>Select</b>. </li></ul><h2>Applying custom GL accounts</h2>
+<p>For each list item where 1C:Drive displays the GL accounts tab (like for a product or a counterparty), you can redefine GL accounts.</p>
+<p>For instance, if you have an account assigned as a default GL account to the Inventory business operation and then you create a product, by default, it is the inventory GL account of the product. For a particular new product, you may want to assign another account as the inventory one, and you can do this when editing the product details, on the GL accounts tab. Similarly, you can change the GL account of costs for a product.</p>
+<p>For more information, see <a href="Catalog.DefaultGLAccounts.Form.ListForm/Help">Default GL accounts</a>.</p>
+<p>If you have business areas turned on in 1C:Drive, you can create and apply a business area that redefines the default GL accounts for revenue from sales, sales cost, and profit in a particular situation. Thus, you can get extra accounting flexibility where you need it.</p>
+<p>Also, for a particular document you can redefine the GL account instead of the default GL account. For instance, this can be useful for credit notes or debit notes.</p></body></html>

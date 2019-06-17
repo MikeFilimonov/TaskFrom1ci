@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.19180"></meta></head><body>
+<h1>Credit notes</h1>
+<p>When you supply goods or services to your customer and you have already issued a sales invoice, you may need to reduce the customer's debt. Common scenarios when you need this include:</p>
+<ul><li>A change in the product list (for instance, your wholesale customer requests a goods return, or your retail customer requests a return when the retail shift when you sold the goods is already closed). 
+</li><li>A change in the debt amount (for example, you decide to apply an extra discount or allowance). </li></ul><p>In both scenarios, you issue a credit note document to your customer.</p>
+<p>This document serves as the evidence of the reduction in your sales. In the credit note, you can list the products, quantities, and agreed prices for products or services that your company provided to the customer, but the customer returned or did not receive them, or you can simply adjust the debt amount. Typically, you state the reason for the credit note and refer to the original sales invoice, goods return, or sales slip.</p>
+<p>You can provide the credit to the customer as reduction of their debt, or the customer can apply the credit to the future purchases.</p>
+<h2>Viewing credit notes</h2>
+<p>To view the list of credit notes:</p>
+<ul><li>Click <b>Sales &gt; Return &gt; Credit notes</b>. </li></ul><a name="credit_note_fields"></a>
+<h2>Credit note fields</h2>
+<p>A credit note has the following fields:</p>
+<ul><li><b>Counterparty</b> (required). The customer you issue the credit note for. If you issue a credit note for a retail sales return, 1C:Drive adds the <strong>Retail customer</strong> value to the field. You can change it to any other customer. 
+</li><li><b>Contract</b> (required). The customer's contract that governs the issue of the credit note. 
+</li><li><b>Base document</b>. The sales invoice, goods return, or sales slip where you want to apply the credit note. This field is available only if the <b>Operation</b> field of the credit note is set to "Sales return." 
+</li><li><b>Adjustment amount</b>. The money amount to reduce the customer's debt. 1C:Drive changes the value of this field automatically according to the content of the credit note you edit. You can change the value of this field explicitly only if the <b>Operation</b> field of the credit note is set to "Accounts receivable adjustments" or "Discount allowed." 
+</li><li><b>Number</b>. A unique credit note number. It helps you identify the credit note. 
+</li><li><b>Dated</b>. The date and time when the credit note was issued. 
+</li><li><b>Operation</b>. The credit note type. It can have one of the following values: 
+<ul><li><b>Accounts receivable adjustments</b>. Reduces the customer's debt with a reason rather than a discount or a sales return. For instance, your company delayed the goods delivery and wants to compensate this to the customer. 
+</li><li><b>Discount allowed</b>. Applies a discount to the sale after you have already issued a sales invoice. For instance, you want to give the customer a fast payment bonus for your sales invoice. 
+</li><li><b>Sales return</b>. The credit note initiates a goods return document, or is based on a goods return or sales slip document. A credit note of this type itself does not assume physical transfer of goods in the inventory. That is why there are no cost of goods sold (COGS) entries. To register a goods transfer, use a separate goods return document. </li></ul></li><li><b>Company</b> (required). Your company that issues the credit note to the customer. 
+</li><li><b>Warehouse</b>. Your company's warehouse to which you return the goods. This field is available only if the <b><a href="InformationRegister.AccountingPolicy/Help#sales_return_flow_option">Sales return flow</a></b> option is set to "Credit note document posts all entries, including inventory." 
+</li><li><b>GL account</b> (required). The GL account for recording the adjusted amount. Typically, it is a contra revenue account. </li></ul><h2>Creating credit notes</h2>
+<p>To create a credit note:</p>
+<ol><li>Do any of the following: 
+<ul><li>Click <b>Sales &gt; Return &gt; Credit notes</b> and then click <b>Create</b>. 
+</li><li>Open a sales invoice, goods return, or sales slip and click <b>Generate &gt; Credit note</b>. </li></ul></li><li>Fill the credit note fields. 
+<p>For more information, see <a href="#credit_note_fields">Credit note fields</a>.</p>
+</li><li>If the credit note has the "Sales return" operation type, specify the sales return products. 
+<p>For more information, see <a href="#specifying_return_products">Specifying return products</a>.</p>
+</li><li>If the credit note has the "Accounts receivable adjustments" or "Discount allowed" operation type, specify the allowances or discounts. 
+<p>For more information, see <a href="#specifying_allowances_or_discounts">Specifying allowances or discounts</a>.</p>
+</li><li>Specify the credit note amount allocation. 
+<p>For more information, see <a href="#specifying_credit_note_amount_allocation">Specifying credit note amount allocation</a>.</p>
+</li><li>Specify the credit note reason. 
+<p>For more information, see <a href="#specifying_credit_note_reason">Specifying credit note reason</a>.</p>
+</li><li>Click <b>Post</b>. </li></ol><a name="specifying_return_products"></a>
+<h3>Specifying return products</h3>
+<p>When you register a credit note for a sales return reason, you select "Sales return" in the credit note's <b>Operation</b> field. For more information, see <a href="#credit_note_fields">Credit note fields</a>.</p>
+<p>For such a credit note, you also have to specify the products the customer returns and the adjustment amount. To do this:</p>
+<ol><li>Open the credit note. 
+</li><li>Click the <b>Products</b> tab. 
+</li><li>Click <b>Populate from base document</b>. 
+<p>1C:Drive populates the table on the <b>Products</b> tab according to the sales invoice, goods return, or sales slip document you specified in the <b>Base document</b> field.</p>
+</li><li>For each returned product, do the following: 
+<ol type="a"><li>If the credit note is based on a sales invoice or sales slip, in the <b>Return quantity</b> column, specify the returned quantity. 
+<p>1C:Drive calculates the value of the <b>Adjustment amount</b> column.</p>
+</li><li>If the credit note is based on a goods return, in the <b>Adjustment amount</b> column, specify the amount you want to subtract from the customer's debt. 
+</li><li>In the <b>COGS</b> column, specify the cost of goods sold (COGS) for the product. </li></ol></li></ol><p>1C:Drive calculates the resulting adjustment amount of the credit note and displays it in the <b>Adjustment amount</b> field.</p><a name="specifying_allowances_or_discounts"></a>
+<h3>Specifying allowances or discounts</h3>
+<p>When you register a credit note for the reason of discounts or allowances for a customer, you select "Discount allowed" or "Accounts receivable adjustments" in the credit note's <b>Operation</b> field. For more information, see <a href="#credit_note_fields">Credit note fields</a>.</p>
+<p>For such a credit note, you need to specify one or several sales invoice documents to apply the debt reduction to and the amount of the allowance or discount. To do this:</p>
+<ol><li>Open the credit note. 
+</li><li>Click the <b>Credited transactions</b> tab. 
+</li><li>Do any of the following: 
+<ul><li>To populate the table on the <b>Credited transactions</b> tab with appropriate basis documents automatically, click <b>Fill by period</b>, specify the period when the documents were issued, and click <b>Select</b>. 
+</li><li>To select a particular base document, click <b>Select</b>, click <b>Sales invoice</b>, click the base document, and click <b>Select</b>. 
+<p>Also, you can add, edit, or delete table records.</p></li></ul></li><li>In the <b>Adjustment amount</b> field, specify the amount of the allowance or discount. </li></ol><a name="specifying_credit_note_amount_allocation"></a>
+<h3>Specifying credit note amount allocation</h3>
+<p>When you issue a credit note for a customer, you need to decide how to allocate the adjusted amount. Mainly, it depends on whether the customer has performed a payment for the basis invoice before you issue the credit note.</p>
+<p>If there was a payment from the customer, reduce the customer's debt for the invoice by the credit note's amount. If there was no payment from the customer so far, allocate the amount as an advance payment.</p>
+<p>To allocate the amount of a credit note:</p>
+<ol><li>Open the credit note. 
+</li><li>Click the <b>Amount allocation</b> tab. 
+</li><li>Click <b>Fill in</b>. 
+<p>1C:Drive populates the table on the <b>Amount allocation</b> tab according to the payments the customer made for the basis invoice.</p>
+</li><li>To allocate the amount as an advance payment, select the <b>Is advance</b> check box for the allocated amount record. 
+</li><li>If necessary, in the <b>Offset amount</b> column, change the offset amount for the allocated amount record. 
+</li><li>If necessary, in the <b>Document</b> column, select another invoice for the allocated amount record. 
+<p>There is no need to specify the document for the offset amount if you specified that you allocate it as an advance payment.</p>
+</li><li>If necessary, in the <b>Order</b> column, specify the sales order for the allocated amount record. 
+<p>Also, you can add, edit, or delete table records.</p></li></ol><a name="specifying_credit_note_reason"></a>
+<h3>Specifying credit note reason</h3>
+<p>For each credit note, you have to specify the reason why you issue it. To do this:</p>
+<ol><li>Open the credit note. 
+</li><li>Click the <b>Additional Information</b> tab. 
+</li><li>In the <b>Reason for correction</b> field, specify the brief description of the reason. 
+</li><li>If necessary, in the <b>Note</b> field, specify a detailed description of the reason. </li></ol></body></html>

@@ -1,0 +1,883 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>DataSource1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>DataSet1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Count</dataPath>
+			<field>Count</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Leads count</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>State</dataPath>
+			<field>State</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>State</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>CASE 
+	WHEN Count(Distinct Count) = 0 THEN State
+	ELSE State + " total: " + String(Sum(Sum)) + ", " + Format(100*Count(Distinct Count) / AllLeadsCount, "NFD=0; NZ=0") + " %"
+END</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Order</dataPath>
+			<field>Order</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Order</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Reference</dataPath>
+			<field>Reference</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Lead / Sales document</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Sum</dataPath>
+			<field>Sum</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Amount</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Products</dataPath>
+			<field>Products</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Characteristic</dataPath>
+			<field>Characteristic</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Batch</dataPath>
+			<field>Batch</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Document</dataPath>
+			<field>Document</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Company</dataPath>
+			<field>Company</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>VATRate</dataPath>
+			<field>VATRate</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>SalesOrder</dataPath>
+			<field>SalesOrder</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Department</dataPath>
+			<field>Department</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Responsible</dataPath>
+			<field>Responsible</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>AllLeadsCount</dataPath>
+			<field>AllLeadsCount</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>All leads count</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Counterparty</dataPath>
+			<field>Counterparty</field>
+		</field>
+		<dataSource>DataSource1</dataSource>
+		<query>SELECT
+	Leads.Potential AS Potential,
+	Leads.Ref AS Ref,
+	Leads.Counterparty AS Counterparty
+INTO AllLeads
+FROM
+	Catalog.Leads AS Leads
+WHERE
+	Leads.Created BETWEEN &amp;BeginDate AND &amp;EndDate
+	AND NOT Leads.DeletionMark
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	Leads.Potential AS Potential,
+	Leads.Ref AS Ref,
+	Leads.Counterparty AS Counterparty
+INTO ConvertedLeads
+FROM
+	AllLeads AS AllLeads
+		INNER JOIN Catalog.Leads AS Leads
+		ON AllLeads.Ref = Leads.Ref
+WHERE
+	Leads.ClosureResult = VALUE(Enum.LeadClosureResult.ConvertedIntoCustomer)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	ConvertedLeads.Counterparty AS Counterparty,
+	QuotationsTurnovers.Recorder AS Quotation,
+	QuotationsTurnovers.AmountTurnover AS Amount
+INTO OnlyQuotes
+FROM
+	ConvertedLeads AS ConvertedLeads
+		INNER JOIN AccumulationRegister.Quotations.Turnovers(&amp;BeginDate, &amp;CurrentDate, Recorder, ) AS QuotationsTurnovers
+		ON ConvertedLeads.Counterparty = QuotationsTurnovers.Counterparty
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	ConvertedLeads.Counterparty AS Counterparty,
+	SalesOrder.Ref AS Ref,
+	SalesOrder.DocumentAmount AS DocumentAmount,
+	SalesOrder.BasisDocument AS BasisDocument,
+	SalesOrder.Date AS Date
+INTO AllSalesOrders
+FROM
+	ConvertedLeads AS ConvertedLeads
+		INNER JOIN Document.SalesOrder AS SalesOrder
+		ON ConvertedLeads.Counterparty = SalesOrder.Counterparty
+WHERE
+	SalesOrder.Posted
+	AND NOT SalesOrder.DeletionMark
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	AllSalesOrders.Counterparty AS Counterparty,
+	MIN(AllSalesOrders.Date) AS Date
+INTO FirstSalesDate
+FROM
+	AllSalesOrders AS AllSalesOrders
+
+GROUP BY
+	AllSalesOrders.Counterparty
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	AllSalesOrders.Counterparty AS Counterparty,
+	AllSalesOrders.Ref AS Ref,
+	AllSalesOrders.DocumentAmount AS DocumentAmount,
+	AllSalesOrders.BasisDocument AS BasisDocument,
+	AllSalesOrders.Date AS Date
+INTO FirstSales
+FROM
+	FirstSalesDate AS FirstSalesDate
+		INNER JOIN AllSalesOrders AS AllSalesOrders
+		ON FirstSalesDate.Counterparty = AllSalesOrders.Counterparty
+			AND FirstSalesDate.Date = AllSalesOrders.Date
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	SalesInvoice.Ref AS Ref,
+	SalesInvoice.Counterparty AS Counterparty,
+	SalesInvoice.Date AS Date
+INTO SalesInvoicesCounterpaties
+FROM
+	ConvertedLeads AS ConvertedLeads
+		INNER JOIN Document.SalesInvoice AS SalesInvoice
+		ON ConvertedLeads.Counterparty = SalesInvoice.Counterparty
+WHERE
+	SalesInvoice.Posted
+	AND NOT SalesInvoice.DeletionMark
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	SalesInvoicesCounterpaties.Ref AS Ref,
+	SalesInvoicesCounterpaties.Counterparty AS Counterparty,
+	SUM(SalesTurnovers.AmountTurnover) AS Amount,
+	SalesTurnovers.SalesOrder AS SalesOrder,
+	SalesInvoicesCounterpaties.Date AS Date
+INTO AllSalesInvoices
+FROM
+	SalesInvoicesCounterpaties AS SalesInvoicesCounterpaties
+		INNER JOIN AccumulationRegister.Sales.Turnovers(&amp;BeginDate, &amp;CurrentDate, , ) AS SalesTurnovers
+		ON SalesInvoicesCounterpaties.Ref = SalesTurnovers.Document
+
+GROUP BY
+	SalesInvoicesCounterpaties.Date,
+	SalesTurnovers.SalesOrder,
+	SalesInvoicesCounterpaties.Counterparty,
+	SalesInvoicesCounterpaties.Ref
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	AllSalesInvoices.Counterparty AS Counterparty,
+	MIN(AllSalesInvoices.Date) AS Date
+INTO FirstInvoiceDate
+FROM
+	AllSalesInvoices AS AllSalesInvoices
+
+GROUP BY
+	AllSalesInvoices.Counterparty
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	AllSalesInvoices.Ref AS Ref,
+	AllSalesInvoices.Counterparty AS Counterparty,
+	AllSalesInvoices.Amount AS Amount,
+	AllSalesInvoices.SalesOrder AS SalesOrder,
+	AllSalesInvoices.Date AS Date
+INTO FirstInvoices
+FROM
+	FirstInvoiceDate AS FirstInvoiceDate
+		INNER JOIN AllSalesInvoices AS AllSalesInvoices
+		ON FirstInvoiceDate.Counterparty = AllSalesInvoices.Counterparty
+			AND FirstInvoiceDate.Date = AllSalesInvoices.Date
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	AllLeads.Ref AS Count,
+	1 AS Order,
+	AllLeads.Potential AS Sum,
+	AllLeads.Ref AS Reference
+INTO ResultTable
+FROM
+	AllLeads AS AllLeads
+
+UNION ALL
+
+SELECT
+	ConvertedLeads.Ref,
+	2,
+	ConvertedLeads.Potential,
+	ConvertedLeads.Ref
+FROM
+	ConvertedLeads AS ConvertedLeads
+
+UNION ALL
+
+SELECT
+	OnlyQuotes.Counterparty,
+	3,
+	OnlyQuotes.Amount,
+	OnlyQuotes.Quotation
+FROM
+	OnlyQuotes AS OnlyQuotes
+
+UNION ALL
+
+SELECT
+	FirstSales.Counterparty,
+	3,
+	FirstSales.DocumentAmount,
+	FirstSales.Ref
+FROM
+	FirstSales AS FirstSales
+		LEFT JOIN OnlyQuotes AS OnlyQuotes
+		ON FirstSales.BasisDocument = OnlyQuotes.Quotation
+WHERE
+	OnlyQuotes.Quotation IS NULL
+
+UNION ALL
+
+SELECT
+	FirstSales.Counterparty,
+	4,
+	FirstSales.DocumentAmount,
+	FirstSales.Ref
+FROM
+	FirstSales AS FirstSales
+
+UNION ALL
+
+SELECT
+	FirstInvoices.Counterparty,
+	4,
+	FirstInvoices.Amount,
+	FirstInvoices.Ref
+FROM
+	FirstInvoices AS FirstInvoices
+WHERE
+	FirstInvoices.SalesOrder = UNDEFINED
+
+UNION ALL
+
+SELECT
+	FirstInvoices.Counterparty,
+	5,
+	FirstInvoices.Amount,
+	FirstInvoices.Ref
+FROM
+	FirstInvoices AS FirstInvoices
+
+UNION ALL
+
+SELECT
+	AllSalesInvoices.Counterparty,
+	6,
+	AllSalesInvoices.Amount,
+	AllSalesInvoices.Ref
+FROM
+	AllSalesInvoices AS AllSalesInvoices
+		LEFT JOIN FirstInvoices AS FirstInvoices
+		ON AllSalesInvoices.Ref = FirstInvoices.Ref
+WHERE
+	FirstInvoices.Ref IS NULL
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	1 AS Order,
+	&amp;StateNewLeads AS State
+INTO AllStates
+
+UNION ALL
+
+SELECT
+	2,
+	&amp;StateConvertedLeads
+
+UNION ALL
+
+SELECT
+	3,
+	&amp;StateQuotationSent
+
+UNION ALL
+
+SELECT
+	4,
+	&amp;StateFirstOrder
+
+UNION ALL
+
+SELECT
+	5,
+	&amp;StateSold
+
+UNION ALL
+
+SELECT
+	6,
+	&amp;StateRepetetiveSale
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	COUNT(DISTINCT AllLeads.Ref) AS AllLeadsCount
+INTO LeadsCount
+FROM
+	AllLeads AS AllLeads
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	AllStates.Order AS Order,
+	AllStates.State AS State,
+	ResultTable.Count AS Count,
+	ResultTable.Sum AS Sum,
+	ResultTable.Reference AS Reference,
+	LeadsCount.AllLeadsCount AS AllLeadsCount
+FROM
+	AllStates AS AllStates
+		LEFT JOIN ResultTable AS ResultTable
+		ON AllStates.Order = ResultTable.Order,
+	LeadsCount AS LeadsCount</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Count</dataPath>
+		<expression>Count(Distinct Count)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Order</dataPath>
+		<expression>Max(Order)</expression>
+	</totalField>
+	<parameter>
+		<name>BeginDate</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Begin date</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Period.StartDate</expression>
+	</parameter>
+	<parameter>
+		<name>EndDate</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>End date</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Period.EndDate</expression>
+	</parameter>
+	<parameter>
+		<name>StateConvertedLeads</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>State converted leads</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:type="xs:string">Converted leads,</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>StateNewLeads</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>State new leads</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:type="xs:string">New leads,</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Period</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Period</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>StateFirstOrder</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>State first order</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:type="xs:string">First order,</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>StateQuotationSent</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>State quotation sent</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:type="xs:string">Quotation sent,</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>BeginOfPeriod</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Begin of period</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>EndOfPeriod</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>End of period</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>StateSold</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>State sold</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:type="xs:string">Sold,</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>StateRepetetiveSale</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>State repetetive sale</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:type="xs:string">Repetetive sale,</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>CurrentDate</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Current date</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>CurrentSessionDate()</expression>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>SalesFunnel</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>bg</v8:lang>
+				<v8:content>Default</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Sales funnel</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>de</v8:lang>
+				<v8:content>Default</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>pl</v8:lang>
+				<v8:content>Default</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ro</v8:lang>
+				<v8:content>Default</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Default</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>es_ES</v8:lang>
+				<v8:content>Default</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>tr</v8:lang>
+				<v8:content>Default</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Default</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>SystemFields.GroupSerialNumber</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>#</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Reference</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Sum</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>StateConvertedLeads</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Converted leads</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>StateNewLeads</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">New leads</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Period</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>e4abbe7a-a01a-4fee-ac80-1ef00dae6b27</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>StateFirstOrder</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>StateQuotationSent</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>StateSold</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>StateRepetetiveSale</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Repetetive sale</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Order</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>AppearanceTemplate</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ReportThemeGreen</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>GroupFieldsPlacement</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionGroupFieldsPlacement">Separately</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>VerticalOverallPlacement</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ChartType</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:ChartType">Bar3D</dcscor:value>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ChartType.LabelType</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:ChartLabelType">Series</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ChartType.ColorPaletteDescription</dcscor:parameter>
+						<dcscor:value xmlns:d7p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d7p1:ChartColorPaletteDescription">
+							<d7p1:colorPalette>Custom</d7p1:colorPalette>
+							<d7p1:customPalette>
+								<v8:Value xsi:type="v8ui:Color">#4CC8FF</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#FF8779</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#FFC000</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#5FC26E</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#9E99F2</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#ECCB66</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#C765FF</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#71D1C8</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#B1FF4C</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#66B4EC</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#A766EC</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#FF79E8</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#AB6D90</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#C3996B</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#B1C0C9</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#B49EB4</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#9F6D4D</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#FAAF40</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#B0B073</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#AC7A74</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#C1B49A</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#74CCE5</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#C28B9A</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#999889</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#6E9B74</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#8FA1C9</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#7B7C7F</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#809EAD</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#C26558</v8:Value>
+								<v8:Value xsi:type="v8ui:Color">#D8D13E</v8:Value>
+							</d7p1:customPalette>
+						</dcscor:value>
+					</dcscor:item>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Title</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>DataParametersOutput</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>FilterOutput</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemChart">
+				<dcsset:name>Funnel</dcsset:name>
+				<dcsset:series>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>State</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:series>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>Order</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Count</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ChartType</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:ChartType">Bar3D</dcscor:value>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ChartType.LabelType</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:ChartLabelType">SeriesValue</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ChartType.LegendPlacement</dcscor:parameter>
+							<dcscor:value xsi:type="dcsset:DataCompositionChartLegendPlacement">None</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ChartType.PointsScale</dcscor:parameter>
+							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d8p1:ChartScale">
+								<d8p1:showTitle>Show</d8p1:showTitle>
+								<d8p1:titleText>
+									<v8:item>
+										<v8:lang>#</v8:lang>
+										<v8:content>Stage</v8:content>
+									</v8:item>
+								</d8p1:titleText>
+								<d8p1:titleArea>
+									<d8p1:font kind="AutoFont"/>
+									<d8p1:textColor>auto</d8p1:textColor>
+									<d8p1:backColor>auto</d8p1:backColor>
+									<d8p1:border width="1">
+										<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+									</d8p1:border>
+									<d8p1:borderColor>auto</d8p1:borderColor>
+								</d8p1:titleArea>
+								<d8p1:scaleLabelLocation>None</d8p1:scaleLabelLocation>
+							</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ChartType.ColorPalette</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:ChartColorPalette">Pastel</dcscor:value>
+						</dcscor:item>
+					</dcscor:item>
+				</dcsset:outputParameters>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:use>false</dcsset:use>
+				<dcsset:name>DrillDown</dcsset:name>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>State</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:row>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>GroupFieldsPlacement</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionGroupFieldsPlacement">Together</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>VerticalOverallPlacement</dcscor:parameter>
+						<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,2161 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="ChoiceProcessing">ChoiceProcessing</Event>
+		<Event name="NotificationProcessing">NotificationProcessing</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+		<Event name="OnClose">OnClose</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="CommandBar" id="472">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="CommandBarExtendedTooltip" id="473"/>
+			<ChildItems>
+				<CommandBar name="CommandBarLeft" id="466">
+					<ExtendedTooltip name="CommandBarLeftExtendedTooltip" id="467"/>
+					<ChildItems>
+						<ButtonGroup name="CreateGroup" id="759">
+							<ExtendedTooltip name="CreateGroupExtendedTooltip" id="760"/>
+							<ChildItems>
+								<Button name="Choose" id="630">
+									<Type>CommandBarButton</Type>
+									<DefaultButton>true</DefaultButton>
+									<OnlyInAllActions>true</OnlyInAllActions>
+									<CommandName>Form.StandardCommand.Choose</CommandName>
+									<ExtendedTooltip name="ChooseExtendedTooltip" id="631"/>
+								</Button>
+								<Button name="Create" id="719" DisplayImportance="VeryHigh">
+									<Type>CommandBarButton</Type>
+									<OnlyInAllActions>true</OnlyInAllActions>
+									<CommandName>Form.StandardCommand.Create</CommandName>
+									<ExtendedTooltip name="CreateExtendedTooltip" id="720"/>
+								</Button>
+								<Button name="CreateKanban" id="478">
+									<Type>CommandBarButton</Type>
+									<Representation>Text</Representation>
+									<OnlyInAllActions>true</OnlyInAllActions>
+									<CommandName>Form.Command.CreateKanban</CommandName>
+									<ExtendedTooltip name="CreateKanbanExtendedTooltip" id="479"/>
+								</Button>
+								<Button name="Copy" id="550">
+									<Type>CommandBarButton</Type>
+									<OnlyInAllActions>true</OnlyInAllActions>
+									<Width>3</Width>
+									<CommandName>Form.StandardCommand.Copy</CommandName>
+									<ExtendedTooltip name="CopyExtendedTooltip" id="551"/>
+								</Button>
+								<Button name="DataImportFromExternalSources" id="476">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.DataImportFromExternalSources</CommandName>
+									<ExtendedTooltip name="DataImportFromExternalSourcesExtendedTooltip" id="477"/>
+								</Button>
+								<Button name="CommonCommandSetReminder" id="518">
+									<Type>CommandBarButton</Type>
+									<Representation>Picture</Representation>
+									<OnlyInAllActions>true</OnlyInAllActions>
+									<Width>3</Width>
+									<CommandName>CommonCommand.SetReminder</CommandName>
+									<DataPath>Items.List.CurrentData.Ref</DataPath>
+									<ExtendedTooltip name="CommonCommandSetReminderExtendedTooltip" id="519"/>
+								</Button>
+							</ChildItems>
+						</ButtonGroup>
+						<Popup name="SubmenuEvents" id="520">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Events</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<ExtendedTooltip name="SubmenuEventsExtendedTooltip" id="521"/>
+							<ChildItems>
+								<Button name="PhoneCall" id="766">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.PhoneCall</CommandName>
+									<ExtendedTooltip name="PhoneCallExtendedTooltip" id="767"/>
+								</Button>
+								<Button name="Email" id="768">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.Email</CommandName>
+									<ExtendedTooltip name="EmailExtendedTooltip" id="769"/>
+								</Button>
+								<Button name="SMS" id="770">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.SMS</CommandName>
+									<ExtendedTooltip name="SMSExtendedTooltip" id="771"/>
+								</Button>
+								<Button name="PersonalMeeting" id="772">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.PersonalMeeting</CommandName>
+									<ExtendedTooltip name="PersonalMeetingExtendedTooltip" id="773"/>
+								</Button>
+								<Button name="Other" id="774">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.Other</CommandName>
+									<ExtendedTooltip name="OtherExtendedTooltip" id="775"/>
+								</Button>
+							</ChildItems>
+						</Popup>
+						<Popup name="SubmenuChange" id="812">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Change</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<ExtendedTooltip name="SubmenuChangeExtendedTooltip" id="813"/>
+							<ChildItems>
+								<Button name="FormChangeCampaign" id="806">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ChangeCampaign</CommandName>
+									<ExtendedTooltip name="FormChangeCampaignExtendedTooltip" id="807"/>
+								</Button>
+								<Button name="FormChangeActivity" id="808">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ChangeActivity</CommandName>
+									<ExtendedTooltip name="FormChangeActivityExtendedTooltip" id="809"/>
+								</Button>
+								<Button name="FormChangeSalesRep" id="810">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ChangeSalesRep</CommandName>
+									<ExtendedTooltip name="FormChangeSalesRepExtendedTooltip" id="811"/>
+								</Button>
+							</ChildItems>
+						</Popup>
+					</ChildItems>
+				</CommandBar>
+				<UsualGroup name="CommandBarRight" id="544">
+					<HorizontalStretch>true</HorizontalStretch>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="CommandBarRightExtendedTooltip" id="545"/>
+					<ChildItems>
+						<InputField name="FilterSearch" id="463">
+							<DataPath>FilterSearch</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Shortcut>Ctrl+F</Shortcut>
+							<HorizontalAlign>Left</HorizontalAlign>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>32</MaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ClearButton>true</ClearButton>
+							<EditTextUpdate>OnValueChange</EditTextUpdate>
+							<InputHint>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Search (Ctrl+F)</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="FilterSearchContextMenu" id="464"/>
+							<ExtendedTooltip name="FilterSearchExtendedTooltip" id="465"/>
+							<Events>
+								<Event name="EditTextChange">FilterSearchEditTextChange</Event>
+								<Event name="Clearing">FilterSearchClearing</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="SearchGroup" id="698">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>AlwaysHorizontal</Group>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="SearchGroupExtendedTooltip" id="699"/>
+							<ChildItems>
+								<SearchStringAddition name="SupplementSearchString" id="700">
+									<AdditionSource>
+										<Item>List</Item>
+										<Type>SearchStringRepresentation</Type>
+									</AdditionSource>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Addition search bar</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>30</MaxWidth>
+									<ContextMenu name="SupplementSearchStringContextMenu" id="701"/>
+									<ExtendedTooltip name="SupplementSearchStringExtendedTooltip" id="702"/>
+								</SearchStringAddition>
+								<SearchControlAddition name="SupplementSearchManagement" id="703">
+									<AdditionSource>
+										<Item>List</Item>
+										<Type>SearchControl</Type>
+									</AdditionSource>
+									<ContextMenu name="SupplementSearchManagementContextMenu" id="704"/>
+									<ExtendedTooltip name="SupplementSearchManagementExtendedTooltip" id="705"/>
+								</SearchControlAddition>
+							</ChildItems>
+						</UsualGroup>
+						<CommandBar name="MainCommands" id="482">
+							<HorizontalStretch>false</HorizontalStretch>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<CommandSource>Form</CommandSource>
+							<ExtendedTooltip name="MainCommandsExtendedTooltip" id="483"/>
+							<ChildItems>
+								<ButtonGroup name="FormGroupDataImportOnlyInAllActions" id="694">
+									<ExtendedTooltip name="FormGroupDataImportOnlyInAllActionsExtendedTooltip" id="695"/>
+									<ChildItems>
+										<Button name="FormDataImportFromExternalSources" id="646">
+											<Type>CommandBarButton</Type>
+											<OnlyInAllActions>false</OnlyInAllActions>
+											<CommandName>Form.Command.DataImportFromExternalSources</CommandName>
+											<ExtendedTooltip name="FormDataImportFromExternalSourcesExtendedTooltip" id="647"/>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
+								<ButtonGroup name="FormGroupCommandsList" id="696">
+									<ExtendedTooltip name="FormGroupCommandsListExtendedTooltip" id="697"/>
+									<ChildItems>
+										<ButtonGroup name="FormGroupCommandsListOnlyInAllActions" id="648">
+											<ExtendedTooltip name="FormGroupCommandsListOnlyInAllActionsExtendedTooltip" id="649"/>
+											<ChildItems>
+												<Button name="FormChoose" id="642">
+													<Type>CommandBarButton</Type>
+													<OnlyInAllActions>false</OnlyInAllActions>
+													<CommandName>Form.StandardCommand.Choose</CommandName>
+													<ExtendedTooltip name="FormChooseExtendedTooltip" id="643"/>
+												</Button>
+												<Button name="FormCreate" id="640">
+													<Type>CommandBarButton</Type>
+													<OnlyInAllActions>false</OnlyInAllActions>
+													<CommandName>Form.StandardCommand.Create</CommandName>
+													<ExtendedTooltip name="FormCreateExtendedTooltip" id="641"/>
+												</Button>
+												<Button name="FormCopy" id="644">
+													<Type>CommandBarButton</Type>
+													<OnlyInAllActions>false</OnlyInAllActions>
+													<CommandName>Form.StandardCommand.Copy</CommandName>
+													<ExtendedTooltip name="FormCopyExtendedTooltip" id="645"/>
+												</Button>
+												<Button name="FormChange" id="654">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.StandardCommand.Change</CommandName>
+													<ExtendedTooltip name="FormChangeExtendedTooltip" id="655"/>
+												</Button>
+												<Button name="FormSetDeletionMark" id="656">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.StandardCommand.SetDeletionMark</CommandName>
+													<ExtendedTooltip name="FormSetDeletionMarkExtendedTooltip" id="657"/>
+												</Button>
+												<Button name="FormDelete" id="678">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.StandardCommand.Delete</CommandName>
+													<ExtendedTooltip name="FormDeleteExtendedTooltip" id="679"/>
+												</Button>
+												<Button name="FormRefresh" id="714">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.StandardCommand.Refresh</CommandName>
+													<ExtendedTooltip name="FormRefreshExtendedTooltip" id="715"/>
+												</Button>
+											</ChildItems>
+										</ButtonGroup>
+										<ButtonGroup name="FormGroupLeadClosure" id="751">
+											<Title>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Lead closure</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="FormGroupLeadClosureExtendedTooltip" id="752"/>
+											<ChildItems>
+												<Button name="FormConverIntoReject" id="753">
+													<Type>CommandBarButton</Type>
+													<OnlyInAllActions>false</OnlyInAllActions>
+													<CommandName>Form.Command.ConvertIntoReject</CommandName>
+													<ExtendedTooltip name="FormConverIntoRejectExtendedTooltip" id="754"/>
+												</Button>
+												<Button name="FormConvertIntoCustomer" id="755">
+													<Type>CommandBarButton</Type>
+													<OnlyInAllActions>false</OnlyInAllActions>
+													<CommandName>Form.Command.ConvertIntoCustomer</CommandName>
+													<ExtendedTooltip name="FormConvertIntoCustomerExtendedTooltip" id="756"/>
+												</Button>
+											</ChildItems>
+										</ButtonGroup>
+										<ButtonGroup name="FormGroupStandartCommands" id="652">
+											<ExtendedTooltip name="FormGroupStandartCommandsExtendedTooltip" id="653"/>
+											<ChildItems>
+												<Button name="FormFind" id="664">
+													<Type>CommandBarButton</Type>
+													<OnlyInAllActions>false</OnlyInAllActions>
+													<CommandName>Form.StandardCommand.Find</CommandName>
+													<ExtendedTooltip name="FormFindExtendedTooltip" id="665"/>
+												</Button>
+												<Button name="FormFindByCurrentValue" id="662">
+													<Type>CommandBarButton</Type>
+													<OnlyInAllActions>false</OnlyInAllActions>
+													<CommandName>Form.StandardCommand.FindByCurrentValue</CommandName>
+													<ExtendedTooltip name="FormFindByCurrentValueExtendedTooltip" id="663"/>
+												</Button>
+												<Button name="FormCancelSearch" id="666">
+													<Type>CommandBarButton</Type>
+													<OnlyInAllActions>false</OnlyInAllActions>
+													<CommandName>Form.StandardCommand.CancelSearch</CommandName>
+													<ExtendedTooltip name="FormCancelSearchExtendedTooltip" id="667"/>
+												</Button>
+											</ChildItems>
+										</ButtonGroup>
+										<ButtonGroup name="FormGroupListSettings" id="668">
+											<ExtendedTooltip name="FormGroupListSettingsExtendedTooltip" id="669"/>
+											<ChildItems>
+												<Button name="FormListSettings" id="670">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.StandardCommand.ListSettings</CommandName>
+													<ExtendedTooltip name="FormListSettingsExtendedTooltip" id="671"/>
+												</Button>
+												<Button name="FormLoadDynamicListSettings" id="672">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.StandardCommand.LoadDynamicListSettings</CommandName>
+													<ExtendedTooltip name="FormLoadDynamicListSettingsExtendedTooltip" id="673"/>
+												</Button>
+												<Button name="FormSaveDynamicListSettings" id="674">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.StandardCommand.SaveDynamicListSettings</CommandName>
+													<ExtendedTooltip name="FormSaveDynamicListSettingsExtendedTooltip" id="675"/>
+												</Button>
+												<Button name="FormDynamicListStandardSettings" id="676">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.StandardCommand.DynamicListStandardSettings</CommandName>
+													<ExtendedTooltip name="FormDynamicListStandardSettingsExtendedTooltip" id="677"/>
+												</Button>
+											</ChildItems>
+										</ButtonGroup>
+										<ButtonGroup name="FormGroupOutputList" id="692">
+											<ExtendedTooltip name="FormGroupOutputListExtendedTooltip" id="693"/>
+											<ChildItems>
+												<Button name="FormOutputList" id="690">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.StandardCommand.OutputList</CommandName>
+													<ExtendedTooltip name="FormOutputListExtendedTooltip" id="691"/>
+												</Button>
+											</ChildItems>
+										</ButtonGroup>
+										<ButtonGroup name="FormGroupCommandSetReminderOnlyInAllActions" id="572">
+											<ExtendedTooltip name="FormGroupCommandSetReminderOnlyInAllActionsExtendedTooltip" id="573"/>
+											<ChildItems>
+												<Button name="FormCommonCommandSetReminder" id="574">
+													<Type>CommandBarButton</Type>
+													<OnlyInAllActions>false</OnlyInAllActions>
+													<CommandName>CommonCommand.SetReminder</CommandName>
+													<DataPath>Items.List.CurrentData.Ref</DataPath>
+													<ExtendedTooltip name="FormCommonCommandSetReminderExtendedTooltip" id="575"/>
+												</Button>
+											</ChildItems>
+										</ButtonGroup>
+										<ButtonGroup name="GroupChangeItems" id="634">
+											<ExtendedTooltip name="GroupChangeItemsExtendedTooltip" id="635"/>
+											<ChildItems>
+												<Button name="ChangeSelected" id="582">
+													<Type>CommandBarButton</Type>
+													<OnlyInAllActions>false</OnlyInAllActions>
+													<CommandName>Form.Command.ChangeSelected</CommandName>
+													<ExtendedTooltip name="ChangeSelectedExtendedTooltip" id="583"/>
+												</Button>
+											</ChildItems>
+										</ButtonGroup>
+									</ChildItems>
+								</ButtonGroup>
+								<Button name="FormUpdateKanban" id="712">
+									<Type>CommandBarButton</Type>
+									<OnlyInAllActions>false</OnlyInAllActions>
+									<CommandName>Form.Command.UpdateKanban</CommandName>
+									<ExtendedTooltip name="FormUpdateKanbanExtendedTooltip" id="713"/>
+								</Button>
+								<ButtonGroup name="GroupViewType" id="546">
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<Representation>Compact</Representation>
+									<ExtendedTooltip name="GroupViewTypeExtendedTooltip" id="547"/>
+									<ChildItems>
+										<Button name="FormList" id="542">
+											<Type>CommandBarButton</Type>
+											<Representation>Picture</Representation>
+											<OnlyInAllActions>true</OnlyInAllActions>
+											<CommandName>Form.Command.List</CommandName>
+											<ExtendedTooltip name="FormListExtendedTooltip" id="543"/>
+										</Button>
+										<Button name="FormKanban" id="540">
+											<Type>CommandBarButton</Type>
+											<Representation>Picture</Representation>
+											<OnlyInAllActions>true</OnlyInAllActions>
+											<CommandName>Form.Command.Kanban</CommandName>
+											<ExtendedTooltip name="FormKanbanExtendedTooltip" id="541"/>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
+								<Button name="ChangeForm" id="584">
+									<Type>CommandBarButton</Type>
+									<OnlyInAllActions>false</OnlyInAllActions>
+									<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+									<ExtendedTooltip name="ChangeFormExtendedTooltip" id="585"/>
+								</Button>
+								<Button name="FormHelp" id="586">
+									<Type>CommandBarButton</Type>
+									<OnlyInAllActions>false</OnlyInAllActions>
+									<CommandName>Form.StandardCommand.Help</CommandName>
+									<ExtendedTooltip name="FormHelpExtendedTooltip" id="587"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="GroupMain" id="32">
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="GroupMainExtendedTooltip" id="33"/>
+			<ChildItems>
+				<UsualGroup name="GroupLeft" id="25">
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="GroupLeftExtendedTooltip" id="26"/>
+					<ChildItems>
+						<Table name="List" id="3">
+							<Representation>List</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<ChoiceMode>true</ChoiceMode>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialTreeView>ExpandTopLevel</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>List</DataPath>
+							<RowPictureDataPath>List.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<UserSettingsGroup>1:02023637-7868-4a5f-8576-835a76e0c9ba</UserSettingsGroup>
+							<ContextMenu name="ListContextMenu" id="4">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<ButtonGroup name="ListContextMenuGroupStandart" id="721">
+										<CommandSource>Item.List</CommandSource>
+										<ExtendedTooltip name="ListContextMenuGroupStandartExtendedTooltip" id="722"/>
+										<ChildItems>
+											<Button name="ListCreate" id="723">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.List.StandardCommand.Create</CommandName>
+												<ExtendedTooltip name="ListCreateExtendedTooltip" id="724"/>
+											</Button>
+											<Button name="ListChange" id="727">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.List.StandardCommand.Change</CommandName>
+												<ExtendedTooltip name="ListChangeExtendedTooltip" id="728"/>
+											</Button>
+											<Button name="ListCopy" id="729">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.List.StandardCommand.Copy</CommandName>
+												<ExtendedTooltip name="ListCopyExtendedTooltip" id="730"/>
+											</Button>
+											<Button name="ListSetDeletionMark" id="731">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.List.StandardCommand.SetDeletionMark</CommandName>
+												<ExtendedTooltip name="ListSetDeletionMarkExtendedTooltip" id="732"/>
+											</Button>
+											<Button name="ListDelete" id="733">
+												<Type>CommandBarButton</Type>
+												<Visible>false</Visible>
+												<CommandName>Form.Item.List.StandardCommand.Delete</CommandName>
+												<ExtendedTooltip name="ListDeleteExtendedTooltip" id="734"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ListContextMenuGroupChangeState" id="796">
+										<ExtendedTooltip name="ListContextMenuGroupChangeStateExtendedTooltip" id="797"/>
+										<ChildItems>
+											<Button name="ListContextMenuChangeCampaign" id="798">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ChangeCampaign</CommandName>
+												<ExtendedTooltip name="ListContextMenuChangeCampaignExtendedTooltip" id="799"/>
+											</Button>
+											<Button name="ListContextMenuChangeActivity" id="800">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ChangeActivity</CommandName>
+												<ExtendedTooltip name="ListContextMenuChangeActivityExtendedTooltip" id="801"/>
+											</Button>
+											<Button name="ListContextMenuChangeSalesRep" id="802">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ChangeSalesRep</CommandName>
+												<ExtendedTooltip name="ListContextMenuChangeSalesRepExtendedTooltip" id="803"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ListContextMenuGroupLeadClosure" id="626">
+										<ExtendedTooltip name="ListContextMenuGroupLeadClosureExtendedTooltip" id="627"/>
+										<ChildItems>
+											<Button name="ListContextMenuGroupConverIntoReject" id="578">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ConvertIntoReject</CommandName>
+												<ExtendedTooltip name="ListContextMenuGroupConverIntoRejectExtendedTooltip" id="579"/>
+											</Button>
+											<Button name="ListContextMenuGroupConverIntoCustomer" id="580">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ConvertIntoCustomer</CommandName>
+												<ExtendedTooltip name="ListContextMenuGroupConverIntoCustomerExtendedTooltip" id="581"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ListContextMenuGroupSearch" id="737">
+										<CommandSource>Item.List</CommandSource>
+										<ExtendedTooltip name="ListContextMenuGroupSearchExtendedTooltip" id="738"/>
+										<ChildItems>
+											<Button name="ListFind" id="741">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.List.StandardCommand.Find</CommandName>
+												<ExtendedTooltip name="ListFindExtendedTooltip" id="742"/>
+											</Button>
+											<Button name="ListCancelSearch" id="743">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.List.StandardCommand.CancelSearch</CommandName>
+												<ExtendedTooltip name="ListCancelSearchExtendedTooltip" id="744"/>
+											</Button>
+											<Button name="ListFindByCurrentValue" id="745">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.List.StandardCommand.FindByCurrentValue</CommandName>
+												<ExtendedTooltip name="ListFindByCurrentValueExtendedTooltip" id="746"/>
+											</Button>
+											<Button name="ListCopyToClipboard" id="747">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.List.StandardCommand.CopyToClipboard</CommandName>
+												<ExtendedTooltip name="ListCopyToClipboardExtendedTooltip" id="748"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="ListCommandBar" id="5"/>
+							<ExtendedTooltip name="ListExtendedTooltip" id="6"/>
+							<SearchStringAddition name="ListSearchString" id="7">
+								<AdditionSource>
+									<Item>List</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ListSearchStringContextMenu" id="8"/>
+								<ExtendedTooltip name="ListSearchStringExtendedTooltip" id="9"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ListViewStatus" id="10">
+								<ToolTipRepresentation>None</ToolTipRepresentation>
+								<AdditionSource>
+									<Item>List</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<ContextMenu name="ListViewStatusContextMenu" id="11">
+									<Autofill>false</Autofill>
+								</ContextMenu>
+								<ExtendedTooltip name="ListViewStatusExtendedTooltip" id="12"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ListSearchControl" id="13">
+								<AdditionSource>
+									<Item>List</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ListSearchControlContextMenu" id="14"/>
+								<ExtendedTooltip name="ListSearchControlExtendedTooltip" id="15"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ListSelection</Event>
+								<Event name="BeforeAddRow">ListBeforeAddRow</Event>
+								<Event name="OnActivateRow">ListOnActivateRow</Event>
+								<Event name="BeforeRowChange">ListBeforeRowChange</Event>
+								<Event name="NewWriteProcessing">ListNewWriteProcessing</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="Description" id="16">
+									<DataPath>List.Description</DataPath>
+									<DefaultItem>true</DefaultItem>
+									<Width>30</Width>
+									<ContextMenu name="DescriptionContextMenu" id="17"/>
+									<ExtendedTooltip name="DescriptionExtendedTooltip" id="18"/>
+								</LabelField>
+								<LabelField name="Created" id="19">
+									<DataPath>List.Created</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="CreatedContextMenu" id="20"/>
+									<ExtendedTooltip name="CreatedExtendedTooltip" id="21"/>
+								</LabelField>
+								<LabelField name="Campaign" id="763">
+									<DataPath>List.Campaign</DataPath>
+									<ContextMenu name="CampaignContextMenu" id="764"/>
+									<ExtendedTooltip name="CampaignExtendedTooltip" id="765"/>
+								</LabelField>
+								<LabelField name="Activity" id="40">
+									<DataPath>List.Activity</DataPath>
+									<Width>14</Width>
+									<MaxWidth>20</MaxWidth>
+									<ContextMenu name="ActivityContextMenu" id="41"/>
+									<ExtendedTooltip name="ActivityExtendedTooltip" id="42"/>
+								</LabelField>
+								<LabelField name="SalesRep" id="591">
+									<DataPath>List.SalesRep</DataPath>
+									<ContextMenu name="SalesRepContextMenu" id="592"/>
+									<ExtendedTooltip name="SalesRepExtendedTooltip" id="593"/>
+								</LabelField>
+								<LabelField name="AcquisitionChannel" id="588">
+									<DataPath>List.AcquisitionChannel</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="AcquisitionChannelContextMenu" id="589"/>
+									<ExtendedTooltip name="AcquisitionChannelExtendedTooltip" id="590"/>
+								</LabelField>
+								<LabelField name="ClosureResult" id="198">
+									<DataPath>List.ClosureResult</DataPath>
+									<Visible>false</Visible>
+									<ContextMenu name="ClosureResultContextMenu" id="199"/>
+									<ExtendedTooltip name="ClosureResultExtendedTooltip" id="200"/>
+								</LabelField>
+								<LabelField name="Counterparty" id="716">
+									<DataPath>List.Counterparty</DataPath>
+									<CellHyperlink>true</CellHyperlink>
+									<Hiperlink>true</Hiperlink>
+									<ContextMenu name="CounterpartyContextMenu" id="717"/>
+									<ExtendedTooltip name="CounterpartyExtendedTooltip" id="718"/>
+								</LabelField>
+								<LabelField name="RejectionReason" id="171">
+									<DataPath>List.RejectionReason</DataPath>
+									<Visible>false</Visible>
+									<Width>20</Width>
+									<ContextMenu name="RejectionReasonContextMenu" id="172"/>
+									<ExtendedTooltip name="RejectionReasonExtendedTooltip" id="173"/>
+								</LabelField>
+								<LabelField name="BasicInformation" id="43">
+									<DataPath>List.BasicInformation</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<HeaderPicture>
+										<xr:Ref>CommonPicture.BasicList</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</HeaderPicture>
+									<Width>10</Width>
+									<MaxWidth>10</MaxWidth>
+									<ContextMenu name="BasicInformationContextMenu" id="44"/>
+									<ExtendedTooltip name="BasicInformationExtendedTooltip" id="45"/>
+								</LabelField>
+								<LabelField name="Ref" id="201">
+									<DataPath>List.Ref</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="RefContextMenu" id="202"/>
+									<ExtendedTooltip name="RefExtendedTooltip" id="203"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+						<PlannerField name="Planner" id="223">
+							<DataPath>Planner</DataPath>
+							<Visible>false</Visible>
+							<TitleLocation>None</TitleLocation>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<ContextMenu name="PlannerContextMenu" id="224">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<ButtonGroup name="PlannerContextMenuGroupMoving" id="706">
+										<ExtendedTooltip name="PlannerContextMenuGroupMovingExtendedTooltip" id="707"/>
+										<ChildItems>
+											<Button name="PlannerContextMenuGroupMoveToTop" id="311">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.MoveToTop</CommandName>
+												<ExtendedTooltip name="PlannerContextMenuGroupMoveToTopExtendedTooltip" id="312"/>
+											</Button>
+											<Button name="PlannerContextMenuGroupMoveUp" id="313">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.MoveUp</CommandName>
+												<ExtendedTooltip name="PlannerContextMenuGroupMoveUpExtendedTooltip" id="314"/>
+											</Button>
+											<Button name="PlannerContextMenuGroupMoveDown" id="315">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.MoveDown</CommandName>
+												<ExtendedTooltip name="PlannerContextMenuGroupMoveDownExtendedTooltip" id="316"/>
+											</Button>
+											<Button name="PlannerContextMenuGroupMoveToEnd" id="309">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.MoveToEnd</CommandName>
+												<ExtendedTooltip name="PlannerContextMenuGroupMoveToEndExtendedTooltip" id="310"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="PlannerContextMenuGroupChangeState" id="814">
+										<ExtendedTooltip name="PlannerContextMenuGroupChangeStateExtendedTooltip" id="815"/>
+										<ChildItems>
+											<Button name="PlannerContextMenuChangeCampaign" id="816">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ChangeCampaign</CommandName>
+												<ExtendedTooltip name="PlannerContextMenuChangeCampaignExtendedTooltip" id="817"/>
+											</Button>
+											<Button name="PlannerContextMenuChangeActivity" id="818">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ChangeActivity</CommandName>
+												<ExtendedTooltip name="PlannerContextMenuChangeActivityExtendedTooltip" id="819"/>
+											</Button>
+											<Button name="PlannerContextMenuChangeSalesRep" id="820">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ChangeSalesRep</CommandName>
+												<ExtendedTooltip name="PlannerContextMenuChangeSalesRepExtendedTooltip" id="821"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="PlannerContextMenuGroupClosure" id="628">
+										<ExtendedTooltip name="PlannerContextMenuGroupClosureExtendedTooltip" id="629"/>
+										<ChildItems>
+											<Button name="PlannerContextMenuConverIntoReject" id="576">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ConvertIntoReject</CommandName>
+												<ExtendedTooltip name="PlannerContextMenuConverIntoRejectExtendedTooltip" id="577"/>
+											</Button>
+											<Button name="PlannerContextMenuConverIntoCustomer" id="461">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ConvertIntoCustomer</CommandName>
+												<ExtendedTooltip name="PlannerContextMenuConverIntoCustomerExtendedTooltip" id="462"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+								</ChildItems>
+							</ContextMenu>
+							<ExtendedTooltip name="PlannerExtendedTooltip" id="225"/>
+							<Events>
+								<Event name="BeforeCreate">PlannerBeforeCreate</Event>
+								<Event name="OnCurrentRepresentationPeriodChange">PlannerOnCurrentRepresentationPeriodChange</Event>
+								<Event name="OnEditEnd">PlannerOnEditEnd</Event>
+								<Event name="BeforeDelete">PlannerBeforeDelete</Event>
+								<Event name="BeforeStartEdit">PlannerBeforeStartEdit</Event>
+								<Event name="BeforeStartQuickEdit">PlannerBeforeStartQuickEdit</Event>
+								<Event name="Selection">PlannerSelection</Event>
+								<Event name="OnActivate">PlannerOnActivate</Event>
+							</Events>
+						</PlannerField>
+						<UsualGroup name="LeadClosure" id="317">
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<Group>Horizontal</Group>
+							<VerticalSpacing>Half</VerticalSpacing>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="LeadClosureExtendedTooltip" id="318"/>
+							<ChildItems>
+								<UsualGroup name="GroupDelete" id="380">
+									<Height>2</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<United>false</United>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="GroupDeleteExtendedTooltip" id="381"/>
+									<ChildItems>
+										<LabelDecoration name="DecorationDelete" id="402">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>40</MaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Delete</v8:content>
+												</v8:item>
+											</Title>
+											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<Border width="2">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">Overline</v8ui:style>
+											</Border>
+											<ContextMenu name="DecorationDeleteContextMenu" id="403"/>
+											<ExtendedTooltip name="DecorationDeleteExtendedTooltip" id="404"/>
+										</LabelDecoration>
+										<UsualGroup name="GroupDeleteUnited" id="386">
+											<Height>2</Height>
+											<Group>Vertical</Group>
+											<HorizontalSpacing>None</HorizontalSpacing>
+											<VerticalSpacing>None</VerticalSpacing>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="GroupDeleteUnitedExtendedTooltip" id="387"/>
+											<ChildItems>
+												<PictureDecoration name="HorizontalDashedGrayLine1" id="390">
+													<HorizontalStretch>true</HorizontalStretch>
+													<VerticalStretch>true</VerticalStretch>
+													<PictureSize>Tile</PictureSize>
+													<Picture>
+														<xr:Ref>CommonPicture.HorizontalDashedGrayLine</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<ContextMenu name="HorizontalDashedGrayLine1ContextMenu" id="391"/>
+													<ExtendedTooltip name="HorizontalDashedGrayLine1ExtendedTooltip" id="392"/>
+												</PictureDecoration>
+												<UsualGroup name="MarkForDeletionGroup" id="388">
+													<Height>2</Height>
+													<Group>Horizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="MarkForDeletionGroupExtendedTooltip" id="389"/>
+													<ChildItems>
+														<PictureDecoration name="VerticalDashedGrayLine1" id="396">
+															<VerticalStretch>true</VerticalStretch>
+															<PictureSize>Tile</PictureSize>
+															<Picture>
+																<xr:Ref>CommonPicture.VerticalDashedGrayLine</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</Picture>
+															<ContextMenu name="VerticalDashedGrayLine1ContextMenu" id="397"/>
+															<ExtendedTooltip name="VerticalDashedGrayLine1ExtendedTooltip" id="398"/>
+														</PictureDecoration>
+														<PictureDecoration name="MarkFoDeletionBin" id="331">
+															<Width>11</Width>
+															<Height>1</Height>
+															<HorizontalStretch>true</HorizontalStretch>
+															<VerticalStretch>false</VerticalStretch>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Delete</v8:content>
+																</v8:item>
+															</Title>
+															<GroupVerticalAlign>Center</GroupVerticalAlign>
+															<PictureSize>Proportionally</PictureSize>
+															<EnableDrag>true</EnableDrag>
+															<Picture>
+																<xr:Ref>CommonPicture.MarkFoDeletionBin</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</Picture>
+															<ContextMenu name="MarkFoDeletionBinContextMenu" id="332"/>
+															<ExtendedTooltip name="MarkFoDeletionBinExtendedTooltip" id="333"/>
+															<Events>
+																<Event name="DragCheck">MarkFoDeletionBinDragCheck</Event>
+																<Event name="Drag">MarkFoDeletionBinDrag</Event>
+															</Events>
+														</PictureDecoration>
+														<PictureDecoration name="VerticalDashedGrayLine2" id="399">
+															<VerticalStretch>true</VerticalStretch>
+															<PictureSize>Tile</PictureSize>
+															<Picture>
+																<xr:Ref>CommonPicture.VerticalDashedGrayLine</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</Picture>
+															<ContextMenu name="VerticalDashedGrayLine2ContextMenu" id="400"/>
+															<ExtendedTooltip name="VerticalDashedGrayLine2ExtendedTooltip" id="401"/>
+														</PictureDecoration>
+													</ChildItems>
+												</UsualGroup>
+												<PictureDecoration name="HorizontalDashedGrayLine2" id="781">
+													<HorizontalStretch>true</HorizontalStretch>
+													<VerticalStretch>true</VerticalStretch>
+													<PictureSize>Tile</PictureSize>
+													<Picture>
+														<xr:Ref>CommonPicture.HorizontalDashedGrayLine</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<ContextMenu name="HorizontalDashedGrayLine2ContextMenu" id="782"/>
+													<ExtendedTooltip name="HorizontalDashedGrayLine2ExtendedTooltip" id="783"/>
+												</PictureDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="GroupRejected" id="384">
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>Vertical</Group>
+									<VerticalSpacing>None</VerticalSpacing>
+									<Representation>None</Representation>
+									<United>false</United>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="GroupRejectedExtendedTooltip" id="385"/>
+									<ChildItems>
+										<LabelDecoration name="DecorationRejected" id="405">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>60</MaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Reject</v8:content>
+												</v8:item>
+											</Title>
+											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<BorderColor>#FF8C8C</BorderColor>
+											<Border width="2">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">Overline</v8ui:style>
+											</Border>
+											<ContextMenu name="DecorationRejectedContextMenu" id="406"/>
+											<ExtendedTooltip name="DecorationRejectedExtendedTooltip" id="407"/>
+										</LabelDecoration>
+										<UsualGroup name="GroupRejectedUnited" id="334">
+											<Height>2</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Group>Vertical</Group>
+											<HorizontalSpacing>None</HorizontalSpacing>
+											<VerticalSpacing>None</VerticalSpacing>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="GroupRejectedUnitedExtendedTooltip" id="335"/>
+											<ChildItems>
+												<PictureDecoration name="HorizontalDashedRedLine1" id="346">
+													<HorizontalStretch>true</HorizontalStretch>
+													<VerticalStretch>true</VerticalStretch>
+													<PictureSize>Tile</PictureSize>
+													<Picture>
+														<xr:Ref>CommonPicture.HorizontalDashedRedLine</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<ContextMenu name="HorizontalDashedRedLine1ContextMenu" id="347"/>
+													<ExtendedTooltip name="HorizontalDashedRedLine1ExtendedTooltip" id="348"/>
+												</PictureDecoration>
+												<UsualGroup name="ConverIntoRejectGroup" id="341">
+													<HorizontalStretch>true</HorizontalStretch>
+													<Group>Horizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ConverIntoRejectGroupExtendedTooltip" id="342"/>
+													<ChildItems>
+														<PictureDecoration name="VerticalDashedRedLine1" id="355">
+															<VerticalStretch>true</VerticalStretch>
+															<PictureSize>Tile</PictureSize>
+															<Picture>
+																<xr:Ref>CommonPicture.VerticalDashedRedLine</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</Picture>
+															<ContextMenu name="VerticalDashedRedLine1ContextMenu" id="356"/>
+															<ExtendedTooltip name="VerticalDashedRedLine1ExtendedTooltip" id="357"/>
+														</PictureDecoration>
+														<PictureDecoration name="DecorationRejectedLead" id="352">
+															<Height>1</Height>
+															<HorizontalStretch>true</HorizontalStretch>
+															<VerticalStretch>false</VerticalStretch>
+															<TextColor>#E6BBBB</TextColor>
+															<GroupVerticalAlign>Center</GroupVerticalAlign>
+															<NonselectedPictureText>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Drag item here</v8:content>
+																</v8:item>
+															</NonselectedPictureText>
+															<EnableDrag>true</EnableDrag>
+															<ContextMenu name="DecorationRejectedLeadContextMenu" id="353"/>
+															<ExtendedTooltip name="DecorationRejectedLeadExtendedTooltip" id="354"/>
+															<Events>
+																<Event name="DragCheck">DecorationRejectedLeadDragCheck</Event>
+																<Event name="Drag">DecorationRejectedLeadDrag</Event>
+															</Events>
+														</PictureDecoration>
+														<PictureDecoration name="VerticalDashedRedLine2" id="787">
+															<VerticalStretch>true</VerticalStretch>
+															<PictureSize>Tile</PictureSize>
+															<Picture>
+																<xr:Ref>CommonPicture.VerticalDashedRedLine</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</Picture>
+															<ContextMenu name="VerticalDashedRedLine2ContextMenu" id="788"/>
+															<ExtendedTooltip name="VerticalDashedRedLine2ExtendedTooltip" id="789"/>
+														</PictureDecoration>
+													</ChildItems>
+												</UsualGroup>
+												<PictureDecoration name="HorizontalDashedRedLine2" id="784">
+													<HorizontalStretch>true</HorizontalStretch>
+													<VerticalStretch>true</VerticalStretch>
+													<PictureSize>Tile</PictureSize>
+													<Picture>
+														<xr:Ref>CommonPicture.HorizontalDashedRedLine</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<ContextMenu name="HorizontalDashedRedLine2ContextMenu" id="785"/>
+													<ExtendedTooltip name="HorizontalDashedRedLine2ExtendedTooltip" id="786"/>
+												</PictureDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="GroupConvertIntoCustomer" id="382">
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>Vertical</Group>
+									<VerticalSpacing>None</VerticalSpacing>
+									<Representation>None</Representation>
+									<United>false</United>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="GroupConvertIntoCustomerExtendedTooltip" id="383"/>
+									<ChildItems>
+										<LabelDecoration name="DecorationConvertIntoCustomer" id="408">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>60</MaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Convert into customer</v8:content>
+												</v8:item>
+											</Title>
+											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<BorderColor>#07B200</BorderColor>
+											<Border width="2">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">Overline</v8ui:style>
+											</Border>
+											<ContextMenu name="DecorationConvertIntoCustomerContextMenu" id="409"/>
+											<ExtendedTooltip name="DecorationConvertIntoCustomerExtendedTooltip" id="410"/>
+										</LabelDecoration>
+										<UsualGroup name="GroupConvertIntoCustomerUnited" id="361">
+											<Height>2</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Group>Vertical</Group>
+											<HorizontalSpacing>None</HorizontalSpacing>
+											<VerticalSpacing>None</VerticalSpacing>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="GroupConvertIntoCustomerUnitedExtendedTooltip" id="362"/>
+											<ChildItems>
+												<PictureDecoration name="HorizontalDashedGreenLine1" id="363">
+													<HorizontalStretch>true</HorizontalStretch>
+													<VerticalStretch>true</VerticalStretch>
+													<PictureSize>Tile</PictureSize>
+													<Picture>
+														<xr:Ref>CommonPicture.HorizontalDashedGreenLine</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<ContextMenu name="HorizontalDashedGreenLine1ContextMenu" id="364"/>
+													<ExtendedTooltip name="HorizontalDashedGreenLine1ExtendedTooltip" id="365"/>
+												</PictureDecoration>
+												<UsualGroup name="ConvertIntoCustomerGroup" id="366">
+													<HorizontalStretch>true</HorizontalStretch>
+													<Group>Horizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ConvertIntoCustomerGroupExtendedTooltip" id="367"/>
+													<ChildItems>
+														<PictureDecoration name="VerticalDashedGreenLine1" id="368">
+															<VerticalStretch>true</VerticalStretch>
+															<PictureSize>Tile</PictureSize>
+															<Picture>
+																<xr:Ref>CommonPicture.VerticalDashedGreenLine</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</Picture>
+															<ContextMenu name="VerticalDashedGreenLine1ContextMenu" id="369"/>
+															<ExtendedTooltip name="VerticalDashedGreenLine1ExtendedTooltip" id="370"/>
+														</PictureDecoration>
+														<PictureDecoration name="DecorationIntoCustomer" id="371">
+															<Height>1</Height>
+															<HorizontalStretch>true</HorizontalStretch>
+															<VerticalStretch>false</VerticalStretch>
+															<TextColor>#AFD4AF</TextColor>
+															<GroupVerticalAlign>Center</GroupVerticalAlign>
+															<NonselectedPictureText>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Drag item here</v8:content>
+																</v8:item>
+															</NonselectedPictureText>
+															<EnableDrag>true</EnableDrag>
+															<ContextMenu name="DecorationIntoCustomerContextMenu" id="372"/>
+															<ExtendedTooltip name="DecorationIntoCustomerExtendedTooltip" id="373"/>
+															<Events>
+																<Event name="DragCheck">DecorationIntoCustomerDragCheck</Event>
+																<Event name="Drag">DecorationIntoCustomerDrag</Event>
+															</Events>
+														</PictureDecoration>
+														<PictureDecoration name="VerticalDashedGreenLine2" id="793">
+															<VerticalStretch>true</VerticalStretch>
+															<PictureSize>Tile</PictureSize>
+															<Picture>
+																<xr:Ref>CommonPicture.VerticalDashedGreenLine</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</Picture>
+															<ContextMenu name="VerticalDashedGreenLine2ContextMenu" id="794"/>
+															<ExtendedTooltip name="VerticalDashedGreenLine2ExtendedTooltip" id="795"/>
+														</PictureDecoration>
+													</ChildItems>
+												</UsualGroup>
+												<PictureDecoration name="HorizontalDashedGreenLine2" id="790">
+													<HorizontalStretch>true</HorizontalStretch>
+													<VerticalStretch>true</VerticalStretch>
+													<PictureSize>Tile</PictureSize>
+													<Picture>
+														<xr:Ref>CommonPicture.HorizontalDashedGreenLine</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<ContextMenu name="HorizontalDashedGreenLine2ContextMenu" id="791"/>
+													<ExtendedTooltip name="HorizontalDashedGreenLine2ExtendedTooltip" id="792"/>
+												</PictureDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="RightPanel" id="27">
+					<Width>25</Width>
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="RightPanelExtendedTooltip" id="28"/>
+					<ChildItems>
+						<PictureDecoration name="DecorationExpandFilters" id="98">
+							<Visible>false</Visible>
+							<Width>1</Width>
+							<VerticalStretch>true</VerticalStretch>
+							<Font ref="style:NormalTextFont" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Decoration expand filters</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<PictureSize>Proportionally</PictureSize>
+							<Zoomable>true</Zoomable>
+							<Picture>
+								<xr:Ref>CommonPicture.ExpandFilters</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="DecorationExpandFiltersContextMenu" id="99"/>
+							<ExtendedTooltip name="DecorationExpandFiltersExtendedTooltip" id="100"/>
+							<Events>
+								<Event name="Click">CollapseExpandFiltesPanelClick</Event>
+							</Events>
+						</PictureDecoration>
+						<Pages name="RightPagePanel" id="822">
+							<Width>25</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="RightPagePanelExtendedTooltip" id="823"/>
+							<ChildItems>
+								<Page name="FilterSettingsAndAddInfo" id="96">
+									<ExtendedTooltip name="FilterSettingsAndAddInfoExtendedTooltip" id="97"/>
+									<ChildItems>
+										<UsualGroup name="Filters" id="75">
+											<Width>20</Width>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="FiltersExtendedTooltip" id="76"/>
+											<ChildItems>
+												<LabelField name="PeriodPresentation" id="103">
+													<DataPath>PeriodPresentation</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Filter by creation date</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Hiperlink>true</Hiperlink>
+													<Font ref="style:NormalTextFont" height="11" kind="StyleItem"/>
+													<ContextMenu name="PeriodPresentationContextMenu" id="104"/>
+													<ExtendedTooltip name="PeriodPresentationExtendedTooltip" id="105"/>
+													<Events>
+														<Event name="Click">PeriodPresentationClick</Event>
+													</Events>
+												</LabelField>
+												<UsualGroup name="Campaigns" id="779">
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="CampaignsExtendedTooltip" id="780"/>
+													<ChildItems>
+														<InputField name="FilterCampaign" id="776">
+															<DataPath>FilterCampaign</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<DropListButton>false</DropListButton>
+															<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+															<ClearButton>true</ClearButton>
+															<OpenButton>false</OpenButton>
+															<CreateButton>false</CreateButton>
+															<QuickChoice>false</QuickChoice>
+															<InputHint>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Campaign</v8:content>
+																</v8:item>
+															</InputHint>
+															<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+															<ContextMenu name="FilterCampaignContextMenu" id="777"/>
+															<ExtendedTooltip name="FilterCampaignExtendedTooltip" id="778"/>
+															<Events>
+																<Event name="OnChange">FilterCampaignOnChange</Event>
+															</Events>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="Activities" id="79">
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ActivitiesExtendedTooltip" id="80"/>
+													<ChildItems>
+														<InputField name="FilterActivity" id="34">
+															<DataPath>FilterActivity</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ToolTipRepresentation>None</ToolTipRepresentation>
+															<OpenButton>false</OpenButton>
+															<CreateButton>false</CreateButton>
+															<ListChoiceMode>true</ListChoiceMode>
+															<InputHint>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Activity</v8:content>
+																</v8:item>
+															</InputHint>
+															<ContextMenu name="FilterActivityContextMenu" id="35"/>
+															<ExtendedTooltip name="FilterActivityExtendedTooltip" id="36"/>
+															<Events>
+																<Event name="ChoiceProcessing">FilterActivityChoiceProcessing</Event>
+															</Events>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="Result" id="160">
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ResultExtendedTooltip" id="161"/>
+													<ChildItems>
+														<InputField name="FilterResult" id="162">
+															<DataPath>FilterResult</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ChoiceList>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Active</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.LeadClosureResult.EmptyRef</Value>
+																	</xr:Value>
+																</xr:Item>
+															</ChoiceList>
+															<InputHint>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Result</v8:content>
+																</v8:item>
+															</InputHint>
+															<ContextMenu name="FilterResultContextMenu" id="163"/>
+															<ExtendedTooltip name="FilterResultExtendedTooltip" id="164"/>
+															<Events>
+																<Event name="ChoiceProcessing">FilterResultChoiceProcessing</Event>
+															</Events>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="Tags" id="112">
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="TagsExtendedTooltip" id="113"/>
+													<ChildItems>
+														<InputField name="FilterTag" id="114">
+															<DataPath>FilterTag</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<OpenButton>false</OpenButton>
+															<InputHint>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Tag</v8:content>
+																</v8:item>
+															</InputHint>
+															<ContextMenu name="FilterTagContextMenu" id="115"/>
+															<ExtendedTooltip name="FilterTagExtendedTooltip" id="116"/>
+															<Events>
+																<Event name="ChoiceProcessing">FilterTagChoiceProcessing</Event>
+															</Events>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="AcquisitionChannels" id="218">
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="AcquisitionChannelsExtendedTooltip" id="219"/>
+													<ChildItems>
+														<InputField name="FilterAcquisitionChannel" id="220">
+															<DataPath>FilterAcquisitionChannel</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<OpenButton>false</OpenButton>
+															<InputHint>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Acquisition channel</v8:content>
+																</v8:item>
+															</InputHint>
+															<ContextMenu name="FilterAcquisitionChannelContextMenu" id="221"/>
+															<ExtendedTooltip name="FilterAcquisitionChannelExtendedTooltip" id="222"/>
+															<Events>
+																<Event name="ChoiceProcessing">FilterAcquisitionChannelChoiceProcessing</Event>
+															</Events>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="SalesReps" id="81">
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="SalesRepsExtendedTooltip" id="82"/>
+													<ChildItems>
+														<InputField name="FilterSalesRep" id="37">
+															<DataPath>FilterSalesRep</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<OpenButton>false</OpenButton>
+															<InputHint>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Sales rep</v8:content>
+																</v8:item>
+															</InputHint>
+															<ContextMenu name="FilterSalesRepContextMenu" id="38"/>
+															<ExtendedTooltip name="FilterSalesRepExtendedTooltip" id="39"/>
+															<Events>
+																<Event name="ChoiceProcessing">FilterSalesRepChoiceProcessing</Event>
+															</Events>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ContactInformation" id="459">
+											<Title>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Contact information</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalStretch>true</VerticalStretch>
+											<Group>Vertical</Group>
+											<ExtendedTooltip name="ContactInformationExtendedTooltip" id="460"/>
+										</UsualGroup>
+										<LabelDecoration name="CollapseFilters" id="72">
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalStretch>true</VerticalStretch>
+											<TextColor>0:2a29a148-1bea-4d41-bf3b-fcf976448851</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>collapse</v8:content>
+												</v8:item>
+											</Title>
+											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+											<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+											<Hyperlink>true</Hyperlink>
+											<HorizontalAlign>Right</HorizontalAlign>
+											<VerticalAlign>Bottom</VerticalAlign>
+											<ContextMenu name="CollapseFiltersContextMenu" id="73"/>
+											<ExtendedTooltip name="CollapseFiltersExtendedTooltip" id="74"/>
+											<Events>
+												<Event name="Click">CollapseExpandFiltesPanelClick</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="List" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>List.Ref</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>SELECT
+	CatalogLeads.Ref AS Ref,
+	CatalogLeads.DeletionMark AS DeletionMark,
+	CatalogLeads.Code AS Code,
+	CatalogLeads.Description AS Description,
+	CatalogLeads.AcquisitionChannel AS AcquisitionChannel,
+	CatalogLeads.BasicInformation AS BasicInformation,
+	CatalogLeads.ClosureDate AS ClosureDate,
+	CatalogLeads.ClosureNote AS ClosureNote,
+	CatalogLeads.ClosureResult AS ClosureResult,
+	CatalogLeads.Counterparty AS Counterparty,
+	CatalogLeads.Created AS Created,
+	CatalogLeads.Note AS Note,
+	CatalogLeads.Potential AS Potential,
+	CatalogLeads.RejectionReason AS RejectionReason,
+	CatalogLeads.Tags.(
+		Ref AS Ref,
+		LineNumber AS LineNumber,
+		Tag AS Tag
+	) AS Tags,
+	CatalogLeads.Predefined AS Predefined,
+	CatalogLeads.PredefinedDataName AS PredefinedDataName,
+	LeadActivitiesSliceLast.Campaign AS Campaign,
+	LeadActivitiesSliceLast.SalesRep AS SalesRep,
+	LeadActivitiesSliceLast.Activity AS Activity
+FROM
+	Catalog.Leads AS CatalogLeads
+		LEFT JOIN InformationRegister.LeadActivities.SliceLast AS LeadActivitiesSliceLast
+		ON LeadActivitiesSliceLast.Lead = CatalogLeads.Ref</QueryText>
+				<MainTable>Catalog.Leads</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="FilterTag" id="2">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Tags</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="FilterSalesRep" id="4">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Employees</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="PeriodPresentation" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Period presentation</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="FilterPeriod" id="7">
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="FilterActivity" id="9">
+			<Type>
+				<v8:Type>cfg:CatalogRef.CampaignActivities</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CurrentLead" id="10">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Leads</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="FilterRejected" id="12">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="FilterClosed" id="13">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="FilterResult" id="15">
+			<Type>
+				<v8:Type>cfg:EnumRef.LeadClosureResult</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="FilterAcquisitionChannel" id="16">
+			<Type>
+				<v8:Type>cfg:CatalogRef.CustomerAcquisitionChannels</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Planner" id="17">
+			<Type>
+				<v8:Type xmlns:pl="http://v8.1c.ru/8.3/data/planner">pl:Planner</v8:Type>
+			</Type>
+			<Settings xmlns:pl="http://v8.1c.ru/8.3/data/planner" xsi:type="pl:Planner">
+				<pl:borderColor>style:FormBackColor</pl:borderColor>
+				<pl:backColor>#FFFFFF</pl:backColor>
+				<pl:textColor>auto</pl:textColor>
+				<pl:lineColor>#FFFFFF</pl:lineColor>
+				<pl:font kind="AutoFont"/>
+				<pl:beginOfRepresentationPeriod>0001-01-01T00:00:00</pl:beginOfRepresentationPeriod>
+				<pl:endOfRepresentationPeriod>0001-01-01T00:00:00</pl:endOfRepresentationPeriod>
+				<pl:alignElementsOfTimeScale>true</pl:alignElementsOfTimeScale>
+				<pl:displayTimeScaleWrapHeaders>false</pl:displayTimeScaleWrapHeaders>
+				<pl:displayWrapHeaders>false</pl:displayWrapHeaders>
+				<pl:timeScaleWrapHeadersFormat/>
+				<pl:periodicVariantUnit>Day</pl:periodicVariantUnit>
+				<pl:periodicVariantRepetition>0</pl:periodicVariantRepetition>
+				<pl:timeScaleWrapBeginIndent>0</pl:timeScaleWrapBeginIndent>
+				<pl:timeScaleWrapEndIndent>0</pl:timeScaleWrapEndIndent>
+				<pl:timeScale>
+					<placement xmlns="http://v8.1c.ru/8.2/data/chart">Left</placement>
+					<level xmlns="http://v8.1c.ru/8.2/data/chart">
+						<measure>Second</measure>
+						<interval>1</interval>
+						<show>true</show>
+						<line width="1" gap="false">
+							<v8ui:style xsi:type="v8ui:ChartLineType">None</v8ui:style>
+						</line>
+						<scaleColor>#FFFFFF</scaleColor>
+						<dayFormatRule>MonthDay</dayFormatRule>
+						<format>
+							<v8:item>
+								<v8:lang>#</v8:lang>
+								<v8:content>ДФ=</v8:content>
+							</v8:item>
+						</format>
+						<labels>
+							<ticks>0</ticks>
+						</labels>
+						<backColor>auto</backColor>
+						<textColor>style:FormTextColor</textColor>
+						<showPereodicalLabels>true</showPereodicalLabels>
+					</level>
+					<transparent xmlns="http://v8.1c.ru/8.2/data/chart">false</transparent>
+					<backColor xmlns="http://v8.1c.ru/8.2/data/chart">auto</backColor>
+					<textColor xmlns="http://v8.1c.ru/8.2/data/chart">auto</textColor>
+					<currentLevel xmlns="http://v8.1c.ru/8.2/data/chart">0</currentLevel>
+				</pl:timeScale>
+				<pl:period>
+					<pl:begin>2019-01-30T00:00:00</pl:begin>
+					<pl:end>2019-01-30T23:59:59</pl:end>
+				</pl:period>
+				<pl:displayCurrentDate>false</pl:displayCurrentDate>
+				<pl:itemsTimeRepresentation>DontDisplay</pl:itemsTimeRepresentation>
+			</Settings>
+		</Attribute>
+		<Attribute name="FirstItemKanban" id="21">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="FirstLastItemKanban" id="26">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Activity" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Activity</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.CampaignActivities</v8:Type>
+					</Type>
+				</Column>
+				<Column name="FirstItemOrder" id="2">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="LastItemOrder" id="3">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="EndOfLastItem" id="5">
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Count" id="4">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Campaign" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Campaign</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Campaigns</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="MaxItemKanban" id="28">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="CurrentDisplayKanban" id="29">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="FilterStringKanban" id="30">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="FilterSearch" id="31">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="NumberOfStatesWithoutDisplayedItems" id="32">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="NumberOfItemsToDisplayCanban" id="33">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="CIDataKanban" id="34">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Representation" id="2">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="IconIndex" id="3">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="TypeShowingData" id="5">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="PresentationCI" id="6">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Comment" id="7">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="OwnerCI" id="8">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="LeadRef" id="1">
+					<Type>
+						<v8:Type>cfg:CatalogRef.Leads</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="LongOperationParametres" id="35">
+			<Type/>
+		</Attribute>
+		<Attribute name="DataLoadSettings" id="36">
+			<Type/>
+		</Attribute>
+		<Attribute name="ChangedLeadsCount" id="37">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="LeadsActivitiesTable" id="38">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Activity" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Activity</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.CampaignActivities</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ChangedLeads" id="39">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Lead" id="1">
+					<Type>
+						<v8:Type>cfg:CatalogRef.Leads</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="LabelData" id="41">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="Label" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Label</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:ValueListType</v8:Type>
+						<v8:Type>xs:boolean</v8:Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="LabelPresentation" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Label presentation</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="FilterFieldName" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Filter field name</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="GroupParentName" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group parent name</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="FilterCampaign" id="42">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Campaigns</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="PhoneCall" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Phone call</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Phone call</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>PhoneCall</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+			<AssociatedTableElementId>3</AssociatedTableElementId>
+		</Command>
+		<Command name="SMS" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>SMS</v8:content>
+				</v8:item>
+			</Title>
+			<Action>SMS</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+			<AssociatedTableElementId>3</AssociatedTableElementId>
+		</Command>
+		<Command name="Email" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Email</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Email</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+			<AssociatedTableElementId>3</AssociatedTableElementId>
+		</Command>
+		<Command name="PersonalMeeting" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Personal meeting</v8:content>
+				</v8:item>
+			</Title>
+			<Action>PersonalMeeting</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+			<AssociatedTableElementId>3</AssociatedTableElementId>
+		</Command>
+		<Command name="Other" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Other</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Other</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+			<AssociatedTableElementId>3</AssociatedTableElementId>
+		</Command>
+		<Command name="DataImportFromExternalSources" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Import data from an external source</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.LoadFromFile</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>DataImportFromExternalSources</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Kanban" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Kanban</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.KanbanViewType</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Kanban</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="List" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>List</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.ListViewType</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>List</Action>
+			<AssociatedTableElementId>3</AssociatedTableElementId>
+		</Command>
+		<Command name="CreateKanban" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Create</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Create</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="MoveToEnd" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Move to end</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.MoveToEndKanban</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>MoveToEnd</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="MoveToTop" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Move to top</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.MoveToTopKanban</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>MoveToTop</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="MoveDown" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Move down</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.MoveDownKanban</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>MoveDown</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="MoveUp" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Move up</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.MoveUpKanban</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>MoveUp</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ConvertIntoCustomer" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Convert into customer</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ConvertIntoCustomer</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+			<AssociatedTableElementId>3</AssociatedTableElementId>
+		</Command>
+		<Command name="ConvertIntoReject" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Reject</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Convert into reject</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ConvertIntoReject</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+			<AssociatedTableElementId>3</AssociatedTableElementId>
+		</Command>
+		<Command name="ChangeSelected" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Change selected</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ChangeSelected</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+			<AssociatedTableElementId>3</AssociatedTableElementId>
+		</Command>
+		<Command name="UpdateKanban" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Refresh</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Update kanban</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>UpdatePlannerItemsAndDimensions</Action>
+		</Command>
+		<Command name="ChangeCampaign" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Change campaign</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ChangeCampaign</Action>
+		</Command>
+		<Command name="ChangeActivity" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Change activity</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ChangeActivity</Action>
+		</Command>
+		<Command name="ChangeSalesRep" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Change sales rep</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ChangeSalesRep</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>CommonCommand.SetReminder</Command>
+				<Type>Auto</Type>
+				<CommandGroup>CommandGroup.PersonalOrganizer</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.AdditionalInformationCommandBar</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

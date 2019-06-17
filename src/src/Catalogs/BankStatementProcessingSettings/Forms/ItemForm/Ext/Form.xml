@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="FormCommandBar" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">AfterWrite</Event>
+		<Event name="NotificationProcessing">NotificationProcessing</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="GroupDescCode" id="44">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="GroupDescCodeExtendedTooltip" id="45"/>
+			<ChildItems>
+				<InputField name="Description" id="4">
+					<DataPath>Object.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="DescriptionContextMenu" id="5"/>
+					<ExtendedTooltip name="DescriptionExtendedTooltip" id="6"/>
+				</InputField>
+				<InputField name="Code" id="1">
+					<DataPath>Object.Code</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="CodeContextMenu" id="2"/>
+					<ExtendedTooltip name="CodeExtendedTooltip" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="DataProcessor" id="7">
+			<DataPath>Object.DataProcessor</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="DataProcessorContextMenu" id="8"/>
+			<ExtendedTooltip name="DataProcessorExtendedTooltip" id="9"/>
+			<Events>
+				<Event name="OnChange">DataProcessorOnChange</Event>
+			</Events>
+		</InputField>
+		<InputField name="Encoding" id="10">
+			<DataPath>Object.Encoding</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="EncodingContextMenu" id="11"/>
+			<ExtendedTooltip name="EncodingExtendedTooltip" id="12"/>
+		</InputField>
+		<InputField name="FileExtensions" id="46">
+			<DataPath>Object.FileExtensions</DataPath>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<ContextMenu name="FileExtensionsContextMenu" id="47"/>
+			<ExtendedTooltip name="FileExtensionsExtendedTooltip" id="48">
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Input bank statement file extension using format: Format name 1|*.extension1|Format name 2|*.extension2
+Example: XML file (*.xml)|*.xml|Text files (*.txt)|*.txt, be careful with space characters</v8:content>
+					</v8:item>
+				</Title>
+			</ExtendedTooltip>
+		</InputField>
+		<Pages name="GroupPages" id="59">
+			<ExtendedTooltip name="GroupPagesExtendedTooltip" id="60"/>
+			<ChildItems>
+				<Page name="PageImport" id="61">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Import</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="PageImportExtendedTooltip" id="62"/>
+					<ChildItems>
+						<CheckBoxField name="AutomaticallyFillInDebts" id="19">
+							<DataPath>Object.AutomaticallyFillInDebts</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Automatic payment allocation</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Incoming payments will automatically allocate the amount on unpaid invoices</v8:content>
+								</v8:item>
+							</ToolTip>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="AutomaticallyFillInDebtsContextMenu" id="20"/>
+							<ExtendedTooltip name="AutomaticallyFillInDebtsExtendedTooltip" id="21"/>
+						</CheckBoxField>
+						<InputField name="ImportDirectory" id="13">
+							<DataPath>Object.ImportDirectory</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="ImportDirectoryContextMenu" id="14"/>
+							<ExtendedTooltip name="ImportDirectoryExtendedTooltip" id="15"/>
+							<Events>
+								<Event name="StartChoice">ImportCatalogStartChoice</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="PageExport" id="63">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Export</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="PageExportExtendedTooltip" id="64"/>
+					<ChildItems>
+						<InputField name="ExportDirectory" id="16">
+							<DataPath>Object.ExportDirectory</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="ExportDirectoryContextMenu" id="17"/>
+							<ExtendedTooltip name="ExportDirectoryExtendedTooltip" id="18"/>
+							<Events>
+								<Event name="StartChoice">ExportCatalogStartChoice</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="PageAdditionalSettings" id="65">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Additional settings</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="PageAdditionalSettingsExtendedTooltip" id="66"/>
+					<ChildItems>
+						<Table name="AdditionalSettings" id="22">
+							<Representation>List</Representation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Object.AdditionalSettings</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="AdditionalSettingsContextMenu" id="23"/>
+							<AutoCommandBar name="AdditionalSettingsCommandBar" id="24"/>
+							<ExtendedTooltip name="AdditionalSettingsExtendedTooltip" id="25"/>
+							<SearchStringAddition name="AdditionalSettingsSearchString" id="26">
+								<AdditionSource>
+									<Item>AdditionalSettings</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="AdditionalSettingsSearchStringContextMenu" id="27"/>
+								<ExtendedTooltip name="AdditionalSettingsSearchStringExtendedTooltip" id="28"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="AdditionalSettingsViewStatus" id="29">
+								<AdditionSource>
+									<Item>AdditionalSettings</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="AdditionalSettingsViewStatusContextMenu" id="30"/>
+								<ExtendedTooltip name="AdditionalSettingsViewStatusExtendedTooltip" id="31"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="AdditionalSettingsSearchControl" id="32">
+								<AdditionSource>
+									<Item>AdditionalSettings</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="AdditionalSettingsSearchControlContextMenu" id="33"/>
+								<ExtendedTooltip name="AdditionalSettingsSearchControlExtendedTooltip" id="34"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="AdditionalSettingsLineNumber" id="35">
+									<DataPath>Object.AdditionalSettings.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="AdditionalSettingsLineNumberContextMenu" id="36"/>
+									<ExtendedTooltip name="AdditionalSettingsLineNumberExtendedTooltip" id="37"/>
+								</LabelField>
+								<InputField name="AdditionalSettingsSetting" id="38">
+									<DataPath>Object.AdditionalSettings.Setting</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="AdditionalSettingsSettingContextMenu" id="39"/>
+									<ExtendedTooltip name="AdditionalSettingsSettingExtendedTooltip" id="40"/>
+								</InputField>
+								<InputField name="AdditionalSettingsValue" id="41">
+									<DataPath>Object.AdditionalSettings.Value</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="AdditionalSettingsValueContextMenu" id="42"/>
+									<ExtendedTooltip name="AdditionalSettingsValueExtendedTooltip" id="43"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.BankStatementProcessingSettings</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.19267"></meta></head><body>
+<h1>Sales orders</h1>
+<p>In 1C:Drive, with a <em>sales order</em> document you can track an individual sale your company makes to a customer.</p>
+<p>Typically, your sales flow starts with a sales order. Sometimes, you initiate it with a quotation and then generate a sales order based on the quotation.</p>
+<p>In the sales order, you specify the customer, the goods and services the customer ordered and their price, and the agreed shipment date.</p>
+<p>Additionally, you can specify the payment terms and delivery terms you agreed on.</p>
+<p>As sales order are parts of your sales flow, you can use a sales order to generate other documents in the flow: goods issues, sales invoices, and others.</p>
+<h2>Viewing sales orders</h2>
+<p>To view the list of sales orders:</p>
+<ul><li>Click <strong>Sales &gt; Sales &gt; Sales orders</strong>. </li></ul><p>You can create, edit, or delete sales orders.</p><a name="sales_order_fields"></a>
+<h2>Sales order fields</h2>
+<p>A sales order has the following fields:</p>
+<ul><li><strong>Customer</strong> (required). The customer name. 
+</li><li><strong>Contract</strong> (required). The contract governing the sale. This field is only available if the customer's billing details include contracts. 
+</li><li><strong>Base document</strong>. The document that is a base for the sales order. It can be a quotation. 
+</li><li><strong>Number</strong>. A unique sales order number. 
+</li><li><strong>Date</strong>. The date and time when the sales order was created. 
+</li><li><strong>Company</strong> (required). The company that issues the sales order. 
+</li><li><strong>Warehouse</strong> (required). The company's warehouse you sell goods from. 
+</li><li><strong>Prices and currency</strong>. Indicates the currency, price type, and VAT tax category of the sales order. 
+</li><li><strong>Note</strong>. Comments on the sales order. 
+</li><li><strong>Status</strong> (required). Indicates what is going on with the sales order: 
+<ul><li><strong>Open</strong>. Your company has just created the order and has not started its fulfillment. 
+</li><li><strong>In progress</strong>. Your company is fulfilling the order. 
+</li><li><strong>Completed</strong>. The order fulfillment is completed. </li></ul></li></ul><h2>Monitoring sales order statuses</h2>
+<p>When viewing the sales order list, the <strong>Status</strong> column helps you focus on the orders having the status of your interest. For more information, see <a href="#sales_order_fields">Sales order fields</a>.</p>
+<p>In 1C:Drive, a sales order can reflect both the fact that your company received the expected money for the order from the customer and the fact that your company delivered the goods and services according to the order.</p>
+<p>To monitor that both sides of the deal (your company and the customer) fulfilled their obligations, you can use the sales order list.</p>
+<p>In the list, for each order, 1C:Drive separately displays its payment status and dispatch status.</p>
+<p>Each status is displayed with a colored circle.</p>
+<p>The circle color indicates timeliness:</p>
+<ul><li><strong>Green</strong>. On time. The deadline is met. 
+</li><li><strong>Orange</strong>. In jeopardy. The deadline is reached. 
+</li><li><strong>Red</strong>. Overdue. The deadline is missed. </li></ul><p>The circle shape indicates completeness:</p>
+<ul><li><img src="_files/fulfilled_in_full.jpg"></img>. Fulfilled in full. 
+</li><li><img src="_files/fulfilled_in_part.jpg"></img>. Fulfilled in part. 
+</li><li><img src="_files/not_fulfilled.jpg"></img>. Not fulfilled. </li></ul><h2>Creating sales orders</h2>
+<p>To create a sales order:</p>
+<ol><li>Do any of the following: 
+<ul><li>To create a sales order from scratch: 
+<ul><li>Click <strong>Sales &gt; Sales &gt; Sales orders</strong> and then click <strong>Create</strong>. </li></ul></li><li>To create a sales order based on an existing quotation: 
+<ul><li>Open the quotation and click <strong>Generate &gt; Sales order</strong>. </li></ul></li></ul></li><li>Fill in the sales order fields. 
+<p>For more information, see <a href="#sales_order_fields">Sales order fields</a>.</p>
+</li><li>Specify the goods and services to include in the sales order. 
+<p>For more information, see <a href="#specifying_goods_and_services_to_sell">Specifying goods and services to sell</a>.</p>
+</li><li>Optional. Specify discounts for the goods and services. 
+<p>For more information, see <a href="DataProcessor.DiscountTypes/Help">Discounts</a>.</p>
+</li><li>Optional. Estimate profit from the sales order. 
+<p>For more information, see <a href="Document.SalesOrder.Form.EstimateForm/Help">Profit estimation</a>.</p>
+</li><li>Optional. Specify payment terms for the sales order. 
+<p>For more information, see <a href="Catalog.CounterpartyContracts.Form.StagesOfPaymentForm/Help">Payment terms</a>.</p>
+</li><li>Optional. Specify the delivery terms. 
+<p>For more information, see <a href="#specifying_delivery_terms">Specifying delivery terms</a>.</p>
+</li><li>Click <strong>Post</strong>. 
+</li><li>Print the order and send it to the customer. </li></ol><a name="specifying_goods_and_services_to_sell"></a>
+<h2>Specifying goods and services to sell</h2>
+<p>To specify the goods and services your company sells to a customer according to a sales order, use the <strong>Products</strong> tab of the sales order page.</p>
+<p>The table on the tab lists all goods and services the customer is to pay for, their prices, quantities, the VAT amount, and the total amount. In the table, you can add, edit, and delete items.</p>
+<p>If the sales order is based on a quotation or another document, the table includes the goods and services the base document includes.</p>
+<p>Adding an item and filling its fields is the straightforward way to populate the products table. Also, you can copy existing items, paste them to the table, and update their fields.</p>
+<p>The other ways to populate the products table are as follows:</p>
+<ul><li>Importing sales order data from external sources 
+</li><li>Selecting products from stock and reserves </li></ul><a name="selecting_products_from_stock_and_reserves"></a>
+<h3>Selecting products from stock and reserves</h3>
+<p>When selling a product you might want to check the product's availability before adding it to the sales order (whether it is possible to sell it immediately) and put the product in reserve after adding it to the sales order (whether it is possible to sell it if the sales order is canceled).</p>
+<p>For this purpose, use the product selection tool. To open it:</p>
+<ul><li>On the <strong>Products</strong> tab of the sales order, click <strong>Select</strong>. </li></ul><p>For more information, see <a href="DataProcessor.ProductsSelection/Help">Selecting products for sales documents</a>.</p><a name="specifying_delivery_terms"></a>
+<h2>Specifying delivery terms</h2>
+<p>In the sales order, you can specify the delivery terms for the goods ordered.</p>
+<p>The following delivery term fields are available:</p>
+<ul><li><strong>Delivery option</strong>. The way your company ships the ordered goods to the customer. Available values: 
+<ul><li><strong>Self pickup</strong>. The customer is to pick up the goods from your company's warehouse. 
+</li><li><strong>Delivery</strong>. Your company is to deliver the goods to the customer. 
+</li><li><strong>Logistics company</strong>. A third-party logistics company is to deliver the goods to the customer. </li></ul></li><li><strong>Logistics company</strong>. The logistics company name. The field is only available if the <strong>Delivery option</strong> field is set to <strong>Logistics company</strong>. 
+</li><li><strong>Shipping address</strong>. The customer's shipping address. The field is only available if the <strong>Delivery option</strong> field is set to <strong>Delivery</strong> or <strong>Logistics company</strong>. 
+</li><li><strong>Contact person</strong>. The customer's contact person for delivery-specific questions. The field is only available if the <strong>Delivery option</strong> field is set to <strong>Delivery</strong> or <strong>Logistics company</strong>. 
+</li><li><strong>Goods marking</strong>. The text of the label on the goods to ship. The field is only available if the <strong>Delivery option</strong> field is set to <strong>Delivery</strong> or <strong>Logistics company</strong>. 
+</li><li><strong>Delivery from ... till</strong>. The preferred delivery time period during the day. The field is only available if the <strong>Delivery option</strong> is set to <strong>Delivery</strong> or <strong>Logistics company</strong>. 
+</li><li><strong>Incoterms</strong>. The Incoterms rule to use for delivery. The field is only available if the <strong>Delivery option</strong> is set to <strong>Delivery</strong> or <strong>Logistics company</strong>. </li></ul><p>To specify the delivery term fields for a sales order:</p>
+<ul><li>Open the sales order. 
+</li><li>Click the <strong>Delivery</strong> tab. 
+</li><li>Fill the delivery term fields. </li></ul><h2>Closing sales orders</h2>
+<p>When you need to abort processing a sales order at any stage, you can close the order to indicate you expect no actions with it. Once a sales order is closed, you cannot generate other documents based on it.</p>
+<p>To close a sales order:</p>
+<ol><li>Open the sales order or click it in the sales order list. 
+</li><li>Click <strong>Close order</strong>. </li></ol><p>In the sales order list, 1C:Drive displays <img src="_files/closed_mark.jpg"></img> for the order.</p>
+<h2>Sales order analysis reports</h2>
+<p>The following reports that help you analyze a sales order are available:</p>
+<ul><li><strong>Order analysis</strong>. Displays which items of the sales order were ordered, shipped, reserved, allocated in purchase and production orders, and not allocated, and which items are remaining in stock. Displays the payment status of the sales order: order amount, paid amount, and due amount. 
+</li><li><strong>Available stock</strong>. For all warehouses, displays which items mentioned in the sales order are on hand, ordered, or available. 
+</li><li><strong>Statement of account</strong>. For the sales order's customer, displays debits and credits of your company's receivables and payables for an accounting period. 
+</li><li><strong>Inventory demand</strong>. Displays which items of the sales order were requested, shipped, reserved, allocated in purchase and production orders, and not allocated, and which items are remaining in stock. </li></ul><p>The reports are built-in to the sales order page. To generate a report for a sales order:</p>
+<ul><li>Open the sales order and click the link with the report name. </li></ul></body></html>

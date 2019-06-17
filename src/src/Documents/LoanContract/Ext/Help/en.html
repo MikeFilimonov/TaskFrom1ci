@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<h1>Managing loans</h1>
+<h2>Loan overview</h2>
+<p>Sometimes, to support and speed up development of your business, you may need to borrow money from another company for a short term without collateral. With such a loan, for the period you agreed with your lender, your company can fill up its working capital, while your lender can earn extra money by interest and an optional commission your company pays to them for the loan.</p>
+<p>Alternatively, if your company wants to support and retain its staff members, you can lend the money to your employees as a short-term loan and also get your interest. In either scenario, to have a clear picture of the financial health and forecast of your company, you need to register such loans in 1C:Drive as they affect your company's balance sheet, cash flow, and income statement.</p><a name="loan_contracts"></a>
+<h2>Loan contracts</h2>
+<p>To keep records of a loan you agreed upon with your counterparty or employee, register a loan contract in 1C:Drive. A loan contract defines whether your company is a borrower or a lender and specifies all the terms according to which you are to receive or issue the loan, pay for it, or get payments for it. Of course, you first come to an agreement on the loan details and then keep records of them in the loan contract.</p>
+<p>The loan contract becomes the source document from which you generate documents that describe the accruals schedule and payments schedule and the actual accruals and payments.</p>
+<h2>Creating loan contracts as a borrower</h2>
+<p>To register a <a href="#loan_contracts">loan contract</a> under which your company borrows money:</p>
+<ol><li>Go to <strong>Cash management &gt; Loan management &gt; Loan contracts</strong>. 
+</li><li>Click <strong>Create</strong>. 
+</li><li>In the <strong>Loan kind</strong> list, click <strong>Borrowed</strong>. 
+</li><li>In the <strong>Lender</strong> list, click the counterparty company that lends the money to your company. 
+</li><li>Specify loan terms. 
+<p>For more information, see <a href="#loan_terms">Managing loan terms of loan contracts</a>. </p>
+</li><li>Specify repayment terms. 
+<p>For more information, see <a href="#repayment_terms">Managing repayment terms of loan contracts</a>. </p>
+</li><li>Specify GL accounts for tracking the loan's accruals and payments. 
+<p>For more information, see <a href="#loan_gl_accounts">Managing GL accounts of loan contracts</a>. </p>
+</li><li>Click <strong>Post</strong>. </li></ol><p><strong>Note.</strong> Posting a loan contract adds records of the loan payment schedule to the <strong>Loan repayment schedule</strong> information register.</p>
+<h2>Creating loan contracts as a lender</h2>
+<p>To register a <a href="#loan_contracts">loan contract</a> under which your company lends money:</p>
+<ol><li>Go to <strong>Cash management &gt; Loan management &gt; Loan contracts</strong>. 
+</li><li>Click <strong>Create</strong>. 
+</li><li>In the <strong>Loan kind</strong> list, click <strong>Lent</strong>. 
+</li><li>In the <strong>Employee</strong> list, click your company's employee who borrows the money from the company. 
+</li><li>Specify loan terms. 
+<p>For more information, see <a href="#loan_terms">Managing loan terms of loan contracts</a>. </p>
+</li><li>Specify repayment terms. 
+<p>For more information, see <a href="#repayment_terms">Managing repayment terms of loan contracts</a>. </p>
+</li><li>Specify GL accounts for tracking the loan's accruals and payments. 
+<p>For more information, see <a href="#loan_gl_accounts">Managing GL accounts of loan contracts</a>. </p>
+</li><li>Click <strong>Post</strong>. </li></ol><p><strong>Note.</strong> Posting a loan contract adds records of the loan payment schedule to the <strong>Loan repayment schedule</strong> information register.</p><a name="loan_terms"></a>
+<h2>Managing loan terms of loan contracts</h2>
+<p>For each <a href="#loan_contracts">loan contract</a>, specify its loan terms. To do this, use the <strong>Loan terms</strong> tab of the loan contract:</p>
+<ul><li><strong>Currency</strong>. The loan currency. 
+</li><li><strong>Principal</strong>. The amount of money you borrow or lend. 
+</li><li><strong>Annual interest, %</strong>. The annual interest of the loan, in percent. 
+</li><li><strong>Commission</strong>. The type of the commission you are to pay for the loan you borrow. Available values: 
+<ul><li><strong>None</strong>. No commission. 
+</li><li><strong>Amount (per month)</strong>. The fixed amount each month. 
+</li><li><strong>% of principal (per month)</strong>. The percentage of the loan principal each month. 
+</li><li><strong>% of principal balance (per month)</strong>. The percentage of the remaining principal due on the loan each month. 
+</li><li><strong>Custom schedule of repayments terms tab</strong>. You specify the commission according to the custom payment schedule. 
+</li><li><strong>Amount</strong>. The amount of the commission you are to pay for the loan you borrow, in terms of money or in percent, depending on the commission type. </li></ul></li><li><strong>Issued on</strong>. The date when the lender issues the loan. 
+</li><li><strong>For the period</strong>. The number of months during which the borrower is to repay the loan completely. 
+</li><li><strong>Maturity</strong>. The final date when the borrower is to repay the loan completely. 
+</li><li><strong>First repayment</strong>. The date when the borrower is to make the first payment of the loan. 
+</li><li><strong>Comment</strong>. The optional comment that contains extra details of the loan terms. </li></ul><a name="repayment_terms"></a>
+<h2>Managing repayment terms of loan contracts</h2>
+<p>The repayment terms of a <a href="#loan_contracts">loan contract</a> define the payment schedule. They use the loan terms of the loan contract for calculating the schedule.</p>
+<p>To specify the repayment terms, use the <strong>Repayment terms</strong> tab of the loan contract:</p>
+<ul><li><strong>One-time (on maturity date)</strong>. Click this if the loan is to be repaid once on the maturity date. Thus, by default, the payment schedule contains only one record. 
+</li><li><strong>Monthly</strong>. Click this if the loan is to be repaid on the monthly basis. 
+</li><li><strong>Charge from salary</strong>. Select this check box to automatically deduct payments for the loan your company provides to its employee from the employee's salary. 
+</li><li><strong>As in loan calculators (360 days a year)</strong>. Select this check box to use the Earning convention where a year has 360 days and 12 months, each having 30 days. This helps you budget the amount of interest accrued on accounts payable or accounts receivable evenly across the financial year. Otherwise, a year has 365 or 366 days for the payment schedule. 
+<p>This check box is available if the <strong>Settings &gt; Accounting settings &gt; Payroll &gt; Enable section use</strong> option is turned on. </p>
+</li><li><strong>Payments</strong>. Specify the payment type for the loan that is repaid monthly, and then click <strong>Fill</strong> to automatically fill in the payment schedule. Available values: 
+<ul><li><strong>Annuity payments</strong>. Equal payments every month up to the maturity date. A payment includes principal and interest. Their ratio is different for each payment. 
+</li><li><strong>Fixed principal payment</strong>. Equal principal payments every month up to the maturity date plus the interest. 
+</li><li><strong>Only interest (principal on maturity date)</strong>. Equal interest payments every month up to the maturity day and repayment of the entire principal on the maturity date. 
+</li><li><strong>Only principal (interest on maturity date)</strong>. Equal principal payments every month up to the maturity day and repayment of the entire interest on the maturity date. 
+</li><li><strong>Custom schedule</strong>. Arbitrary payment schedule. </li></ul></li></ul><p>You can change and delete payment schedule records.</p>
+<p>To add a record to the payment schedule:</p>
+<ul><li>Click <strong>Add</strong> and specify the payment record details. </li></ul><p>If you change records in the payment schedule manually (rather than by using the <strong>Fill</strong> button), you need to update the loan repayment balance after that. To do this:</p>
+<ul><li>In the <strong>More actions</strong> menu of the <strong>Repayment terms</strong> tab, click <strong>Update comments</strong>. </li></ul><p>1C:Drive updates the loan repayment balance in the <strong>Comment</strong> column.</p>
+<p>For instance, if your employee or your company makes an early repayment of a loan, you have to manually correct the payment schedule of the loan contract. This will allow you to keep generating documents based on the loan contract with accurate amounts. Otherwise, you will have to manually correct the amounts in payments and accruals every time you generate the documents.</p><a name="loan_gl_accounts"></a>
+<h2>Managing GL accounts of loan contracts</h2>
+<p>When creating and configuring a <a href="#loan_contracts">loan contract</a>, you also need to specify the general ledger (GL) accounts that you want to use to keep records of the operations related to the loan.</p>
+<p>Before selecting the GL accounts, make sure that you created a chart of accounts in 1C:Drive.</p>
+<p>For the loan contract, on the <strong>GL accounts</strong> tab, select the accounts you want to use:</p>
+<ul><li><strong>Principal GL account</strong> 
+</li><li><strong>Interest GL account</strong> 
+</li><li><strong>Commission GL account</strong> 
+<p>This field is available if you specify the commission in the loan terms of the contract.</p>
+</li><li><strong>Expense account</strong> 
+</li><li><strong>Deduction (principal debt)</strong> 
+<p>This field is available if you select the <strong>Charge from salary</strong> check box in the repayment terms of the contract for the loan you lend.</p></li></ul><h2>Viewing loan contract totals</h2>
+<p>After you specify the loan terms and repayment terms of a <a href="#loan_contracts">loan contract</a>, 1C:Drive automatically calculates and displays totals for the contract in the bottom line, in money terms:</p>
+<ul><li><strong>Principal</strong>. The total principal amount. 
+</li><li><strong>Interest</strong>. The total interest amount. 
+</li><li><strong>Commission</strong>. The total commission amount. 
+</li><li><strong>Total amount</strong>. Principal + interest + commission. </li></ul><p>This lets you estimate whether the loan contract matches your needs.</p>
+<h2>Managing loan payment reminders</h2>
+<p>After you specify the payment schedule for a <a href="#loan_contracts">loan contract</a>, you may need to set reminders that will notify you that it is time to pay or get a payment for the loan. You can set reminders for the first payment or for all payments scheduled in the loan contract.</p>
+<p>To be able to set reminders in 1C:Drive:</p>
+<ul><li>Go to <strong>Settings &gt; Application settings &gt; Personal organizer</strong> and select the <strong>Use reminders</strong> check box. </li></ul><p>To view the list of reminders:</p>
+<ul><li>Go to <strong>Settings &gt; Application settings &gt; Personal organizer</strong> and click <strong>User reminders</strong>. </li></ul><h3>Creating the first payment reminder</h3>
+<p>To create the first payment reminder for a <a href="#loan_contracts">loan contract</a>:</p>
+<ol><li>Open the loan contract. 
+</li><li>In the <strong>More actions</strong> menu of the loan contract, click <strong>Set reminder</strong>. 
+</li><li>Specify when 1C:Drive is to remind you about the first payment. 
+</li><li>Click <strong>Save and close</strong>. </li></ol><h3>Creating reminders for all scheduled payments</h3>
+<p>To create reminders for all scheduled payments of a <a href="#loan_contracts">loan contract</a>:</p>
+<ol><li>Open the loan contract. 
+</li><li>Click the <strong>Repayment terms</strong> tab. 
+</li><li>Click <strong>Create reminders</strong>. 
+</li><li>Select whether to remind on the payment day or on the day before payment. 
+</li><li>Specify the reminder time. 
+</li><li>Select the user who will get the reminder. 
+</li><li>Click <strong>Create payment reminders</strong>. 
+</li><li>Click <strong>Close</strong>. </li></ol><p>1C:Drive creates reminders for all records in the payment schedule at once.</p>
+<h2>Receiving loans and paying them</h2>
+<p>After creating a <a href="#loan_contracts">contract</a> on a loan you borrowed from another company:</p>
+<ol><li>Register the fact of receiving the loan (<a href="#receiving_borrowed_loans_in_cash">in cash</a> or <a href="#receiving_borrowed_loans_in_bank_transfer">via a bank transfer</a>). 
+</li><li>Create <a href="#accruals_for_borrowed_loans">a</a> for the loan's interest and commission. 
+</li><li>Register your payments for the loan (<a href="#paying_for_borrowed_loans_in_cash">in cash</a><a> or </a><a href="#paying_for_borrowed_loans_via_bank_transfer">via a bank transfer</a>) according to the payment schedule defined in the contract. </li></ol><a name="receiving_borrowed_loans_in_cash"></a>
+<h3>Receiving borrowed loans in cash</h3>
+<p>To register the fact of receiving a loan in cash:</p>
+<ol><li>Open the <a href="#loan_contracts">loan contract</a>. 
+</li><li>Click <strong>Generate</strong> and then click <strong>Cash receipt</strong>. 
+<p>1C:Drive creates a cash receipt document based on the loan contract and populates it. Note that the <strong>Operation</strong> field has the <strong>Loan receipt</strong> value.</p>
+</li><li>In the <strong>Cash account</strong> list, click the account to which you receive the money in cash. 
+</li><li>In the <strong>Amount</strong> field, specify the amount of money you receive. 
+</li><li>Click <strong>Post</strong>. </li></ol><p>On the <strong>Settlements on credits</strong> tab, 1C:Drive displays the total loan amount according to the contract and the remaining amount of the loan you have to receive.</p><a name="receiving_borrowed_loans_in_bank_transfer"></a>
+<h3>Receiving borrowed loans via bank transfer</h3>
+<p>To register the fact of receiving a loan via a bank transfer:</p>
+<ol><li>Open the <a href="#loan_contracts">loan contract</a>. 
+</li><li>Click <strong>Generate</strong> and then click <strong>Bank receipt</strong>. 
+<p>1C:Drive creates a bank receipt document based on the loan contract and populates it. Note that the <strong>Operation</strong> field has the <strong>Loan receipt</strong> value.</p>
+</li><li>In the <strong>Account</strong> list, click the bank account to which you receive the money. 
+</li><li>In the <strong>Amount</strong> field, specify the amount of money you receive. 
+</li><li>If the bank that serves your account charges you for receiving the money, select the <strong>Bank charge</strong> check box and then, under <strong>Bank charges</strong>, fill the <strong>Bank charge</strong>, <strong>Item</strong>, and <strong>Amount</strong> fields. 
+</li><li>Click <strong>Post</strong>. </li></ol><p>On the <strong>Settlements on credits</strong> tab, 1C:Drive displays the total loan amount according to the contract and the remaining amount of the loan you have to receive.</p><a name="accruals_for_borrowed_loans"></a>
+<h3>Creating accruals for borrowed loans</h3>
+<p>Typically, a <a href="#loan_contracts">loan contract</a> includes an interest you are to pay for the loan you borrow. Also, the contract can include a commission. So, for such loans, interest and commission serve as your expense.</p>
+<p>To register accruals for such interest and commission in 1C:Drive, use the loan interest (commission) Earning documents. You can create such accruals based on particular loan contracts.</p>
+<p>To create accruals for one or several borrowed loans:</p>
+<ol><li>Go to <strong>Cash management &gt; Loan management &gt; Loan interest (commission) accruals</strong>. 
+</li><li>Click <strong>Create</strong>. 
+</li><li>In the <strong>Operation</strong> list, click <strong>accruals for loans borrowed</strong>. 
+</li><li>Specify the start and end of the Earning period. 
+</li><li>On the <strong>Accruals</strong> tab, click <strong>Fill</strong>. 
+</li><li>In the <strong>Fill in Accruals</strong> dialog box, do any the following: 
+<ul><li>In the <strong>Lender</strong> list, click the lender whose loans you want to apply. 
+</li><li>In the <strong>Loan contract</strong> list, click the borrowed loan contract you want to apply. </li></ul><p>The document will list only accruals for the selected lender and contracts. If you do not select any, it will contains the accruals for all lenders and contracts.</p>
+</li><li>Click <strong>Apply</strong>. 
+<p>1C:Drive populates the table on the <strong>Accruals</strong> tab according to the loan contracts and the Earning period you specified. You can add, edit, or delete table records.</p>
+</li><li>Click <strong>Post</strong>. </li></ol><a name="paying_for_borrowed_loans_in_cash"></a>
+<h3>Paying for borrowed loans in cash</h3>
+<p>To register a loan payment in cash:</p>
+<ol><li>Do one of the following: 
+<ul><li>Open the <a href="#loan_contracts">loan contract</a>, click <strong>Generate</strong>, and then click <strong>Cash payment</strong>. 
+</li><li>Open an Earning based on the loan contract, click <strong>Generate</strong>, click <strong>Payment</strong>, and then click <strong>Cash payment</strong>. </li></ul><p>1C:Drive creates a cash payment document based on the loan contract or the Earning and populates it. Note that the <strong>Operation</strong> field has the <strong>Loan repayment</strong> value.</p>
+<p>Since an Earning does not include principal and can include just interest and commision, generating a cash payment document based on the Earning makes sense if the loan contract's payment type is <strong>Only interest (principal on maturity date)</strong>.</p>
+</li><li>In the <strong>Cash account</strong> list, click the account from which you pay the money in cash. 
+<p>On the <strong>Settlements on credits</strong> tab, 1C:Drive displays the debt balance according to the loan contract and information about the next payment: date and amounts to pay for principal, interest, and commission.</p>
+</li><li>In the <strong>Amount</strong> field, specify the amount of money you pay, or set it to zero. 
+<p>If you set the amount to zero, 1C:Drive will calculate the amount.</p>
+</li><li>On the <strong>Settlements on credits</strong> tab, click <strong>Fill by credit contract</strong>. 
+</li><li>Do any of the following: 
+<ul><li>Select the <strong>Next payment</strong> check box to populate the payment according to the next payment in the loan contract's payment schedule. 
+</li><li>Select the <strong>Previous payment</strong> check box to clone the payment details from the previous payment you already received for the loan from the employee. 
+</li><li>Select the <strong>Remaining debt</strong> check box to get the remaining principal of the loan. 
+</li><li>Select the <strong>Complete early repayment</strong> check box to get full repayment of the remaining debt of the loan, including its principal, interest, and commission. </li></ul></li><li>If necessary, for the items you selected, change the payment date, principal, interest, or commission. 
+</li><li>If you want to clear the payment details of the cash payment document before populating it according to the loan contract, select the <strong>Overwrite existing data</strong> check box. 
+<p>-OR-</p>
+<p>If you want to append new payment details to existing ones, clear the <strong>Overwrite existing data</strong> check box.</p>
+</li><li>Click <strong>Fill</strong>. 
+<p>1C:Drive populates the payment details on the Settlements on credits tab according to the amount and the payment options you specified:</p>
+<ul><li>If you selected the <strong>Overwrite existing data</strong> check box and specified a nonzero amount in the <strong>Amount</strong> field, 1C:Drive distributes this amount in the payment details (what goes to principal, what goes to interest, and what goes to commission). If 1C:Drive cannot distribute the entire amount, it adds a record with the remaining amount and a blank value in the <strong>Type of amount</strong> column. 
+</li><li>If you selected the <strong>Overwrite existing data</strong> check box and specified a zero amount in the <strong>Amount</strong> field, 1C:Drive populates the amount with the total of the <strong>Payment amount</strong> column. 
+</li><li>If you cleared the <strong>Overwrite existing data</strong> check box, 1C:Drive ignores the <strong>Amount</strong> field and populates the payment details according to the payment options you specified. </li></ul><p>On the <strong>Settlements on credits</strong> tab, you can add, change, or delete records.</p>
+</li><li>Click <strong>Post</strong>. </li></ol><a name="paying_for_borrowed_loans_via_bank_transfer"></a>
+<h3>Paying for borrowed loans via bank transfer</h3>
+<p>To register a loan payment via a bank transfer:</p>
+<ol><li>Do one of the following: 
+<ul><li>Open the <a href="#loan_contracts">loan contract</a>, click <strong>Generate</strong>, and then click <strong>Bank payment</strong>. 
+</li><li>Open an Earning based on the loan contract, click <strong>Generate</strong>, click <strong>Payment</strong>, and then click <strong>Bank payment</strong>. </li></ul><p>1C:Drive creates a bank payment document and populates it based on the loan contract or Earning. Note that the <strong>Operation</strong> field has the <strong>Loan repayment</strong> value.</p>
+<p>Since an Earning does not include principal and can include just interest and commision, generating a bank payment document based on the Earning makes sense if the loan contract's payment type is <strong>Only interest (principal on maturity date)</strong>.</p>
+</li><li>In the <strong>Account</strong> list, click the bank account from which you pay the money. 
+</li><li>On the <strong>Settlements on credits</strong> tab, 1C:Drive displays the debt balance according to the loan contract and information about the next payment: date and amounts to pay for principal, interest, and commission. 
+</li><li>If the bank that serves your account charges you for transferring the money, select the <strong>Bank charge</strong> check box and then, under <strong>Bank charges</strong>, fill the <strong>Bank charge</strong>, <strong>Item</strong>, and <strong>Amount</strong> fields. 
+</li><li>In the <strong>Amount</strong> field, specify the amount of money you pay, or set it to zero. 
+<p>If you set the amount to zero, 1C:Drive will calculate the amount.</p>
+</li><li>On the <strong>Settlements on credits</strong> tab, click <strong>Fill by credit</strong> contract. 
+</li><li>Do any of the following: 
+<ul><li>Select the <strong>Next payment</strong> check box to populate the payment according to the next payment in the loan contract's payment schedule. 
+</li><li>Select the <strong>Previous payment</strong> check box to clone the payment details from the previous payment you already received for the loan from the employee. 
+</li><li>Select the <strong>Remaining debt</strong> check box to get the remaining principal of the loan. 
+</li><li>Select the <strong>Complete early repayment</strong> check box to get full repayment of the remaining debt of the loan, including its principal, interest, and commission. </li></ul></li><li>If necessary, for the item you selected, change the payment date, principal, interest, or commission. 
+</li><li>If you want to clear the payment details of the bank payment document before populating it according to the loan contract, select the <strong>Overwrite existing data</strong> check box. 
+<p>-OR-</p>
+<p>If you want to append new payment details to existing ones, clear the <strong>Overwrite existing data</strong> check box.</p>
+</li><li>Click <strong>Fill</strong>. 
+<p>1C:Drive populates the payment details on the Settlements on credits tab according to the amount and the payment options you specified:</p>
+<ul><li>If you selected the <strong>Overwrite existing data</strong> check box and specified a nonzero amount in the <strong>Amount</strong> field, 1C:Drive distributes this amount in the payment details (what goes to principal, what goes to interest, and what goes to commission). If 1C:Drive cannot distribute the entire amount, it adds a record with the remaining amount and a blank value in the <strong>Type of amount</strong> column. 
+</li><li>If you selected the <strong>Overwrite existing data</strong> check box and specified a zero amount in the <strong>Amount</strong> field, 1C:Drive populates the amount with the total of the <strong>Payment amount</strong> column. 
+</li><li>If you cleared the <strong>Overwrite existing data</strong> check box, 1C:Drive ignores the <strong>Amount</strong> field and populates the payment details according to the payment options you specified. </li></ul><p>On the <strong>Settlements on credits</strong> tab, you can add, change, or delete records.</p>
+</li><li>Click <strong>Post</strong>. </li></ol><h2>Issuing loans and and getting payments for them</h2>
+<p>After creating a <a href="#loan_contracts">contract</a> on a loan you lent to your company's employee:</p>
+<ol><li>Register the fact of issuing the loan (<a href="#issuing_loans_in_cash">in cash</a> or <a href="#issuing_loans_via_bank_transfer">via a bank transfer</a>). 
+</li><li>Create <a href="#accruals_for_lent_loans">accruals</a> for the loan's interest. 
+</li><li>Either register incoming payments for the loan (<a href="#getting_payments_for_lent_loans_in_cash">in cash</a> or <a href="#getting_payments_for_lent_loans_via_bank_transfer">via a bank transfer</a>), or have loan repayments <a href="#payroll_loan_payments">charged from the employee's salary</a>, according to the payment schedule defined in the contract. </li></ol><a name="issuing_loans_in_cash"></a>
+<h3>Issuing loans in cash</h3>
+<p>To register the fact of issuing the loan to your company's employee in cash:</p>
+<ol><li>Open the <a href="#loan_contracts">loan contract</a>. 
+</li><li>Click <strong>Generate</strong> and then click <strong>Cash payment</strong>. 
+<p>1C:Drive creates a cash payment document based on the loan contract and populates it. Note that the <strong>Operation</strong> field has the <strong>Issue loan</strong> to employee value.</p>
+</li><li>In the <strong>Cash account</strong> list, click the account from which you pay the money in cash. 
+</li><li>In the <strong>Amount</strong> field, specify the amount of money you give out. 
+</li><li>Click <strong>Post</strong>. </li></ol><p>On the <strong>Settlements on loans</strong> tab, 1C:Drive displays the total loan amount according to the contract and the remaining amount of the loan you have to issue to the employee.</p><a name="issuing_loans_via_bank_transfer"></a>
+<h3>Issuing loans via bank transfer</h3>
+<p>To register the fact of issuing the loan to your company's employee via a bank transfer:</p>
+<ol><li>Open the <a href="#loan_contracts">loan contract</a>. 
+</li><li>Click <strong>Generate</strong> and then click <strong>Bank payment</strong>. 
+<p>1C:Drive creates a bank payment document based on the loan contract and populates it. Note that the <strong>Operation</strong> field has the Issue loan to employee value.</p>
+</li><li>In the <strong>Account</strong> list, click the bank account from which you pay the money. 
+</li><li>If the bank that serves your account charges you for transferring the money, select the <strong>Bank charge</strong> check box and then, under <strong>Bank charges</strong>, fill the <strong>Bank charge</strong>, <strong>Item</strong>, and <strong>Amount</strong> fields. 
+</li><li>In the <strong>Amount</strong> field, specify the amount of money you give out. 
+</li><li>Click <strong>Post</strong>. </li></ol><p>On the <strong>Settlements on loans</strong> tab, 1C:Drive displays the total loan amount according to the contract and the remaining amount of the loan you have to issue to the employee.</p><a name="accruals_for_lent_loans"></a>
+<h3>Creating Accruals for lent loans</h3>
+<p>Typically, a <a href="#loan_contracts">loan contract</a> includes an interest you are to get for the loan you issue. So, for such loans, interest serves as your income.</p>
+<p>To register accruals for such interest in 1C:Drive, use the loan interest (commission) Earning documents. You can create such accruals based on particular loan contracts.</p>
+<p>To create accruals for one or several lent loans:</p>
+<ol><li>Go to <strong>Cash management &gt; Loan management &gt; Loan interest (commission) accruals</strong>. 
+</li><li>Click <strong>Create</strong>. 
+</li><li>In the <strong>Operation</strong> list, click <strong>accruals for loans lent</strong>. 
+</li><li>Specify the start and end of the Earning period. 
+</li><li>On the <strong>Accruals</strong> tab, click <strong>Fill</strong>. 
+</li><li>In the <strong>Fill in Accruals</strong> dialog box, do any the following: 
+<ul><li>In the <strong>Employee</strong> list, click the employee whose loans you want to apply. 
+</li><li>In the <strong>Loan contract</strong> list, click the lent loan contract you want to apply. 
+</li><li>To apply only the contracts where the <strong>Charge from salary</strong> check box is selected, select the <strong>Charged from salary only</strong> check box. </li></ul><p>The document will list only accruals for the selected employees and contracts. If you do not select any, it will contains the accruals for all lent loan contracts.</p>
+</li><li>Click <strong>Apply</strong>. 
+<p>1C:Drive populates the table on the <strong>Accruals</strong> tab according to the loan contracts and the Earning period you specified. You can add, edit, or delete the table records.</p>
+</li><li>Click <strong>Post</strong>. </li></ol><a name="getting_payments_for_lent_loans_in_cash"></a>
+<h3>Getting payments for lent loans in cash</h3>
+<p>To register an incoming payment in cash for the loan according to the payment schedule defined in the contract:</p>
+<ol><li>Do one of the following: 
+<ul><li>Open the <a href="#loan_contracts">loan contract</a>, click <strong>Generate</strong>, and then click <strong>Cash receipt</strong>. 
+</li><li>Open an Earning based on the loan contract, click <strong>Generate</strong>, click <strong>Payment</strong>, and then click <strong>Cash receipt</strong>. </li></ul><p>1C:Drive creates a cash receipt document based on the loan contract and populates it. Note that the <strong>Operation</strong> field has the <strong>Loan repayment by employee</strong> value. Since an Earning does not include principal and can include just interest, generating a cash receipt document based on the Earning makes sense if the loan contract's payment type is <strong>Only interest (principal on maturity date)</strong>.</p>
+</li><li>In the <strong>Cash account</strong> list, click the account to which you receive the money in cash. 
+<p>On the <strong>Settlements on loans</strong> tab, 1C:Drive displays your employee's debt balance according to the loan contract and information about the next payment: date and amounts to pay for principal, interest, and commission.</p>
+</li><li>In the <strong>Amount</strong> field, specify the amount of money you receive, or set it to zero. 
+<p>If you set the amount to zero, 1C:Drive will calculate the amount.</p>
+</li><li>On the <strong>Settlements on loans</strong> tab, click <strong>Fill by loan contract</strong>. 
+</li><li>Do any of the following: 
+<ul><li>Select the <strong>Next payment</strong> check box to populate the payment according to the next payment in the loan contract's payment schedule. 
+</li><li>Select the <strong>Previous payment</strong> check box to clone the payment details from the previous payment you already received for the loan from the employee. 
+</li><li>Select the <strong>Remaining debt</strong> check box to get the remaining principal of the loan. 
+</li><li>Select the <strong>Complete early repayment</strong> check box to get full repayment of the remaining debt of the loan, including its principal, interest, and commission. </li></ul></li><li>If necessary, for the items you selected, change the payment date, principal, interest, or commission. 
+</li><li>If you want to clear the payment details of the cash payment document before populating it according to the loan contract, select the <strong>Overwrite existing data</strong> check box. 
+<p>-OR-</p>
+<p>If you want to append new payment details to existing ones, clear the <strong>Overwrite existing data</strong> check box.</p>
+</li><li>Click <strong>Fill</strong>. 
+<p>1C:Drive populates the payment details on the <strong>Settlements on loans</strong> tab according to the amount and the payment options you specified:</p>
+<ul><li>If you selected the <strong>Overwrite existing data</strong> check box and specified a nonzero amount in the <strong>Amount</strong> field, 1C:Drive distributes this amount in the payment details (what goes to principal, what goes to interest, and what goes to commission). If 1C:Drive cannot distribute the entire amount, it adds a record with the remaining amount and a blank value in the <strong>Type of amount</strong> column. 
+</li><li>If you selected the <strong>Overwrite existing data</strong> check box and specified a zero amount in the <strong>Amount</strong> field, 1C:Drive populates the amount with the total of the <strong>Payment amount</strong> column. 
+</li><li>If you cleared the <strong>Overwrite existing data</strong> check box, 1C:Drive ignores the <strong>Amount</strong> field and populates the payment details according to the payment options you specified. </li></ul><p>On the <strong>Settlements on loans</strong> tab, you can add, change, or delete records.</p>
+</li><li>Click <strong>Post</strong>. </li></ol><a name="getting_payments_for_lent_loans_via_bank_transfer"></a>
+<h3>Getting payments for lent loans via bank transfer</h3>
+<p>To register an incoming payment via a bank transfer for the loan according to the payment schedule defined in the contract:</p>
+<ol><li>Do one of the following: 
+<ul><li>Open the <a href="#loan_contracts">loan contract</a>, click <strong>Generate</strong>, and then click <strong>Bank receipt</strong>. 
+</li><li>Open an Earning based on the loan contract, click <strong>Generate</strong>, click <strong>Payment</strong>, and then click <strong>Bank receipt</strong>. </li></ul><p>1C:Drive creates a bank receipt document based on the loan contract and populates it. Note that the <strong>Operation</strong> field has the <strong>Loan repayment by employee</strong> value.</p>
+<p>Since an Earning does not include principal and can include just interest, generating a bank receipt document based on the Earning makes sense if the loan contract's payment type is <strong>Only interest (principal on maturity date)</strong>.</p>
+</li><li>In the <strong>Account</strong> list, click the bank account to which you receive the money. 
+<p>On the <strong>Settlements on loans</strong> tab, 1C:Drive displays your employee's debt balance according to the loan contract and information about the next payment: date and amounts to pay for principal, interest, and commission.</p>
+</li><li>In the <strong>Amount</strong> field, specify the amount of money you receive or set it to zero. 
+<p>If you set the amount to zero, 1C:Drive will calculate the amount.</p>
+</li><li>If the bank that serves your account charges you for receiving the money, select the <strong>Bank charge</strong> check box and then, under <strong>Bank charges</strong>, fill the <strong>Bank charge</strong>, <strong>Item</strong>, and <strong>Amount</strong> fields. 
+</li><li>On the <strong>Settlements on loans</strong> tab, click <strong>Fill by loan contract</strong>. 
+</li><li>Do any of the following: 
+<ul><li>Select the <strong>Next payment</strong> check box to populate the payment according to the next payment in the loan contract's payment schedule. 
+</li><li>Select the <strong>Previous payment</strong> check box to clone the payment details from the previous payment you already received for the loan from the employee. 
+</li><li>Select the <strong>Remaining debt</strong> check box to get the remaining principal of the loan. 
+</li><li>Select the <strong>Complete early repayment</strong> check box to get full repayment of the remaining debt of the loan, including its principal, interest, and commission. </li></ul></li><li>If necessary, for the item you selected, change the payment date, principal, interest, or commission. 
+</li><li>If you want to clear the payment details of the bank payment document before populating it according to the loan contract, select the <strong>Overwrite existing data</strong> check box. 
+<p>-OR-</p>
+<p>If you want to append new payment details to existing ones, clear the <strong>Overwrite existing data</strong> check box.</p>
+</li><li>Click <strong>Fill</strong>. 
+<p>1C:Drive populates the payment details on the <strong>Settlements on loans</strong> tab according to the amount and the payment options you specified:</p>
+<ul><li>If you selected the <strong>Overwrite existing data</strong> check box and specified a nonzero amount in the <strong>Amount</strong> field, 1C:Drive distributes this amount in the payment details (what goes to principal, what goes to interest, and what goes to commission). If 1C:Drive cannot distribute the entire amount, it adds a record with the remaining amount and a blank value in the <strong>Type of amount</strong> column. 
+</li><li>If you selected the <strong>Overwrite existing data</strong> check box and specified a zero amount in the <strong>Amount</strong> field, 1C:Drive populates the amount with the total of the <strong>Payment amount</strong> column. 
+</li><li>If you cleared the <strong>Overwrite existing data</strong> check box, 1C:Drive ignores the <strong>Amount</strong> field and populates the payment details according to the payment options you specified. </li></ul><p>On the <strong>Settlements on loans</strong> tab, you can add, change, or delete records.</p>
+</li><li>Click <strong>Post</strong>. </li></ol><a name="payroll_loan_payments"></a>
+<h3>Getting payments for lent loans via payroll</h3>
+<p>If you selected the <strong>Charge from salary</strong> check box in a <a href="#loan_contracts">loan contract</a> where you lend money to your employee, you can charge a loan payment from the employee's salary. This is possible for the employees who are hired according to the hiring documents and who received the loan from your company.</p>
+<p>To have payments charged from employee's salary, create a payroll and specify loan repayment details in the payroll according to the accruals. To do this:</p>
+<ol><li>Go to <strong>Payroll &gt; Payroll &gt; Payroll documents</strong>. 
+</li><li>Click <strong>Create</strong>. 
+</li><li>In the <strong>Registration period</strong> field, select the payroll month. 
+</li><li>Click the <strong>Loan repayment</strong> tab. 
+</li><li>Click <strong>Fill in</strong>. 
+<p>1C:Drive populates the <strong>Loan repayment</strong> tab. For each employee for which you have accruals for lent loans during the payroll period, 1C:Drive displays the charged principal, accrued and charged interest, and the loan contract.</p>
+</li><li>On the <strong>Loan repayment</strong> tab, you can add, change, or delete records. 
+</li><li>Click <strong>Post</strong>. </li></ol><p>The loan payments charged from the employee's salaries are added to their payslip documents.</p>
+<h2>Loan management reports</h2>
+<p>To analyze and control settlements on loans your company borrowed, use the <strong>Cash management &gt; Reports &gt; More reports... &gt; Loan management &gt; Loans borrowed</strong> report.</p>
+<p>To analyze and control settlements on loans your company lent to its employees, use the <strong>Cash management &gt; Reports &gt; More reports... &gt; Loan management &gt; Loans lent</strong> report.</p>
+<p>These two reports are options of the same report. So, when you open one of them, you can quickly switch to another.</p></body></html>

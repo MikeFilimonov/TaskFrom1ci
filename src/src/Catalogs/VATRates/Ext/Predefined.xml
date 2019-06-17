@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.7">
+	<Item id="47b54a43-141e-4e06-9d4d-40852b250364">
+		<Name>ZeroRate</Name>
+		<Code/>
+		<Description>0%</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="2e5b68fc-f3f3-49ab-809b-69b12440108c">
+		<Name>Exempt</Name>
+		<Code/>
+		<Description>Exempt</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

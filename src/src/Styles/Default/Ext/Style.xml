@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Style xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<Item name="FormBackColor">
+		<Color>web:Cream</Color>
+	</Item>
+	<Item name="FormTextColor">
+		<Color>style:FormTextColor</Color>
+	</Item>
+	<Item name="ButtonBackColor">
+		<Color>style:ButtonBackColor</Color>
+	</Item>
+	<Item name="ButtonTextColor">
+		<Color>style:ButtonTextColor</Color>
+	</Item>
+	<Item name="FieldBackColor">
+		<Color>style:FieldBackColor</Color>
+	</Item>
+	<Item name="FieldTextColor">
+		<Color>style:FieldTextColor</Color>
+	</Item>
+	<Item name="FieldSelectionBackColor">
+		<Color>style:FieldSelectionBackColor</Color>
+	</Item>
+	<Item name="FieldSelectedTextColor">
+		<Color>style:FieldSelectedTextColor</Color>
+	</Item>
+	<Item name="FieldAlternativeBackColor">
+		<Color>style:FieldAlternativeBackColor</Color>
+	</Item>
+	<Item name="ToolTipBackColor">
+		<Color>style:ToolTipBackColor</Color>
+	</Item>
+	<Item name="ToolTipTextColor">
+		<Color>style:ToolTipTextColor</Color>
+	</Item>
+	<Item name="SpecialTextColor">
+		<Color>style:SpecialTextColor</Color>
+	</Item>
+	<Item name="NegativeTextColor">
+		<Color>style:NegativeTextColor</Color>
+	</Item>
+	<Item name="BorderColor">
+		<Color>style:BorderColor</Color>
+	</Item>
+	<Item name="ReportHeaderBackColor">
+		<Color>style:ReportHeaderBackColor</Color>
+	</Item>
+	<Item name="ReportGroup1BackColor">
+		<Color>style:ReportGroup1BackColor</Color>
+	</Item>
+	<Item name="ReportGroup2BackColor">
+		<Color>style:ReportGroup2BackColor</Color>
+	</Item>
+	<Item name="ReportLineColor">
+		<Color>style:ReportLineColor</Color>
+	</Item>
+	<Item name="ControlBorder">
+		<Border ref="style:ControlBorder"/>
+	</Item>
+	<Item name="TextFont">
+		<Font ref="style:TextFont" kind="StyleItem"/>
+	</Item>
+	<Item name="SmallTextFont">
+		<Font ref="style:SmallTextFont" kind="StyleItem"/>
+	</Item>
+	<Item name="NormalTextFont">
+		<Font ref="style:NormalTextFont" kind="StyleItem"/>
+	</Item>
+	<Item name="LargeTextFont">
+		<Font ref="style:LargeTextFont" kind="StyleItem"/>
+	</Item>
+	<Item name="ExtraLargeTextFont">
+		<Font ref="style:ExtraLargeTextFont" kind="StyleItem"/>
+	</Item>
+	<Item name="ButtonBorderColor">
+		<Color>style:ButtonBorderColor</Color>
+	</Item>
+	<Item name="TableHeaderBackColor">
+		<Color>style:TableHeaderBackColor</Color>
+	</Item>
+	<Item name="TableHeaderTextColor">
+		<Color>style:TableHeaderTextColor</Color>
+	</Item>
+	<Item name="TableFooterBackColor">
+		<Color>style:TableFooterBackColor</Color>
+	</Item>
+	<Item name="TableFooterTextColor">
+		<Color>style:TableFooterTextColor</Color>
+	</Item>
+	<Item name="StyleItem.AddedAttributeBackground">
+		<Color>0:42544966-445d-41b8-b6a0-a52c64758232</Color>
+	</Item>
+	<Item name="StyleItem.AmountReceivedColor">
+		<Color>0:18ad428e-f7be-4a45-bd9f-e8319dbcdc1a</Color>
+	</Item>
+	<Item name="StyleItem.BackgroundRelatedDocuments">
+		<Color>0:eade72ed-7c25-409f-a6c0-2ecbf311b833</Color>
+	</Item>
+	<Item name="StyleItem.BackgroundTagClouds">
+		<Color>0:4b2b1093-7953-456b-a4a5-81b203321f08</Color>
+	</Item>
+	<Item name="StyleItem.BlockedAttributeColor">
+		<Color>0:a92d8a5c-b595-4c6c-9f1d-5e85b1c996b4</Color>
+	</Item>
+	<Item name="StyleItem.BorderColorGroupPricesAndCurrencies">
+		<Color>0:76ba858f-acc9-463c-bd9d-94578a117053</Color>
+	</Item>
+	<Item name="StyleItem.BusinessCalendarDayTypeHolidayColor">
+		<Color>0:1a220e88-428b-4d85-926d-e572bf19997c</Color>
+	</Item>
+	<Item name="StyleItem.BusinessCalendarDayTypeNoDefinedColor">
+		<Color>0:f0cda8f5-56f5-423b-8c1c-7113433ebf25</Color>
+	</Item>
+	<Item name="StyleItem.BusinessCalendarDayTypePreHolidayColor">
+		<Color>0:ca0d938b-244e-421f-9fa4-320784b9f416</Color>
+	</Item>
+	<Item name="StyleItem.BusinessCalendarDayTypeSaturdayColor">
+		<Color>0:289a2d84-2477-4177-a6ef-507e2cadeea2</Color>
+	</Item>
+	<Item name="StyleItem.BusinessCalendarDayTypeSundayColor">
+		<Color>0:b7e435a9-6107-4d02-a949-cff793462e31</Color>
+	</Item>
+	<Item name="StyleItem.BusinessCalendarDayTypeWorkColor">
+		<Color>0:a108b11d-a489-4684-84ea-d5377c7394de</Color>
+	</Item>
+	<Item name="StyleItem.BusyResource">
+		<Color>0:cf759887-a094-4a5a-8041-b95e55b3f12f</Color>
+	</Item>
+	<Item name="StyleItem.CaseTitleColor">
+		<Color>0:9eea8645-1ba7-4faf-9c29-868bf99964dd</Color>
+	</Item>
+	<Item name="StyleItem.CashierWorkplaceAdditionalPanelColor">
+		<Color>0:8e99e404-5cfd-4263-97e3-37b427c01241</Color>
+	</Item>
+	<Item name="StyleItem.CashierWorkplaceChangeTextColor">
+		<Color>0:e4ce7d46-fb11-4154-a5e6-63b1bdc79368</Color>
+	</Item>
+	<Item name="StyleItem.CellBorder">
+		<Color>0:912840be-ad8e-4574-a153-a07bf2fc1026</Color>
+	</Item>
+	<Item name="StyleItem.ColorChartMissingData">
+		<Color>0:f0b4176c-e0d6-4676-a1e2-898d908f7e2b</Color>
+	</Item>
+	<Item name="StyleItem.ColorInvalidInformation">
+		<Color>0:2dee1afd-5167-41df-bca3-ac55b7e7531f</Color>
+	</Item>
+	<Item name="StyleItem.CompletedJob">
+		<Color>0:cc9d749d-24a2-49a3-a2ee-631c8d79f510</Color>
+	</Item>
+	<Item name="StyleItem.ContactInformationWithEditingInDialogColor">
+		<Color>0:e5b8ea5c-1d08-4f0a-a8f6-358b41e2e9f2</Color>
+	</Item>
+	<Item name="StyleItem.CurrentTimeInterval">
+		<Color>0:ed4517f3-0e32-4041-88eb-b685449b5458</Color>
+	</Item>
+	<Item name="StyleItem.DeletedAdditionalAttributeFont">
+		<Font ref="0" kind="StyleItem"/>
+	</Item>
+	<Item name="StyleItem.DeletedAttributeBackground">
+		<Color>0:671afc3e-7589-49d8-95a5-1cf195c3b2f8</Color>
+	</Item>
+	<Item name="StyleItem.DeletedAttributeTitleBackground">
+		<Color>0:e07ac651-07b9-4664-95e8-f3f5a51ea6c8</Color>
+	</Item>
+	<Item name="StyleItem.DeniedAccessRight">
+		<Color>0:0c44fdea-7b81-45be-87f5-d64456a9d379</Color>
+	</Item>
+	<Item name="StyleItem.ErrorCounterpartyHighlightColor">
+		<Color>0:3b45cc56-3b2d-4823-a4b4-602dbdf284a1</Color>
+	</Item>
+	<Item name="StyleItem.ExplanationText">
+		<Color>0:ad87bd29-0ad1-4da4-ac62-38e714e0cb9f</Color>
+	</Item>
+	<Item name="StyleItem.ExplanationTextError">
+		<Color>0:b9627855-6773-4a59-b7d3-f9e2e565cd9e</Color>
+	</Item>
+	<Item name="StyleItem.FileLockedByAnotherUser">
+		<Color>0:2c8e45b8-7d80-4137-85db-66cd1db94526</Color>
+	</Item>
+	<Item name="StyleItem.FileLockedByCurrentUser">
+		<Color>0:47accdc7-8fa0-4996-9305-c42b6ca12df9</Color>
+	</Item>
+	<Item name="StyleItem.FilterActiveValueBackground">
+		<Color>0:4ec8ce5d-bb5a-4b9b-8cdd-cbc29cdd1e3b</Color>
+	</Item>
+	<Item name="StyleItem.FilterOptionsPanelBackground">
+		<Color>0:6e8357df-61e7-447e-a045-9be3259983a8</Color>
+	</Item>
+	<Item name="StyleItem.FontRightFilterPanel">
+		<Font ref="0" kind="StyleItem"/>
+	</Item>
+	<Item name="StyleItem.HiddenReportOptionColor">
+		<Color>0:34b0e268-497d-44d4-b822-84909d0685aa</Color>
+	</Item>
+	<Item name="StyleItem.InaccessibleDataColor">
+		<Color>0:0d0ada8a-09bb-4634-bf50-199f3779dad5</Color>
+	</Item>
+	<Item name="StyleItem.InformationPanelLargeFont">
+		<Font ref="style:TextFont" kind="StyleItem"/>
+	</Item>
+	<Item name="StyleItem.InformationPanelSmallFont">
+		<Font ref="style:TextFont" kind="StyleItem"/>
+	</Item>
+	<Item name="StyleItem.InformationText">
+		<Color>0:d296f133-e57e-4c4d-b344-16e8e42327d5</Color>
+	</Item>
+	<Item name="StyleItem.MasterFieldBackground">
+		<Color>0:da164c9a-4836-4c07-ace9-1c2e2382eceb</Color>
+	</Item>
+	<Item name="StyleItem.MinorInscriptionText">
+		<Color>0:2a29a148-1bea-4d41-bf3b-fcf976448851</Color>
+	</Item>
+	<Item name="StyleItem.ModifiedAttributeValueBackground">
+		<Color>0:d09d6f21-cdd0-485e-bd2c-92092a1aefef</Color>
+	</Item>
+	<Item name="StyleItem.ModifiedAttributeValueColor">
+		<Color>0:2fc92784-d7b0-4209-ba06-e54bed2f160f</Color>
+	</Item>
+	<Item name="StyleItem.MyReportsVariantsColor">
+		<Color>0:a4e4c91c-fd95-4369-98e3-51ffba79937b</Color>
+	</Item>
+	<Item name="StyleItem.NonWorkingTimeDayOff">
+		<Color>0:3d2ae39f-3f43-40ec-b5f7-d6c0ac22b3d4</Color>
+	</Item>
+	<Item name="StyleItem.OrderIsClosed">
+		<Color>0:432a2c66-012d-4d9a-a38c-19d574910a64</Color>
+	</Item>
+	<Item name="StyleItem.OverdueDataColor">
+		<Color>0:283ce432-3553-4de9-94a2-ca9a590437f5</Color>
+	</Item>
+	<Item name="StyleItem.OverdueJob">
+		<Color>0:fdcc9116-6281-47d9-9cfa-63a88faadcec</Color>
+	</Item>
+	<Item name="StyleItem.PastEvent">
+		<Color>0:b3529ec3-032b-4fe0-9f67-535e4fd6e652</Color>
+	</Item>
+	<Item name="StyleItem.QuickSettingsGroupBackground">
+		<Color>0:01d22c51-912e-4d07-a432-23f479945e5e</Color>
+	</Item>
+	<Item name="StyleItem.RelatedInformationTextColor">
+		<Color>0:f8257f69-6b7b-4756-8188-1f7184452d23</Color>
+	</Item>
+	<Item name="StyleItem.ReportsVariantsGroupColor">
+		<Color>0:950f8fd5-fefa-4bfb-97a0-38d77ae830dc</Color>
+	</Item>
+	<Item name="StyleItem.ReportsVariantsGroupColor82">
+		<Color>0:cbbe7903-842c-470e-a2d6-7928df8f13e9</Color>
+	</Item>
+	<Item name="StyleItem.ResultSuccessColor">
+		<Color>0:0da019ca-1fc7-4aff-8998-3ddcccf10872</Color>
+	</Item>
+	<Item name="StyleItem.ScheduleDateChangedBackground">
+		<Color>0:e02597c4-bf45-4bb6-931d-62d2244f6c58</Color>
+	</Item>
+	<Item name="StyleItem.ScheduledTime">
+		<Color>0:e3f3edf2-5c61-498e-acf0-374fcbca2a57</Color>
+	</Item>
+	<Item name="StyleItem.SelectedUser">
+		<Color>0:23dbb528-7ea8-44ae-a1f2-b7608118666e</Color>
+	</Item>
+	<Item name="StyleItem.TextColorRightFilterPanel">
+		<Color>0:f87a71b3-b94e-4fc1-a1ce-51f90794cb15</Color>
+	</Item>
+	<Item name="StyleItem.TitleColorSettingsGroup">
+		<Color>0:d186981c-69b1-43e1-8ae8-b1a7a6483090</Color>
+	</Item>
+	<Item name="StyleItem.TotalsGroupBackground">
+		<Color>0:1df935d0-dbff-44ad-b3b5-057382fc07e1</Color>
+	</Item>
+	<Item name="StyleItem.UnacceptedVersion">
+		<Color>0:d343d4e4-d07f-48c3-9db1-774b0d6c1134</Color>
+	</Item>
+	<Item name="StyleItem.UnavailableButton">
+		<Color>0:f280f660-9ce4-4c56-84b5-b893facc9582</Color>
+	</Item>
+	<Item name="StyleItem.UnavailableCellTextColor">
+		<Color>0:fe63db47-3ece-4518-b6a2-0b6499f60a61</Color>
+	</Item>
+	<Item name="StyleItem.UnavailableTabularSectionTextColor">
+		<Color>0:c0111cd6-6dff-407e-a8c1-74e993684188</Color>
+	</Item>
+	<Item name="StyleItem.UnselectedImageTextColor">
+		<Color>0:bcf1a1a2-5826-4ef2-beac-2b0fdb9c3a2c</Color>
+	</Item>
+	<Item name="StyleItem.VisibleReportOptionColor">
+		<Color>0:757b547b-b79c-459a-a64a-eef19a09a38f</Color>
+	</Item>
+	<Item name="StyleItem.WorktimeCompletelyBusy">
+		<Color>0:a565ca4b-ea2a-42f8-b887-ec977eec9b1a</Color>
+	</Item>
+	<Item name="StyleItem.WorktimeFreeAvailable">
+		<Color>0:f659a8f0-3562-456b-87da-91786167cfc9</Color>
+	</Item>
+</Style>

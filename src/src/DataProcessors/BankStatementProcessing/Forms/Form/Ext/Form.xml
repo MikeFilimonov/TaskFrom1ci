@@ -1,0 +1,1821 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">NotificationProcessing</Event>
+		<Event name="OnOpen">OnOpen</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Pages" id="593">
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="PagesExtendedTooltip" id="594"/>
+			<ChildItems>
+				<Page name="PageStart" id="597">
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>true</VerticalStretch>
+					<ExtendedTooltip name="PageStartExtendedTooltip" id="598"/>
+					<ChildItems>
+						<UsualGroup name="GroupBankAndSettings" id="606">
+							<ToolTipRepresentation>ShowTop</ToolTipRepresentation>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupBankAndSettingsExtendedTooltip" id="607"/>
+							<ChildItems>
+								<InputField name="Bank" id="599">
+									<DataPath>Object.Bank</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Bank to exchange data with</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="BankContextMenu" id="600"/>
+									<ExtendedTooltip name="BankExtendedTooltip" id="601"/>
+									<Events>
+										<Event name="OnChange">BankOnChange</Event>
+									</Events>
+								</InputField>
+								<Button name="Setting" id="604">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.Setting</CommandName>
+									<ExtendedTooltip name="SettingExtendedTooltip" id="605"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="GroupImportExportButtons" id="613">
+							<ToolTipRepresentation>ShowTop</ToolTipRepresentation>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupImportExportButtonsExtendedTooltip" id="614"/>
+							<ChildItems>
+								<Button name="ImportBankStatement" id="602">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ImportBankStatementFromFile</CommandName>
+									<ExtendedTooltip name="ImportBankStatementExtendedTooltip" id="603"/>
+								</Button>
+								<Button name="ExportBankStatement" id="608">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ExportBankStatementToFile</CommandName>
+									<ExtendedTooltip name="ExportBankStatementExtendedTooltip" id="609"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="PageImport" id="595">
+					<ExtendedTooltip name="PageImportExtendedTooltip" id="596"/>
+					<ChildItems>
+						<UsualGroup name="GroupCommandBarImport" id="745">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupCommandBarImportExtendedTooltip" id="746"/>
+							<ChildItems>
+								<Button name="ImportButton" id="44">
+									<Type>UsualButton</Type>
+									<DefaultButton>true</DefaultButton>
+									<SkipOnInput>false</SkipOnInput>
+									<CommandName>Form.Command.Import</CommandName>
+									<ExtendedTooltip name="ImportButtonExtendedTooltip" id="459"/>
+								</Button>
+								<Button name="MarkAll" id="377">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<SkipOnInput>false</SkipOnInput>
+									<Width>3</Width>
+									<CommandName>Form.Command.MarkAll</CommandName>
+									<ExtendedTooltip name="MarkAllExtendedTooltip" id="462"/>
+								</Button>
+								<Button name="ClearAll" id="378">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<SkipOnInput>false</SkipOnInput>
+									<Width>3</Width>
+									<CommandName>Form.Command.ClearAll</CommandName>
+									<ExtendedTooltip name="ClearAllExtendedTooltip" id="463"/>
+								</Button>
+								<RadioButtonField name="HideRowsWithDocuments" id="742">
+									<DataPath>HideRowsWithDocuments</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<RadioButtonType>Tumbler</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Show all</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">ShowAll</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Hide imported</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Hide</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="HideRowsWithDocumentsContextMenu" id="743"/>
+									<ExtendedTooltip name="HideRowsWithDocumentsExtendedTooltip" id="744"/>
+									<Events>
+										<Event name="OnChange">HideRowsWithDocumentsOnChange</Event>
+									</Events>
+								</RadioButtonField>
+								<Button name="RefreshImport" id="747">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.RefreshImport</CommandName>
+									<ExtendedTooltip name="RefreshImportExtendedTooltip" id="748"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="Import" id="186">
+							<SkipOnInput>false</SkipOnInput>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<HorizontalLines>false</HorizontalLines>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Object.Import</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ImportContextMenu" id="187">
+								<ChildItems>
+									<Button name="ImportContextMenuFillThisValueInEmptyLines" id="749">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.FillThisValueInEmptyLines</CommandName>
+										<ExtendedTooltip name="ImportContextMenuFillThisValueInEmptyLinesExtendedTooltip" id="750"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="ImportCommandBar" id="188">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ImportExtendedTooltip" id="467"/>
+							<SearchStringAddition name="ImportSearchString" id="497">
+								<AdditionSource>
+									<Item>Import</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ImportSearchStringContextMenu" id="498"/>
+								<ExtendedTooltip name="ImportSearchStringExtendedTooltip" id="499"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ImportViewStatus" id="500">
+								<AdditionSource>
+									<Item>Import</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ImportViewStatusContextMenu" id="501"/>
+								<ExtendedTooltip name="ImportViewStatusExtendedTooltip" id="502"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ImportSearchControl" id="503">
+								<AdditionSource>
+									<Item>Import</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ImportSearchControlContextMenu" id="504"/>
+								<ExtendedTooltip name="ImportSearchControlExtendedTooltip" id="505"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ImportSelection</Event>
+								<Event name="OnActivateRow">ImportOnActivateRow</Event>
+								<Event name="OnActivateField">ImportOnActivateField</Event>
+								<Event name="OnStartEdit">ImportOnStartEdit</Event>
+								<Event name="OnChange">ImportOnChange</Event>
+							</Events>
+							<ChildItems>
+								<CheckBoxField name="ImportMark" id="193">
+									<DataPath>Object.Import.Mark</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<FixingInTable>Left</FixingInTable>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ImportMarkContextMenu" id="194"/>
+									<ExtendedTooltip name="ImportMarkExtendedTooltip" id="469"/>
+								</CheckBoxField>
+								<PictureField name="ImportPictureNumber" id="375">
+									<DataPath>Object.Import.ImageNumber</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Red circle - The line isn't mapped. See the data mapping section for details.
+Empty green circle - The line is ready to be imported.
+Filled green circle - The line has been imported.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<FixingInTable>Left</FixingInTable>
+									<HeaderPicture>
+										<xr:Ref>CommonPicture.Information</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</HeaderPicture>
+									<Width>1</Width>
+									<Height>1</Height>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.OrderState</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</ValuesPicture>
+									<Border width="1">
+										<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+									</Border>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ImportPictureNumberContextMenu" id="376"/>
+									<ExtendedTooltip name="ImportPictureNumberExtendedTooltip" id="470"/>
+								</PictureField>
+								<InputField name="ImportLineNumber" id="189">
+									<DataPath>Object.Import.LineNumber</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<FixingInTable>Left</FixingInTable>
+									<Width>1</Width>
+									<Wrap>false</Wrap>
+									<ContextMenu name="ImportLineNumberContextMenu" id="190"/>
+									<ExtendedTooltip name="ImportLineNumberExtendedTooltip" id="468"/>
+								</InputField>
+								<InputField name="ImportReceived" id="235">
+									<DataPath>Object.Import.Received</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Width>4</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>4</MaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Wrap>false</Wrap>
+									<ContextMenu name="ImportReceivedContextMenu" id="236"/>
+									<ExtendedTooltip name="ImportReceivedExtendedTooltip" id="472"/>
+								</InputField>
+								<InputField name="ImportDocument" id="590">
+									<DataPath>Object.Import.Document</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ImportDocumentContextMenu" id="591"/>
+									<ExtendedTooltip name="ImportDocumentExtendedTooltip" id="592"/>
+									<Events>
+										<Event name="StartChoice">ImportDocumentStartChoice</Event>
+									</Events>
+								</InputField>
+								<InputField name="ImportAmount" id="209">
+									<DataPath>Object.Import.Amount</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>12</MaxWidth>
+									<Wrap>false</Wrap>
+									<ContextMenu name="ImportAmountContextMenu" id="210"/>
+									<ExtendedTooltip name="ImportAmountExtendedTooltip" id="474"/>
+								</InputField>
+								<InputField name="ImportCompany" id="666">
+									<DataPath>Object.Import.Company</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ImportCompanyContextMenu" id="667"/>
+									<ExtendedTooltip name="ImportCompanyExtendedTooltip" id="668"/>
+								</InputField>
+								<InputField name="ImportCompanyAccount" id="207">
+									<DataPath>Object.Import.BankAccount</DataPath>
+									<Wrap>false</Wrap>
+									<ContextMenu name="ImportAccountCompaniesContextMenu" id="208"/>
+									<ExtendedTooltip name="ImportAccountCompaniesExtendedTooltip" id="477"/>
+								</InputField>
+								<InputField name="ImportOperationKind" id="373">
+									<DataPath>Object.Import.OperationKind</DataPath>
+									<Wrap>false</Wrap>
+									<ContextMenu name="ImportOperationTypeContextMenu" id="374"/>
+									<ExtendedTooltip name="ImportOperationTypeExtendedTooltip" id="480"/>
+								</InputField>
+								<InputField name="ImportCounterparty" id="379">
+									<DataPath>Object.Import.Counterparty</DataPath>
+									<Wrap>false</Wrap>
+									<ContextMenu name="ImportCounterpartyContextMenu" id="380"/>
+									<ExtendedTooltip name="ImportCounterpartyExtendedTooltip" id="478"/>
+								</InputField>
+								<InputField name="ImportCounterpartyBankAccount" id="689">
+									<DataPath>Object.Import.CounterpartyBankAccount</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ImportCounterpartyBankAccountContextMenu" id="690"/>
+									<ExtendedTooltip name="ImportCounterpartyBankAccountExtendedTooltip" id="691"/>
+								</InputField>
+								<InputField name="ImportContract" id="361">
+									<DataPath>Object.Import.Contract</DataPath>
+									<Wrap>false</Wrap>
+									<ContextMenu name="ImportContractContextMenu" id="362"/>
+									<ExtendedTooltip name="ImportContractExtendedTooltip" id="479"/>
+								</InputField>
+								<InputField name="ImportCFItem" id="363">
+									<DataPath>Object.Import.CFItem</DataPath>
+									<Wrap>false</Wrap>
+									<ContextMenu name="ImportCFItemContextMenu" id="364"/>
+									<ExtendedTooltip name="ImportCFItemExtendedTooltip" id="482"/>
+								</InputField>
+								<InputField name="ImportExpenseGLAccount" id="697">
+									<DataPath>Object.Import.ExpenseGLAccount</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ImportExpenseGLAccountContextMenu" id="698"/>
+									<ExtendedTooltip name="ImportExpenseGLAccountExtendedTooltip" id="699"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="Information" id="538">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="InformationExtendedTooltip" id="539"/>
+							<ChildItems>
+								<InputField name="PaymentPurpose" id="734">
+									<DataPath>Items.Import.CurrentData.PaymentPurpose</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>2</Height>
+									<MultiLine>true</MultiLine>
+									<TextEdit>false</TextEdit>
+									<BorderColor>style:FormBackColor</BorderColor>
+									<ContextMenu name="PaymentPurposeContextMenu" id="735"/>
+									<ExtendedTooltip name="PaymentPurposeExtendedTooltip" id="736"/>
+								</InputField>
+								<UsualGroup name="Totals" id="732">
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<BackColor>0:1df935d0-dbff-44ad-b3b5-057382fc07e1</BackColor>
+									<ExtendedTooltip name="TotalsExtendedTooltip" id="733"/>
+									<ChildItems>
+										<InputField name="TotalDr" id="729">
+											<DataPath>TotalDr</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Total amount of incoming payments</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ContextMenu name="TotalDrContextMenu" id="730"/>
+											<ExtendedTooltip name="TotalDrExtendedTooltip" id="731"/>
+										</InputField>
+										<InputField name="TotalCr" id="726">
+											<DataPath>TotalCr</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Total amount of outgoing payments</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ContextMenu name="TotalCrContextMenu" id="727"/>
+											<ExtendedTooltip name="TotalCrExtendedTooltip" id="728"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="DataMapping" id="740">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Data mapping errors</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="DataMappingExtendedTooltip" id="741"/>
+							<ChildItems>
+								<Table name="ErrorTable" id="635">
+									<Representation>List</Representation>
+									<TitleLocation>Auto</TitleLocation>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<Height>4</Height>
+									<MaxHeight>5</MaxHeight>
+									<SelectionMode>SingleRow</SelectionMode>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>ErrorTable</DataPath>
+									<CommandSet>
+										<ExcludedCommand>Add</ExcludedCommand>
+										<ExcludedCommand>Copy</ExcludedCommand>
+										<ExcludedCommand>Delete</ExcludedCommand>
+										<ExcludedCommand>MoveDown</ExcludedCommand>
+										<ExcludedCommand>MoveUp</ExcludedCommand>
+										<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+									</CommandSet>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ErrorTableContextMenu" id="636"/>
+									<AutoCommandBar name="ErrorTableCommandBar" id="637">
+										<Autofill>false</Autofill>
+										<ChildItems>
+											<Button name="SaveAndRefresh" id="695">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.SaveAndRefresh</CommandName>
+												<ExtendedTooltip name="SaveAndRefreshExtendedTooltip" id="696"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ErrorTableExtendedTooltip" id="638"/>
+									<SearchStringAddition name="ErrorTableSearchString" id="639">
+										<AdditionSource>
+											<Item>ErrorTable</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ErrorTableSearchStringContextMenu" id="640"/>
+										<ExtendedTooltip name="ErrorTableSearchStringExtendedTooltip" id="641"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ErrorTableViewStatus" id="642">
+										<AdditionSource>
+											<Item>ErrorTable</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ErrorTableViewStatusContextMenu" id="643"/>
+										<ExtendedTooltip name="ErrorTableViewStatusExtendedTooltip" id="644"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ErrorTableSearchControl" id="645">
+										<AdditionSource>
+											<Item>ErrorTable</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ErrorTableSearchControlContextMenu" id="646"/>
+										<ExtendedTooltip name="ErrorTableSearchControlExtendedTooltip" id="647"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnStartEdit">ErrorTableOnStartEdit</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="ErrorTableAttribute" id="700">
+											<DataPath>ErrorTable.Attribute</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Attribute name, which has to be mapped</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ErrorTableAttributeContextMenu" id="701"/>
+											<ExtendedTooltip name="ErrorTableAttributeExtendedTooltip" id="702"/>
+										</InputField>
+										<InputField name="ErrorTableReceivedValue" id="684">
+											<DataPath>ErrorTable.ReceivedValue</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Value of the attribute as it is stated in the bank statement</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ErrorTableReceivedValueContextMenu" id="685"/>
+											<ExtendedTooltip name="ErrorTableReceivedValueExtendedTooltip" id="686"/>
+										</InputField>
+										<InputField name="ErrorTableValue" id="678">
+											<DataPath>ErrorTable.Value</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>The value in the Infobase, which corresponds to the bank statement value</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<TypeLink>
+												<xr:DataPath>Items.ErrorTable.CurrentData.DefaultValue</xr:DataPath>
+												<xr:LinkItem>0</xr:LinkItem>
+											</TypeLink>
+											<ContextMenu name="ErrorTableValueContextMenu" id="679"/>
+											<ExtendedTooltip name="ErrorTableValueExtendedTooltip" id="680"/>
+											<Events>
+												<Event name="OnChange">ErrorTableValueOnChange</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="PageExport" id="703">
+					<ExtendedTooltip name="PageExportExtendedTooltip" id="704"/>
+					<ChildItems>
+						<UsualGroup name="GroupExportAndBankAccount" id="843">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupExportAndBankAccountExtendedTooltip" id="844"/>
+							<ChildItems>
+								<Button name="ExportButton" id="724">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.Export</CommandName>
+									<ExtendedTooltip name="ExportButtonExtendedTooltip" id="725"/>
+								</Button>
+								<InputField name="BankAccount" id="737">
+									<DataPath>BankAccount</DataPath>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Filter.Bank</xr:Name>
+											<xr:DataPath xsi:type="xs:string">Object.Bank</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ChoiceParameters>
+										<app:item name="Filter.IsCompanyAccount">
+											<app:value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xs:boolean">true</Value>
+											</app:value>
+										</app:item>
+									</ChoiceParameters>
+									<ContextMenu name="BankAccountContextMenu" id="738"/>
+									<ExtendedTooltip name="BankAccountExtendedTooltip" id="739"/>
+									<Events>
+										<Event name="OnChange">BankAccountOnChange</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="GroupCommandBarExport" id="755">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupCommandBarExportExtendedTooltip" id="756"/>
+							<ChildItems>
+								<Button name="MarkAllExport" id="753">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<SkipOnInput>false</SkipOnInput>
+									<Width>3</Width>
+									<CommandName>Form.Command.MarkAllExport</CommandName>
+									<ExtendedTooltip name="MarkAllExportExtendedTooltip" id="754"/>
+								</Button>
+								<Button name="ClearAllExport" id="751">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<SkipOnInput>false</SkipOnInput>
+									<Width>3</Width>
+									<CommandName>Form.Command.ClearAllExport</CommandName>
+									<ExtendedTooltip name="ClearAllExportExtendedTooltip" id="752"/>
+								</Button>
+								<InputField name="Period" id="783">
+									<DataPath>Period</DataPath>
+									<Width>15</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="PeriodContextMenu" id="784"/>
+									<ExtendedTooltip name="PeriodExtendedTooltip" id="785"/>
+									<Events>
+										<Event name="OnChange">PeriodOnChange</Event>
+									</Events>
+								</InputField>
+								<RadioButtonField name="HideRowsWithExportedDocuments" id="792">
+									<DataPath>HideRowsWithExportedDocuments</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<RadioButtonType>Tumbler</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Show all</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">ShowAll</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Hide exported</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Hide</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="HideRowsWithExportedDocumentsContextMenu" id="793"/>
+									<ExtendedTooltip name="HideRowsWithExportedDocumentsExtendedTooltip" id="794"/>
+									<Events>
+										<Event name="OnChange">HideRowsWithExportedDocumentsOnChange</Event>
+									</Events>
+								</RadioButtonField>
+								<Button name="RefreshExport" id="778">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.RefreshExport</CommandName>
+									<ExtendedTooltip name="RefreshExportExtendedTooltip" id="779"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="DocumentsForExport" id="705">
+							<AutoAddIncomplete>false</AutoAddIncomplete>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Object.DocumentsForExport</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>CancelSearch</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>Find</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>OutputList</ExcludedCommand>
+								<ExcludedCommand>SelectAll</ExcludedCommand>
+								<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+								<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="DocumentsForExportContextMenu" id="706"/>
+							<AutoCommandBar name="DocumentsForExportCommandBar" id="707">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="DocumentsForExportExtendedTooltip" id="708"/>
+							<SearchStringAddition name="DocumentsForExportSearchString" id="709">
+								<AdditionSource>
+									<Item>DocumentsForExport</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="DocumentsForExportSearchStringContextMenu" id="710"/>
+								<ExtendedTooltip name="DocumentsForExportSearchStringExtendedTooltip" id="711"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="DocumentsForExportViewStatus" id="712">
+								<AdditionSource>
+									<Item>DocumentsForExport</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="DocumentsForExportViewStatusContextMenu" id="713"/>
+								<ExtendedTooltip name="DocumentsForExportViewStatusExtendedTooltip" id="714"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="DocumentsForExportSearchControl" id="715">
+								<AdditionSource>
+									<Item>DocumentsForExport</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="DocumentsForExportSearchControlContextMenu" id="716"/>
+								<ExtendedTooltip name="DocumentsForExportSearchControlExtendedTooltip" id="717"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">DocumentsForExportSelection</Event>
+								<Event name="OnActivateRow">DocumentsForExportOnActivateRow</Event>
+							</Events>
+							<ChildItems>
+								<CheckBoxField name="DocumentsForExportMark" id="795">
+									<DataPath>Object.DocumentsForExport.Mark</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="DocumentsForExportMarkContextMenu" id="796"/>
+									<ExtendedTooltip name="DocumentsForExportMarkExtendedTooltip" id="797"/>
+									<Events>
+										<Event name="OnChange">DocumentsForExportMarkOnChange</Event>
+									</Events>
+								</CheckBoxField>
+								<PictureField name="DocumentsForExportImageNumber" id="798">
+									<DataPath>Object.DocumentsForExport.ImageNumber</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Red circle - The line isn't mapped. See the data mapping section for details.
+Empty green circle - The line is ready to be exported.
+Filled green circle - The line has been exported.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
+									<HeaderPicture>
+										<xr:Ref>CommonPicture.Information</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</HeaderPicture>
+									<Width>1</Width>
+									<Height>1</Height>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.OrderState</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</ValuesPicture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="DocumentsForExportImageNumberContextMenu" id="799"/>
+									<ExtendedTooltip name="DocumentsForExportImageNumberExtendedTooltip" id="800"/>
+								</PictureField>
+								<LabelField name="DocumentsForExportLineNumber" id="801">
+									<DataPath>Object.DocumentsForExport.LineNumber</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
+									<Width>1</Width>
+									<ContextMenu name="DocumentsForExportLineNumberContextMenu" id="802"/>
+									<ExtendedTooltip name="DocumentsForExportLineNumberExtendedTooltip" id="803"/>
+								</LabelField>
+								<InputField name="DocumentsForExportDocument" id="721">
+									<DataPath>Object.DocumentsForExport.Document</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>30</Width>
+									<ChooseType>false</ChooseType>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Filter.BankAccount</xr:Name>
+											<xr:DataPath xsi:type="xs:string">BankAccount</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ChoiceParameters>
+										<app:item name="Filter.Posted">
+											<app:value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xs:boolean">true</Value>
+											</app:value>
+										</app:item>
+									</ChoiceParameters>
+									<ContextMenu name="DocumentsForExportDocumentContextMenu" id="722"/>
+									<ExtendedTooltip name="DocumentsForExportDocumentExtendedTooltip" id="723"/>
+								</InputField>
+								<InputField name="DocumentsForExportAmount" id="780">
+									<DataPath>Object.DocumentsForExport.Amount</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="DocumentsForExportAmountContextMenu" id="781"/>
+									<ExtendedTooltip name="DocumentsForExportAmountExtendedTooltip" id="782"/>
+								</InputField>
+								<InputField name="DocumentsForExportCounterparty" id="760">
+									<DataPath>Object.DocumentsForExport.Counterparty</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>30</Width>
+									<ContextMenu name="DocumentsForExportCounterpartyContextMenu" id="761"/>
+									<ExtendedTooltip name="DocumentsForExportCounterpartyExtendedTooltip" id="762"/>
+								</InputField>
+								<InputField name="DocumentsForExportCounterpartyBankAccount" id="772">
+									<DataPath>Object.DocumentsForExport.CounterpartyBankAccount</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>35</Width>
+									<ContextMenu name="DocumentsForExportCounterpartyBankAccountContextMenu" id="773"/>
+									<ExtendedTooltip name="DocumentsForExportCounterpartyBankAccountExtendedTooltip" id="774"/>
+								</InputField>
+								<InputField name="DocumentsForExportContract" id="763">
+									<DataPath>Object.DocumentsForExport.Contract</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="DocumentsForExportContractContextMenu" id="764"/>
+									<ExtendedTooltip name="DocumentsForExportContractExtendedTooltip" id="765"/>
+								</InputField>
+								<InputField name="DocumentsForExportOperationKind" id="766">
+									<DataPath>Object.DocumentsForExport.OperationKind</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="DocumentsForExportOperationKindContextMenu" id="767"/>
+									<ExtendedTooltip name="DocumentsForExportOperationKindExtendedTooltip" id="768"/>
+								</InputField>
+								<InputField name="DocumentsForExportExportDate" id="789">
+									<DataPath>Object.DocumentsForExport.ExportDate</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="DocumentsForExportExportDateContextMenu" id="790"/>
+									<ExtendedTooltip name="DocumentsForExportExportDateExtendedTooltip" id="791"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="ExportInformation" id="830">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ExportInformationExtendedTooltip" id="831"/>
+							<ChildItems>
+								<InputField name="ExportPaymentPurpose" id="832">
+									<DataPath>Items.DocumentsForExport.CurrentData.PaymentPurpose</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>3</Height>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<MaxHeight>3</MaxHeight>
+									<MultiLine>true</MultiLine>
+									<TextEdit>false</TextEdit>
+									<BorderColor>style:FormBackColor</BorderColor>
+									<ContextMenu name="ExportPaymentPurposeContextMenu" id="833"/>
+									<ExtendedTooltip name="ExportPaymentPurposeExtendedTooltip" id="834"/>
+								</InputField>
+								<UsualGroup name="ExportTotalsAndCurrency" id="861">
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<BackColor>0:1df935d0-dbff-44ad-b3b5-057382fc07e1</BackColor>
+									<ExtendedTooltip name="ExportTotalsAndCurrencyExtendedTooltip" id="862"/>
+									<ChildItems>
+										<UsualGroup name="ExportTotals" id="845">
+											<Title>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Export totals</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Export totals</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ExportTotalsExtendedTooltip" id="846"/>
+											<ChildItems>
+												<InputField name="OpeningBalance" id="847">
+													<DataPath>OpeningBalance</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<ContextMenu name="OpeningBalanceContextMenu" id="848"/>
+													<ExtendedTooltip name="OpeningBalanceExtendedTooltip" id="849"/>
+												</InputField>
+												<InputField name="ExportTotalCr" id="840">
+													<DataPath>TotalCr</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Total amount of outgoing payments</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Итого исходящих платежей</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ContextMenu name="ExportTotalCrContextMenu" id="841"/>
+													<ExtendedTooltip name="ExportTotalCrExtendedTooltip" id="842"/>
+												</InputField>
+												<InputField name="ClosingBalance" id="850">
+													<DataPath>ClosingBalance</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<ContextMenu name="ClosingBalanceContextMenu" id="851"/>
+													<ExtendedTooltip name="ClosingBalanceExtendedTooltip" id="852"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ExportCurrency" id="856">
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ExportCurrencyExtendedTooltip" id="857"/>
+											<ChildItems>
+												<InputField name="Currency" id="858">
+													<DataPath>Currency</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<Width>3</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<OpenButton>false</OpenButton>
+													<ContextMenu name="CurrencyContextMenu" id="859"/>
+													<ExtendedTooltip name="CurrencyExtendedTooltip" id="860"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="DataErrors" id="804">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Data filling errors</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ошибки заполнения данных</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Data errors</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="DataErrorsExtendedTooltip" id="805"/>
+							<ChildItems>
+								<Table name="ExportErrorTable" id="806">
+									<Representation>List</Representation>
+									<TitleLocation>Auto</TitleLocation>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<Height>2</Height>
+									<MaxHeight>5</MaxHeight>
+									<SelectionMode>SingleRow</SelectionMode>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>ErrorTable</DataPath>
+									<CommandSet>
+										<ExcludedCommand>Add</ExcludedCommand>
+										<ExcludedCommand>Copy</ExcludedCommand>
+										<ExcludedCommand>Delete</ExcludedCommand>
+										<ExcludedCommand>MoveDown</ExcludedCommand>
+										<ExcludedCommand>MoveUp</ExcludedCommand>
+										<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+									</CommandSet>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ExportErrorTableContextMenu" id="807"/>
+									<AutoCommandBar name="ExportErrorTableCommandBar" id="808">
+										<Autofill>false</Autofill>
+										<ChildItems>
+											<Button name="SaveAndRefreshValues" id="828">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.SaveAndRefresh</CommandName>
+												<ExtendedTooltip name="SaveAndRefreshValuesExtendedTooltip" id="829"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ExportErrorTableExtendedTooltip" id="809"/>
+									<SearchStringAddition name="ExportErrorTableSearchString" id="810">
+										<AdditionSource>
+											<Item>ExportErrorTable</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ExportErrorTableSearchStringContextMenu" id="811"/>
+										<ExtendedTooltip name="ExportErrorTableSearchStringExtendedTooltip" id="812"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ExportErrorTableViewStatus" id="813">
+										<AdditionSource>
+											<Item>ExportErrorTable</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ExportErrorTableViewStatusContextMenu" id="814"/>
+										<ExtendedTooltip name="ExportErrorTableViewStatusExtendedTooltip" id="815"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ExportErrorTableSearchControl" id="816">
+										<AdditionSource>
+											<Item>ExportErrorTable</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ExportErrorTableSearchControlContextMenu" id="817"/>
+										<ExtendedTooltip name="ExportErrorTableSearchControlExtendedTooltip" id="818"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnStartEdit">ErrorTableOnStartEdit</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="ExportErrorTableAttribute" id="819">
+											<DataPath>ErrorTable.Attribute</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Unfilled attribute name</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Attribute name, which has to be mapped</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ExportErrorTableAttributeContextMenu" id="820"/>
+											<ExtendedTooltip name="ExportErrorTableAttributeExtendedTooltip" id="821"/>
+										</InputField>
+										<InputField name="ExportErrorTableValue" id="825">
+											<DataPath>ErrorTable.Value</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Value in the Infobase</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>The value in the Infobase, which corresponds to the bank statement value</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ChooseType>false</ChooseType>
+											<TypeLink>
+												<xr:DataPath>Items.ExportErrorTable.CurrentData.DefaultValue</xr:DataPath>
+												<xr:LinkItem>0</xr:LinkItem>
+											</TypeLink>
+											<ContextMenu name="ExportErrorTableValueContextMenu" id="826"/>
+											<ExtendedTooltip name="ExportErrorTableValueExtendedTooltip" id="827"/>
+											<Events>
+												<Event name="OnChange">ErrorTableValueOnChange</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="PageLongOperation" id="615">
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>true</VerticalStretch>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<VerticalAlign>Center</VerticalAlign>
+					<ExtendedTooltip name="PageLongOperationExtendedTooltip" id="616"/>
+					<ChildItems>
+						<UsualGroup name="GroupLongOperation" id="627">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupLongOperationExtendedTooltip" id="628"/>
+							<ChildItems>
+								<PictureDecoration name="LongOperationPicture" id="629">
+									<Width>6</Width>
+									<Height>3</Height>
+									<Picture>
+										<xr:Ref>CommonPicture.LongOperation48</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="LongOperationPictureContextMenu" id="630"/>
+									<ExtendedTooltip name="LongOperationPictureExtendedTooltip" id="631"/>
+								</PictureDecoration>
+								<LabelDecoration name="LoadingMessage" id="632">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Loading data, please wait...</v8:content>
+										</v8:item>
+									</Title>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<ContextMenu name="LoadingMessageContextMenu" id="633"/>
+									<ExtendedTooltip name="LoadingMessageExtendedTooltip" id="634"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<CommandBar name="GroupCommandBar" id="623">
+							<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="GroupCommandBarExtendedTooltip" id="624"/>
+							<ChildItems>
+								<Button name="CancelBackgroundJob" id="625">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.CancelBackgroundJob</CommandName>
+									<ExtendedTooltip name="CancelBackgroundJobExtendedTooltip" id="626"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="Footer" id="533">
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="FooterExtendedTooltip" id="534"/>
+			<ChildItems>
+				<Button name="Back" id="687">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Back</CommandName>
+					<ExtendedTooltip name="BackExtendedTooltip" id="688"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.BankStatementProcessing</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>Object.Bank</Field>
+			</Save>
+			<Columns>
+				<AdditionalColumns table="Object.Import">
+					<Column name="Show" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Show</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="Object.DocumentsForExport">
+					<Column name="Show" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Show</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="JobStorageAddress" id="6">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="JobID" id="7">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Encoding" id="9">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="FileExtensions" id="10">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ImportDirectory" id="11">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="StorageAddress" id="12">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="IsImport" id="13">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ErrorTable" id="14">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ID" id="1">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Attribute" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Attribute to map</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.BankMappingAttribute</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Value" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Corresponding value in the Infobase</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+						<v8:NumberQualifiers>
+							<v8:Digits>14</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+						<v8:StringQualifiers>
+							<v8:Length>255</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="DefaultValue" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Default value</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+						<v8:NumberQualifiers>
+							<v8:Digits>14</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+						<v8:StringQualifiers>
+							<v8:Length>255</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ReceivedValue" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Value from the file</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+						<v8:NumberQualifiers>
+							<v8:Digits>14</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+						<v8:StringQualifiers>
+							<v8:Length>255</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ExportDirectory" id="15">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="TotalCr" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Total Cr</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="TotalDr" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Total Dr</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="BankAccount" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Bank account</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.BankAccounts</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="BinaryData" id="20">
+			<Type/>
+		</Attribute>
+		<Attribute name="IsCreatingDocuments" id="21">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="HideRowsWithDocuments" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Hide rows with documents</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>HideRowsWithDocuments</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ImportMode" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Import mode</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Period" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Period</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="HideRowsWithExportedDocuments" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Hide rows with documents</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>HideRowsWithExportedDocuments</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="TableName" id="26">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="DocumentsForExportTable" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Documents for export table</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Document" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Document</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.PaymentExpense</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="OpeningBalance" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Opening balance</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ClosingBalance" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Closing balance</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Currency" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Currency</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Currencies</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="PathToFile" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Path to file</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Import</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Object.Import.Document</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ReadOnly</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ImportAmount</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Object.Import.DocumentKind</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">PaymentExpense</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>BackColor</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">0:3d2ae39f-3f43-40ec-b5f7-d6c0ac22b3d4</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>TextColor</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ImportAmount</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Object.Import.DocumentKind</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">PaymentReceipt</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>BackColor</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">0:42544966-445d-41b8-b6a0-a52c64758232</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>TextColor</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">0:ed4517f3-0e32-4041-88eb-b685449b5458</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="Import" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Import</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ImportExecute</Action>
+			<Representation>Text</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ClearAll" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Clear all</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Clear all</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ClearAllExecute</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="MarkAll" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Mark all</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Mark all</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>MarkAllExecute</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Setting" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Setting</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Bank exchange settings</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.DocumentSetup</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Setting</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ImportBankStatementFromFile" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Import bank statement from file</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ImportBankStatementFromFile</Action>
+		</Command>
+		<Command name="ExportBankStatementToFile" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Export payment initiations to file</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ExportBankStatementToFile</Action>
+		</Command>
+		<Command name="CancelBackgroundJob" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Cancel</v8:content>
+				</v8:item>
+			</Title>
+			<Action>CancelBackgroundJob</Action>
+		</Command>
+		<Command name="Back" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Back</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.GoBack</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Back</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="SaveAndRefresh" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Apply changes and refresh</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Save and refresh</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Write</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>SaveAndRefresh</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="Export" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Export</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ExportExecute</Action>
+		</Command>
+		<Command name="RefreshImport" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Refresh</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Reread</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>RefreshImport</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="FillThisValueInEmptyLines" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Fill this value in empty lines</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.EventsList</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>FillThisValueInEmptyLines</Action>
+		</Command>
+		<Command name="MarkAllExport" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Mark all</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Mark all</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>MarkAllExecuteExport</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ClearAllExport" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Clear all</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Clear all</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять отметку у всех</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ClearAllExecuteExport</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="RefreshExport" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Refresh</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Refresh export</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Reread</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>RefreshExport</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

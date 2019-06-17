@@ -1,0 +1,606 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>DataSource1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>DataSet1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Document</dataPath>
+			<field>Document</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Currency</dataPath>
+			<field>Currency</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Transaction currency</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Company</dataPath>
+			<field>Company</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>SettlementsType</dataPath>
+			<field>SettlementsType</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Contract</dataPath>
+			<field>Contract</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Counterparty</dataPath>
+			<field>Counterparty</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Order</dataPath>
+			<field>Order</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TotalDue</dataPath>
+			<field>TotalDue</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Total due (transaction currency)</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Format</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>NFD=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>PaymentTotalDue</dataPath>
+			<field>PaymentTotalDue</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Total due</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Format</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>NFD=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>EPDAmount</dataPath>
+			<field>EPDAmount</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>EPD Amount</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Format</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>NFD=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Due</dataPath>
+			<field>Due</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Due</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Format</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>NFD=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<dataSource>DataSource1</dataSource>
+		<query>SELECT
+	ExchangeRatesSliceLast.Currency AS Currency,
+	ExchangeRatesSliceLast.ExchangeRate AS ExchangeRate,
+	ExchangeRatesSliceLast.Multiplicity AS Multiplicity
+INTO ExchangeRatesOnPeriod
+FROM
+	InformationRegister.ExchangeRates.SliceLast(&amp;Period, ) AS ExchangeRatesSliceLast
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT ALLOWED
+	AccountsPayableBalances.Company AS Company,
+	AccountsPayableBalances.Counterparty AS Counterparty,
+	AccountsPayableBalances.Contract AS Contract,
+	AccountsPayableBalances.Document AS Document,
+	AccountsPayableBalances.SettlementsType AS SettlementsType,
+	AccountsPayableBalances.AmountCurBalance AS AmountCurBalance
+INTO AccountsPayableTable
+FROM
+	AccumulationRegister.AccountsPayable.Balance(, SettlementsType = VALUE(Enum.SettlementsTypes.Debt)) AS AccountsPayableBalances
+{WHERE
+	(AccountsPayableBalances.Company = &amp;Company),
+	(AccountsPayableBalances.Counterparty = &amp;Counterparty)}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	AccountsPayableTable.Company AS Company,
+	AccountsPayableTable.Counterparty AS Counterparty,
+	AccountsPayableTable.Contract AS Contract,
+	AccountsPayableTable.Document AS Document,
+	SUM(AccountsPayableTable.AmountCurBalance) AS AmountCurBalance
+INTO AccountsPayableGrouped
+FROM
+	AccountsPayableTable AS AccountsPayableTable
+WHERE
+	AccountsPayableTable.AmountCurBalance &gt; 0
+
+GROUP BY
+	AccountsPayableTable.Company,
+	AccountsPayableTable.Counterparty,
+	AccountsPayableTable.Contract,
+	AccountsPayableTable.Document
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT ALLOWED
+	AccountsPayableGrouped.Company AS Company,
+	AccountsPayableGrouped.Counterparty AS Counterparty,
+	AccountsPayableGrouped.Contract AS Contract,
+	AccountsPayableGrouped.Document AS Document,
+	AccountsPayableGrouped.AmountCurBalance AS AmountCurBalance,
+	CounterpartyContracts.SettlementsCurrency AS SettlementsCurrency
+INTO AccountsPayableContract
+FROM
+	AccountsPayableGrouped AS AccountsPayableGrouped
+		INNER JOIN Catalog.CounterpartyContracts AS CounterpartyContracts
+		ON AccountsPayableGrouped.Contract = CounterpartyContracts.Ref
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT DISTINCT
+	AccountsPayableTable.Document AS Document
+INTO SupplierInvoiceTable
+FROM
+	AccountsPayableTable AS AccountsPayableTable
+WHERE
+	AccountsPayableTable.Document REFS Document.SupplierInvoice
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT ALLOWED
+	SupplierInvoiceEarlyPaymentDiscounts.DueDate AS DueDate,
+	SupplierInvoiceEarlyPaymentDiscounts.DiscountAmount AS DiscountAmount,
+	SupplierInvoiceEarlyPaymentDiscounts.Ref AS SupplierInvoice
+INTO EarlyPaymentDiscounts
+FROM
+	Document.SupplierInvoice.EarlyPaymentDiscounts AS SupplierInvoiceEarlyPaymentDiscounts
+		INNER JOIN SupplierInvoiceTable AS SupplierInvoiceTable
+		ON SupplierInvoiceEarlyPaymentDiscounts.Ref = SupplierInvoiceTable.Document
+WHERE
+	ENDOFPERIOD(SupplierInvoiceEarlyPaymentDiscounts.DueDate, DAY) &gt;= &amp;Period
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	MIN(EarlyPaymentDiscounts.DueDate) AS DueDate,
+	EarlyPaymentDiscounts.SupplierInvoice AS SupplierInvoice
+INTO EarlyPaymentMinDueDate
+FROM
+	EarlyPaymentDiscounts AS EarlyPaymentDiscounts
+
+GROUP BY
+	EarlyPaymentDiscounts.SupplierInvoice
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	EarlyPaymentDiscounts.DiscountAmount AS DiscountAmount,
+	EarlyPaymentDiscounts.SupplierInvoice AS SupplierInvoice
+INTO EarlyPaymentMaxDiscountAmount
+FROM
+	EarlyPaymentDiscounts AS EarlyPaymentDiscounts
+		INNER JOIN EarlyPaymentMinDueDate AS EarlyPaymentMinDueDate
+		ON EarlyPaymentDiscounts.SupplierInvoice = EarlyPaymentMinDueDate.SupplierInvoice
+			AND EarlyPaymentDiscounts.DueDate = EarlyPaymentMinDueDate.DueDate
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	AccountsPayableContract.Company AS Company,
+	AccountsPayableContract.Counterparty AS Counterparty,
+	AccountsPayableContract.Contract AS Contract,
+	AccountsPayableContract.Document AS Document,
+	AccountsPayableContract.SettlementsCurrency AS SettlementsCurrency,
+	AccountsPayableContract.AmountCurBalance AS AmountCur,
+	CAST(AccountsPayableContract.AmountCurBalance * SettlementsExchangeRates.ExchangeRate * ExchangeRatesOfDocument.Multiplicity / (ExchangeRatesOfDocument.ExchangeRate * SettlementsExchangeRates.Multiplicity) AS NUMBER(15, 2)) AS AmountCurDoc,
+	CAST(ISNULL(EarlyPaymentMaxDiscountAmount.DiscountAmount, 0) * SettlementsExchangeRates.ExchangeRate * ExchangeRatesOfDocument.Multiplicity / (ExchangeRatesOfDocument.ExchangeRate * SettlementsExchangeRates.Multiplicity) AS NUMBER(15, 2)) AS EPDAmountCurDoc
+INTO AccountsPayableWithEPD
+FROM
+	AccountsPayableContract AS AccountsPayableContract
+		LEFT JOIN EarlyPaymentMaxDiscountAmount AS EarlyPaymentMaxDiscountAmount
+		ON AccountsPayableContract.Document = EarlyPaymentMaxDiscountAmount.SupplierInvoice
+		LEFT JOIN ExchangeRatesOnPeriod AS ExchangeRatesOfDocument
+		ON (ExchangeRatesOfDocument.Currency = &amp;Currency)
+		LEFT JOIN ExchangeRatesOnPeriod AS SettlementsExchangeRates
+		ON AccountsPayableContract.SettlementsCurrency = SettlementsExchangeRates.Currency
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	AccountsPayableWithEPD.Company AS Company,
+	AccountsPayableWithEPD.Counterparty AS Counterparty,
+	AccountsPayableWithEPD.Contract AS Contract,
+	AccountsPayableWithEPD.SettlementsCurrency AS Currency,
+	AccountsPayableWithEPD.Document AS Document,
+	AccountsPayableWithEPD.AmountCur AS TotalDue,
+	AccountsPayableWithEPD.AmountCurDoc AS PaymentTotalDue,
+	AccountsPayableWithEPD.EPDAmountCurDoc AS EPDAmount,
+	AccountsPayableWithEPD.AmountCurDoc - AccountsPayableWithEPD.EPDAmountCurDoc AS Due
+FROM
+	AccountsPayableWithEPD AS AccountsPayableWithEPD</query>
+	</dataSet>
+	<totalField>
+		<dataPath>TotalDue</dataPath>
+		<expression>Sum(TotalDue)</expression>
+		<group>Contract</group>
+		<group>Currency</group>
+		<group>Document</group>
+	</totalField>
+	<totalField>
+		<dataPath>PaymentTotalDue</dataPath>
+		<expression>Sum(PaymentTotalDue)</expression>
+		<group>Contract</group>
+		<group>Currency</group>
+		<group>Document</group>
+	</totalField>
+	<totalField>
+		<dataPath>EPDAmount</dataPath>
+		<expression>Sum(EPDAmount)</expression>
+		<group>Contract</group>
+		<group>Currency</group>
+		<group>Document</group>
+	</totalField>
+	<totalField>
+		<dataPath>Due</dataPath>
+		<expression>Sum(Due)</expression>
+		<group>Contract</group>
+		<group>Currency</group>
+		<group>Document</group>
+	</totalField>
+	<parameter>
+		<name>Currency</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Currency</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Currencies</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Period</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Period</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<expression>EndOfPeriod(&amp;Period, "Day")</expression>
+		<inputParameters>
+			<dcscor:item>
+				<dcscor:parameter>EditFormat</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>DLF=D</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</inputParameters>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>TitleOutput</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Display title</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Company</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Company</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Companies</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Counterparty</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Counterparty</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Counterparties</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>InvoicesValidForEPD</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>bg</v8:lang>
+				<v8:content>Default</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Invoices valid for EPD</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>de</v8:lang>
+				<v8:content>Default</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>pl</v8:lang>
+				<v8:content>Default</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ro</v8:lang>
+				<v8:content>Default</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Default</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>es_ES</v8:lang>
+				<v8:content>Default</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>tr</v8:lang>
+				<v8:content>Default</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Default</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TotalDue</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>PaymentTotalDue</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>EPDAmount</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Due</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Currency</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Catalog.Currencies.EmptyRef</dcscor:value>
+					<dcsset:userSettingID>0287a485-445b-4424-867d-2409c52acbc1</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Period</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+						<v8:date>0001-01-01T00:00:00</v8:date>
+					</dcscor:value>
+					<dcsset:userSettingID>1326b134-f487-4197-8f11-83179481954a</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>TitleOutput</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>518f0335-c0fa-4412-9cfd-60b6532aa714</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Company</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Catalog.Companies.EmptyRef</dcscor:value>
+					<dcsset:userSettingID>87dddac4-2546-4aae-aa77-6d6b93432804</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Counterparty</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Catalog.Counterparties.EmptyRef</dcscor:value>
+					<dcsset:userSettingID>b953a5ba-f4c5-4ded-9dde-a27133c3f325</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>TotalsPlacement</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>VerticalOverallPlacement</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>TitleOutput</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Title</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Invoices valid for EPD</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>DataParametersOutput</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>FilterOutput</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Company</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Counterparty</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Contract</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Currency</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:outputParameters>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:use>false</dcscor:use>
+								<dcscor:parameter>AttributePlacement</dcscor:parameter>
+								<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Together</dcscor:value>
+							</dcscor:item>
+						</dcsset:outputParameters>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>Document</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>
