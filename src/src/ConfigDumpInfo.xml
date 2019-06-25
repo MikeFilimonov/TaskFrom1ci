@@ -9421,7 +9421,7 @@
 		<Metadata name="Document.Budget.Help" id="c1b3cd94-5815-4d94-ad19-3869bc5c15e4.1" configVersion="912f72f6865afb44aee442743bbf592d00000000"/>
 		<Metadata name="Document.Budget.ManagerModule" id="c1b3cd94-5815-4d94-ad19-3869bc5c15e4.2" configVersion="9d77e8024a046d46bc5f074ec0a608c400000000"/>
 		<Metadata name="Document.Budget.ObjectModule" id="c1b3cd94-5815-4d94-ad19-3869bc5c15e4.0" configVersion="5537ceb9618d0a43b720b4fd01e1aead00000000"/>
-		<Metadata name="Document.BulkMail" id="1ab3264c-e0a4-4066-9961-52ef8b657bb2" configVersion="972593be4d4bda438924820fc60cbb0b00000000">
+		<Metadata name="Document.BulkMail" id="1ab3264c-e0a4-4066-9961-52ef8b657bb2" configVersion="35970ae2cf9e0140b2b27f1e54a4c6ad00000000">
 			<Metadata name="Document.BulkMail.TabularSection.Recipients.Attribute.DeliveryStatus" id="00253b41-5f3b-4518-9d94-bea702cb7898"/>
 			<Metadata name="Document.BulkMail.Attribute.Content" id="0ee29296-19dd-4502-9215-54f671922a17"/>
 			<Metadata name="Document.BulkMail.Attribute.CreateEvents" id="1fa71149-39f7-4605-b1d6-5e4d4f907dad"/>
@@ -9452,7 +9452,7 @@
 		<Metadata name="Document.BulkMail.Form.ListForm.Form" id="05257526-7aba-4539-8eb4-54e411d68f47.0" configVersion="79545f842a9dd544b8d5001c614bf3e600000000"/>
 		<Metadata name="Document.BulkMail.Help" id="1ab3264c-e0a4-4066-9961-52ef8b657bb2.1" configVersion="8e17d2b5da30b74085af1631d7285e0700000000"/>
 		<Metadata name="Document.BulkMail.ManagerModule" id="1ab3264c-e0a4-4066-9961-52ef8b657bb2.2" configVersion="f620bc5a9315bb4487bf886a2fce8ee800000000"/>
-		<Metadata name="Document.BulkMail.ObjectModule" id="1ab3264c-e0a4-4066-9961-52ef8b657bb2.0" configVersion="438be1ac9cbc7d4ab968f615a6dbff4800000000"/>
+		<Metadata name="Document.BulkMail.ObjectModule" id="1ab3264c-e0a4-4066-9961-52ef8b657bb2.0" configVersion="f787547bb7c1e6448a67e62fca0d250100000000"/>
 		<Metadata name="Document.CashInflowForecast" id="c18706f7-84f7-4c9d-ae6a-832e18f1c2ab" configVersion="a03b0da9ead96b4fbcc06cac637d7bcc00000000">
 			<Metadata name="Document.CashInflowForecast.Attribute.DocumentAmount" id="1acd5e63-cb3e-47b2-b799-a2ee4339b247"/>
 			<Metadata name="Document.CashInflowForecast.Attribute.Company" id="22477ae0-7c5a-46df-b4a6-695c26329eee"/>

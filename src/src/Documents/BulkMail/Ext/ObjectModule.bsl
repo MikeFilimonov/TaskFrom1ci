@@ -10,6 +10,18 @@ Procedure FillCheckProcessing(Cancel, CheckedAttributes)
 	
 EndProcedure
 
+Procedure Filling(FillingData, StandardProcessing)
+	If TypeOf(FillingData) = Type("DocumentRef.RequestForQuotation") Then
+		// Filling the headline
+		Content = FillingData.DescriptionOfTheRequirements;
+		For Each CurRowSuppliers In FillingData.Suppliers Do
+			NewRow = Recipients.Add();
+			NewRow.Contact = CurRowSuppliers.ContactPerson;
+			NewRow.HowToContact = CurRowSuppliers.Email;
+		EndDo;
+	EndIf;
+EndProcedure
+
 #EndRegion
 
 #EndIf

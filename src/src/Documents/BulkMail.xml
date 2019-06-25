@@ -178,7 +178,9 @@
 				</xr:StandardAttribute>
 			</StandardAttributes>
 			<Characteristics/>
-			<BasedOn/>
+			<BasedOn>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.RequestForQuotation</xr:Item>
+			</BasedOn>
 			<InputByString>
 				<xr:Field>Document.BulkMail.StandardAttribute.Number</xr:Field>
 			</InputByString>
