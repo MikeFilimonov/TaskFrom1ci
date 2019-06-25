@@ -2263,6 +2263,7 @@
 			<Document>ReconciliationStatement</Document>
 			<Document>RegistersCorrection</Document>
 			<Document>RetailRevaluation</Document>
+			<Document>RequestForQuotation</Document>
 			<Document>SalesInvoice</Document>
 			<Document>SalesOrder</Document>
 			<Document>SalesSlip</Document>
@@ -2281,7 +2282,6 @@
 			<Document>TransferAndPromotion</Document>
 			<Document>WeeklyTimesheet</Document>
 			<Document>WorkOrder</Document>
-			<Document>RequestForQuotation</Document>
 			<DocumentNumerator>TaxInvoiceIssued</DocumentNumerator>
 			<DocumentJournal>BankDocuments</DocumentJournal>
 			<DocumentJournal>CashDocuments</DocumentJournal>
@@ -2475,6 +2475,7 @@
 			<Enum>WorkScheduleFillingMethods</Enum>
 			<Enum>WorkScheduleTypes</Enum>
 			<Enum>YesNo</Enum>
+			<Enum>RequestForQuotationStatuses</Enum>
 			<Report>AccessRights</Report>
 			<Report>AccountsPayable</Report>
 			<Report>AccountsPayableAging</Report>

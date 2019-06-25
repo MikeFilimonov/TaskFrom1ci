@@ -55,6 +55,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.UsingPaymentTermsInDocuments</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.PrintGoodsReceivedNote</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.InvoicesValidForEPD</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.RequestForQuotation</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>
