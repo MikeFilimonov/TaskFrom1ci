@@ -123,6 +123,11 @@
 							<ContextMenu name="ValidUntilContextMenu" id="421"/>
 							<ExtendedTooltip name="ValidUntilExtendedTooltip" id="422"/>
 						</InputField>
+						<InputField name="RFQ" id="423">
+							<DataPath>Object.RFQ</DataPath>
+							<ContextMenu name="RFQContextMenu" id="424"/>
+							<ExtendedTooltip name="RFQExtendedTooltip" id="425"/>
+						</InputField>
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="RightColumn" id="21">

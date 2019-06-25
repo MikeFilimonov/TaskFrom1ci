@@ -12562,7 +12562,7 @@
 		<Metadata name="Document.SupplierInvoice.Template.LoadFromFileInventory.Template" id="261d716d-a450-481c-81f7-4fccbb8795cb.0" configVersion="bd78fc353ff54645aa651c9c7709865600000000"/>
 		<Metadata name="Document.SupplierInvoice.Template.PF_MXL_MerchandiseFillingForm" id="f25b0e54-e5d1-409d-8e42-bfa57dd037e4" configVersion="c2bf52049ff22842b30b85dacf1450e100000000"/>
 		<Metadata name="Document.SupplierInvoice.Template.PF_MXL_MerchandiseFillingForm.Template" id="f25b0e54-e5d1-409d-8e42-bfa57dd037e4.0" configVersion="34e756da363a2b46893a0f1383e9865100000000"/>
-		<Metadata name="Document.SupplierQuote" id="c5463756-11fa-43bd-9f03-cc67ad6147ae" configVersion="613d50007df4d54d8d7968ac0400269500000000">
+		<Metadata name="Document.SupplierQuote" id="c5463756-11fa-43bd-9f03-cc67ad6147ae" configVersion="8a48c2f9b06449488bdaf7acbaafd6ee00000000">
 			<Metadata name="Document.SupplierQuote.Attribute.Responsible" id="00eda742-f0d4-4abf-a1ba-c3cd0947f0ad"/>
 			<Metadata name="Document.SupplierQuote.Attribute.Contract" id="019acb42-d09a-42b8-84d5-9a73cc37f25b"/>
 			<Metadata name="Document.SupplierQuote.Command.EnterActualPayment" id="01c8a449-06d6-4d9a-a31a-a71d017e4c0f"/>
@@ -12572,6 +12572,7 @@
 			<Metadata name="Document.SupplierQuote.Attribute.SetPaymentTerms" id="170d5ad4-cbac-4af1-861b-3b86406b7938"/>
 			<Metadata name="Document.SupplierQuote.Attribute.Multiplicity" id="20a6cf48-3285-4dfa-8094-4cc65bf304ab"/>
 			<Metadata name="Document.SupplierQuote.TabularSection.PaymentCalendar.Attribute.PaymentPercentage" id="394fae21-c871-4dd2-9f1c-c0c559329b6d"/>
+			<Metadata name="Document.SupplierQuote.Attribute.RFQ" id="3e2794eb-023a-4d94-b463-53126c0917ad"/>
 			<Metadata name="Document.SupplierQuote.TabularSection.Inventory.Attribute.Quantity" id="4c1455aa-165b-454b-a01c-eb0411a40669"/>
 			<Metadata name="Document.SupplierQuote.Attribute.VATTaxation" id="4f4d70e3-da48-47c8-99cc-a229a86b7197"/>
 			<Metadata name="Document.SupplierQuote.TabularSection.Inventory.Attribute.Characteristic" id="59a7e206-cc0c-4211-a5a5-d57d14ceead7"/>
@@ -12610,8 +12611,8 @@
 		<Metadata name="Document.SupplierQuote.Command.EnterActualPayment.CommandModule" id="01c8a449-06d6-4d9a-a31a-a71d017e4c0f.2" configVersion="ef52f488d60abd4d90816c6a35381ff400000000"/>
 		<Metadata name="Document.SupplierQuote.Form.ChoiceForm" id="cdeee297-3053-42c8-b20c-16feb9b26d36" configVersion="c20fe6ded5848b459a3c23e3dd00124100000000"/>
 		<Metadata name="Document.SupplierQuote.Form.ChoiceForm.Form" id="cdeee297-3053-42c8-b20c-16feb9b26d36.0" configVersion="e75b441790079a4c9cdc9cbc71d0a96700000000"/>
-		<Metadata name="Document.SupplierQuote.Form.DocumentForm" id="06f8b4d5-39e8-4777-9a2b-d0fa5c41584f" configVersion="d89b96ca76ab8f49bfcd07f4dd3ec3e500000000"/>
-		<Metadata name="Document.SupplierQuote.Form.DocumentForm.Form" id="06f8b4d5-39e8-4777-9a2b-d0fa5c41584f.0" configVersion="797365e0e680c3428f15bf414d4dfb8900000000"/>
+		<Metadata name="Document.SupplierQuote.Form.DocumentForm" id="06f8b4d5-39e8-4777-9a2b-d0fa5c41584f" configVersion="ce18fde972b08b43a9b629ce208f2ac100000000"/>
+		<Metadata name="Document.SupplierQuote.Form.DocumentForm.Form" id="06f8b4d5-39e8-4777-9a2b-d0fa5c41584f.0" configVersion="b905b55d8c4f894fbabaecd4d781f28d00000000"/>
 		<Metadata name="Document.SupplierQuote.Form.ListForm" id="bbb4bf1f-f1fa-4376-9a7c-d404a0f08c05" configVersion="142beccc0bb67e498d8ae8d757fe3ebf00000000"/>
 		<Metadata name="Document.SupplierQuote.Form.ListForm.Form" id="bbb4bf1f-f1fa-4376-9a7c-d404a0f08c05.0" configVersion="be60a2a45071544bb46784e1972c55cf00000000"/>
 		<Metadata name="Document.SupplierQuote.Help" id="c5463756-11fa-43bd-9f03-cc67ad6147ae.1" configVersion="9fc38762d51f734285d8ccd66f8acd9300000000"/>
